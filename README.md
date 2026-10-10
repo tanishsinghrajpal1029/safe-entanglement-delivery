@@ -4,7 +4,7 @@
 
 Research code, pre-registrations, results and the audit trail for an independent study at Carnegie Mellon University (Information Networking Institute).
 
-**Author:** Tanish Singh Rajpal.
+**Authors:** Tanish Singh Rajpal and Michael Mattarock (Carnegie Mellon University).
 
 **Status (October 2026):** a preprint is in preparation.
 - The evidence is mainly **simulation**: a discrete-event network simulator whose physics was cross-checked against NetSquid.
@@ -95,7 +95,7 @@ Props. 1–7: `study18c_controller_and_guard/THEORY_NOTE.md` and the project the
 Third-party datasets are **not** redistributed here; see `DATA_SOURCES.md` for sources and licences.
 
 ## AI assistance
-Code, simulations and documents were developed with substantial assistance from an AI model (Anthropic's Claude), under the author's direction. Every result comes from running the code in this repository. The pre-registrations and the ledger record what was decided before each run.
+Code, simulations and documents were developed with substantial assistance from an AI model (Anthropic's Claude), under the authors' direction. Every result comes from running the code in this repository. The pre-registrations and the ledger record what was decided before each run.
 
 ## License and citation
 - Code: MIT (`LICENSE`). Documents and results: CC BY 4.0.

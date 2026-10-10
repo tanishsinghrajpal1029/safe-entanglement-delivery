@@ -4,7 +4,10 @@ title: "Safe entanglement delivery: label-free risk control and an anytime-valid
 authors:
   - family-names: Rajpal
     given-names: Tanish Singh
-    affiliation: "Carnegie Mellon University, Information Networking Institute"
+    affiliation: "Carnegie Mellon University"
+  - family-names: Mattarock
+    given-names: Michael
+    affiliation: "Carnegie Mellon University"
 date-released: 2026-10-10
 license: MIT
 type: software
