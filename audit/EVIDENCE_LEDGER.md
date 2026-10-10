@@ -1631,3 +1631,10 @@ Details: `22_external_checks/icfo_2021/STAGE1_RESULT.md`.
 - Caveat: equal set sizes were assumed.
 
 Details: `22_external_checks/ustc_2026/STAGE1_RESULT.md`.
+
+## E98 — Data requests sent (10 Oct 2026, by Tanish)
+- **Oxford:** D. P. Nadlinger and C. J. Ballance — time-ordered DIQKD herald and measurement records.
+- **Harvard:** M. D. Lukin — SiV–SiV herald and measurement records.
+- **ICFO:** H. de Riedmatten — phase settings for the coh_k files, which would allow a Stage 2 visibility analysis.
+
+Any data received will get its own pre-registration before analysis. No result depends on a reply.
