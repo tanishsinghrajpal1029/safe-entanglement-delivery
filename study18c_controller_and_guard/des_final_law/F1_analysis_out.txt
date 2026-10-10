@@ -1,0 +1,58 @@
+=== R1: Gaussian error model, max |obs-pred| over bins with >=200 attempts (per run), z>=1
+g             est      
+1.000000e-09  ols_reset    0.0047
+              static       0.0025
+1.000000e-05  ols_reset    0.0090
+              static       0.0074
+1.000000e-04  ols_reset    0.0316
+              static       0.1063
+R1 pre-registered statistic (g<=1e-5): median of per-run max dev = 0.0059  -> PASS (bar 0.05)
+=== R2: r_cond predicted from each run's own attempt histogram
+runs=609  Spearman=0.961 (bar 0.9)  median|ln ratio| (bad>0, n=449)=0.252  (0.5-corrected, all)=0.395  bar ln1.5=0.405
+R2: PASS
+   g=1e-09 ols_reset n= 90 spearman=0.985 med|lnratio|=0.156 pooled meas=0.0420 pooled pred=0.0396
+   g=1e-09 static    n= 91 spearman=0.921 med|lnratio|=0.296 pooled meas=0.0070 pooled pred=0.0061
+   g=1e-05 ols_reset n=101 spearman=0.977 med|lnratio|=0.171 pooled meas=0.0407 pooled pred=0.0408
+   g=1e-05 static    n=101 spearman=0.920 med|lnratio|=0.336 pooled meas=0.0070 pooled pred=0.0073
+   g=0.0001 ols_reset n=123 spearman=0.989 med|lnratio|=0.205 pooled meas=0.0752 pooled pred=0.0859
+   g=0.0001 static    n=103 spearman=0.962 med|lnratio|=0.383 pooled meas=0.0197 pooled pred=0.0191
+=== R3: base-rate dependence, Kendall tau(F0, r_cond) per (cell,g,est,z>=1) series
+    cell            g       est   z       tau
+ion_2020 1.000000e-09 ols_reset 1.0 -0.807692
+ion_2020 1.000000e-09 ols_reset 2.0 -0.346154
+ion_2020 1.000000e-09 ols_reset 3.0  0.102564
+ion_2020 1.000000e-09    static 1.0 -0.346154
+ion_2020 1.000000e-09    static 2.0 -0.038462
+ion_2020 1.000000e-09    static 3.0  0.000000
+ion_2020 1.000000e-05 ols_reset 1.0 -0.871795
+ion_2020 1.000000e-05 ols_reset 2.0 -0.871795
+ion_2020 1.000000e-05 ols_reset 3.0 -0.782051
+ion_2020 1.000000e-05    static 1.0 -0.179487
+ion_2020 1.000000e-05    static 2.0  0.089744
+ion_2020 1.000000e-05    static 3.0  0.000000
+ion_2020 1.000000e-04 ols_reset 1.0 -0.871795
+ion_2020 1.000000e-04 ols_reset 2.0 -0.871795
+ion_2020 1.000000e-04 ols_reset 3.0 -0.871795
+ion_2020 1.000000e-04    static 1.0 -0.153846
+ion_2020 1.000000e-04    static 2.0  0.153846
+ion_2020 1.000000e-04    static 3.0  0.217949
+ion_proj 1.000000e-09 ols_reset 1.0 -0.961538
+ion_proj 1.000000e-09 ols_reset 2.0 -0.448718
+ion_proj 1.000000e-09 ols_reset 3.0 -0.076923
+ion_proj 1.000000e-09    static 1.0 -0.679487
+ion_proj 1.000000e-09    static 2.0  0.076923
+ion_proj 1.000000e-09    static 3.0  0.000000
+ion_proj 1.000000e-05 ols_reset 1.0 -0.987179
+ion_proj 1.000000e-05 ols_reset 2.0 -0.961538
+ion_proj 1.000000e-05 ols_reset 3.0 -0.230769
+ion_proj 1.000000e-05    static 1.0 -0.692308
+ion_proj 1.000000e-05    static 2.0 -0.038462
+ion_proj 1.000000e-05    static 3.0  0.000000
+ion_proj 1.000000e-04 ols_reset 1.0 -0.987179
+ion_proj 1.000000e-04 ols_reset 2.0 -0.987179
+ion_proj 1.000000e-04 ols_reset 3.0 -0.474359
+ion_proj 1.000000e-04    static 1.0 -0.423077
+ion_proj 1.000000e-04    static 2.0 -0.410256
+ion_proj 1.000000e-04    static 3.0  0.051282
+R3: 0.39 of 36 series have tau <= -0.6 (bar 0.75) -> FAIL
+analysis script sha256: c9f06b92ae6bcb91

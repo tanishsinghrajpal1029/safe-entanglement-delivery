@@ -1,0 +1,13 @@
+    cell            g       est  ad_qual  ad_r  S0_z  S0_qual  S0_r  S1_z  S1_qual  S1_r
+ion_2020 1.000000e-09    static     8584 0.047   2.0     7943 0.176   1.5    12066 0.642
+ion_2020 1.000000e-09 ols_reset     1163 0.000   NaN        0 0.000   NaN        0 0.000
+ion_2020 1.000000e-05    static     2793 0.143   2.0     4000 0.818   2.0     4000 0.818
+ion_2020 1.000000e-05 ols_reset      137 0.725   NaN        0 0.000   3.0       34 5.556
+ion_2020 1.000000e-04 ols_reset       28 0.000   NaN        0 0.000   NaN        0 0.000
+ion_proj 1.000000e-09    static    33027 0.067   1.0    55724 0.615   1.0    55724 0.615
+ion_proj 1.000000e-09 ols_reset     8612 0.000   1.5    20158 0.484   1.5    20158 0.484
+ion_proj 1.000000e-05    static    22875 0.057   1.5    32695 0.281   1.0    46159 1.506
+ion_proj 1.000000e-05 ols_reset     4518 0.000   2.0     5762 0.121   1.5    13130 0.980
+ion_proj 1.000000e-04 ols_reset      690 0.000   NaN        0 0.000   2.0     1592 0.872
+S0 violations: 0  S1 violations: 2  adaptive violations: 0
+groups where LTT-Bonf(S0) delivers >0: 6 ; adaptive qual >= LTT(S0) qual in 5 of 10

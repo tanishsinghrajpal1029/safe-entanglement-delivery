@@ -1,0 +1,194 @@
+{
+ "per_run_herald": [
+  {
+   "run": "1819",
+   "herald": "psi+",
+   "last": 41,
+   "not_last": 0
+  },
+  {
+   "run": "1819",
+   "herald": "psi-",
+   "last": 24,
+   "not_last": 0
+  },
+  {
+   "run": "1856",
+   "herald": "psi+",
+   "last": 43,
+   "not_last": 0
+  },
+  {
+   "run": "1856",
+   "herald": "psi-",
+   "last": 38,
+   "not_last": 0
+  },
+  {
+   "run": "1920",
+   "herald": "psi+",
+   "last": 35,
+   "not_last": 0
+  },
+  {
+   "run": "1920",
+   "herald": "psi-",
+   "last": 21,
+   "not_last": 0
+  },
+  {
+   "run": "2143",
+   "herald": "psi+",
+   "last": 24,
+   "not_last": 0
+  },
+  {
+   "run": "2143",
+   "herald": "psi-",
+   "last": 24,
+   "not_last": 0
+  },
+  {
+   "run": "2243",
+   "herald": "psi+",
+   "last": 45,
+   "not_last": 0
+  },
+  {
+   "run": "2243",
+   "herald": "psi-",
+   "last": 33,
+   "not_last": 0
+  },
+  {
+   "run": "0014",
+   "herald": "psi+",
+   "last": 36,
+   "not_last": 0
+  },
+  {
+   "run": "0014",
+   "herald": "psi-",
+   "last": 25,
+   "not_last": 0
+  },
+  {
+   "run": "2203",
+   "herald": "psi+",
+   "last": 31,
+   "not_last": 0
+  },
+  {
+   "run": "2203",
+   "herald": "psi-",
+   "last": 28,
+   "not_last": 0
+  },
+  {
+   "run": "2349",
+   "herald": "psi+",
+   "last": 31,
+   "not_last": 0
+  },
+  {
+   "run": "2349",
+   "herald": "psi-",
+   "last": 24,
+   "not_last": 0
+  },
+  {
+   "run": "2302",
+   "herald": "psi+",
+   "last": 38,
+   "not_last": 0
+  },
+  {
+   "run": "2302",
+   "herald": "psi-",
+   "last": 40,
+   "not_last": 0
+  }
+ ],
+ "early": {
+  "1819": {
+   "early_cycles": 1120,
+   "parallel-pol pair, in window": 163,
+   "2+ distinct-detector clicks in attempt but not both in [5.5,23] us": 478,
+   "psi pattern in window but |tau|>1us": 415,
+   "qualifying psi (main table)": 63,
+   ">2 clicks in window": 1
+  },
+  "1856": {
+   "early_cycles": 1133,
+   "2+ distinct-detector clicks in attempt but not both in [5.5,23] us": 466,
+   "psi pattern in window but |tau|>1us": 405,
+   "parallel-pol pair, in window": 185,
+   "qualifying psi (main table)": 77
+  },
+  "1920": {
+   "early_cycles": 1243,
+   "psi pattern in window but |tau|>1us": 470,
+   "2+ distinct-detector clicks in attempt but not both in [5.5,23] us": 532,
+   "qualifying psi (main table)": 55,
+   "parallel-pol pair, in window": 184,
+   "1 detector click(s) in [0,60] us of last attempt": 1,
+   ">2 clicks in window": 1
+  },
+  "2143": {
+   "early_cycles": 1195,
+   "psi pattern in window but |tau|>1us": 408,
+   "2+ distinct-detector clicks in attempt but not both in [5.5,23] us": 559,
+   "parallel-pol pair, in window": 178,
+   "qualifying psi (main table)": 47,
+   "1 detector click(s) in [0,60] us of last attempt": 3
+  },
+  "2243": {
+   "early_cycles": 1199,
+   "2+ distinct-detector clicks in attempt but not both in [5.5,23] us": 543,
+   "psi pattern in window but |tau|>1us": 415,
+   "parallel-pol pair, in window": 164,
+   "qualifying psi (main table)": 75,
+   ">2 clicks in window": 2
+  },
+  "0014": {
+   "early_cycles": 1087,
+   "2+ distinct-detector clicks in attempt but not both in [5.5,23] us": 493,
+   "psi pattern in window but |tau|>1us": 360,
+   "parallel-pol pair, in window": 172,
+   "qualifying psi (main table)": 61,
+   "1 detector click(s) in [0,60] us of last attempt": 1
+  },
+  "2203": {
+   "early_cycles": 1121,
+   "2+ distinct-detector clicks in attempt but not both in [5.5,23] us": 543,
+   "qualifying psi (main table)": 57,
+   "psi pattern in window but |tau|>1us": 373,
+   "parallel-pol pair, in window": 148
+  },
+  "2349": {
+   "early_cycles": 1113,
+   "psi pattern in window but |tau|>1us": 390,
+   "2+ distinct-detector clicks in attempt but not both in [5.5,23] us": 508,
+   "qualifying psi (main table)": 55,
+   "parallel-pol pair, in window": 158,
+   "1 detector click(s) in [0,60] us of last attempt": 2
+  },
+  "2302": {
+   "early_cycles": 1231,
+   "2+ distinct-detector clicks in attempt but not both in [5.5,23] us": 533,
+   "parallel-pol pair, in window": 164,
+   "psi pattern in window but |tau|>1us": 457,
+   "qualifying psi (main table)": 74,
+   "1 detector click(s) in [0,60] us of last attempt": 2,
+   ">2 clicks in window": 1
+  }
+ },
+ "early_total": {
+  "parallel-pol pair, in window": 1516,
+  "2+ distinct-detector clicks in attempt but not both in [5.5,23] us": 4655,
+  "psi pattern in window but |tau|>1us": 3693,
+  "qualifying psi (main table)": 564,
+  ">2 clicks in window": 5,
+  "1 detector click(s) in [0,60] us of last attempt": 9
+ }
+}

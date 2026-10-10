@@ -1,0 +1,4 @@
+(1) ideal gates: max |F_circuit - F_closed| = 5.55e-16, max |p_succ diff| = 6.66e-16
+(2) gate error e=0.003: max |circuit - surrogate((1-e)F'+e/4)| = 0.0024 at (F1,F2,circ,surr)=(0.85, 0.99, np.float64(0.9363), 0.9387)
+(2) gate error e=0.005: max |circuit - surrogate((1-e)F'+e/4)| = 0.0040 at (F1,F2,circ,surr)=(0.85, 0.99, np.float64(0.9333), 0.9373)
+(2) gate error e=0.01: max |circuit - surrogate((1-e)F'+e/4)| = 0.0079 at (F1,F2,circ,surr)=(0.85, 0.99, np.float64(0.926), 0.9339)

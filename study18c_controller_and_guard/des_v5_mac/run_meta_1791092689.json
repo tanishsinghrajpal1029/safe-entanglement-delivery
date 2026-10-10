@@ -1,0 +1,46 @@
+{
+ "script": "drift_queue_des_v5.py",
+ "v4_sha": "cc954805fc279f39e467c0f54141903e642a7df106dd3f3e69849bd8b79fadd9",
+ "self_sha": "49e10e8adf5d86acaf8e9fb90d089011b8a779df0e7bcbc6266ae101c29a0711",
+ "python": "3.9.23",
+ "numpy": "1.22.4",
+ "horizon": 300.0,
+ "paths": 16,
+ "workers": 17,
+ "smoke": false,
+ "grid": {
+  "rho": [
+   0.03,
+   0.1,
+   0.3
+  ],
+  "T": [
+   10.0,
+   30.0,
+   100.0,
+   300.0
+  ],
+  "margin": [
+   0.005,
+   0.0125,
+   0.025,
+   0.04,
+   0.06
+  ],
+  "est": [
+   "static",
+   "reset",
+   "ols_reset"
+  ],
+  "D": [
+   0.25,
+   1.0
+  ]
+ },
+ "combos": [
+  "(('ion_2020', 2, True), 1e-05, 0.9)",
+  "(('ion_2020', 2, True), 0.0001, 0.9)",
+  "(('ion_proj', 3, True), 1e-05, 0.9)",
+  "(('ion_proj', 3, True), 0.0001, 0.9)"
+ ]
+}

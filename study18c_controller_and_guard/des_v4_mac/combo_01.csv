@@ -1,0 +1,4 @@
+combo,preset,L,drift_g,load,policy,dev_settings_tried,oracle_qual_per_s,oracle_miss,oracle_latency_ms,rho,T_s,margin,EVAL_qual_frac_of_oracle,EVAL_r_cond_pct,EVAL_delivered,EVAL_miss,EVAL_latency_ms,note
+1,ion_2020,2,1e-05,0.9,fixed,18,4.8562,0.3769,191.4,0.1,300.0,0.0125,0.0518,3.05,623.0,0.6348,221.3,
+1,ion_2020,2,1e-05,0.9,opportunistic,6,4.8562,0.3769,191.4,,,,,,,,,no dev setting met r_cond<=1%
+1,ion_2020,2,1e-05,0.9,hybrid,18,4.8562,0.3769,191.4,0.1,300.0,0.0125,0.0501,1.351,592.0,0.6356,221.4,

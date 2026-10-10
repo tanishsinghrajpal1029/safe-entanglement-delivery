@@ -1,0 +1,20 @@
+tasks: 1536 (expected 1536)
+ctrl             cal  gcarry  gexact  gpersist
+hw      scen                                  
+ion2020 D     0.8486  0.7273  0.7219    0.8053
+        Dj    0.8480  0.7285  0.7250    0.7994
+        Djb   0.8752  0.7506  0.7496    0.7684
+ionproj D     0.9516  0.7666  0.7612    0.8998
+        Dj    0.9489  0.7658  0.7630    0.8923
+        Djb   0.9676  0.8152  0.8152    0.8957
+
+B1 (primary, safety) gcarry in all 6 cells (D, Dj, Djb x 2 hw): r <= 1%, UB <= 1%, bad paths <= 5%: PASS (bad pairs 0 in 1836164)
+B2 (primary, Prop. 7 prediction) carrying the previous cycle buys little: gcarry - gexact, 90% CI inside [-2, +2]: PASS (gain +0.30 points, 90% CI [+0.22, +0.38], cells [0.54, 0.35, 0.09, 0.54, 0.27, 0.0])
+B3 (secondary, replication of G5) gpersist delivers bad pairs whenever re-alignment jitters (all 4 Dj/Djb cells bad > 0): CONFIRMED (bad [55, 1251, 204, 3002], r % [0.0229, 0.48, 0.0462, 0.7004])
+B4 (descriptive) gexact safe in all 6 cells: True (bad 0); cost vs no guard (cal) per cell:
+  ('ion2020', 'D'): gexact -12.67, gcarry -12.13 points vs cal
+  ('ion2020', 'Dj'): gexact -12.30, gcarry -11.95 points vs cal
+  ('ion2020', 'Djb'): gexact -12.55, gcarry -12.46 points vs cal
+  ('ionproj', 'D'): gexact -19.04, gcarry -18.51 points vs cal
+  ('ionproj', 'Dj'): gexact -18.58, gcarry -18.31 points vs cal
+  ('ionproj', 'Djb'): gexact -15.24, gcarry -15.24 points vs cal

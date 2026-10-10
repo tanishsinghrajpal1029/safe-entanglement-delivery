@@ -1,0 +1,10 @@
+{
+ "script": "drift_queue_des_v8.py",
+ "self_sha": "5e165d38137f28b4a9b70fd9ae2c9efce070cc583fcb072ae1a27ee742d64106",
+ "v6_sha": "3dac7de579d88e3fda6790abf1464cbaed3cb02a3564a536f7ecf79cb47f81ac",
+ "python": "3.9.23",
+ "numpy": "1.22.4",
+ "workers": 17,
+ "smoke": false,
+ "n_tasks": 1872
+}

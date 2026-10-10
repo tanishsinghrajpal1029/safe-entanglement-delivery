@@ -1,0 +1,14 @@
+{
+ "module": "drift_queue_des_final",
+ "module_sha": "40ee6079b18ed58c3f39e343b4e06e7ee0fc9158bff9e0724b7357ef16f2935a",
+ "runner_sha": "f5eca179c1f1728e6da64a397d9aa27e760ac737fe8802971f4a6bf40f933602",
+ "tasks_sha": "50fe0d1f7339f93170b8c773674f89fcefdd37ed45cd24301507c853f333d929",
+ "shard": 12,
+ "nshards": 24,
+ "n": 1120,
+ "workers": 16,
+ "host": "r252.ib.bridges2.psc.edu",
+ "python": "3.12.7",
+ "start": "2026-10-05T17:24:30Z",
+ "elapsed_s": 1322.9
+}

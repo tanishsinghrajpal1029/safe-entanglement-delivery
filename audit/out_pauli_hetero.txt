@@ -1,0 +1,13 @@
+trials 4000 | max spread of true F across Bell outcomes within a trial: 0.249518
+F>=0.95: n=236 max|err|=0.0002  Pauli overestimates (err>1e-9) in 24 rows; max overestimate 0.00003
+F>=0.9: n=2826 max|err|=0.0013  Pauli overestimates (err>1e-9) in 306 rows; max overestimate 0.00023
+F>=0.85: n=8470 max|err|=0.0034  Pauli overestimates (err>1e-9) in 790 rows; max overestimate 0.00171
+F>=0.8: n=14618 max|err|=0.0121  Pauli overestimates (err>1e-9) in 1424 rows; max overestimate 0.00369
+rows where Pauli says >=0.9 but truth <0.9 (would be a BAD delivery): 0
+rows where Pauli says <0.9 but truth >=0.9 (lost goodput): 2 of 40012
+avg F in [0.95,1.01): trials=47 max outcome spread=0.00011 median=0.000014
+avg F in [0.9,0.95): trials=393 max outcome spread=0.00088 median=0.000029
+avg F in [0.85,0.9): trials=656 max outcome spread=0.00471 median=0.000104
+avg F in [0.8,0.85): trials=594 max outcome spread=0.01038 median=0.000399
+avg F in [0.6,0.8): trials=1365 max outcome spread=0.04025 median=0.001908
+avg F in [0,0.6): trials=945 max outcome spread=0.24952 median=0.015326

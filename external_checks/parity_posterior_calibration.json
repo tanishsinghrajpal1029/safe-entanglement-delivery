@@ -1,0 +1,79 @@
+{
+ "source": "../../../Files11-EndToEnd-PRX/prx_work/21_live_parity_law/runs",
+ "cells": 1080,
+ "seeds": 20,
+ "shots_total": 32400,
+ "optimistic_tail_rate_at_0.01": 0.008333333333333333,
+ "pessimistic_tail_rate_at_0.01": 0.004629629629629629,
+ "optimistic_tail_rate_at_0.05": 0.05092592592592592,
+ "pessimistic_tail_rate_at_0.05": 0.075,
+ "optimistic_tail_rate_at_0.1": 0.09074074074074075,
+ "pessimistic_tail_rate_at_0.1": 0.10740740740740741,
+ "coverage_90": 0.8740740740740741,
+ "coverage_95": 0.9592592592592593,
+ "pit_decile_counts": [
+  116,
+  97,
+  154,
+  48,
+  129,
+  124,
+  90,
+  143,
+  81,
+  98
+ ],
+ "ks_D_obs": 0.05042242096734262,
+ "ks_D_null_p_value": 0.735,
+ "opt_tail_1pct_null_mean": 0.010302777777777777,
+ "opt_tail_1pct_null_p_upper": 0.771,
+ "coverage_95_null_mean": 0.9548291666666666,
+ "coverage_95_null_p_lower": 0.768,
+ "by_basis_hold": {
+  "X@0us": {
+   "cells": 120,
+   "opt_tail_1pct": 0.008333333333333333,
+   "cov95": 0.9916666666666667
+  },
+  "X@200us": {
+   "cells": 120,
+   "opt_tail_1pct": 0.008333333333333333,
+   "cov95": 0.925
+  },
+  "X@800us": {
+   "cells": 120,
+   "opt_tail_1pct": 0.008333333333333333,
+   "cov95": 0.95
+  },
+  "Y@0us": {
+   "cells": 120,
+   "opt_tail_1pct": 0.0,
+   "cov95": 0.9833333333333333
+  },
+  "Y@200us": {
+   "cells": 120,
+   "opt_tail_1pct": 0.008333333333333333,
+   "cov95": 0.9583333333333334
+  },
+  "Y@800us": {
+   "cells": 120,
+   "opt_tail_1pct": 0.008333333333333333,
+   "cov95": 0.9583333333333334
+  },
+  "Z@0us": {
+   "cells": 120,
+   "opt_tail_1pct": 0.0,
+   "cov95": 1.0
+  },
+  "Z@200us": {
+   "cells": 120,
+   "opt_tail_1pct": 0.008333333333333333,
+   "cov95": 0.9333333333333333
+  },
+  "Z@800us": {
+   "cells": 120,
+   "opt_tail_1pct": 0.025,
+   "cov95": 0.9333333333333333
+  }
+ }
+}

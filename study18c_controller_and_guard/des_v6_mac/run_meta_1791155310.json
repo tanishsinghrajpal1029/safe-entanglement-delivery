@@ -1,0 +1,12 @@
+{
+ "script": "drift_queue_des_v6.py",
+ "self_sha": "3dac7de579d88e3fda6790abf1464cbaed3cb02a3564a536f7ecf79cb47f81ac",
+ "v5_sha": "49e10e8adf5d86acaf8e9fb90d089011b8a779df0e7bcbc6266ae101c29a0711",
+ "v4_sha": "cc954805fc279f39e467c0f54141903e642a7df106dd3f3e69849bd8b79fadd9",
+ "python": "3.9.23",
+ "numpy": "1.22.4",
+ "paths": 32,
+ "horizon": 300.0,
+ "smoke": false,
+ "workers": 17
+}

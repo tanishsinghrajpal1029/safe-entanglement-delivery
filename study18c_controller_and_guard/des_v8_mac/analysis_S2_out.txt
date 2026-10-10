@@ -1,0 +1,30 @@
+all                    n=745 spearman(r_meas,r_kappa)=0.361  med|ln ratio|(bad>0)=3.212  kappa range 0.000-575498709.623
+g=1e-09 ols_reset      n=149 spearman(r_meas,r_kappa)=-0.031  med|ln ratio|(bad>0)=4.647  kappa range 0.000-575498709.623
+g=1e-09 static         n= 89 spearman(r_meas,r_kappa)=0.799  med|ln ratio|(bad>0)=1.782  kappa range 0.000-276635969.099
+g=1e-05 ols_reset      n=151 spearman(r_meas,r_kappa)=0.070  med|ln ratio|(bad>0)=3.923  kappa range 0.000-173087221.464
+g=1e-05 static         n= 98 spearman(r_meas,r_kappa)=0.862  med|ln ratio|(bad>0)=1.547  kappa range 0.000-82570475.790
+g=0.0001 ols_reset     n=156 spearman(r_meas,r_kappa)=0.356  med|ln ratio|(bad>0)=3.619  kappa range 0.000-41573592.457
+g=0.0001 static        n=102 spearman(r_meas,r_kappa)=0.926  med|ln ratio|(bad>0)=1.681  kappa range 0.023-20.347
+                          power  r_meas
+z   kappa                              
+1.0 (0.0, 0.05]          0.7440  0.0012
+    (0.05, 0.1]          0.5620  0.0034
+    (0.1, 0.2]           0.4516  0.0075
+    (0.2, 0.4]           0.3599  0.0214
+    (0.4, 0.8]           0.2819  0.0614
+    (0.8, 1000000000.0]  0.1551  0.6585
+2.0 (0.0, 0.05]          0.3322  0.0000
+    (0.05, 0.1]          0.1549  0.0010
+    (0.1, 0.2]           0.1171  0.0032
+    (0.2, 0.4]           0.0790  0.0137
+    (0.4, 0.8]           0.0503  0.0313
+    (0.8, 1000000000.0]  0.0138  0.5088
+3.0 (0.0, 0.05]          0.0871  0.0000
+    (0.05, 0.1]          0.0309  0.0000
+    (0.1, 0.2]           0.0229  0.0000
+    (0.2, 0.4]           0.0118  0.0000
+    (0.4, 0.8]           0.0060  0.0189
+    (0.8, 1000000000.0]  0.0004  0.1282
+S2 z=1.0: power non-increasing=True, r_cond non-decreasing=True; bins n=[24, 24, 31, 35, 34]
+S2 z=2.0: power non-increasing=True, r_cond non-decreasing=True; bins n=[28, 24, 34, 31, 33]
+S2: PASS

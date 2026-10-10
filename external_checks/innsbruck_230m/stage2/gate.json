@@ -1,0 +1,462 @@
+{
+ "description": "E63 Stage 2 decoding gate numbers (G3). Main table: coincidence |tau|<=1 us, both clicks in [5.5,23] us after the BSM ch0 (Node B Raman-start) trigger; psi+ = same-output pairs (ch2,ch6),(ch4,ch5); psi- = orthogonal cross pairs (ch2,ch5),(ch4,ch6).",
+ "n_total": 581,
+ "per_run": {
+  "0014": 61,
+  "1819": 65,
+  "1856": 81,
+  "1920": 56,
+  "2143": 48,
+  "2203": 59,
+  "2243": 78,
+  "2302": 78,
+  "2349": 55
+ },
+ "per_herald": {
+  "psi+": 324,
+  "psi-": 257
+ },
+ "F_plus": 0.8998048568381823,
+ "F_minus": 0.8373587402958083,
+ "phi_joint_deg": 265.3,
+ "F_definition": "MLE (R rho R) two-qubit state per herald from 9 basis settings; fidelity to |Psi+-(phi)>=(|01>+-e^{i phi}|10>)/sqrt2 with ONE phi optimised jointly for both heralds (paper: phi optimised, then fixed). |0>=|D> (bright after mapping pulse), |1>=|D_prime> (dark).",
+ "F_plus_own_phi": 0.9067694661139792,
+ "F_minus_own_phi": 0.8451672245316381,
+ "F_plus_lin_own_phi": 0.9240358959713064,
+ "F_minus_lin_own_phi": 0.861364856298481,
+ "F_plus_maxME": 0.9269914382667322,
+ "F_minus_maxME": 0.8483067407069261,
+ "min_eig_linear_inversion": {
+  "psi+": -0.13351155968732217,
+  "psi-": -0.1339874229955913
+ },
+ "counts_by_setting": {
+  "psi+": {
+   "XX": [
+    [
+     11,
+     9
+    ],
+    [
+     18,
+     7
+    ]
+   ],
+   "XY": [
+    [
+     18,
+     0
+    ],
+    [
+     3,
+     15
+    ]
+   ],
+   "XZ": [
+    [
+     2,
+     11
+    ],
+    [
+     7,
+     4
+    ]
+   ],
+   "YX": [
+    [
+     1,
+     15
+    ],
+    [
+     15,
+     0
+    ]
+   ],
+   "YY": [
+    [
+     4,
+     15
+    ],
+    [
+     10,
+     9
+    ]
+   ],
+   "YZ": [
+    [
+     13,
+     2
+    ],
+    [
+     9,
+     7
+    ]
+   ],
+   "ZX": [
+    [
+     12,
+     9
+    ],
+    [
+     14,
+     8
+    ]
+   ],
+   "ZY": [
+    [
+     12,
+     8
+    ],
+    [
+     10,
+     5
+    ]
+   ],
+   "ZZ": [
+    [
+     1,
+     22
+    ],
+    [
+     16,
+     2
+    ]
+   ]
+  },
+  "psi-": {
+   "XX": [
+    [
+     4,
+     12
+    ],
+    [
+     9,
+     8
+    ]
+   ],
+   "XY": [
+    [
+     1,
+     8
+    ],
+    [
+     13,
+     3
+    ]
+   ],
+   "XZ": [
+    [
+     6,
+     7
+    ],
+    [
+     7,
+     4
+    ]
+   ],
+   "YX": [
+    [
+     11,
+     1
+    ],
+    [
+     0,
+     12
+    ]
+   ],
+   "YY": [
+    [
+     8,
+     8
+    ],
+    [
+     11,
+     13
+    ]
+   ],
+   "YZ": [
+    [
+     4,
+     11
+    ],
+    [
+     7,
+     6
+    ]
+   ],
+   "ZX": [
+    [
+     10,
+     9
+    ],
+    [
+     9,
+     10
+    ]
+   ],
+   "ZY": [
+    [
+     3,
+     7
+    ],
+    [
+     5,
+     6
+    ]
+   ],
+   "ZZ": [
+    [
+     1,
+     10
+    ],
+    [
+     12,
+     1
+    ]
+   ]
+  }
+ },
+ "bootstrap": {
+  "n": 1000,
+  "seed": 20261007,
+  "scheme": "resample events with replacement within each run",
+  "psi+": {
+   "se": 0.03824223221803318,
+   "p16": 0.8496253168234853,
+   "p84": 0.9261383736236003
+  },
+  "psi-": {
+   "se": 0.05848979653119649,
+   "p16": 0.7590252760289493,
+   "p84": 0.8787226793037373
+  },
+  "psi+_own": {
+   "se": 0.037955316787251184,
+   "p16": 0.8597477897376125,
+   "p84": 0.9327254679680747
+  },
+  "psi-_own": {
+   "se": 0.057771366567794476,
+   "p16": 0.771242391001821,
+   "p84": 0.8872068346598944
+  }
+ },
+ "rejected_handedness_candidate": {
+  "note": "Node B Y-axis sign flipped (equivalently X<->Y relabelling at B): unphysical",
+  "F_plus": 0.36752991087560355,
+  "F_minus": 0.4470017784128262,
+  "min_eig_lin": {
+   "psi+": -0.45361791069935664,
+   "psi-": -0.3671228891027324
+  }
+ },
+ "sensitivity_report_only": {
+  "thrA30": {
+   "n": 581,
+   "n_plus": 324,
+   "n_minus": 257,
+   "Fp_joint": 0.8998048568381823,
+   "Fm_joint": 0.8373587402958083,
+   "Fp_own": 0.9067694661139792,
+   "Fm_own": 0.8451672245316381,
+   "phi_joint": 265.3
+  },
+  "thrA44": {
+   "n": 581,
+   "n_plus": 324,
+   "n_minus": 257,
+   "Fp_joint": 0.8998048568381823,
+   "Fm_joint": 0.8373587402958083,
+   "Fp_own": 0.9067694661139792,
+   "Fm_own": 0.8451672245316381,
+   "phi_joint": 265.3
+  },
+  "thrB3": {
+   "n": 581,
+   "n_plus": 324,
+   "n_minus": 257,
+   "Fp_joint": 0.8998048568381823,
+   "Fm_joint": 0.8373587402958083,
+   "Fp_own": 0.9067694661139792,
+   "Fm_own": 0.8451672245316381,
+   "phi_joint": 265.3
+  },
+  "thrB6": {
+   "n": 581,
+   "n_plus": 324,
+   "n_minus": 257,
+   "Fp_joint": 0.8996677146059145,
+   "Fm_joint": 0.8388508279125845,
+   "Fp_own": 0.9067694661139792,
+   "Fm_own": 0.8467491363990582,
+   "phi_joint": 265.40000000000003
+  },
+  "win-0.5": {
+   "n": 586,
+   "n_plus": 327,
+   "n_minus": 259,
+   "Fp_joint": 0.8851222470254309,
+   "Fm_joint": 0.8367567513712652,
+   "Fp_own": 0.8926943492033109,
+   "Fm_own": 0.8449176279557914,
+   "phi_joint": 264.90000000000003
+  },
+  "win+0.5": {
+   "n": 573,
+   "n_plus": 323,
+   "n_minus": 250,
+   "Fp_joint": 0.9005730347790325,
+   "Fm_joint": 0.8334520968271127,
+   "Fp_own": 0.9065956176634419,
+   "Fm_own": 0.8400038899292857,
+   "phi_joint": 264.70000000000005
+  },
+  "T0.75": {
+   "n": 443,
+   "n_plus": 255,
+   "n_minus": 188,
+   "Fp_joint": 0.8882240265948893,
+   "Fm_joint": 0.8702452132794847,
+   "Fp_own": 0.895187094960994,
+   "Fm_own": 0.877333284558565,
+   "phi_joint": 263.4
+  },
+  "T1.5": {
+   "n": 882,
+   "n_plus": 487,
+   "n_minus": 395,
+   "Fp_joint": 0.8249709521551178,
+   "Fm_joint": 0.794252652304573,
+   "Fp_own": 0.8285914844688297,
+   "Fm_own": 0.7985658768598267,
+   "phi_joint": 261.40000000000003
+  },
+  "T17.5": {
+   "n": 4490,
+   "n_plus": 2574,
+   "n_minus": 1916,
+   "Fp_joint": 0.5966005704607269,
+   "Fm_joint": 0.584578305110261,
+   "Fp_own": 0.5968964664515404,
+   "Fm_own": 0.5848574496462446,
+   "phi_joint": 259.6
+  }
+ },
+ "bookkeeping": [
+  {
+   "run": "1819",
+   "segs": 387,
+   "valid_segs": 373,
+   "first_valid_seg": 14,
+   "holes": [],
+   "in_window_2click_terminal": 686,
+   "kept": 670
+  },
+  {
+   "run": "1856",
+   "segs": 379,
+   "valid_segs": 376,
+   "first_valid_seg": 3,
+   "holes": [],
+   "in_window_2click_terminal": 710,
+   "kept": 702
+  },
+  {
+   "run": "1920",
+   "segs": 380,
+   "valid_segs": 377,
+   "first_valid_seg": 3,
+   "holes": [],
+   "in_window_2click_terminal": 760,
+   "kept": 749
+  },
+  {
+   "run": "2143",
+   "segs": 380,
+   "valid_segs": 377,
+   "first_valid_seg": 3,
+   "holes": [],
+   "in_window_2click_terminal": 667,
+   "kept": 664
+  },
+  {
+   "run": "2243",
+   "segs": 398,
+   "valid_segs": 395,
+   "first_valid_seg": 3,
+   "holes": [],
+   "in_window_2click_terminal": 695,
+   "kept": 693
+  },
+  {
+   "run": "0014",
+   "segs": 380,
+   "valid_segs": 377,
+   "first_valid_seg": 3,
+   "holes": [],
+   "in_window_2click_terminal": 623,
+   "kept": 618
+  },
+  {
+   "run": "2203",
+   "segs": 380,
+   "valid_segs": 377,
+   "first_valid_seg": 3,
+   "holes": [],
+   "in_window_2click_terminal": 609,
+   "kept": 608
+  },
+  {
+   "run": "2349",
+   "segs": 381,
+   "valid_segs": 378,
+   "first_valid_seg": 3,
+   "holes": [],
+   "in_window_2click_terminal": 637,
+   "kept": 637
+  },
+  {
+   "run": "2302",
+   "segs": 380,
+   "valid_segs": 377,
+   "first_valid_seg": 3,
+   "holes": [],
+   "in_window_2click_terminal": 738,
+   "kept": 731
+  }
+ ],
+ "paper_reference": {
+  "n_1us": 491,
+  "F_plus_1us": 0.882,
+  "F_minus_1us": 0.822,
+  "n_17p5us": 3960,
+  "F_plus_17p5": 0.587,
+  "F_minus_17p5": 0.58,
+  "attempts": 13656928
+ },
+ "G3": {
+  "count_within_10pct": false,
+  "F_plus_within_0p06": true,
+  "F_minus_within_0p06": true
+ },
+ "sha256": {
+  "events_csv": "bea45cf8161a7da81792907cce287bd06e92b6b299c1380965992973e8d1bcaa",
+  "runs_csv": "f5f6e20dabdf4aca4d27d60a226a8668114889a54646d6784c071d2e602f5d66",
+  "common.py": "61118bfbfbc7058396a3f0822218a077f2e480099cb0b6cc90967b9eca371020",
+  "s01_cache_tags.py": "98d6ce11b1075f2c7eeec290762da85f754487db216531dfbbeed62d8eaa4d82",
+  "s02_bsm_cycles.py": "cd33155a700291232219aed3600ca406188a4ca4fa31dbdb021749c45c0c8847",
+  "s03_nodeA_raw.py": "32fade252cada097b9b36e9447658deab30c56dbd0b3db1d6c3048fd9a6f3291",
+  "s04_match_A.py": "d52c44c8f6d19b43e6a2f917fc50e44fff28c0af0e9487317cf2099368284cc5",
+  "s04b_match_A_strict.py": "2387a9c4750c25a5d74f8b1f3c30a7b9fdd20281ec2b3056ca2441197423d75d",
+  "s05_patterns.py": "df74411449c7a05982a9e162b4c14ff9959df0c96fe582301a6b3e59560fc1eb",
+  "s06_coinc.py": "7ec80f910bec72aa9f8139ee621b5405d314340bb8cf78a79131958fe44ecb10",
+  "s07_load_pmt.py": "d792581783c0c93b1e309deef4c097f681fd585a377b7ec188c51c78429b0c12",
+  "s08_events_raw.py": "cca108d526e08231ec91f6c45e0d73d133581b692b47e92444d48fd714d8bd04",
+  "s09_build_events.py": "e14a5b87bae574f3ee2e63d790558eebe9dc7a48efc77ac152106bf958cce061",
+  "s10_gate.py": "a12e8c0dfcce2f879f3cd1fed857e07a48f7402c06dd29ab4fae65a79ee30eb5",
+  "s11_boot_sens.py": "064bac682a2d2681f899e442a72aa450367e5631de81dd2a009c1f9e188765a4",
+  "s12_sens.py": "c53db07886e5e9940b8e76c5d919cc80f4c80a1044d0de899974d9d737864c6f",
+  "s13_write_gate.py": "3fc1b5139c4a603c8cb5521a80379842a98e199291064e14163b246dc0c79632",
+  "tomo.py": "093bdee71bdf788639ebdde0e673bcfb5c3fd1bcd7baa2395351cd52e11c76fc"
+ }
+}

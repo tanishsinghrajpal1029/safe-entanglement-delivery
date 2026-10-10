@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite them as below."
+title: "Safe entanglement delivery: label-free risk control and an anytime-valid per-user guard for quantum networks"
+authors:
+  - family-names: Rajpal
+    given-names: Tanish Singh
+    affiliation: "Carnegie Mellon University, Information Networking Institute"
+date-released: 2026-10-10
+license: MIT
+type: software

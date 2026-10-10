@@ -1,0 +1,377 @@
+{
+ "script": "22_external_checks/netsquid_t1t2_check.py",
+ "seed": 22201,
+ "trials": 1500,
+ "netsquid_version": "1.1.6",
+ "python": "3.9.23",
+ "platform": "macOS-27.0.1-x86_64-i386-64bit",
+ "elapsed_s": 76.9,
+ "t1t2_init_source": "    def __init__(self, T1=0, T2=0, **kwargs):\n        super().__init__(**kwargs)\n\n        def t1_constraint(t1):\n            if t1 < 0:\n                return False\n            t2 = self.properties.get('T2', 0)\n            if t1 == 0 or t2 == 0:\n                return True\n            if t2 > t1:\n                return False\n            return True\n\n        def t2_constraint(t2):\n            if t2 < 0:\n                return False\n            t1 = self.properties.get('T1', 0)\n            if t1 == 0 or t2 == 0:\n                return True\n            if t2 > t1:\n                return False\n            return True\n\n        self.add_property('T1', T1,\n                          value_type=(int, float),\n                          value_constraints=ValueConstraint(t1_constraint))\n        self.add_property('T2', T2,\n                          value_type=(int, float),\n                          value_constraints=ValueConstraint(t2_constraint))\n",
+ "rejected": {
+  "(0.5, 1.0)": "T1T2NoiseModel rejected: 1000000000.0: Value did not pass constraint check"
+ },
+ "part1_channel": {
+  "cases": [
+   {
+    "T1": "inf",
+    "T2": 1.0,
+    "t": 0.05,
+    "lam": 0.9,
+    "netsquid_route": "T1T2NoiseModel",
+    "max_abs_diff": 1.6653345369377348e-16
+   },
+   {
+    "T1": "inf",
+    "T2": 1.0,
+    "t": 0.3,
+    "lam": 0.95,
+    "netsquid_route": "T1T2NoiseModel",
+    "max_abs_diff": 1.6653345369377348e-16
+   },
+   {
+    "T1": "1.0",
+    "T2": 1.0,
+    "t": 0.05,
+    "lam": 0.9,
+    "netsquid_route": "T1T2NoiseModel",
+    "max_abs_diff": 1.1102230246251565e-16
+   },
+   {
+    "T1": "1.0",
+    "T2": 1.0,
+    "t": 0.3,
+    "lam": 0.8,
+    "netsquid_route": "T1T2NoiseModel",
+    "max_abs_diff": 1.1102230246251565e-16
+   },
+   {
+    "T1": "0.5",
+    "T2": 1.0,
+    "t": 0.05,
+    "lam": 0.9,
+    "netsquid_route": "primitives(amplitude_dampen+dephase)",
+    "max_abs_diff": 1.1102230246251565e-16
+   },
+   {
+    "T1": "0.5",
+    "T2": 1.0,
+    "t": 0.3,
+    "lam": 0.95,
+    "netsquid_route": "primitives(amplitude_dampen+dephase)",
+    "max_abs_diff": 2.220446049250313e-16
+   },
+   {
+    "T1": "2.0",
+    "T2": 1.0,
+    "t": 0.2,
+    "lam": 0.85,
+    "netsquid_route": "T1T2NoiseModel",
+    "max_abs_diff": 1.6653345369377348e-16
+   },
+   {
+    "T1": "10.0",
+    "T2": 1.0,
+    "t": 0.1,
+    "lam": 0.9,
+    "netsquid_route": "T1T2NoiseModel",
+    "max_abs_diff": 5.551115123125783e-17
+   }
+  ],
+  "max_abs_diff": 2.220446049250313e-16,
+  "pass_": true
+ },
+ "part2_end_to_end": {
+  "cases": [
+   {
+    "L": 3,
+    "memory": "deph",
+    "netsquid_route": "T1T2NoiseModel",
+    "e": 0.005,
+    "successes": 1198,
+    "F_netsquid": 0.8908222160638073,
+    "se": 2.0171995953871305e-17,
+    "F_exact": 0.890822216063807,
+    "diff": 3.3306690738754696e-16,
+    "pass_": true
+   },
+   {
+    "L": 3,
+    "memory": "T1eqT2",
+    "netsquid_route": "T1T2NoiseModel",
+    "e": 0.005,
+    "successes": 1148,
+    "F_netsquid": 0.8341455711431123,
+    "se": 3.1502122552970087e-06,
+    "F_exact": 0.8341458974592332,
+    "diff": -3.263161209021703e-07,
+    "pass_": true
+   },
+   {
+    "L": 1,
+    "memory": "AD",
+    "netsquid_route": "primitives(amplitude_dampen+dephase)",
+    "e": 0.005,
+    "successes": 1255,
+    "F_netsquid": 0.8678266795682994,
+    "se": 6.270345295488256e-18,
+    "F_exact": 0.8678266795682996,
+    "diff": -2.220446049250313e-16,
+    "pass_": true
+   },
+   {
+    "L": 2,
+    "memory": "deph",
+    "netsquid_route": "T1T2NoiseModel",
+    "e": 0.005,
+    "successes": 1121,
+    "F_netsquid": 0.8862788763213987,
+    "se": 3.3174258044343756e-18,
+    "F_exact": 0.8862788763213989,
+    "diff": -2.220446049250313e-16,
+    "pass_": true
+   },
+   {
+    "L": 1,
+    "memory": "T1eqT2",
+    "netsquid_route": "T1T2NoiseModel",
+    "e": 0.005,
+    "successes": 1357,
+    "F_netsquid": 0.9433227258574013,
+    "se": 3.0149518803400024e-18,
+    "F_exact": 0.9433227258574013,
+    "diff": 0.0,
+    "pass_": true
+   },
+   {
+    "L": 3,
+    "memory": "AD",
+    "netsquid_route": "primitives(amplitude_dampen+dephase)",
+    "e": 0.003,
+    "successes": 978,
+    "F_netsquid": 0.6561402965490646,
+    "se": 3.97376896729203e-05,
+    "F_exact": 0.6560554428606792,
+    "diff": 8.485368838540008e-05,
+    "pass_": true
+   },
+   {
+    "L": 1,
+    "memory": "deph",
+    "netsquid_route": "T1T2NoiseModel",
+    "e": 0.003,
+    "successes": 1445,
+    "F_netsquid": 0.9762796120032211,
+    "se": 5.8432790769745086e-18,
+    "F_exact": 0.976279612003221,
+    "diff": 1.1102230246251565e-16,
+    "pass_": true
+   },
+   {
+    "L": 1,
+    "memory": "T1eqT2",
+    "netsquid_route": "T1T2NoiseModel",
+    "e": 0.003,
+    "successes": 1328,
+    "F_netsquid": 0.922746881285607,
+    "se": 0.0,
+    "F_exact": 0.9227468812856071,
+    "diff": -1.1102230246251565e-16,
+    "pass_": true
+   },
+   {
+    "L": 2,
+    "memory": "AD",
+    "netsquid_route": "primitives(amplitude_dampen+dephase)",
+    "e": 0.003,
+    "successes": 1127,
+    "F_netsquid": 0.7883563108207953,
+    "se": 9.978084640656895e-05,
+    "F_exact": 0.7883949354844032,
+    "diff": -3.8624663607933485e-05,
+    "pass_": true
+   },
+   {
+    "L": 2,
+    "memory": "deph",
+    "netsquid_route": "T1T2NoiseModel",
+    "e": 0.003,
+    "successes": 1305,
+    "F_netsquid": 0.9280433862998134,
+    "se": 3.0744783142783802e-18,
+    "F_exact": 0.9280433862998135,
+    "diff": -1.1102230246251565e-16,
+    "pass_": true
+   },
+   {
+    "L": 2,
+    "memory": "T1eqT2",
+    "netsquid_route": "T1T2NoiseModel",
+    "e": 0.005,
+    "successes": 1119,
+    "F_netsquid": 0.8087316236793215,
+    "se": 1.950501587282202e-06,
+    "F_exact": 0.808732847824451,
+    "diff": -1.2241451294858763e-06,
+    "pass_": true
+   },
+   {
+    "L": 2,
+    "memory": "AD",
+    "netsquid_route": "primitives(amplitude_dampen+dephase)",
+    "e": 0.005,
+    "successes": 1109,
+    "F_netsquid": 0.7647706627248091,
+    "se": 9.09087589179485e-05,
+    "F_exact": 0.7647788486337004,
+    "diff": -8.18590889128945e-06,
+    "pass_": true
+   },
+   {
+    "L": 3,
+    "memory": "deph",
+    "netsquid_route": "T1T2NoiseModel",
+    "e": 0.005,
+    "successes": 1030,
+    "F_netsquid": 0.8165377472645416,
+    "se": 1.6747676965375588e-17,
+    "F_exact": 0.816537747264542,
+    "diff": -3.3306690738754696e-16,
+    "pass_": true
+   },
+   {
+    "L": 2,
+    "memory": "T1eqT2",
+    "netsquid_route": "T1T2NoiseModel",
+    "e": 0.003,
+    "successes": 1128,
+    "F_netsquid": 0.8243529095423999,
+    "se": 4.9379970819542714e-06,
+    "F_exact": 0.824355261163584,
+    "diff": -2.351621184115693e-06,
+    "pass_": true
+   },
+   {
+    "L": 2,
+    "memory": "AD",
+    "netsquid_route": "primitives(amplitude_dampen+dephase)",
+    "e": 0.003,
+    "successes": 1075,
+    "F_netsquid": 0.7760147841484262,
+    "se": 2.335685190403277e-18,
+    "F_exact": 0.7760147841484263,
+    "diff": -1.1102230246251565e-16,
+    "pass_": true
+   },
+   {
+    "L": 1,
+    "memory": "deph",
+    "netsquid_route": "T1T2NoiseModel",
+    "e": 0.005,
+    "successes": 1364,
+    "F_netsquid": 0.9581998057737621,
+    "se": 3.0071999251195885e-18,
+    "F_exact": 0.9581998057737624,
+    "diff": -3.3306690738754696e-16,
+    "pass_": true
+   },
+   {
+    "L": 1,
+    "memory": "T1eqT2",
+    "netsquid_route": "T1T2NoiseModel",
+    "e": 0.005,
+    "successes": 1382,
+    "F_netsquid": 0.9541208516134412,
+    "se": 5.975075346739408e-18,
+    "F_exact": 0.9541208516134412,
+    "diff": 0.0,
+    "pass_": true
+   },
+   {
+    "L": 3,
+    "memory": "AD",
+    "netsquid_route": "primitives(amplitude_dampen+dephase)",
+    "e": 0.005,
+    "successes": 1272,
+    "F_netsquid": 0.889787784374415,
+    "se": 1.128277707323875e-05,
+    "F_exact": 0.8897935774922444,
+    "diff": -5.793117829444583e-06,
+    "pass_": true
+   },
+   {
+    "L": 2,
+    "memory": "deph",
+    "netsquid_route": "T1T2NoiseModel",
+    "e": 0.005,
+    "successes": 1342,
+    "F_netsquid": 0.9652051317054882,
+    "se": 3.0317671355604166e-18,
+    "F_exact": 0.9652051317054884,
+    "diff": -2.220446049250313e-16,
+    "pass_": true
+   },
+   {
+    "L": 3,
+    "memory": "T1eqT2",
+    "netsquid_route": "T1T2NoiseModel",
+    "e": 0.003,
+    "successes": 991,
+    "F_netsquid": 0.70857795137915,
+    "se": 1.396763172541185e-05,
+    "F_exact": 0.7085684670592567,
+    "diff": 9.484319893338089e-06,
+    "pass_": true
+   },
+   {
+    "L": 3,
+    "memory": "AD",
+    "netsquid_route": "primitives(amplitude_dampen+dephase)",
+    "e": 0.005,
+    "successes": 1028,
+    "F_netsquid": 0.72771491931841,
+    "se": 1.576236716199809e-05,
+    "F_exact": 0.7277074337998001,
+    "diff": 7.48551860996205e-06,
+    "pass_": true
+   },
+   {
+    "L": 3,
+    "memory": "deph",
+    "netsquid_route": "T1T2NoiseModel",
+    "e": 0.005,
+    "successes": 1059,
+    "F_netsquid": 0.8425567096403909,
+    "se": 1.1788416575219504e-17,
+    "F_exact": 0.8425567096403908,
+    "diff": 1.1102230246251565e-16,
+    "pass_": true
+   },
+   {
+    "L": 1,
+    "memory": "T1eqT2",
+    "netsquid_route": "T1T2NoiseModel",
+    "e": 0.003,
+    "successes": 1409,
+    "F_netsquid": 0.9620864481734299,
+    "se": 5.9175086041143984e-18,
+    "F_exact": 0.96208644817343,
+    "diff": -1.1102230246251565e-16,
+    "pass_": true
+   },
+   {
+    "L": 3,
+    "memory": "AD",
+    "netsquid_route": "primitives(amplitude_dampen+dephase)",
+    "e": 0.003,
+    "successes": 1110,
+    "F_netsquid": 0.7846516181042484,
+    "se": 2.0057142141059564e-05,
+    "F_exact": 0.7846720100486094,
+    "diff": -2.039194436098679e-05,
+    "pass_": true
+   }
+  ],
+  "all_pass": true,
+  "max_abs_z": 2.1353452876558294
+ }
+}

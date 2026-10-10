@@ -1,0 +1,9 @@
+total heralded 21793
+M1 logL_ML=-28395.66 LI minEig=-0.4205 detT_LI=0.710
+  LI Fmax_any=0.5121(0.0083) Fphi*=0.4545 Fpsi*=0.5025 Phi+=-0.4139 Phi-=0.4541 Psi+=0.4861 Psi-=0.4737
+  ML Fmax_any=0.3812(0.0082) Fphi*=0.2968 Fpsi*=0.3745 Phi+=0.0021 Phi-=0.2967 Psi+=0.3640 Psi-=0.3372
+  MLeff Fmax_any=0.3812 r=0.7139 logL=-28090.64
+M2 logL_ML=-26735.66 LI minEig=-0.0122 detT_LI=-0.710
+  LI Fmax_any=0.9204(0.0042) Fphi*=0.9143 Fpsi*=0.0427 Phi+=0.9139 Phi-=0.0459 Psi+=0.0139 Psi-=0.0263
+  ML Fmax_any=0.9197(0.0041) Fphi*=0.9135 Fpsi*=0.0352 Phi+=0.9131 Phi-=0.0454 Psi+=0.0149 Psi-=0.0265
+  MLeff Fmax_any=0.9197 r=0.7139 logL=-26430.57

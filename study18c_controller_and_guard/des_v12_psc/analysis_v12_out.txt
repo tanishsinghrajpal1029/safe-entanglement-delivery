@@ -1,0 +1,15 @@
+    cell   g       est  oracle_qual  ad_qual  ad_bad  ad_r  S0_z  S0_qual  S0_bad  S0_r  S1_z  S1_qual  S1_bad  S1_r
+ion_2020 0.0    static        54758     8584       4 0.047   NaN        0       0 0.000   NaN        0       0 0.000
+ion_2020 0.0 ols_reset        54758     1163       0 0.000   NaN        0       0 0.000   NaN        0       0 0.000
+ion_2020 0.0    static        72157     2793       4 0.143   NaN        0       0 0.000   2.0     4000      33 0.818
+ion_2020 0.0 ols_reset        72157      137       1 0.725   NaN        0       0 0.000   NaN        0       0 0.000
+ion_2020 0.0 ols_reset        52229       28       0 0.000   NaN        0       0 0.000   NaN        0       0 0.000
+ion_proj 0.0    static       184766    33027      22 0.067   1.0    55724     345 0.615   1.0    55724     345 0.615
+ion_proj 0.0 ols_reset       184766     8612       0 0.000   NaN        0       0 0.000   NaN        0       0 0.000
+ion_proj 0.0    static       189155    22875      13 0.057   1.5    32695      92 0.281   1.0    46159     706 1.506
+ion_proj 0.0 ols_reset       189155     4518       0 0.000   NaN        0       0 0.000   NaN        0       0 0.000
+ion_proj 0.0 ols_reset       148609      690       0 0.000   NaN        0       0 0.000   NaN        0       0 0.000
+repro: v12 eval z=2 vs v11 fixed2, identical in 1.000 of 384 path-runs
+L1 (S0 LTT eval r<=1% in all 10 groups): 10/10 -> PASS
+L2 (S1 LTT violates in >=1 group: 1; adaptive safe in 10/10) -> PASS
+L3 (adaptive >= 0.8x LTT-S0 goodput where both safe): 0/2 -> FAIL

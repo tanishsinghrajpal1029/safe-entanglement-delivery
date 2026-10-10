@@ -1,0 +1,27 @@
+all                    n=534 spearman(r_meas,r_kappa)=0.861  med|ln ratio|(bad>0)=0.783  kappa range 0.000-100853624.415
+g=1e-09 ols_reset      n= 76 spearman(r_meas,r_kappa)=0.931  med|ln ratio|(bad>0)=1.270  kappa range 0.012-100853624.415
+g=1e-09 static         n= 86 spearman(r_meas,r_kappa)=0.899  med|ln ratio|(bad>0)=0.730  kappa range 0.006-2.010
+g=1e-05 ols_reset      n= 85 spearman(r_meas,r_kappa)=0.916  med|ln ratio|(bad>0)=0.870  kappa range 0.020-92947865.572
+g=1e-05 static         n= 96 spearman(r_meas,r_kappa)=0.754  med|ln ratio|(bad>0)=0.980  kappa range 0.014-5.253
+g=0.0001 ols_reset     n=101 spearman(r_meas,r_kappa)=0.795  med|ln ratio|(bad>0)=0.710  kappa range 0.000-19366968.259
+g=0.0001 static        n= 90 spearman(r_meas,r_kappa)=0.922  med|ln ratio|(bad>0)=0.588  kappa range 0.075-1.303
+                          power  r_meas
+z   kappa                              
+1.0 (0.0, 0.05]          0.9128  0.0006
+    (0.05, 0.1]          0.8258  0.0024
+    (0.1, 0.2]           0.7041  0.0050
+    (0.2, 0.4]           0.5297  0.0164
+    (0.4, 0.8]           0.3433  0.0519
+    (0.8, 1000000000.0]  0.0935  0.5395
+2.0 (0.0, 0.05]          0.7810  0.0000
+    (0.05, 0.1]          0.5906  0.0000
+    (0.1, 0.2]           0.3531  0.0000
+    (0.2, 0.4]           0.1461  0.0020
+    (0.4, 0.8]           0.0581  0.0149
+    (0.8, 1000000000.0]  0.0015  0.0855
+3.0 (0.0, 0.05]          0.5628  0.0000
+    (0.05, 0.1]          0.2105  0.0000
+    (0.1, 0.2]           0.0929  0.0000
+    (0.2, 0.4]           0.0202  0.0000
+    (0.4, 0.8]           0.0024  0.0000
+    (0.8, 1000000000.0]  0.0000  0.0000

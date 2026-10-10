@@ -1,0 +1,14 @@
+{
+ "module": "drift_queue_des_c2",
+ "module_sha": "0832684b21aebdb9231e49a05effb18738cf1a94bd0a4722946f54d96a263a59",
+ "runner_sha": "f5eca179c1f1728e6da64a397d9aa27e760ac737fe8802971f4a6bf40f933602",
+ "tasks_sha": "7b176bfbe7bebda872c2a9d615e14a5001382635803309d5bdb864172a9a242e",
+ "shard": 6,
+ "nshards": 16,
+ "n": 1040,
+ "workers": 32,
+ "host": "r277.ib.bridges2.psc.edu",
+ "python": "3.12.7",
+ "start": "2026-10-07T04:44:36Z",
+ "elapsed_s": 2164.1
+}

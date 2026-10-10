@@ -1,0 +1,44 @@
+ORACLE-qualified fraction at F_th=0.9 (perfect knowledge):
+ strategy     purify1    raw
+preset    L                
+aspir_cfg 1    1.000  1.000
+          2    1.000  1.000
+          3    1.000  1.000
+          4    1.000  1.000
+ion_2020  1    1.000  1.000
+          2    0.358  0.048
+          3    0.000  0.000
+          4    0.000  0.000
+ion_proj  1    1.000  1.000
+          2    1.000  0.995
+          3    0.804  0.271
+          4    0.040  0.000
+nv_2021   1    0.000  0.008
+          2    0.000  0.000
+          3    0.000  0.000
+          4    0.000  0.000
+
+Min calibration pairs/link (per drift period) to keep >=90% of oracle-qualified at r_cond<=1%, and overhead fraction:
+   preset  L strategy  n_needed  overhead
+aspir_cfg  1  purify1       300  0.000003
+aspir_cfg  1      raw       300  0.000003
+aspir_cfg  2  purify1       300  0.000003
+aspir_cfg  2      raw       300  0.000003
+aspir_cfg  3  purify1       300  0.000003
+aspir_cfg  3      raw       300  0.000003
+aspir_cfg  4  purify1       300  0.000003
+aspir_cfg  4      raw       300  0.000003
+ ion_2020  1  purify1       300  0.000165
+ ion_2020  1      raw       300  0.000165
+ ion_proj  1  purify1       300  0.000150
+ ion_proj  1      raw       300  0.000150
+ ion_proj  2  purify1       300  0.000150
+ ion_proj  2      raw       300  0.000150
+ ion_proj  3  purify1     10000  0.005000
+
+feasible cells NOT reaching 90% kept even at 1e5 pairs/link:
+   preset  L strategy  kept_frac
+ion_2020  2  purify1      0.814
+ion_2020  2      raw      0.573
+ion_proj  3      raw      0.803
+ion_proj  4  purify1      0.170

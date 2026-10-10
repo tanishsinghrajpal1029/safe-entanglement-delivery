@@ -1,0 +1,26 @@
+max |err| per-outcome, all cases: 0.1925  outcome-averaged: 0.1925
+cases with F>= 0.95: n=92  max|err| per outcome 0.0006   outcome-avg max|err| 0.0006
+cases with F>= 0.9: n=224  max|err| per outcome 0.0027   outcome-avg max|err| 0.0027
+cases with F>= 0.85: n=332  max|err| per outcome 0.0049   outcome-avg max|err| 0.0049
+cases with F>= 0.8: n=508  max|err| per outcome 0.0097   outcome-avg max|err| 0.0097
+cases with F>= 0.7: n=732  max|err| per outcome 0.0168   outcome-avg max|err| 0.0168
+cases with F>= 0.5: n=1024  max|err| per outcome 0.1925   outcome-avg max|err| 0.1925
+
+worst per-outcome cases with true F in [0.85,0.95]:
+  p  t_wait  T2_over_T1  t_after  outcome  prob  F_true  F_pauli     err
+0.0    0.05         2.0      0.1        3  0.25  0.8704   0.8656 -0.0049
+0.0    0.05         2.0      0.1        2  0.25  0.8704   0.8656 -0.0049
+0.0    0.05         2.0      0.1        1  0.25  0.8704   0.8656 -0.0049
+0.0    0.05         2.0      0.1        0  0.25  0.8704   0.8656 -0.0049
+0.0    0.02         2.0      0.1        0  0.25  0.8933   0.8901 -0.0032
+0.0    0.02         2.0      0.1        1  0.25  0.8933   0.8901 -0.0032
+0.0    0.02         2.0      0.1        2  0.25  0.8933   0.8901 -0.0032
+0.0    0.02         2.0      0.1        3  0.25  0.8933   0.8901 -0.0032
+
+sign of per-outcome error near threshold: Pauli overestimates in 0 of 240 cases
+threshold-0.9 misclassified (per-outcome) cases: 4 of 1296
+  p  t_wait  T2_over_T1  t_after  outcome  prob  F_true  F_pauli     err
+0.0    0.01         2.0      0.1        0  0.25  0.9013   0.8985 -0.0027
+0.0    0.01         2.0      0.1        1  0.25  0.9013   0.8985 -0.0027
+0.0    0.01         2.0      0.1        2  0.25  0.9013   0.8985 -0.0027
+0.0    0.01         2.0      0.1        3  0.25  0.9013   0.8985 -0.0027
