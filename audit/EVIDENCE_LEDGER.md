@@ -1576,3 +1576,12 @@ Details: `24_ai_v2_hardware/RESULTS_24.md`.
 **Exploratory, post hoc:** h_c(2) = 0.033 vs 0.036(8); max|E| = 0.884 vs 84(2)%; per-output C = 1.12e−2 vs 1.15(5)e−2.
 
 Details: `22_external_checks/icfo_2021/STAGE1_RESULT.md`.
+
+## E93 — Public release (10 Oct 2026)
+
+**GitHub:** https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery
+- Initial commit e0d2029.
+- ICFO Stage 1 commit 5aa185c.
+
+**Zenodo:** concept DOI 10.5281/zenodo.23287414 (all versions); v0.1.0 DOI 10.5281/zenodo.23287415.
+- From this release on, every pre-registration has a third-party timestamp.

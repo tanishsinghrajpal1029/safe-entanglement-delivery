@@ -1,5 +1,7 @@
 # Safe entanglement delivery: label-free risk control and an anytime-valid per-user guard for quantum networks
 
+[![DOI](https://zenodo.org/badge/1413586519.svg)](https://doi.org/10.5281/zenodo.23287414)
+
 Research code, pre-registrations, results and the audit ledger for an independent study at Carnegie Mellon University (Information Networking Institute).
 
 **Author:** Tanish Singh Rajpal.
@@ -55,4 +57,4 @@ Analysis code, simulations and documents were developed with substantial assista
 - Code: MIT (`LICENSE`).
 - Documents and results: CC BY 4.0.
 
-How to cite: `CITATION.cff`.
+How to cite: `CITATION.cff`. Archived on Zenodo: **doi:10.5281/zenodo.23287414** (all versions; v0.1.0 is doi:10.5281/zenodo.23287415).
