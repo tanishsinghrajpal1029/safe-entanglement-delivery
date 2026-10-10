@@ -9,7 +9,7 @@ Research code, pre-registrations, results and the audit trail for an independent
 **Status (October 2026):** a preprint is in preparation.
 - The evidence is mainly **simulation**: a discrete-event network simulator whose physics was cross-checked against NetSquid.
 - It is backed by **three pre-registered checks on public experimental data** (Innsbruck, ICFO, USTC).
-- One further pre-registered study, Study 25 ("realism"), is in progress.
+- A final pre-registered study, Study 25 ("realism"), tested model error, finite calibration, shared noise, network load and re-alignment: 9/9 primary tests passed; one secondary test failed (reported).
 
 ## The question
 A quantum network cannot inspect a delivered entangled pair without destroying it. Using only data the network already collects, can it:
@@ -29,7 +29,8 @@ A quantum network cannot inspect a delivered entangled pair without destroying i
 | …but has limits | On data-rich ion hardware learning adds < 0.5 points. A linear model captures most of the gain. |
 | **Latency.** End-to-end request-to-delivery latency, reported for every arm. | The guard adds no measurable latency on ion hardware |
 | **Faults.** Alarms cut post-fault harm by ~97% (24 vs 793 late bad pairs). No data-driven rule can stop exposure before post-fault data arrive (Prop. 8, a no-go). | G6, G7 |
-| **Re-alignment drift.** A safe guard pays 12–20% to restart. Re-use is possible only with a declared bound on re-alignment (Prop. 9, a design rule). | G5, Study 24 Block B; Study 25 Block D in progress |
+| **Realism (Study 25).** Undeclared model error breaks the guard (15% of paths at κ = 0.5); declaring a margin restores 0 bad pairs. Short calibration campaigns replace the known fleet law. Strong shared noise breaks every undeclared guard; declaring the dispersion restores safety at a large throughput cost on thin hardware. | Study 25: 0 bad pairs in 7.3M deliveries under parallel load and signalling delay; secondary T3 **failed** (disclosed) |
+| **Re-alignment drift.** A safe guard pays 12–20% to restart. Re-use is possible only with a declared bound on re-alignment (Prop. 9, a design rule). | G5, Study 24 Block B; Study 25 Block D: a declared bound B = 0.005 recovers 61–63% of the restart cost, 0 bad pairs while the bound holds |
 
 ## Real-data checks (pre-registered; data are not redistributed)
 
@@ -60,13 +61,13 @@ Props. 1–7: `study18c_controller_and_guard/THEORY_NOTE.md` and the project the
 ## Known limitations
 - **No live hardware.** The real-data checks re-analyse published data.
 - **The guarantee holds only under the guard's stated assumptions.** It needs a correct or declared-pessimistic physics model, counts that are not over-dispersed (or a declared dispersion), and declared drift or re-alignment bounds.
-- **Network model:** a 5 × 5 grid (and single paths). It serves one request at a time, and the classical signalling delay is not modelled in Studies ≤ 24. Study 25 adds parallel requests and signalling delay.
+- **Network model:** a 5 × 5 grid (and single paths). Studies ≤ 24 serve one request at a time without classical signalling delay; Study 25 adds parallel requests, 4× load and 50 km/hop signalling delay.
 
 ## Method
 - **Pre-registration.** Every confirmatory study was pre-registered before its run: hypotheses, pass bars, a locked analysis script tested on synthetic data, task lists and code hashes. Failures are kept and reported.
-  - See `PREREGISTRATION_TIMELINE.md` and `audit/EVIDENCE_LEDGER.md` (entries E1–E99).
+  - See `PREREGISTRATION_TIMELINE.md` and `audit/EVIDENCE_LEDGER.md` (entries E1–E105).
 - **Independent timestamps** (`audit/PREREG_TIMESTAMP_CHECK.md`):
-  - for **22 of 22** studies run on PSC Bridges-2, the pre-registration file was on the cluster before the first confirmatory job started;
+  - for **22 of 22** studies run on PSC Bridges-2, the pre-registration file was on the cluster before the first confirmatory job started; Study 25 likewise (locked files on the cluster 34 s before job submission; pushed publicly before any job produced output; ledger E102);
   - each `des_*_psc/` folder holds the job-written metadata (code hash, task hash, start time);
   - from v0.1.0 on, every release is archived on Zenodo.
 
