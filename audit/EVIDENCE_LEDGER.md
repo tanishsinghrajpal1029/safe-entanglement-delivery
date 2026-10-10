@@ -1585,3 +1585,49 @@ Details: `22_external_checks/icfo_2021/STAGE1_RESULT.md`.
 
 **Zenodo:** concept DOI 10.5281/zenodo.23287414 (all versions); v0.1.0 DOI 10.5281/zenodo.23287415.
 - From this release on, every pre-registration has a third-party timestamp.
+
+## E94 — ICFO Stage 1 re-run on PSC with real scipy (10 Oct 2026)
+
+**Run:** same script, a4d4124c (hash checked on PSC).
+
+**Result:** every primary and secondary number is identical to the Mac run, at all 5 storage times: window, p10, p01, h_c(2), C, C_sd, C_z, F_eff, V, V_max and E_k.
+
+**Coverage:** these numbers do not use scipy. The R3 lines, the only ones that do (betaln, chi2.sf), are to be compared from `out_psc.json`.
+
+**v0.1.1 released on GitHub** by Tanish, which archives the ICFO stage on Zenodo.
+
+## E95 — Correction to E92 and ICFO R3 shim check (10 Oct 2026)
+
+**Correction.** There are **11** both-open runs, not 12 (2 µs: 1; 7 µs: 2; 12 µs: 1; 19 µs: 3; 25 µs: 4).
+- Over-dispersion is significant (p < 0.05) in **7 of 11** runs, not "9 of 12".
+- The anytime confidence sequence never excluded the full-run estimate in **10 of 11** runs, not "11 of 12".
+- The E92 text stands as written; this entry supersedes those two counts. `STAGE1_RESULT.md` has been corrected and marked.
+
+**Shim check.** The PSC R3 output (real scipy) matches the Mac (shim) in all 11 runs. Dispersion ratios are identical, p-values agree to about 1e−15, and the CS flags are identical. The scipy caveat is closed.
+
+## E96 — USTC 2026 Stage 1 pre-registered (10 Oct 2026; headers only were seen)
+
+**Dataset:** Zenodo 18218281 (18 figure workbooks), downloaded by Tanish into `22_external_checks/ustc_2026/`.
+
+**Locked files:**
+
+| File | sha |
+|---|---|
+| `PREREG_USTC_STAGE1.md` | 10dad084 |
+| `stage1/ustc_stage1.py` | 9ae8a9fc |
+| `stage1/synth_ustc.py` | a26a3dc1 |
+
+**Tests:**
+- **U1** (primary): our pure-dephasing memory model, fed only the single-ion KDD coherence (Fig. S2b), predicts the remote ion–ion fidelity decay (Fig. 3d). Bar: within 2σ + 0.02 at every storage time.
+- **U2** (secondary): per-set QBER (Fig. S8) — over-dispersion, and coverage of the anytime confidence sequence.
+
+## E97 — USTC Stage 1 results (10 Oct 2026)
+
+**U1 PASS, but a weak test.** The predicted fidelity decay is within the bar at all 4 storage times (100–450 ms). The model is optimistic by 0.020–0.044 at every point.
+
+**U2:**
+- 200 sets (not 201); dispersion 3.57 (p ≈ 0).
+- The confidence sequence excluded the full-run rate for 3.5% of the run.
+- Caveat: equal set sizes were assumed.
+
+Details: `22_external_checks/ustc_2026/STAGE1_RESULT.md`.

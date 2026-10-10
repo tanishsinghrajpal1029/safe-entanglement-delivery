@@ -17,7 +17,7 @@
 | **R1-B** (primary) | 2 µs F_eff ∈ [0.89, 0.95] | **FAIL.** 1.007 (follows from R1-A) |
 | R1-C (secondary) | 2 µs concurrence ∈ [0.80, 1.50]·10⁻² | **FAIL.** 2.64·10⁻² |
 | R1-D (secondary) | Concurrence falls with storage time, and C(25 µs) ≥ 5σ (the paper's text claims) | **PASS.** Spearman ρ = −0.90; C = 2.64, 1.06, 1.18, 0.50, 0.35 (·10⁻²) at 2–25 µs; C(25 µs) = 6.2σ |
-| R3 (descriptive) | Real-data drift and validity of the anytime bound | Over-dispersion is present in most runs: dispersion ratio 0.73–5.6, and **9 of 12 runs show significant over-dispersion** (p < 0.05). Yet the anytime-valid confidence sequence **never excluded the full-run estimate in 11 of 12 runs** (once, for 1.7% of a 7 µs run). |
+| R3 (descriptive) | Real-data drift and validity of the anytime bound | Over-dispersion is present in most runs: dispersion ratio 0.73–5.6, and **7 of 11 runs show significant over-dispersion** (p < 0.05). Yet the anytime-valid confidence sequence **never excluded the full-run estimate in 10 of 11 runs** (once, for 1.7% of a 7 µs run). *Corrected in E95: the first version said 9 of 12 and 11 of 12; there are 11 both-open runs.* |
 
 ## Why R1-A failed (diagnosis, stated as such)
 - The primary visibility estimator assumed that the recorded phase settings span the fringe evenly. The pre-registration flagged this as untestable, because phases were not recorded.
@@ -35,6 +35,6 @@
 
 ## What this means for our paper
 1. **Real hardware drifts.** Echo probability is over-dispersed against an iid model in most long runs. This supports the drift-aware guards (Props. 6′, 6″) as necessary rather than optional.
-2. **The anytime-valid bound behaved as designed on real data** (11/12 runs never excluded the estimate). This is the first real-data check of the guard's statistics. It checks the confidence sequence on real counts; it is not a full delivery experiment.
+2. **The anytime-valid bound behaved as designed on real data** (10 of 11 runs never excluded the estimate). This is the first real-data check of the guard's statistics. It checks the confidence sequence on real counts; it is not a full delivery experiment.
 3. **We reproduce the authors' qualitative claims and their two-photon suppression.** The headline visibility could not be pinned down, because the phase settings were not recorded.
 4. **Next step, Stage 2** (needs its own pre-registration): ask the authors for the phase settings, or pre-register a phase-free estimator.
