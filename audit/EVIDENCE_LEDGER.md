@@ -1530,3 +1530,49 @@ Details: `23_ai_rl_guard/RESULTS_23.md`. Policy-file hashes: ion2020 dense arg 6
 **Latency (descriptive):** the guard adds no measurable latency on ion hardware. On SiV, queueing dominates (about 20 of about 25 s), and the AI serves 6.5× more requests at similar latency.
 
 Details: `24_ai_v2_hardware/RESULTS_24.md`.
+
+## E90 — ICFO 2021 Stage 1 pre-registered (10 Oct 2026; before any visibility or concurrence on real data)
+
+**Dataset:** Zenodo 6454536 (Lago-Rivera et al., Nature 2021), raw time tags, downloaded by Tanish into `22_external_checks/icfo_2021/`.
+
+**Looked at before pre-registering** (structure only): file names, the authors' MATLAB scripts, singles rates, and one herald–signal delay histogram (echo near 2.04 µs).
+
+**Locked files:**
+
+| File | sha |
+|---|---|
+| `PREREG_ICFO_STAGE1.md` | f3ebc014 |
+| `stage1/icfo_stage1.py` | 79a2caad (tested on synthetic data: V = 0.80 recovered as 0.78–0.81) |
+| `stage1/synth_icfo.py` | fa13fb43 |
+
+**Tests:**
+- **R1-A** (primary): 2 µs V ∈ [0.78, 0.90].
+- **R1-B** (primary): 2 µs F_eff ∈ [0.89, 0.95].
+- R1-C (secondary): 2 µs C ∈ [0.80, 1.50]e−2.
+- R1-D (secondary): ρ(τ, C) ≤ −0.7 and C(25 µs) z ≥ 5.
+- **R3** (descriptive): real-data over-dispersion and coverage of the anytime-valid confidence sequence.
+
+## E91 — ICFO Stage 1: environment shim and the single decoding fix (10 Oct 2026, recorded before the fixed re-run)
+
+**Environment.** The Mac VM has no scipy and no network. A minimal shim (`stage1/shim/scipy`: betaln, chi2.sf) was validated against scipy in the cloud: max relative error 7e−14 for betaln, max absolute error 9e−15 for chi2.sf. The analysis is unchanged.
+
+**First run (79a2caad), 2 µs.** V(rms) = 1.014 ± 0.011; max|E| = 0.884; F_eff = 1.007; p10 = 0.0103; p01 = 0.0210; h_c(2) = 0.0345; C = 0.0263; R3 dispersion 9.6. The script crashed at 19 µs.
+
+**Bug found.** 12 of 254 files contain a backward time jump near the end of a run (a "Hydra" glitch, which the authors' own script trims with Tremove). `count_in` assumes sorted tags.
+
+**Single allowed fix** (as pre-registered): keep only tags ≥ the running maximum. This drops 885–1,057 tags in the affected files and none elsewhere. Fixed script: a4d4124c. The 2 µs coherence files were not affected, so R1-A is unchanged by the fix.
+
+## E92 — ICFO Stage 1 results (10 Oct 2026)
+
+**Run:** fixed script a4d4124c; output `stage1/out_all_fix1.json`.
+
+**Pre-registered verdicts:**
+- **R1-A FAIL:** V(rms, 2 µs) = 1.014. The estimator assumed evenly spread phases, which the data violate.
+- **R1-B FAIL:** F_eff = 1.007.
+- **R1-C FAIL:** C = 2.64e−2.
+- **R1-D PASS:** ρ = −0.90; C(25 µs) = 6.2σ.
+- **R3:** over-dispersion in 9 of 12 runs (dispersion 0.73–5.6); the anytime confidence sequence never excluded the full-run estimate in 11 of 12 runs.
+
+**Exploratory, post hoc:** h_c(2) = 0.033 vs 0.036(8); max|E| = 0.884 vs 84(2)%; per-output C = 1.12e−2 vs 1.15(5)e−2.
+
+Details: `22_external_checks/icfo_2021/STAGE1_RESULT.md`.
