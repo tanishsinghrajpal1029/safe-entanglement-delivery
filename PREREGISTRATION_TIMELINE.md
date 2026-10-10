@@ -48,5 +48,6 @@ The table below is generated from the files in this repository (sha256, first 16
 | study24_ai_v2_hardware | README_24.md | 952a5c51ff80135c | RESULTS_24.md | des_s24b_psc/runs.csv `9f8633ed3e590f8f`, des_s24_psc/runs.csv `71e3cc31467c2efb` |
 | external_checks/innsbruck_230m | PREREG_INNSBRUCK_STAGE1.md | 568c7b973f8e94f4 | — | — |
 | external_checks/innsbruck_230m | PREREG_INNSBRUCK_STAGE2.md | 00356d058c4e233c | — | — |
+| study25_realism | README_25.md | b9c1718afa201133 | pending | pending (pushed **before** the confirmatory run) |
 
 Where "Results document" is "—", the confirmatory outcome is recorded in `audit/EVIDENCE_LEDGER.md` (entries E35–E89), next to the run hashes.

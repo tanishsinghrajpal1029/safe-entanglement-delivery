@@ -1638,3 +1638,58 @@ Details: `22_external_checks/ustc_2026/STAGE1_RESULT.md`.
 - **ICFO:** H. de Riedmatten — phase settings for the coh_k files, which would allow a Stage 2 visibility analysis.
 
 Any data received will get its own pre-registration before analysis. No result depends on a reply.
+
+## E99 — Independent timestamp check of pre-registrations (10 Oct 2026)
+
+**Inputs:** PSC file times of the 28 pre-registration files, Slurm sacct history, and the job-written shard metadata.
+
+**Result:** every PSC-run study had its pre-registration on the cluster before its first confirmatory shard started (22 of 22). Leads ranged from 1 to 42 minutes. Studies v5–v10 ran on the Mac and rely on the ledger alone.
+
+**Report:** `github_release/.../audit/PREREG_TIMESTAMP_CHECK.md`.
+
+## E100 — Study 25 ("realism") built, reviewed, and its PSC dev pilot submitted (10–11 Oct 2026)
+
+**Code:**
+
+| File | sha |
+|---|---|
+| `study25.py` (Blocks M, K, T, C) | 347344dc |
+| `study25b.py` (Block D) | 1b234c47 |
+| `study24` / `study24b` (unchanged) | 7be8c292 / 5d24bef6 |
+
+**Independent code review before the pilot** (subagent, 11 Oct) confirmed two bugs, both fixed before submission:
+1. **Block T:** node-level shared noise also over-dispersed each link's OWN counts, so it would break every guard, not just the AI. Block T was redesigned: arms kgphi and ag2phi declare the dispersion φ = 1 + c². The independence question is now Prop. 10 (theory note v4).
+2. **Block D:** `max_jump` counted unrealised cycles. Fixed.
+
+Also changed: serial routing now uses the service-start epoch; signalling delay is added to chain-2 storage; epoch headroom extended and clamping recorded.
+
+**Dev pilot:**
+- Tasks: P25 a20b67d4 (1,440 tasks); P25D 54115f22 (432 tasks); dev seeds 20261+ / 20271+.
+- PSC jobs 49019958 and 49019959. Hashes verified on PSC by Tanish.
+
+## E101 — Study 25 dev pilot read; pre-registration locked (11 Oct 2026)
+
+**Pilot runs:** be7e239c (1,440 tasks) and 2bdce8f1 (432 tasks); 19.3 SU.
+- The PSC merge failed because campaign rows carried 2 extra columns. Fix: `merge_robust.py` for the pilot, and identical columns in every row from now on.
+
+**Pilot findings:**
+- **M:** D ≥ κ gave 0 bad pairs. Undeclared κ = 0.5 on ion2020 gave 11.6% bad paths.
+- **K:** SiV campaigns recovered 87–98% of the known-law gain.
+- **T:** c = 2 broke all non-declaring arms about equally; declared φ gave 0 bad pairs.
+- **C:** 0 bad pairs in all 48 cells.
+- **D:** gb0.005 recovered 57–58% of the restart cost; broken promises gave bad pairs.
+
+**Second independent review** (fixes + analysis): no bugs. Minor hardening added.
+
+**Locked:**
+
+| File | sha |
+|---|---|
+| `study25.py` | ecccd63c |
+| `study25b.py` | 1b234c47 |
+| `analyze_25.py` | 47ef235e |
+| `README_25.md` | b9c1718a |
+| `tasks_s25` | 971aa981 (5,760 tasks) |
+| `tasks_s25d` | 22560748 (3,456 tasks) |
+
+**Hypotheses:** M1, M2, K1, K2, T1, T2, C1, D1 and D2 are primary.
