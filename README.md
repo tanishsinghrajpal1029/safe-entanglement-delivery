@@ -77,7 +77,7 @@ Props. 1–7: `study18c_controller_and_guard/THEORY_NOTE.md` and the project the
 | `study18c_controller_and_guard/` | Simulators (`drift_queue_des_*.py`), the physics model (`ptm_model.py` + NetSquid cross-checks), pre-registrations (`README_*.md`), locked analyses, confirmatory outputs (`des_*_psc/`) and the theory note. Studies v5–v21, C1–C2, P1, S1, G1–G7. |
 | `study23_ai_rl_guard/` | Global AI model + RL router under the guard (Study 23) |
 | `study24_ai_v2_hardware/` | AI v2; five hardware types; unseen correlation patterns; latency; drift carry-over (Study 24) |
-| `study25_realism/` | **Pre-registered, confirmatory run pending:** model error, finite calibration, shared noise, parallel load, declared re-alignment bound (Study 25) |
+| `study25_realism/` | Model error, finite calibration, shared noise, parallel load, declared re-alignment bound (Study 25): 9/9 primary PASS, secondary T3 FAIL; see `RESULTS_25.md` |
 | `external_checks/` | `innsbruck_230m/`, `icfo_2021/`, `ustc_2026/`: pre-registrations, code and results |
 | `audit/` | Evidence ledger, timestamp check, PSC job history, hardware provenance, novelty map, audit scripts |
 | `docs/` | Theory note v4 (Props. 8–10, novelty and contributions) |

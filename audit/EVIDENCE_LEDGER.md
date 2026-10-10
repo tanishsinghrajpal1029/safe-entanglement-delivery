@@ -1693,3 +1693,90 @@ Also changed: serial routing now uses the service-start epoch; signalling delay 
 | `tasks_s25d` | 22560748 (3,456 tasks) |
 
 **Hypotheses:** M1, M2, K1, K2, T1, T2, C1, D1 and D2 are primary.
+
+## E102 — Study 25 pre-registration made public before the confirmatory run (11 Oct 2026)
+
+**Public commit:** GitHub commit `370a823`, at 2026-10-10 22:58:56 UTC. It contains `study25_realism/`, with hashes identical to E101. The local branch matches origin/main.
+
+**Release:** the user reports that release v0.1.4 was made on GitHub. Its Zenodo DOI is to be recorded here.
+
+**PSC confirmatory jobs:** the user reports they were submitted after the push. Job IDs and start times are to be taken from `sacct` and recorded with the results, as a check that the start time is later than the commit time.
+
+**E102 addendum — timing caveat, found on our own check.** PSC times are EDT (UTC−4). Arrays 49020121 (A) and 49020122 (D).
+
+**Times:**
+
+| Event | Time |
+|---|---|
+| Earliest start of array A (shard 0), inferred from squeue | ≈ 18:57:08 EDT = **22:57:08 UTC** |
+| Public commit `370a823` | 22:58:56 UTC |
+| Array D start | 19:01:51 EDT = 23:01:51 UTC |
+
+- So the first shards of A started **about 2 min before the commit timestamp**. "Public before the run" is **not** true for array A as stated in E102.
+- Before the run, the pre-registration was hash-locked locally (E101, about 22:55 UTC) and the hashes were checked on PSC.
+- The commit came before any A shard could finish: each shard runs about 30 min.
+
+**Pending:** sacct Submit/Start times for all shards, the PSC file mtimes and the GitHub push time. The paper will state the exact order.
+
+**E102 addendum 2 — exact order, from PSC records** (PSC clock, EDT +4 h = UTC).
+
+| UTC | Event |
+|---|---|
+| 22:40:51 | `study25b.py` on PSC (1b234c47, unchanged since the pilot) |
+| 22:56:16–18 | Locked files arrive on PSC (file mtimes): study25.py, analyze_25.py, README_25.md, both task lists. The hashes were checked by the user before sbatch. |
+| 22:56:52 | Array A submitted (49020121) |
+| 22:57:08 | Array A shards start |
+| 22:58:56 | Commit `370a823` (local commit time; push time still pending) |
+| 23:01:15 | First A shard completes. Shards took about 4 min, not the expected 30. |
+| 23:01:51 | Array D (49020122) shards start |
+
+**Wording for the paper:** "Code, task lists, analysis script and hypotheses were hash-locked and present on the cluster before job submission (cluster file timestamps). They were committed publicly 2 min after Block A started, before any shard completed, and before Block D started."
+
+If the push turns out to be later than 23:01:15, the "before any shard completed" clause will be dropped.
+
+## E103 — Study 25 confirmatory results (11 Oct 2026)
+
+**Release:** v0.1.4 (Study 25 pre-registration), DOI **10.5281/zenodo.23289143**.
+
+**Run outputs:** A `3826490aaf20734b` (5,760 rows); D `7bb3996c177a281d` (3,456 rows). `analyze_25.py` 47ef235e ran unmodified.
+
+**Primary hypotheses (9 of 9 PASS):**
+- **M1** PASS: 0 bad in 1.21M.
+- **M2** PASS (prediction): ion2020 κ0.5 D0 had 15.4% of paths bad.
+- **K1** PASS: 0 bad in 495k.
+- **K2** PASS: SiV recovered 0.876 / 0.988 / 0.947 (K16: 0.878).
+- **T1** PASS: 0 bad.
+- **T2** PASS: 3 bad in 845k (NV, c = 2); max 0.23% of paths bad.
+- **C1** PASS: 0 bad in 7.31M.
+- **D1** PASS: 0 bad in 6.22M.
+- **D2** PASS: 0.611 / 0.625.
+
+**Secondary hypotheses:**
+- **C2** PASS: +26.5 points, 90% CI [23.6, 29.5].
+- **D3** CONFIRMED.
+- **T3 FAIL:** NV ag2t 5.05% vs kg 2.93%, over the 2-point margin by 0.12 (43 vs 29 bad pairs). ag2 passes on all hw. Reported as a failure; not re-tuned.
+
+**Notable:**
+- Under c = 2, every non-declaring arm on NV breaks a safety bar. Declared φ fixes this, but costs SiV almost all throughput (about 1.3% of oracle).
+- `RESULTS_25.md` sha 7cad498d.
+
+**Open:** GitHub push time of `370a823` (for the E102 wording); scp of the des folders to the Mac for a local re-analysis.
+
+**E103 addendum — local replication of the analysis.**
+- The run outputs copied to the Mac have the same hashes as on PSC (A 3826490a, D 7bb3996c).
+- `analyze_25.py` (47ef235e) was re-run on the Mac (pandas 2.3.3). Every hypothesis line is identical to the PSC output.
+- Saved as `reanalysis_A_mac.txt` and `reanalysis_D_mac.txt`.
+- The run outputs and the re-analysis files were added to the public repo folder.
+
+**E102 addendum 3 — push time of `370a823`.**
+
+| Source | What it shows |
+|---|---|
+| Our own check at 23:00:47 UTC (E102) | `git status -sb` showed `main...origin/main` with nothing ahead, so the push had completed by 23:00:47 UTC |
+| GitHub Activity, viewed about 23:21 UTC | "pushed 9a4ca18…370a823, 21 minutes ago", consistent with that |
+
+- **Push window:** 22:58:56–23:00:47 UTC.
+- **Order:** Block A started 22:57:08 → push by 23:00:47 → first shard completed 23:01:15 → Block D started 23:01:51.
+- **Conclusion:** the pre-registration was public before any result existed, but only by a margin of at least 28 s. It was public before Block D started.
+- **Paper wording:** "hash-locked on the cluster before submission; publicly pushed within 4 min of Block A start and before any job produced output."
+- The exact GitHub time (from the tooltip) can still be added here.

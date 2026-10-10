@@ -1,0 +1,47 @@
+tasks: 3456 (expected 3456)
+ctrl             cal  gb0.005  gb0.01  gb0.02  gb0.04  gb0.08  gb0.16  gexact  gpersist
+hw      scen                                                                           
+ion2020 D     0.8558   0.7858  0.7791  0.7714  0.7666  0.7463  0.7356  0.7356    0.8177
+        Dj    0.8496   0.7816  0.7720  0.7616  0.7592  0.7393  0.7248  0.7248    0.7990
+        Djb   0.8806   0.8278  0.8238  0.8132  0.7940  0.7706  0.7545  0.7544    0.7804
+ionproj D     0.9500   0.8439  0.8292  0.8138  0.8027  0.7746  0.7577  0.7577    0.8958
+        Dj    0.9538   0.8710  0.8484  0.8276  0.8128  0.7874  0.7669  0.7669    0.8938
+        Djb   0.9707   0.9423  0.9361  0.9201  0.8873  0.8488  0.8199  0.8198    0.9001
+ctrl             cal  gb0.005  gb0.01  gb0.02  gb0.04  gb0.08  gb0.16  gexact  gpersist
+hw      scen                                                                           
+ion2020 D     3122.0      0.0     0.0     0.0     0.0     0.0     0.0     0.0       0.0
+        Dj    3223.0     20.0     2.0     0.0     0.0     0.0     0.0     0.0      55.0
+        Djb   3886.0   1425.0  1259.0   835.0   120.0     9.0     0.0     0.0    1243.0
+ionproj D     6344.0      0.0     0.0     0.0     0.0     0.0     0.0     0.0       0.0
+        Dj    6439.0     66.0     3.0     0.0     0.0     0.0     0.0     0.0     139.0
+        Djb   8574.0   4065.0  3317.0  1962.0   360.0     7.0     0.0     0.0    2921.0
+D1 (primary) the declared-bound guard is safe whenever B >= 3 sd of the true re-alignment jump (20 cells): PASS (20 cells; bad 0 in 6220215)
+D2 (primary, design curve) with exact re-alignment, a declared B = 0.005 recovers >= 40% of the gexact -> gpersist gap, both hw: PASS (ion2020: 0.611, ionproj: 0.625)
+D3 (secondary, prediction) a broken promise (Djb, B = 0.005) produces bad pairs on both hw: CONFIRMED (bad [1425, 4065], % bad paths [11.73, 8.35])
+D4 (descriptive) promise check per network: bad pairs in networks whose realised max jump <= B, by cell:
+                      nets  bad  delivered
+hw      scen ctrl                         
+ion2020 D    gb0.005    64    0     229454
+             gb0.01     64    0     227030
+             gb0.02     64    0     224884
+             gb0.04     64    0     223478
+             gb0.08     64    0     217716
+             gb0.16     64    0     213773
+        Dj   gb0.02     52    0     184910
+             gb0.04     64    0     225857
+             gb0.08     64    0     219707
+             gb0.16     64    0     216182
+        Djb  gb0.08     51    0     197048
+             gb0.16     64    0     242854
+ionproj D    gb0.005    64    0     421273
+             gb0.01     64    0     413734
+             gb0.02     64    0     405273
+             gb0.04     64    0     400709
+             gb0.08     64    0     386964
+             gb0.16     64    0     377584
+        Dj   gb0.02     49    0     314830
+             gb0.04     64    0     404149
+             gb0.08     64    0     392184
+             gb0.16     64    0     382224
+        Djb  gb0.08     57    0     363591
+             gb0.16     64    0     395186
