@@ -2217,3 +2217,25 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
   - T2 and T5 were redefined after the pilot (disclosed). T2 failed on the pilot only because of its size. The original T5 duplicated kgM.
   - No code change after the pilot.
 - **Confirmatory run:** `tasks_s29.jsonl` (e9c11dcb77432c14, 4,352 tasks), seeds 19311–19314. It runs only after the public commit.
+
+## E125: Study 29 confirmatory results (11 Oct 2026)
+- **Timing:** pre-registration commit `a779735` at 15:34:43 UTC. The first confirmatory shard started at 15:39:34 UTC, 4 min 51 s later.
+- **Run:** `runs.csv` sha256 b751d724625ee2ec, 4,352 rows, module 532e612f, tasks e9c11dcb. No epoch was clamped.
+- **Analysis:** locked `analyze_29.py` (4a54c1e3) on PSC. The cloud re-run is identical below the header line (the header differs only in numpy's print form).
+- **Verdicts: 6/6 primary PASS, 4/4 secondary PASS.**
+  - T1: kgMT had 0 bad pairs in 5,765,233 post-alarm deliveries.
+  - T2: forced early alarm, 0/128 runs with a post-alarm bad pair (kgM: 127/128).
+  - T3: margin +0.006 to +0.011 above the offset.
+  - T4: throughput +24 to +34 points over kgM (lower bound ≥ +17.5).
+  - T5: 0 false segment alarms in 256 runs.
+  - T6: after a false alarm the margin recovers to 0.008–0.010.
+  - U1: point estimate 102/512 runs leaky vs 0/512 with the bound.
+  - U2: tracking beats tomography (0.77–0.79 vs 0.35–0.53).
+  - U3: always-tracking costs 14–16 points.
+  - U4: certificate violated in ≤ 2.3% of runs.
+- **Closes:** Study 28's H4 failure and the oversized post-alarm margins.
+- **Remaining (disclosed):**
+  - harm before the first alarm;
+  - the margin response is heuristic;
+  - probe tests need the end nodes to cooperate;
+  - only constant offsets, only ion hardware.

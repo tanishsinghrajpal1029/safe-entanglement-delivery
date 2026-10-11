@@ -9,7 +9,7 @@ Code, pre-registrations, results and the audit trail for the manuscript of the s
 **Status (October 2026):** the manuscript is in preparation.
 - The evidence is mainly **simulation**: a discrete-event network simulator whose physics was cross-checked against NetSquid.
 - **Three pre-registered re-analyses of public experimental data** back it up: Innsbruck, ICFO and USTC.
-- The final studies are Study 26 (model-based layer at measured hardware levels), Study 27 (model-free certificate) and Study 28 (model check). All three were pre-registered and committed publicly before their first cluster job.
+- The final studies are Study 26 (model-based layer at measured hardware levels), Study 27 (model-free certificate), Study 28 (model check) and Study 29 (margin response). All four were pre-registered and committed publicly before their first cluster job.
 
 ## The question
 A quantum network cannot inspect a delivered entangled pair without destroying it. So what can a user actually be guaranteed about the pairs they receive, and what does each kind of guarantee cost?
@@ -26,6 +26,7 @@ A quantum network cannot inspect a delivered entangled pair without destroying i
 | **Cost.** No model-free certifier can certify 0.9 from perfect pairs with fewer than 330 kept pairs (p = 0.1; converse, Prop. LB); ours needs 678, so the factor of about 2 is the price of anytime validity. Certifying 0.9 needs 315–1,404 kept pairs per user even from perfect pairs (p = 0.2 to 0.05), and about 850–3,900 for pairs of fidelity 0.97. Thin (NV/SiV-like) hardware could not reach a useful certificate within 45 simulated minutes. | Prop. C1 resource curve; Study 27; converse Prop. LB |
 | **Model check (Study 28).** The same tests check the guard's own validity condition with an e-process (Prop. MC: false alarms ≤ β). After an alarm, the declared margin is raised. | Ion networks with undeclared model error: detected in 128/128 networks, with 70–92% fewer bad pairs; false alarms 0.29%. **H4 FAILED:** in one network an alarm after 8 tests raised the margin too little, so 0.8% of post-alarm pairs were bad (bar 1%). Harm is limited, not prevented; the check is blind to sparse failures and thin hardware (as predicted). |
 | **Network-wide guarantee (Cor. NW).** Link confidence sequences at α/\|E\| give P(any user ever receives a bad pair) ≤ α. | Study 28: 0/128 networks with a bad pair; cost 0.5 points on ions, 2.4 on SiV |
+| **Margin response (Study 29).** After an alarm, the margin tracks an exact upper bound on the model offset, estimated from post-alarm tests and probe tests of blocked pairs; it can come back down. | 0 bad pairs in 5.8M post-alarm deliveries, including Study 28's failure case (0/128 vs 127/128); margin within +0.006–0.011 of the true offset; throughput 0.78 of oracle vs 0.48 (Study 28) and 0.35–0.53 (tomography). 6/6 primary PASS |
 | **Earlier results (Studies ≤ 25)** | Label-free risk controller, learned priors on thin hardware, latency, faults (a fault-exposure no-go), re-alignment drift. See the study folders and the theory notes. |
 
 ## Real-data checks (pre-registered; data are not redistributed)
@@ -53,8 +54,8 @@ A quantum network cannot inspect a delivered entangled pair without destroying i
 
 ## Method
 - **Pre-registration.** Every confirmatory study was pre-registered before its run: hypotheses, pass bars, a locked analysis script tested on synthetic data, task lists and code hashes. Failures are kept and reported.
-  - Over the project, 57 primary hypotheses were tested: 49 PASS, 8 FAIL (`audit/SCOREBOARD_v2.md` covers up to Study 27; Study 28: 6/7 primary PASS, see `study28_model_check/RESULTS_28.md`).
-  - See `PREREGISTRATION_TIMELINE.md` and `audit/EVIDENCE_LEDGER.md` (entries E1–E122).
+  - Over the project, 63 primary hypotheses were tested: 55 PASS, 8 FAIL (`audit/SCOREBOARD_v2.md` covers up to Study 27; Study 28: 6/7 primary PASS; Study 29: 6/6; see the RESULTS files).
+  - See `PREREGISTRATION_TIMELINE.md` and `audit/EVIDENCE_LEDGER.md` (entries E1–E125).
 - **Timestamps** (`audit/PREREG_TIMESTAMP_CHECK.md`):
   - For every study run on PSC Bridges-2, the pre-registration was on the cluster before the first confirmatory job.
   - Studies 26 and 27 were committed publicly 2 min 15 s and 1 min 51 s before their first job.
@@ -73,6 +74,7 @@ A quantum network cannot inspect a delivered entangled pair without destroying i
 | `study26_certified/` | Per-user guarantee level, real-hardware noise and model-error levels (ICFO/USTC), published baselines at matched safety, finite memory (Study 26): 7/7 primary PASS; secondary U2, R5 FAIL; see `RESULTS_26.md` |
 | `study27_certification/` | Model-free, anytime-valid certificate of kept-pair fidelity on top of the control layer, under model error, persistent noise and memory faults (Study 27): 2/2 primary PASS; certificate valid where the control layer fails; theory note and adversarial review included; see `RESULTS_27.md` |
 | `study28_model_check/` | Model check (e-process on the certification tests), network-wide guard, converse resource bound (Study 28): 6/7 primary PASS, H4 FAIL (disclosed); 4/4 secondary PASS; theory note, adversarial review, pilot and confirmatory runs; see `RESULTS_28.md` |
+| `study29_margin_response/` | Margin response after a model-check alarm: tracking with an exact upper bound and probe tests (Study 29): 6/6 primary, 4/4 secondary PASS; replay of Study 28's failing network; see `RESULTS_29.md` |
 | `external_checks/` | `innsbruck_230m/`, `icfo_2021/`, `ustc_2026/`: pre-registrations, code and results |
 | `audit/` | Evidence ledger, timestamp check, PSC job history, hardware provenance, novelty map, audit scripts |
 | `docs/` | Theory note v4 for the model-based guard (Prop. 10 there is superseded by Lemma B; see `audit/reviews_2026-10-11/PROOF_REVIEW.md`) |
