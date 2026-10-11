@@ -2239,3 +2239,19 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
   - the margin response is heuristic;
   - probe tests need the end nodes to cooperate;
   - only constant offsets, only ion hardware.
+
+## E126: Zenodo DOI for v0.5.0 (11 Oct 2026)
+- **v0.5.0** ("Margin response (Study 29): closed-loop model check with tracking margin"): DOI **10.5281/zenodo.23300999**. This is the latest version; the concept DOI is 10.5281/zenodo.23287414.
+- **v0.4.0** (Study 28): DOI not yet recorded.
+
+## E127: Manuscript v0.3, adding Studies 28–29 (11 Oct 2026)
+- **Folder:** `prx_work/manuscript_v0.3/`. The edits are scripted in `fix_v03.py` and `fix_v03b.py`; the change list is in `CHANGES_v0.3.md`.
+- **What was added:**
+  - Prop. LB (converse), Prop. MC (model check) and Cor. NW (network-wide guard), with proofs in the appendix;
+  - a new section "Closing the loop" with the Study 28 results (H4 failure reported) and the Study 29 results;
+  - a new Fig. 5;
+  - novelty positioned against verification sample-complexity results;
+  - updated limitations;
+  - scoreboard: 63 primary hypotheses (55 PASS / 8 FAIL);
+  - data availability now cites v0.5.0.
+- **sha256 (first 16):** main.tex 0ff46daf5d39db12, appendix.tex 7e56b7bf4865331c, references.bib a378d42efbb6c71e, preview.pdf b5f802379a824c3b. The preview has 15 pages and builds cleanly.
