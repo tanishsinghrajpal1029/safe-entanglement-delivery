@@ -1,0 +1,25 @@
+{
+ "n0": 600,
+ "err0": 30,
+ "F_hat0": 0.925,
+ "F_decl": 0.8992,
+ "tests": {
+  "A": 206,
+  "B": 457
+ },
+ "kept": 2637,
+ "cert_final": 0.7132,
+ "bell_pass_final": 0.8104,
+ "cert_violation": 0,
+ "max_cert_minus_truth": -0.0745,
+ "alarm_index": 2943,
+ "alarm_phase": "B",
+ "bell_pass_A": 0.9232,
+ "bell_pass_B": 0.7618,
+ "meta": {
+  "backend": "numpy-sim"
+ },
+ "schedule_sha": "b8db2032104754d0",
+ "mode": "simulate",
+ "script_sha": "3b94867c13068e85"
+}

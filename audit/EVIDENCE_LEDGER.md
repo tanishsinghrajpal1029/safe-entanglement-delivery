@@ -2259,3 +2259,32 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
 ## E128: Zenodo DOI for v0.4.0 (11 Oct 2026)
 - **v0.4.0** ("Model-checked delivery (Study 28), converse resource bound, network-wide guarantee"): DOI **10.5281/zenodo.23297671**.
 - **Version-DOI list:** complete for v0.1.4 through v0.5.0. v0.2.2 was skipped. v0.3.2 = 10.5281/zenodo.23291411, as already recorded in E118.
+
+## E129: Manuscript v0.4, with fact-check and referee fixes (11 Oct 2026)
+- **Folder:** `prx_work/manuscript_v0.4/`. The edits are scripted in `fix_v04.py`; the change list is in `CHANGES_v0.4.md`.
+- **What it fixes:** all text-level items from `FACTCHECK_v0.3.md` (8 must-fix, plus the should-fix items) and the text-level must-fix items from `REFEREE_v0.3.md`:
+  - abstract cut to 259 words;
+  - Markov remark added;
+  - (A0) stated in Theorem 1;
+  - C1 average-conditional-fidelity proof;
+  - Prop LB approximation and claims corrected;
+  - MC restart levels corrected;
+  - offset-0.02 detection reported (56/128);
+  - run-level claims;
+  - closed-loop scope stated;
+  - "human check in progress" removed;
+  - Fig. 1 now shows the loop;
+  - new citations (QKD finite-key, change detection, hardware sources).
+- **Aditi & Becker 2026 (arXiv 2610.10885):** now read, from the PDF the user supplied (pp. 1–6). It gives conformal prediction intervals for fidelity estimation, with coverage averaged over a prior of states. It is characterised accordingly.
+- **sha256 (first 16):** main.tex c474596ff1be0a2d, appendix.tex aa2843cc8059dacf, references.bib b18bdb291c3f0da9, preview.pdf af6973ba1e02a759 (16 pages).
+- **Still open:**
+  - strategic items: a provable closed loop (Study 30), the hardware test-or-keep experiment, the prose rewrite, worst-user risk;
+  - human proof check;
+  - VERIFY flags;
+  - ACCESS text;
+  - push time of 023faed.
+
+## E130: Study 31 (hardware test-or-keep) pre-registration package (11 Oct 2026)
+- **Design:** one IBM Quantum job of 3,900 shots, capped at 120 s (`ibm_testkeep.py` 3b94867c13068e85). Phase 0 calibration (600 pairs); phase A, no injection (1,000 pairs, p = 0.2); phase B, Psi- injected at 0.20 (2,300 pairs).
+- **Hypotheses:** W1 certificate never above the Bell-measured kept pass fraction; W2 no alarm in phase A; W3 alarm in phase B; W4 descriptive. Simulation power check: 60/60 valid, 0/60 phase-A alarms, 59/60 phase-B alarms.
+- **Credentials:** the user runs the job with an IBM account saved on their own machine. Claude does not handle credentials.
