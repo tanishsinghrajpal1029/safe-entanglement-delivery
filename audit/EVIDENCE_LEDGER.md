@@ -2255,3 +2255,7 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
   - scoreboard: 63 primary hypotheses (55 PASS / 8 FAIL);
   - data availability now cites v0.5.0.
 - **sha256 (first 16):** main.tex 0ff46daf5d39db12, appendix.tex 7e56b7bf4865331c, references.bib a378d42efbb6c71e, preview.pdf b5f802379a824c3b. The preview has 15 pages and builds cleanly.
+
+## E128: Zenodo DOI for v0.4.0 (11 Oct 2026)
+- **v0.4.0** ("Model-checked delivery (Study 28), converse resource bound, network-wide guarantee"): DOI **10.5281/zenodo.23297671**.
+- **Version-DOI list:** complete for v0.1.4 through v0.5.0. v0.2.2 was skipped. v0.3.2 = 10.5281/zenodo.23291411, as already recorded in E118.
