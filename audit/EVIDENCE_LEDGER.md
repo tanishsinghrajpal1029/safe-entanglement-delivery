@@ -2081,3 +2081,19 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
   - omits the Study 25 Block A timing exception.
 - **Fix:** README rewritten to match manuscript v0.2, for the next release (v0.3.1). The v0.3.0 archive is immutable; v0.3.1 supersedes its README.
 - **Manuscript:** the data-availability section and the Repo2026 bib entry now cite the v0.3.0 version DOI (main.tex 1e88689e, references.bib a4851428).
+
+## E117: Zenodo DOIs for v0.2.1 and v0.2.3 (11 Oct 2026)
+- **v0.2.1:** "Safe entanglement delivery: label-free risk control and an anytime-valid per-user guard for quantum networks". DOI **10.5281/zenodo.23290433**.
+- **v0.2.3** (GitHub release "Study 27 pre-registration"): same record title. DOI **10.5281/zenodo.23290755**.
+- **Version DOIs recorded so far:**
+
+  | Version | DOI |
+  |---|---|
+  | v0.1.4 | 10.5281/zenodo.23289143 |
+  | v0.2.0 | 10.5281/zenodo.23289367 |
+  | v0.2.1 | 10.5281/zenodo.23290433 |
+  | v0.2.3 | 10.5281/zenodo.23290755 |
+  | v0.3.0 | 10.5281/zenodo.23291355 |
+
+  v0.2.2 is not yet recorded.
+- **Timing evidence:** the timing evidence for the Study 27 pre-registration remains the GitHub commit 63d20c6, made 1 min 51 s before the first job. The Zenodo publication time of v0.2.3 is not used as evidence that the pre-registration preceded the run.
