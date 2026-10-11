@@ -2165,3 +2165,20 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
   - The H7 bar (5 points) was set after seeing the pilot SiV cost; this is disclosed.
   - No code change after the pilot.
 - **Confirmatory run:** `tasks_s28.jsonl` (d469a195f9b955da, 5,248 tasks), seeds 19301–19304. It runs only after the public commit.
+
+## E122: Study 28 confirmatory results (11 Oct 2026)
+- **Timing:** pre-registration commit `023faed` at 06:24:48 UTC (local commit time). The first confirmatory shard started at 06:26:51 UTC, 2 min 3 s later.
+- **Run:** `runs.csv` sha256 b1fae5f497cce25c, 5,248 rows, module 70e98b5a, tasks d469a195. No epoch was clamped.
+- **Analysis:** the locked `analyze_28.py` (65d4ccf2) was run on a PSC compute node (`s28_analysis.txt`). The PSC login-node run was too slow and was stopped. A cloud re-run is in progress.
+- **Verdicts:** 6 of 7 primary hypotheses pass and 4 of 4 secondary hypotheses pass.
+  - **H1 PASS:** false first alarms 3/1,024 (0.29%); upper bound 0.68%.
+  - **H2 PASS:** detection 32/32 in all 4 powered cells.
+  - **H3 PASS:** harm ratio 0.08–0.30.
+  - **H4 FAIL:** post-alarm risk 0.80%, upper bound 2.27% against a bar of 1%.
+  - **H5 PASS:** 0 points.
+  - **H6 PASS:** 0/128 networks with a bad pair; upper bound 2.3%.
+  - **H7 PASS:** cost 0.5 points on ions, 2.4 on SiV.
+  - **Secondary:** S1–S4 PASS.
+- **H4 diagnosis (exploratory):** all 6,232 post-alarm bad pairs came from one network (ion2020, p = 0.1, idx 19). It alarmed after 8 tests, when there were fewer than NMIN tests, so only the fixed step of 0.02 was applied, and it never alarmed again. The other 127 networks had 0 bad pairs after their alarm. No re-tuning was done; a fix needs a new pre-registration.
+- **Results file:** `RESULTS_28.md`.
+- **Addendum (E122):** the cloud re-run of the locked `analyze_28.py` (`reanalysis_28_cloud.txt`) gives verdict lines identical to the PSC compute-node output: all 12 H/S lines match character for character. Only the header's numpy repr differs (`np.int64(90)` vs `90`).

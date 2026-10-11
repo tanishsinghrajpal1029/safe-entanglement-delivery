@@ -1,0 +1,73 @@
+rows 5248; blocks ['S28']; clamped 0; nepoch [90]
+
+== VERDICTS ==
+H1     primary                PASS  kgM/kgNM runs in '-' and 'ro' (1024): false first alarm (tested null) rate 0.0029 (bar <= 0.0304), cluster UB 0.0068 (bar <= 0.05); false segment alarms per run 0.0029, UB 0.0068 (bar <= 0.05)
+H2     primary                PASS  ion2020 p10: alarm in 1.000 of 32 (median epoch 22.8); ion2020 p20: alarm in 1.000 of 32 (median epoch 11.0); ionproj p10: alarm in 1.000 of 32 (median epoch 15.3); ionproj p20: alarm in 1.000 of 32 (median epoch 7.9) (bar >= 0.90 each)
+H3     primary                PASS  ion2020 p10: 0.295 (UB 0.358); ion2020 p20: 0.130 (UB 0.165); ionproj p10: 0.167 (UB 0.225); ionproj p20: 0.078 (UB 0.102) (bar: UB <= 0.50 each)
+H4     primary                FAIL  bad after first alarm 6232/778640 = 0.00800; UB 0.02270 (bar <= 0.01)
+H5     primary                PASS  ion2020 p10: 0.00 pts (UB 0.00); ion2020 p20: 0.00 pts (UB 0.00); ionproj p10: 0.00 pts (UB 0.00); ionproj p20: 0.00 pts (UB 0.00) (bar: UB <= 1 point)
+H6     primary                PASS  kgN networks with any bad pair: 0/128; CP95 UB 0.0231 (bar <= 0.05); [kg reference: 0/128]
+H7     primary                PASS  ion2020: 0.46 pts (UB 0.59); ionproj: 0.55 pts (UB 0.63); nv2: -0.18 pts (UB 0.56); siv: 2.41 pts (UB 4.24) (bar: UB <= 5 points)
+S1     secondary              PASS  ion2020: kgM p10 0.485 vs m16 0.399 (oracle 0.918); ionproj: kgM p10 0.468 vs m16 0.482 (oracle 0.940) (bar: kgM >= m16 - 0.05)
+S2     secondary              PASS  ion2020 p10: alarm 1.00 vs 0.34, bad 102752 vs 330436; ion2020 p20: alarm 1.00 vs 0.38, bad 45091 vs 304579; ionproj p10: alarm 1.00 vs 0.50, bad 13639 vs 81154; ionproj p20: alarm 1.00 vs 0.78, bad 6378 vs 49016 (bar: kgM bad < kgP bad, each cell)
+S3     secondary (prediction) PASS  alarm rate in unpowered cells (NV, SiV; persistent noise; fault): 0.0011 over 1792 runs (prediction <= 0.10)
+S4_p10 secondary              PASS  network certificate violated in 58/5248 runs; CP95 UB 0.0137 (bar <= 0.05)
+S4_p20 secondary              PASS  network certificate violated in 42/5248 runs; CP95 UB 0.0103 (bar <= 0.05)
+
+== D1 powered cells: risk, per-user risk, margins, throughput ==
+                              n     r_%    pu_%      ep    dec     fq
+hw      sc         arm  p                                            
+ion2020 o0.044_m0  kg   p00  32  43.506  53.048     NaN  0.000  0.961
+                   kgM  p10  32  31.648  48.560  22.819  0.080  0.485
+                        p20  32  20.382  45.634  11.000  0.083  0.392
+                   kgN  p00  32  43.261  52.972     NaN  0.000  0.961
+                   kgNM p10  32  32.138  47.564  19.997  0.086  0.410
+                        p20  32  20.503  46.431  12.600  0.081  0.435
+                   kgP  p10  32  42.201  53.002  52.910  0.008  0.962
+                        p20  32  44.086  52.466  62.489  0.032  0.837
+        o0.044_m16 kg   p00  32   3.508   1.026     NaN  0.085  0.399
+        o0.044_orc kg   p00  32   0.000   0.000     NaN  0.044  0.918
+ionproj o0.044_m0  kg   p00  32   9.765  26.094     NaN  0.000  0.961
+                   kgM  p10  32   3.570  18.493  15.264  0.088  0.468
+                        p20  32   1.781  15.956   7.931  0.087  0.451
+                   kgN  p00  32   9.765  26.176     NaN  0.000  0.961
+                   kgNM p10  32   3.504  19.522  15.564  0.085  0.509
+                        p20  32   1.887  17.279  10.362  0.078  0.557
+                   kgP  p10  32   9.720  26.094  41.953  0.010  0.961
+                        p20  32   8.698  22.886  39.991  0.078  0.659
+        o0.044_m16 kg   p00  32   0.000   0.000     NaN  0.081  0.482
+        o0.044_orc kg   p00  32   0.000   0.000     NaN  0.044  0.940
+
+== D2 alarm rates, all cells (feedback arms) ==
+arm                  kgM        kgNM         kgP       
+p                    p10  p20    p10  p20    p10    p20
+hw      sc                                             
+ion2020 -          0.000  0.0  0.000  0.0  0.000  0.000
+        fault      0.000  0.0  0.000  0.0  0.062  0.000
+        n0.184_a   0.000  0.0  0.000  0.0  0.000  0.000
+        o0.044_m0  1.000  1.0  1.000  1.0  0.344  0.375
+        ro         0.000  0.0  0.000  0.0  0.000  0.000
+ionproj -          0.000  0.0  0.000  0.0  0.000  0.031
+        fault      0.000  0.0  0.000  0.0  0.000  0.031
+        n0.184_a   0.000  0.0  0.000  0.0  0.000  0.000
+        o0.044_m0  1.000  1.0  1.000  1.0  0.500  0.781
+        ro         0.000  0.0  0.031  0.0  0.000  0.031
+nv2     -          0.000  0.0  0.000  0.0  0.000  0.000
+        fault      0.000  0.0  0.000  0.0  0.000  0.000
+        n0.184_a   0.000  0.0  0.000  0.0  0.000  0.000
+        o0.044_m0  0.000  0.0  0.000  0.0  0.000  0.000
+        ro         0.031  0.0  0.031  0.0  0.000  0.000
+siv     -          0.000  0.0  0.000  0.0  0.000  0.000
+        fault      0.000  0.0  0.000  0.0  0.000  0.000
+        n0.184_a   0.000  0.0  0.000  0.0  0.000  0.000
+        o0.044_m0  0.000  0.0  0.000  0.0  0.000  0.000
+        ro         0.000  0.0  0.000  0.0  0.000  0.000
+
+== D3 throughput (fraction of oracle), no stressor ==
+arm          kg     kgM             kgN    kgNM             kgP        
+p           p00     p10     p20     p00     p10     p20     p10     p20
+hw                                                                     
+ion2020  0.8707  0.8707  0.8707  0.8660  0.8660  0.8660  0.8707  0.8707
+ionproj  0.9265  0.9265  0.9265  0.9210  0.9210  0.9210  0.9265  0.9197
+nv2      0.1836  0.1836  0.1836  0.1854  0.1854  0.1854  0.1836  0.1836
+siv      0.3902  0.3902  0.3902  0.3661  0.3661  0.3661  0.3902  0.3902
