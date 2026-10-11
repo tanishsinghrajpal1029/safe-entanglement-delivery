@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code or these results, please cite them as below."
-title: "Safe entanglement delivery: label-free risk control and an anytime-valid per-user guard for quantum networks"
+title: "Certifying delivered entanglement: per-pair guarantees need a model, averages do not (code and data)"
 authors:
   - family-names: Rajpal
     given-names: Tanish Singh
@@ -8,7 +8,8 @@ authors:
   - family-names: Mattarock
     given-names: Michael
     affiliation: "Carnegie Mellon University"
-date-released: 2026-10-10
+version: 0.3.0
+date-released: 2026-10-11
 license: MIT
 type: software
 doi: 10.5281/zenodo.23287414
