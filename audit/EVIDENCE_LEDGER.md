@@ -2288,3 +2288,71 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
 - **Design:** one IBM Quantum job of 3,900 shots, capped at 120 s (`ibm_testkeep.py` 3b94867c13068e85). Phase 0 calibration (600 pairs); phase A, no injection (1,000 pairs, p = 0.2); phase B, Psi- injected at 0.20 (2,300 pairs).
 - **Hypotheses:** W1 certificate never above the Bell-measured kept pass fraction; W2 no alarm in phase A; W3 alarm in phase B; W4 descriptive. Simulation power check: 60/60 valid, 0/60 phase-A alarms, 59/60 phase-B alarms.
 - **Credentials:** the user runs the job with an IBM account saved on their own machine. Claude does not handle credentials.
+
+## E131: Study 31 hardware results (11 Oct 2026)
+- **Run:** ibm_fez job db5s7lamb58s738aufbg, 3 s of QPU time, schedule sha b8db2032104754d0. The local Aer dry run came first.
+- **Verdicts:** W1 PASS (certificate valid: final 0.710 against Bell pass 0.852); W2 PASS (no alarm in phase A); **W3 FAIL** (no alarm in phase B: peak log-wealth 2.71 against a threshold of 3.49). Cause: deficit before the change (phase-A log-wealth −3.75) from a conservative F_decl (0.863). Phase errors were 7.2% / 5.8% / 15.5%.
+- **Open:** the user must confirm on GitHub that the Study 31 pre-registration was pushed before the job. A possible e-detector follow-up needs its own pre-registration.
+- **Addendum (E131):** the pre-registration commit is b51306a (16:58:36 UTC), about 15 min before the hardware job (result files written at about 17:13–17:14 UTC).
+
+## E132: Study 30 (provable closed loop): theory, design, review, dev pilot package (11 Oct 2026; dev only, not evidence)
+- **Theory (THEORY_30.md):**
+  - Lemma A: 1 − F ≤ 1.5 P(E=1), for symmetric readout and F ≥ 1/4.
+  - Theorem 2: a time-uniform upper confidence sequence on the offset θ (class Δ = θφ after the first alarm, B2; θ ≤ θ_max = 0.10, B4) gives P(user gets a bad pair after the first alarm) ≤ α + α_hi + α′.
+  - Corollary O (onset class): add β.
+  - Prop D: plug-in and hybrid model checks are e-processes; their debt is limited, not zero.
+- **Code:** core30.py 9091e3364b19fe56 (cs_upper_mix, OffsetCS, PlugInCheck, HybridCheck); study30.py e796ebb7c05a28cf; mcheck.py a05f0822 (same as Study 28).
+- **Tasks:** pilot 86efea56a3b66a7e (1,048 tasks, dev seeds 20321–20324, 4 networks per cell); confirmatory 15e156bc8734488c (8,384 tasks, seeds 19321–19324).
+- **Unit checks:**
+  - link CS upper end: missed in 0.3% of runs at level 0.05;
+  - OffsetCS: coverage 0.997 / 1.000; excess 0.018 / 0.028 after 9,000 tests;
+  - plug-in null: 14/500 at level 3.04% (underpowered).
+- **Adversarial review (REVIEW_30.md):** 4 blockers, 8 major and 9 minor findings, all addressed before the pilot (see README_30_PILOT.md). The truth now carries the offset, so model fidelity never exceeds 1.
+- **Smoke runs (disclosed):**
+  - forced early alarm: 0 bad pairs after the alarm, margin 0.057 against offset 0.044;
+  - L0.044F (false alarm before the onset): 3,942 bad pairs and no second alarm; this is the Corollary O failure mode, now a pre-registered prediction;
+  - kgMCa: 61% of oracle with no stressor.
+
+## E133: Post hoc replay of the Study 31 hardware outcomes with the new checks (11 Oct 2026; exploratory)
+- **Data:** the unchanged hw_result.json and aer_result.json, replayed through ibm_testkeep.schedule (3b94867c13068e85). q = (2/3)(1 − F_decl).
+- **Results (alarm position, counted in phase-B tests):**
+
+  | Check | Hardware | Aer |
+  |---|---|---|
+  | Mixture (as run) | none | 406th |
+  | Plug-in | 208th of 457 | 149th |
+  | Hybrid | 237th | 151st |
+
+  No check alarms in phase A.
+- **Caveat:** the bet rule was written after seeing Study 31's summary rates, so this is not evidence. Study 31b, a fresh-seed hardware rerun with a pre-registered hybrid check, is required.
+
+## E134: Disclosure: model fidelity above 1 in the Study 28–29 offset scenarios (11 Oct 2026)
+- **What happened:** Studies 28–29 added the undeclared offset to the model. For 2.7–63% of attempts, depending on scenario and hardware, the model fidelity exceeded 1. For those pairs the check's null bound q was clipped to 10⁻⁶, which inflates the check's detection power.
+- **What is affected:** scoring is correct everywhere (bad pairs are judged against the true fidelity; false alarms and certificate validity are measured correctly). But in those cells the scenario was less physical. That likely helped detection (Study 28 H2 and S2; Study 29 alarm timing). It may also have helped Study 29's offset estimate: a central prediction above 1 inflates the estimated offset, which makes the margin larger and safer. Study 30 re-tests this with physical scenarios.
+- **Fix from Study 30 on:** the offset is placed in the truth (extra depolarizing noise). To be stated in the manuscript limitations.
+
+## E135: Manuscript v0.5, rewritten as a paper (11 Oct 2026)
+- **Scope:** rewrite of v0.4 from a study log into a paper (referee D3).
+  - Order: setting → certifiable → guard → loop (Prop. MC, Prop. D, Theorem 2, Corollary O) → evidence (with one consolidated results table and a new hardware section) → related work → discussion.
+  - Provenance and revision history moved to Appendix E.
+  - Notation overloads fixed: readout factor → η, calibration success → μ_e, bets → ν, the confidence-sequence mixture → Λ_t.
+- **Abstract:** 250 words.
+- **Placeholders:** Study 30 and 31b slots are red PENDING macros (5 places). No new numbers: a script check found only 5,035 (the rounding fix from fact-check v0.3).
+- **sha256 (first 16):** main.tex 6c98ebb71f0e4b2a, appendix.tex 55732e4c0e8127ad, preview.pdf 769e9b38d7e52e05 (22 pages, article-class preview; REVTeX build pending on Overleaf).
+
+## E136: Study 31b (hardware rerun with the hybrid check) pre-registration package (11 Oct 2026)
+- **Design:** `ibm_testkeep_31b.py` 29c96b3f259a9e24. Seed 31032; schedule sha 3bfbc93611f01b96; 3,900 shots, one job, ≤ 4,000 cap, 120 s cap.
+  - Primary check: HybridCheck (core30.py 9091e3364b19fe56). Study 31's mixture check runs on the same outcomes as a paired comparison.
+  - After the alarm, the offset CS (Theorem 2 machinery) runs at level 0.025.
+  - Unchanged from Study 31: ibm_testkeep.py 3b94867c, cert.py 6b84bbdd, mcheck.py a05f0822.
+- **Hypotheses:**
+  - W1 certificate valid (primary);
+  - W2 no hybrid alarm in phase A (primary);
+  - W3 hybrid alarm in phase B (primary);
+  - W5 post-alarm offset bound covers the Bell-measured offset (secondary);
+  - W6 descriptive.
+- **Power (not evidence):**
+  - numpy model: 60/60 for every hypothesis at each calibration level tried.
+  - At Study 31's observed rates: P(alarm in B) hybrid 78.9%, mixture 44.7%; P(alarm in A) 0.2%.
+  - So W3 can fail about 21% of the time even if the check works as designed. This is stated before the run.
+- **Credentials:** the user runs the job with his own saved IBM account; Claude does not handle credentials.
