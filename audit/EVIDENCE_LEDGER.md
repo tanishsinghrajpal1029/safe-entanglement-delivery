@@ -2356,3 +2356,19 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
   - At Study 31's observed rates: P(alarm in B) hybrid 78.9%, mixture 44.7%; P(alarm in A) 0.2%.
   - So W3 can fail about 21% of the time even if the check works as designed. This is stated before the run.
 - **Credentials:** the user runs the job with his own saved IBM account; Claude does not handle credentials.
+
+## E137: Study 31b hardware results (11 Oct 2026)
+- **Run:** ibm_fez, job db5ubf04qg6s73c40k20, 3 s of QPU. Pre-registration commit 3520391 at 19:37:59 UTC; Aer result 19:38:26; hardware result 19:38:50 UTC. Confirm the push time on GitHub.
+- **Reproduced:** re-running the locked analyse() in the cloud gives identical values.
+- **Verdicts:**
+  - **W1 PASS:** certificate 0.6526 against Bell pass 0.8403.
+  - **W2 PASS:** no alarm in the 205 phase-A tests.
+  - **W3 PASS:** hybrid alarm at phase-B test 170 of 472.
+  - **W5 PASS** (secondary): U = 0.312 ≥ Bell-measured offset 0.099, after 302 tests.
+- **Descriptive:**
+  - F_decl = 0.8851, q = 0.0766.
+  - Test error rates 5.8% / 4.9% / 19.5%.
+  - The mixture was again in deficit (−3.37) but alarmed at test 214; the plug-in alone (exploratory) at 166.
+  - Aer: all pass (hybrid 188, mixture 261).
+- **Interpretation:** the hybrid check detects on hardware, and earlier than the mixture. This run does not show a rescue: the larger phase-B excess let the mixture recover too. The post-alarm bound is valid but loose (about 3×). n = 1.
+- **Manuscript v0.5 updated:** Sec. VI.C, App. E and the abstract. Hashes: main.tex 8ca65f58fcd73a3d, appendix.tex ea2a3378312b5d67, preview 192559e5705a1242.
