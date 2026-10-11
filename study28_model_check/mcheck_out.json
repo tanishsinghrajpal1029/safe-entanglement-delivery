@@ -1,0 +1,53 @@
+{
+ "false_alarm_q_const_0.05": {
+  "runs": 20000,
+  "tests": 10000,
+  "rate": 0.0225,
+  "ub95": 0.02423,
+  "level": 0.0304
+ },
+ "false_alarm_q_random": {
+  "runs": 20000,
+  "tests": 10000,
+  "rate": 0.0226,
+  "ub95": 0.02433,
+  "level": 0.0304
+ },
+ "false_alarm_q_adaptive": {
+  "runs": 20000,
+  "tests": 10000,
+  "rate": 0.02085,
+  "ub95": 0.02251,
+  "level": 0.0304
+ },
+ "restarts_total_alarms_per_run": {
+  "runs": 3000,
+  "tests": 10000,
+  "mean_alarms": 0.020666666666666667,
+  "bound": 0.05
+ },
+ "delay_q0.05_d0.01": {
+  "detected": 1.0,
+  "mean": 5035.152,
+  "median": 4058.0,
+  "bound": 5718.2
+ },
+ "delay_q0.05_d0.03": {
+  "detected": 1.0,
+  "mean": 557.4615,
+  "median": 484.5,
+  "bound": 727.4
+ },
+ "delay_q0.04_d0.06": {
+  "detected": 1.0,
+  "mean": 134.63475,
+  "median": 116.0,
+  "bound": 195.0
+ },
+ "delay_q0.067_d0.03": {
+  "detected": 1.0,
+  "mean": 701.943,
+  "median": 609.5,
+  "bound": 889.7
+ }
+}

@@ -1,0 +1,70 @@
+{
+ "tau0.8_p0.05": {
+  "K_LB": 365,
+  "K_C1": 702,
+  "ratio": 1.923,
+  "approx": 426.9,
+  "K_LB_bell_meas": 240
+ },
+ "tau0.8_p0.1": {
+  "K_LB": 165,
+  "K_C1": 339,
+  "ratio": 2.055,
+  "approx": 202.2,
+  "K_LB_bell_meas": 110
+ },
+ "tau0.8_p0.2": {
+  "K_LB": 70,
+  "K_C1": 158,
+  "ratio": 2.257,
+  "approx": 89.9,
+  "K_LB_bell_meas": 45
+ },
+ "tau0.9_p0.05": {
+  "K_LB": 720,
+  "K_C1": 1404,
+  "ratio": 1.95,
+  "approx": 853.8,
+  "K_LB_bell_meas": 470
+ },
+ "tau0.9_p0.1": {
+  "K_LB": 330,
+  "K_C1": 678,
+  "ratio": 2.055,
+  "approx": 404.4,
+  "K_LB_bell_meas": 210
+ },
+ "tau0.9_p0.2": {
+  "K_LB": 140,
+  "K_C1": 315,
+  "ratio": 2.25,
+  "approx": 179.7,
+  "K_LB_bell_meas": 90
+ },
+ "tau0.95_p0.05": {
+  "K_LB": 1440,
+  "K_C1": 2808,
+  "ratio": 1.95,
+  "approx": 1707.6,
+  "K_LB_bell_meas": 940
+ },
+ "tau0.95_p0.1": {
+  "K_LB": 660,
+  "K_C1": 1355,
+  "ratio": 2.053,
+  "approx": 808.8,
+  "K_LB_bell_meas": 420
+ },
+ "tau0.95_p0.2": {
+  "K_LB": 280,
+  "K_C1": 629,
+  "ratio": 2.246,
+  "approx": 359.5,
+  "K_LB_bell_meas": 180
+ },
+ "gamma_tau0.9_p0.1": {
+  "1.0": 330,
+  "0.9": 300,
+  "0.5": 205
+ }
+}

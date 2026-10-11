@@ -2127,3 +2127,41 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
   - Krutyanskiy2023: full author list (the arXiv page was refused with a rate-limit error);
   - USTC2026: volume and pages, once the issue is out.
 - **Files:** main.tex 91d50703, references.bib c7266930, preview.pdf 7c4d193c. The preview builds cleanly at 13 pages.
+
+## E120: Study 28 design, theory and dev pilot package (11 Oct 2026)
+- **Goal.** Fix weakness 1A by reusing the certification tests to check the model behind the per-pair guard. Also add a converse lower bound (Prop. LB) and a network-wide guard (Cor. NW).
+- **Theory** (`THEORY_28.md`):
+  - Prop. MC: validity with restarts, false alarms ≤ β.
+  - MC-delay bound.
+  - Prop. LB (converse): our certificate is within a factor of 1.9–2.3 of the floor. For example, at τ = 0.9 and p = 0.1 the floor is 330 kept pairs against our 678.
+  - Cor. NW.
+- **Numerical checks:**
+  - `mcheck_out.json`: first-alarm rate 2.1–2.3% against level 3.04%; 0.021 alarms per run with restarts; delay means below the bound.
+  - `lb_out.json`.
+- **Adversarial review** (`REVIEW_28.md`): no blocker, 7 major and 10 minor findings, all addressed before the pilot.
+- **Dev smoke design choices (disclosed):**
+  - Margin response: point estimate → Hoeffding → empirical Bernstein.
+  - Readout bound: a fixed 1% killed detection power, so it was replaced by each hardware's specified readout error.
+- **Pilot:** 1,312 tasks, dev seeds 20301–20304, 8 networks per cell. Confirmatory: 5,248 tasks, seeds 19301–19304, pre-registration to follow.
+- **sha256 (first 16):**
+  - study28.py 70e98b5a9fb94599, mcheck.py a05f0822c0335f3f, lb.py 04e8994ae8ebebef;
+  - pilot_summary_28.py 3fa665bca54b85af;
+  - tasks_p28 c4d8759984aaa408, tasks_s28 d469a195f9b955da.
+- **Unchanged dependencies:** cert.py 6b84bbdd, ptm_corr.py 47d89f15, study26.py 56436cc8.
+
+## E121: Study 28 dev pilot and pre-registration (11 Oct 2026)
+- **First submission (PSC array 49029590):** every shard failed in 7 s with `ModuleNotFoundError: drift_queue_des_g1`. The cause was a placeholder `S18C_LIB` path. Nothing ran and no data were produced.
+- **Resubmission:** used `S18C_LIB=$PWD/../s18c`, as in Study 27.
+- **Dev pilot output:** `des_p28_psc/runs.csv`, sha256 ba9d197ccb219242, 1,312 rows; module sha 70e98b5a and tasks sha c4d87599 match E120.
+- **Pilot results (dev seeds):**
+  - kgM detected undeclared optimism in 8/8 ion networks per cell.
+  - Bad delivered pairs fell to 0.07–0.32 of kg's count, with 0 bad in 191,969 deliveries after the alarm.
+  - Margins were 0.078–0.093, and throughput 0.25–0.57 of oracle (about the same as 16-point tomography).
+  - Per-user risk stayed at 37–45%.
+  - No alarms in the unpowered cells (0/448).
+  - False first alarms: 1/256.
+  - kgN: 0/32 networks with a bad pair, at a cost of 0.3–2.1 points.
+- **Pre-registration:** `README_28.md`, with 7 primary and 4 secondary hypotheses. `analyze_28.py` (sha 65d4ccf220c2d86e) is locked.
+  - The H7 bar (5 points) was set after seeing the pilot SiV cost; this is disclosed.
+  - No code change after the pilot.
+- **Confirmatory run:** `tasks_s28.jsonl` (d469a195f9b955da, 5,248 tasks), seeds 19301–19304. It runs only after the public commit.
