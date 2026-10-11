@@ -2470,3 +2470,32 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
 - **Smoke run (dev):** o0.044FM, ion2020, p = 0.2.
   - Running minimum: stuck near 0; 4,225 bad pairs until a re-alarm.
   - No intersection: recovered; 122 bad pairs, all in the warm-up.
+
+## E143: Manuscript v0.6, 30×30 scale result and topology limitation (11 Oct 2026)
+- **Added to Sec. VI.B:** the G3 result (E73).
+  - Setup: 30×30 grid, 900 nodes, 1,740 links.
+  - The anytime guard delivered 0 bad pairs in about 2.11 M deliveries (0 of 930,435 delivering paths), at a throughput cost of 6–9%.
+  - Without the guard, pooled risk stayed below 1%, but 1–3% of paths delivered a bad pair.
+  - Caveats stated: exact model, stationary links, 2–3-hop requests.
+- **New limitations item, "Topology":**
+  - The guarantees hold on any graph.
+  - The certificate, model check and closed loop were simulated only on the 5×5 grid.
+  - The G3 key is added to App. E.
+- **Correction to an earlier chat statement:** varying topology does not need a new network generator. corr_net builds the grid from g1.GRID_N at import, as G3 did, so a different grid size needs a separate run per size (one process per size).
+- **sha256 (first 16):** main.tex 6d0e6cfa10334f74, appendix.tex 8175e9c6bb896084, preview dac63817a43d30f8.
+
+## E144: Study 32 dev pilot and pre-registration (11 Oct 2026)
+- **Pilot:** des_p32_psc, 416 runs, runs.csv sha 2a7d2da377d947b9.
+  - 32 shards started 22:35:36 UTC; the longest took 325 s. Module 3d1462ed, tasks feaa79cc.
+  - The cloud summary matches the PSC run.
+- **Pilot findings (dev data, not evidence):**
+  - **Block R:**
+    - In class, the no-intersection bound (U′) behaves like the running minimum: 0 post-alarm bad pairs, throughput within 0.5 points.
+    - With a forced miscoverage, U′ recovered in 16/16 runs (median 486 tests), against 0/16 for the running minimum.
+    - Post-alarm bad-pair rate 0.085 vs 0.466; re-alarms 0.06 vs 0.94 per run.
+    - With a false alarm before onset, U′ halves the post-alarm pair risk (0.15 vs 0.33), but per-user risk stays high because (B2) fails.
+  - **Block E:** no post-alarm bad pairs at τ 0.85 or 0.92 or with less calibration data. The always-on arm had 0 harmed users in all cells.
+  - **Block T:** no alarms on thin hardware, and the always-on arm delivers about 0.7% of oracle, as predicted.
+- **Pre-registration:** README_32.md d38dab2848a06a67 and analyze_32.py e9bbc59b38cf8ac7 (locked).
+  - Primary: R1–R4, E1, E2. Secondary: S1–S4.
+  - Confirmatory: tasks_s32 f8dbba7c (3,328 tasks; about 300 SU).
