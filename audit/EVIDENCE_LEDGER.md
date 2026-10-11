@@ -2521,3 +2521,19 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
   - scope limitation;
   - App. E key S32.
   - Hashes: main.tex 4834aadb8be48c18, appendix.tex e6ac23a25d88c139, preview dfd8f4dc6dc0dd6d.
+
+## E146: Release v0.6.0 (11 Oct 2026)
+- **Release:** GitHub release v0.6.0, "Provable closed loop, IBM hardware runs, robustness (manuscript v0.6)".
+  - Zenodo version DOI 10.5281/zenodo.23306520; concept DOI 10.5281/zenodo.23287414.
+  - The README and CITATION (version 0.6.0) were updated just before the release: Studies 30–33, hardware runs, scoreboard 80 primary hypotheses (71 PASS, 9 FAIL).
+- **Manuscript v0.6:**
+  - The data-availability statement and the Repo2026 bib entry now carry the v0.6.0 DOI; the placeholder comment is removed.
+  - Hashes: main.tex 2963379f12474510, references.bib 4a6bd1c4e1a439e9, preview 5d1be648d1240f16.
+- **Remaining author items:**
+  - confirm the ACCESS allocation number;
+  - add the proof-check sentence once true;
+  - check the AditiBecker arXiv entry by hand;
+  - Bhavsar2025 journal reference;
+  - Overleaf REVTeX build;
+  - confirm the GitHub push times of the pre-registrations;
+  - advisor sign-off.
