@@ -2372,3 +2372,20 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
   - Aer: all pass (hybrid 188, mixture 261).
 - **Interpretation:** the hybrid check detects on hardware, and earlier than the mixture. This run does not show a rescue: the larger phase-B excess let the mixture recover too. The post-alarm bound is valid but loose (about 3×). n = 1.
 - **Manuscript v0.5 updated:** Sec. VI.C, App. E and the abstract. Hashes: main.tex 8ca65f58fcd73a3d, appendix.tex ea2a3378312b5d67, preview 192559e5705a1242.
+
+## E138: Study 30 dev pilot and pre-registration (11 Oct 2026)
+- **Pilot:** des_p30_psc, 1,048 runs, runs.csv sha f6f1c34173bea250; 32 shards, median 513 s each, 16 workers; module e796ebb7, tasks 86efea56.
+  - The cloud re-run of pilot_summary_30 matches the PSC output.
+  - Files landed in prx_work/31b_hardware_detector by mistake and were moved to 30_closed_loop.
+- **Pilot findings (dev data, not evidence):**
+  - In class: 0 post-alarm bad pairs in 256 runs (0/9,932 users).
+  - Margin excess about +0.006 to +0.013.
+  - Detection is much slower with physical offsets: at o0.044 on ion2020 the median first alarm is at epoch 33–55, against 8–23 in Study 28. This confirms E134.
+  - Whole-run worst-user risk barely improves with the gated loop (0.50 against 0.56 at o0.044).
+  - The always-on arm protects everyone but costs throughput (0.59–0.68 of oracle with no stressor; 0.21–0.62 at o0.044).
+  - The fixed margin of 0.10 delivers 0.
+  - Outside (B2), post-alarm per-user risk is 0.17–0.90.
+- **Pre-registration:** README_30.md 24968191e1d63a83 and analyze_30.py c8b9914c296b5fcb (locked).
+  - Primary P1–P5: Theorem 2 per-user and per-pair; forced early alarm; always-on full guarantee; check validity; bound tightness.
+  - Secondary S1–S6: price of provability; debt; hybrid robustness; predicted failures outside (B2); certificate under feedback; static competitor.
+  - Confirmatory: tasks_s30.jsonl 15e156bc8734488c (8,384 tasks; about 600 SU).

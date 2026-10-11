@@ -1,0 +1,5 @@
+c8b9914c296b5fcb  analyze_30.py
+24968191e1d63a83  README_30.md
+15e156bc8734488c  tasks_s30.jsonl
+e796ebb7c05a28cf  study30.py
+9091e3364b19fe56  core30.py
