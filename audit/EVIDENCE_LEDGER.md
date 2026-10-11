@@ -1895,3 +1895,72 @@ The hashes were verified by the user on PSC before submission.
 | `README_26.md` | 58cccbb6 |
 
 **Decision:** the user chose the "certified entanglement delivery" framing for PRX Quantum. Model-free certification of delivered pairs will be Study 27.
+
+## E109 — Certified-delivery pivot: theory, adversarial review, Study 27 build (11 Oct 2026)
+
+**Decision:** "go certified", for PRX Quantum (the user's choice).
+
+**Theory note** (`27_certification/THEORY_CERTIFIED_2026-10-11.md`, v2):
+- **Proposition C1:** an anytime-valid certificate on kept pairs, from random hidden X/Y/Z tests. Proof: a convex-MGF supermartingale plus Ville.
+- **Lemma F:** 1 − F = (eX + eY + eZ)/2.
+- **Proposition N:** no model-free certificate can certify per-pair thresholds.
+- **Resource floor:** with perfect pairs, reaching ≥ 0.9 needs 1,404 / 678 / 315 kept pairs at p = 0.05 / 0.1 / 0.2.
+
+**Adversarial review** (`REVIEW_27.md`):
+- The proof is correct.
+- **A3 was FALSE.** Readout noise lowers error rates when F < 1/4, giving 5.8–11.8% violations. Fixed: trusted measurements, or a known r_max (implemented).
+- **A2 was mis-stated.** Replaced by the commuting virtual Bell-label argument, which needs no per-pair assumption.
+- **Novelty claim WITHDRAWN:** C1 is a known-type result (Pallister–Linden–Montanaro; Takeuchi–Morimae; Zhu–Hayashi; Gočanin–Šupić–Dakić; Bouman–Fehr; Zhang–Glancy–Knill). It is cited as a component.
+- **Monte Carlo** (checked after every kept pair):
+  - ours: ≤ 2.5% (8-value λ grid);
+  - the reviewer's: ≤ 4.6% (adaptive adversaries, states that are not Bell-diagonal).
+
+**Analysis fixes from the review:**
+- C1 is now over eligible users, with a cluster bootstrap.
+- C3 and C4 are now descriptive.
+- Hot users are 1-hop users; KMIN is 500.
+
+**Real-data feasibility** (`REALDATA_FEASIBILITY.md`):
+- No public dataset randomises test/keep per pair, so C1 cannot be validated on hardware.
+- The Innsbruck ion–photon data allow a pre-registerable, trusted-measurement fidelity lower bound (6 scans).
+- USTC per-set CHSH lacks counts for a rigorous device-independent bound.
+- ICFO is excluded.
+
+**Study 27 code:**
+
+| File | sha |
+|---|---|
+| `study27.py` | 1281b710 |
+| `cert.py` | 6b84bbdd |
+| `ptm_corr.py` | 47d89f15 |
+| `analyze_27.py` | 8d455051 |
+| `tasks_p27.jsonl` | 9f465a50 (768 dev tasks) |
+
+**Still unread:** arXiv 2610.10885 (rate-limited twice).
+
+## E110 — Study 26 confirmatory results (11 Oct 2026)
+
+**Run:** `runs.csv` b31b9c98 (10,848 rows). Every shard's metadata records module 56436cc8 and tasks a693357d.
+
+**Re-analysis:** the Mac re-analysis (`analyze_26.py` e44895fa) is byte-identical to the PSC output.
+
+**Timing:** pre-registration commit `fc22091` at 01:41:56 UTC; shards started 01:44:11–01:44:20 UTC, so the commit came 2 min 15 s before the run.
+
+**Primary hypotheses (7 of 7 PASS):**
+- **U1:** 0 bad in 1.01M; 0 of 91,392 users.
+- **R1, R2, R3, O1, S1:** all PASS.
+- **O2:** per-user upper bound ≤ 2.7%.
+
+**Secondary hypotheses:**
+- **U2 FAIL:** SiV ag2t correction cost +2.43 vs the 2-point bar.
+- **R5 FAIL:** SiV recipe cost worst −4.47 vs the 3-point bar.
+- **U3, R4, R6, O3:** CONFIRMED.
+- **O2b:** PASS.
+
+**Notable:**
+- **Plug-in rule without a margin:** 17–19% of ion users got bad pairs.
+- **Dev-tuned plugM:** competitive on ions (kg − plugM +2.4 to +4.2; ag2t − plugM −3.0 to +0.4). Far below our guards on thin hardware (+17 to +20).
+- **Persistent noise (AR 0.9):** breaks even the oracle φ on ion2020.
+- **Design curve, ion2020** (M = 4 / 16 / 64 / 256 / oracle): 0.16 / 0.38 / 0.67 / 0.81 / 0.90.
+
+**Results file:** `RESULTS_26.md`.

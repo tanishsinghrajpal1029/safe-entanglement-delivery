@@ -1,0 +1,14 @@
+{
+ "module": "study26",
+ "module_sha": "7e13e41a502809ec485b65b091e431d5ad1255ce7c8b460c95bbf9d59dc34bc9",
+ "runner_sha": "f5eca179c1f1728e6da64a397d9aa27e760ac737fe8802971f4a6bf40f933602",
+ "tasks_sha": "e29c4b3ad7dd32bf671faf4a888ff5b9ba310f71858545128c7b8c342f9f8936",
+ "shard": 1,
+ "nshards": 32,
+ "n": 122,
+ "workers": 16,
+ "host": "r189.ib.bridges2.psc.edu",
+ "python": "3.12.7",
+ "start": "2026-10-11T01:21:47Z",
+ "elapsed_s": 249.3
+}
