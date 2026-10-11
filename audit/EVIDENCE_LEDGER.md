@@ -2040,3 +2040,44 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
 - **Thin hardware:** not certifiable at this horizon.
 
 **Results file:** `RESULTS_27.md`.
+
+## E115: Manuscript v0.2 after the fact-check (11 Oct 2026)
+- **What:** applied every item in `FACTCHECK_v0.2.md` to the manuscript and appendix:
+  - 14 wrong numbers or claims (W1–W14);
+  - 17 overclaims (O1–O17);
+  - 14 missing caveats (D1–D14).
+  Every replacement is scripted in `fix_v02.py`, `fix_v02b.py` and `fix_v02c.py`.
+- **Main corrections:**
+  - Prop C1 now certifies the fraction of kept pairs that would pass a Φ⁺ test. This equals average fidelity only without cross-entanglement.
+  - USTC model optimism is reported as not significant (0.029 ± 0.044); declarations use the 0.10 bound.
+  - The recipe guarantee is α + β = 10%, with delivered-pair risk up to 5% at M = 4.
+  - Pre-registration exceptions are disclosed: Study 25 Block A, v11, v16. The Innsbruck analysis is not blind.
+  - The cost is 850–3,900 kept pairs for F = 0.97 pairs.
+- **Bib:**
+  - USTC2026 is now the real entry: Liu et al., Nature (2026), DOI 10.1038/s41586-026-10177-4, from the arXiv 2602.08472 abstract page. Volume and pages are pending.
+  - ZhuHayashi2019 changed to PRL 123, 260504.
+  - Added WaudbySmith2020.
+  - All .bib entries are now cited except QPing2025.
+- **Figures:** re-run from `make_figs_v2.py`. The preview builds cleanly (13 pages, article class).
+- **Files:** `prx_work/manuscript_v0.2/`. sha256 prefixes: main.tex f0f4e2d9, appendix.tex dba58218, references.bib 5caf1c59, preview.pdf f1ce778f.
+- **Scoreboard v2:** `26_certified/scoreboard/` (scoreboard_v2.csv b5dcc877; SCOREBOARD_v2.md 90967c24).
+  - Primary: 50 hypotheses, 43 PASS / 7 FAIL.
+  - Secondary: 28 hypotheses; 15 PASS, 6 CONFIRMED, 6 FAIL, 1 UNCLEAR.
+- **Open:**
+  - human proof check (M. Mattarock);
+  - ORCID;
+  - v0.2.1–v0.3.0 DOIs;
+  - 12 `% VERIFY` bib flags;
+  - ACCESS acknowledgement text.
+
+## E116: v0.3.0 release and README alignment (11 Oct 2026)
+- **Release:** GitHub v0.3.0, "Certified delivery (Studies 26–27, Innsbruck certificate, manuscript-aligned)". It contains commit a1cdfd7 (CITATION.cff title and version 0.3.0).
+- **Zenodo:** version DOI **10.5281/zenodo.23291355**. Record title: "Certifying delivered entanglement: per-pair guarantees need a model, averages do not (code and data)". Concept DOI unchanged: 10.5281/zenodo.23287414.
+- **Finding after release:** the v0.3.0 snapshot still carries the old README. That README:
+  - lists the withdrawn Prop. 10 as valid;
+  - states the guard per path;
+  - calls the USTC optimism "2–4 points" without saying it is not significant;
+  - recommends a 0.04 margin instead of the 0.10 bound;
+  - omits the Study 25 Block A timing exception.
+- **Fix:** README rewritten to match manuscript v0.2, for the next release (v0.3.1). The v0.3.0 archive is immutable; v0.3.1 supersedes its README.
+- **Manuscript:** the data-availability section and the Repo2026 bib entry now cite the v0.3.0 version DOI (main.tex 1e88689e, references.bib a4851428).

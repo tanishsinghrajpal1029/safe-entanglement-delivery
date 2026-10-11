@@ -1,75 +1,64 @@
-# Safe entanglement delivery: label-free risk control and an anytime-valid per-user guard for quantum networks
+# Certifying delivered entanglement: per-pair guarantees need a model, averages do not
 
 [![DOI](https://zenodo.org/badge/1413586519.svg)](https://doi.org/10.5281/zenodo.23287414)
 
-Research code, pre-registrations, results and the audit trail for an independent study at Carnegie Mellon University (Information Networking Institute).
+Code, pre-registrations, results and the audit trail for the manuscript of the same title. The work is an independent study at Carnegie Mellon University (Information Networking Institute). The repository was formerly titled "Safe entanglement delivery".
 
 **Authors:** Tanish Singh Rajpal and Michael Mattarock (Carnegie Mellon University).
 
-**Status (October 2026):** a preprint is in preparation.
+**Status (October 2026):** the manuscript is in preparation.
 - The evidence is mainly **simulation**: a discrete-event network simulator whose physics was cross-checked against NetSquid.
-- It is backed by **three pre-registered checks on public experimental data** (Innsbruck, ICFO, USTC).
-- A final pre-registered study, Study 25 ("realism"), tested model error, finite calibration, shared noise, network load and re-alignment: 9/9 primary tests passed; one secondary test failed (reported).
+- **Three pre-registered re-analyses of public experimental data** back it up: Innsbruck, ICFO and USTC.
+- The final studies are Study 26 (model-based layer at measured hardware levels) and Study 27 (model-free certificate). Both were pre-registered and committed publicly before their first cluster job.
 
 ## The question
-A quantum network cannot inspect a delivered entangled pair without destroying it. Using only data the network already collects, can it:
-- keep the fraction of **delivered** pairs below a fidelity threshold under a target (δ = 1%), and
-- promise that **no individual user** ever receives such a pair, except with a small, chosen probability (α = 5%)?
+A quantum network cannot inspect a delivered entangled pair without destroying it. So what can a user actually be guaranteed about the pairs they receive, and what does each kind of guarantee cost?
 
-## Main results
+## Main results (manuscript v0.2)
 
 | Result | Evidence |
 |---|---|
-| **No-go.** Rules with a fixed margin or confidence level cannot hold a target rate of bad *delivered* pairs (Prop. 1). | Theory + simulation |
-| **Label-free controller.** With a calibrated posterior, network-average delivered risk ≤ 1% (Prop. 2). It held in 63/63 non-SiV hardware groups. | Studies C1–C2, P1, G1–G3 |
-| **Per-user guard.** An anytime-valid mixture confidence sequence per path (Prop. 6, drift variants 6′/6″) guarantees P(a user ever receives a bad pair) ≤ α. | **0 bad pairs in 12.3M (Study 23) and 34.8M (Study 24) guarded deliveries** |
-| **Learning under the guard.** A learned prior (AI or linear) enters the guard without affecting the guarantee (Props. 7, 10). | Study 24, all pre-registered tests passed |
-| …it rescues thin-data hardware | **SiV-like links: from ~4–5% to ~26–32%** of oracle throughput at 0 bad pairs. **+20 points** on NV/SiV over today's guard. |
-| …it gains from correlations | **+11.4 points** from the AI's own correlation learning on thin hardware; +4.4 on patterns never seen in training |
-| …but has limits | On data-rich ion hardware learning adds < 0.5 points. A linear model captures most of the gain. |
-| **Latency.** End-to-end request-to-delivery latency, reported for every arm. | The guard adds no measurable latency on ion hardware |
-| **Faults.** Alarms cut post-fault harm by ~97% (24 vs 793 late bad pairs). No data-driven rule can stop exposure before post-fault data arrive (Prop. 8, a no-go). | G6, G7 |
-| **Realism (Study 25).** Undeclared model error breaks the guard (15% of paths at κ = 0.5); declaring a margin restores 0 bad pairs. Short calibration campaigns replace the known fleet law. Strong shared noise breaks every undeclared guard; declaring the dispersion restores safety at a large throughput cost on thin hardware. | Study 25: 0 bad pairs in 7.3M deliveries under parallel load and signalling delay; secondary T3 **failed** (disclosed) |
-| **Re-alignment drift.** A safe guard pays 12–20% to restart. Re-use is possible only with a declared bound on re-alignment (Prop. 9, a design rule). | G5, Study 24 Block B; Study 25 Block D: a declared bound B = 0.005 recovers 61–63% of the restart cost, 0 bad pairs while the bound holds |
+| **No-go (Prop. N).** No rule that relies only on test outcomes (no model) can certify that each kept pair clears a fidelity threshold. At test fraction p = 0.1 it wrongly certifies with probability ≥ 0.93 − α, while ≥ 59% of runs contain a bad kept pair. Fixed-confidence filters also cannot hold a target bad-pair rate (base-rate lemma). | Theory |
+| **Model-based layer.** An anytime-valid mixture confidence sequence on each link's calibration counts, at level α/U_max over every link the user could be routed on. Under its model assumptions it bounds P(user ever receives a bad pair) ≤ α (Theorem 1). Learned priors keep validity if they are independent of the link's own data (Lemma B). | 0 bad pairs in 12.3M (Study 23) and 34.8M (Study 24) guarded deliveries; Study 26: 0 of 91,392 users |
+| **…its failure modes at measured hardware levels** | Study 26: undeclared over-dispersion or model optimism breaks the guarantee. Declaring them from calibration data restores it, at a throughput cost set by calibration precision. **Persistent (slowly varying) noise broke the safety bar of every model-based arm**, including one told the true per-epoch level. |
+| **Model-free layer.** Random X/Y/Z tests hidden from the network give an anytime-valid lower bound on the fraction of kept pairs that would pass a Φ⁺ test. That fraction is the average fidelity when pairs are not entangled with each other. The construction is standard; we use it as a component. | Study 27: wrong for 0–0.33% of eligible users (α = 5%), including where the model-based layer failed |
+| **…but it sees only averages** | Under undeclared model optimism (64 networks), 25% of delivered pairs were below threshold, while the certified kept-pair average was 0.888 (true value 0.926) |
+| **Cost.** Certifying 0.9 needs 315–1,404 kept pairs per user even from perfect pairs (p = 0.2 to 0.05), and about 850–3,900 for pairs of fidelity 0.97. Thin (NV/SiV-like) hardware could not reach a useful certificate within 45 simulated minutes. | Prop. C1 resource curve; Study 27 |
+| **Earlier results (Studies ≤ 25)** | Label-free risk controller, learned priors on thin hardware, latency, faults (a fault-exposure no-go), re-alignment drift. See the study folders and the theory notes. |
 
 ## Real-data checks (pre-registered; data are not redistributed)
 
 | Dataset | What we found |
 |---|---|
-| **Innsbruck** 230 m trapped ions (Zenodo 7031042) | Stage 1 reproduced: ion–photon fidelity 0.920 ± 0.004 vs 0.924–0.929 reported. Stage 2: event-count mismatch (581 vs 491), reported. |
-| **ICFO** 2021 solid-state memories (Zenodo 6454536) | Reproduced the paper's claims: concurrence falls with storage time and stays positive at 25 µs (6.2σ); two-photon suppression 0.033 vs 0.036(8). The primary visibility estimator **failed**, because the phase settings are not in the data (a request was sent to the authors). **Real drift** in 7 of 11 runs, yet the anytime bound held in 10 of 11. |
-| **USTC** 2026 remote ion–ion entanglement (Zenodo 18218281, figure data) | Our memory model predicts the real fidelity decay within error, but is **2–4 points optimistic**. **Real drift** in the error rate (dispersion ×3.6). |
+| **Innsbruck** 230 m trapped ions (Zenodo 7031042) | Stage 1 reproduced the ion–photon fidelity: 0.920 ± 0.004, against 0.924 in the authors' repository (0.929 in the paper). Stage 2: event-count mismatch (581 vs 491), reported. **Stage 3: a model-free certificate F ≥ 0.887 at 95%** (point estimate 0.914). Stage 3 is not blind: the counts had been seen in Stage 1, so only the method was fixed in advance. |
+| **ICFO** 2021 solid-state memories (Zenodo 6454536) | Reproduced the paper's claims: concurrence falls with storage time and stays positive at 25 µs (6.2σ); two-photon suppression 0.033 vs 0.036(8). The primary visibility estimator **failed**, because the phase settings are not in the data. The echo probability per herald is over-dispersed in 7 of 11 runs (5 of 11 after Bonferroni). |
+| **USTC** 2026 remote ion–ion entanglement (Liu et al., Nature 2026; Zenodo 18218281, figure data) | Point estimates of our memory model are 2–4 fidelity points optimistic at all four storage times. The offset is **not significant** (0.029 ± 0.044). The error rate is over-dispersed (ratio 3.57). |
 
-**What the real data imply:** real links drift, and physics models tend to be optimistic. A deployed guard therefore needs its drift-aware form and a **declared physics margin**, about 0.04 in fidelity for the USTC device.
+**What the real data imply:** calibration counts need not be binomial, and model optimism cannot be ruled out. A safe declaration must therefore use the upper bound on the model margin (0.10 for USTC), not the point estimate.
 
-## Theory (summary)
-Props. 1–7: `study18c_controller_and_guard/THEORY_NOTE.md` and the project theory notes. Props. 8–10 and the contributions list: `docs/THEORY_NOTE_2026-10-11.md`.
-
-| Prop. | Statement |
-|---|---|
-| 1 | Base-rate no-go for fixed-margin rules |
-| 2 | Calibration controls delivered-pair risk |
-| 3 | Identifiability index for the fleet spread (I ≥ 3 is safe) |
-| 4 | Finite-window deviation of the threshold |
-| 5 | Two fault mechanisms |
-| 6 | Anytime-valid per-path guard (6′/6″ handle drift) |
-| 7 | A prior helps only through the Occam term |
-| 8 | Fault-exposure no-go |
-| 9 | Declared re-alignment bound |
-| 10 | A prior built from neighbours' data adds no independence assumption beyond the guard's own data model |
+## Theory
+- **Certified-delivery theory:** `study27_certification/THEORY_CERTIFIED_2026-10-11.md`, covering Prop. N, Lemma F, Prop. C1 and the resource floor.
+- **Model-based guard:** `docs/THEORY_NOTE_2026-10-11.md` and `audit/reviews_2026-10-11/PROOF_REVIEW.md`, covering Theorem 1 (per user), Lemmas A–E, the drift corollaries and the fault-exposure no-go.
+- **Correction:** the earlier "Prop. 10" (informed priors need no extra assumption) was **false**. Lemma B replaces it with a sufficient condition. The earlier per-path statement of the guard is replaced by the per-user Theorem 1.
+- **Human review:** the AI proof review is in the repository. A human check of the proofs by the second author is in progress.
 
 ## Known limitations
 - **No live hardware.** The real-data checks re-analyse published data.
-- **The guarantee holds only under the guard's stated assumptions.** It needs a correct or declared-pessimistic physics model, counts that are not over-dispersed (or a declared dispersion), and declared drift or re-alignment bounds.
-- **Network model:** a 5 × 5 grid (and single paths). Studies ≤ 24 serve one request at a time without classical signalling delay; Study 25 adds parallel requests, 4× load and 50 km/hop signalling delay.
+- **Model-based guarantees hold only under stated assumptions.** These are: a correct or declared-pessimistic physics model; counts that are not over-dispersed, or a declared dispersion; and declared drift or re-alignment bounds. Persistent noise is not covered.
+- **The model-free certificate** assumes trusted measurements and hidden, fresh test choices. It certifies an aggregate, not individual pairs. The simulations use ideal measurements.
+- **Guarantees are per user,** not simultaneous over all users of a network.
+- **Network model:** a 5 × 5 grid with stylised noise and fault models. The baselines are re-implemented class representatives.
 
 ## Method
 - **Pre-registration.** Every confirmatory study was pre-registered before its run: hypotheses, pass bars, a locked analysis script tested on synthetic data, task lists and code hashes. Failures are kept and reported.
-  - See `PREREGISTRATION_TIMELINE.md` and `audit/EVIDENCE_LEDGER.md` (entries E1–E105).
-- **Independent timestamps** (`audit/PREREG_TIMESTAMP_CHECK.md`):
-  - for **22 of 22** studies run on PSC Bridges-2, the pre-registration file was on the cluster before the first confirmatory job started; Study 25 likewise (locked files on the cluster 34 s before job submission; pushed publicly before any job produced output; ledger E102);
-  - each `des_*_psc/` folder holds the job-written metadata (code hash, task hash, start time);
-  - from v0.1.0 on, every release is archived on Zenodo.
+  - Over the project, 50 primary hypotheses were tested: 43 PASS, 7 FAIL (`audit/SCOREBOARD_v2.md`).
+  - See `PREREGISTRATION_TIMELINE.md` and `audit/EVIDENCE_LEDGER.md` (entries E1–E116).
+- **Timestamps** (`audit/PREREG_TIMESTAMP_CHECK.md`):
+  - For every study run on PSC Bridges-2, the pre-registration was on the cluster before the first confirmatory job.
+  - Studies 26 and 27 were committed publicly 2 min 15 s and 1 min 51 s before their first job.
+  - Exceptions are disclosed in the ledger: Study 25 Block A started about 2 min before its public commit, and v11 and v16 had partial exposure to confirmatory data.
+  - Each `des_*_psc/` folder holds the job-written metadata (code hash, task hash, start time).
+  - From v0.1.0 on, every release is archived on Zenodo.
 
 ## Layout
 
@@ -83,7 +72,7 @@ Props. 1–7: `study18c_controller_and_guard/THEORY_NOTE.md` and the project the
 | `study27_certification/` | Model-free, anytime-valid certificate of kept-pair fidelity on top of the control layer, under model error, persistent noise and memory faults (Study 27): 2/2 primary PASS; certificate valid where the control layer fails; theory note and adversarial review included; see `RESULTS_27.md` |
 | `external_checks/` | `innsbruck_230m/`, `icfo_2021/`, `ustc_2026/`: pre-registrations, code and results |
 | `audit/` | Evidence ledger, timestamp check, PSC job history, hardware provenance, novelty map, audit scripts |
-| `docs/` | Theory note v4 (Props. 8–10, novelty and contributions) |
+| `docs/` | Theory note v4 for the model-based guard (Prop. 10 there is superseded by Lemma B; see `audit/reviews_2026-10-11/PROOF_REVIEW.md`) |
 
 ## Reproducing
 - **Requirements:** Python 3.9–3.12 with numpy, scipy and pandas; scikit-learn for the AI models; openpyxl for the USTC check.
@@ -102,4 +91,4 @@ Code, simulations and documents were developed with substantial assistance from 
 
 ## License and citation
 - Code: MIT (`LICENSE`). Documents and results: CC BY 4.0.
-- Cite via `CITATION.cff`. Zenodo: **doi:10.5281/zenodo.23287414** (all versions).
+- Cite via `CITATION.cff`. Zenodo: **doi:10.5281/zenodo.23287414** (all versions); v0.3.0 (certified delivery): doi:10.5281/zenodo.23291355.
