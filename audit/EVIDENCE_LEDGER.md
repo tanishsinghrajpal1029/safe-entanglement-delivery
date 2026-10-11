@@ -2097,3 +2097,11 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
 
   v0.2.2 is not yet recorded.
 - **Timing evidence:** the timing evidence for the Study 27 pre-registration remains the GitHub commit 63d20c6, made 1 min 51 s before the first job. The Zenodo publication time of v0.2.3 is not used as evidence that the pre-registration preceded the run.
+
+## E118: Zenodo DOIs for v0.3.1 and v0.3.2 (11 Oct 2026)
+- **v0.3.1:** DOI **10.5281/zenodo.23291390**. A documentation-only release: the README was aligned with manuscript v0.2. It supersedes the v0.3.0 README.
+- **v0.3.2:** DOI **10.5281/zenodo.23291411**. It adds ledger E117. Main at release time was 1cef7d0. The tag target was not checked from the cloud, because the GitHub fetch through the proxy was refused.
+- **Record title** for both versions: "Certifying delivered entanglement: per-pair guarantees need a model, averages do not (code and data)".
+- **Manuscript:** the data-availability section and the Repo2026 entry now cite v0.3.2 (main.tex 1d72f464, references.bib 475c9b0b).
+- **Minor:** CITATION.cff said 0.3.1 at the v0.3.2 tag. It has now been bumped to 0.3.2. Zenodo takes the version from the tag.
+- **Open:** the v0.2.2 DOI is not yet recorded.
