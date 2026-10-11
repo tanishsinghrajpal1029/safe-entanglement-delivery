@@ -2499,3 +2499,25 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
 - **Pre-registration:** README_32.md d38dab2848a06a67 and analyze_32.py e9bbc59b38cf8ac7 (locked).
   - Primary: R1–R4, E1, E2. Secondary: S1–S4.
   - Confirmatory: tasks_s32 f8dbba7c (3,328 tasks; about 300 SU).
+
+## E145: Study 32 confirmatory results (11 Oct 2026)
+- **Timing and provenance:**
+  - Pre-registration commit f647233 at 22:45:35 UTC; first shard started 22:47:40 UTC.
+  - Module 3d1462ed, tasks f8dbba7c; longest shard 1,189 s, about 170 SU.
+  - runs.csv 16e67200579969ab (3,328 rows, none clamped).
+  - Analysis on PSC and re-run in the cloud: identical.
+- **Verdicts:** primary R1–R4, E1 and E2 all PASS; secondary S1–S4 all PASS.
+  - **R1 (current-look bound in class):** 23 of 11,800 users (UB 0.58%); 661 of 450,432 pairs (UB 0.42%). All from one run (ion2020, L0.044, p20, network 19): a false alarm before onset, the Corollary O case. The running minimum delivered 1,236 bad pairs in that run.
+  - **R2 (cost):** −0.29 points (lower bound −0.36).
+  - **R3 (forced miscoverage):** post-alarm bad-pair rate 0.097 vs 0.463; ratio upper bound 0.235.
+  - **R4 (recovery):** 128 of 128 runs recovered, median 502 tests.
+  - **E1 (Theorem 2 robustness):** 0 of 15,606 users after the alarm, at τ 0.85 / 0.92 and with less calibration data.
+  - **E2 (always-on):** 0 of 139,264 users.
+  - **Secondary:** L0.044F pair rate 0.158 vs 0.333; re-alarms 0.016 vs 0.883 per run; thin hardware never alarmed and the always-on arm delivered 1.5% of oracle; certificate violated in 39 and 50 of 3,328 runs.
+- **Manuscript v0.6 updated:**
+  - Remark "A bound that can recover" (current-look bound; Howard et al.);
+  - new evidence paragraph;
+  - two Table II rows;
+  - scope limitation;
+  - App. E key S32.
+  - Hashes: main.tex 4834aadb8be48c18, appendix.tex e6ac23a25d88c139, preview dfd8f4dc6dc0dd6d.
