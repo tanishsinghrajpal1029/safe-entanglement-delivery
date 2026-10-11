@@ -2182,3 +2182,38 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
 - **H4 diagnosis (exploratory):** all 6,232 post-alarm bad pairs came from one network (ion2020, p = 0.1, idx 19). It alarmed after 8 tests, when there were fewer than NMIN tests, so only the fixed step of 0.02 was applied, and it never alarmed again. The other 127 networks had 0 bad pairs after their alarm. No re-tuning was done; a fix needs a new pre-registration.
 - **Results file:** `RESULTS_28.md`.
 - **Addendum (E122):** the cloud re-run of the locked `analyze_28.py` (`reanalysis_28_cloud.txt`) gives verdict lines identical to the PSC compute-node output: all 12 H/S lines match character for character. Only the header's numpy repr differs (`np.int64(90)` vs `90`).
+
+## E123: Study 29 design and dev pilot package (11 Oct 2026)
+- **Purpose:** fix Study 28's H4 failure and its over-sized margins.
+- **Arms:**
+  - kgMJ (jump to 0.10 after a low-information alarm);
+  - kgMT (tracking: an exact upper bound on the model offset from post-alarm tests and probe tests of margin-blocked pairs; the margin can fall, and every decrease restarts the e-process);
+  - baselines kgMTp (point estimate) and kgMTa (always-track);
+  - kg and kgM as references.
+- **Scenarios:** offsets 0.02, 0.044 and 0.08; forced-alarm cells; exact-margin and 16-point tomography baselines.
+- **Replay of Study 28's network 19:** kgM reproduces Study 28 exactly (6,232 bad / 24,134).
+- **Adversarial review (`REVIEW_29.md`):**
+  - Blocker B1 (the tracking window included the alarm segment) is fixed.
+  - Majors M1–M6 are fixed. M7 is partly fixed; pair-varying model error and a changing offset are listed as limitations.
+- **Dev smoke design choices (disclosed):**
+  - The bound went from empirical-Bernstein to normal to exact Clopper–Pearson at β/9.
+  - Probe tests were added after the replay showed starvation.
+  - Smoke results: replay kgMT margin 0.046, 0 bad; forced false alarm recovered to 0.014.
+- **sha256 (first 16):**
+  - study29.py 532e612f0de478ef;
+  - tasks_p29 9664b6bec7c4c9fd (1,094 tasks); tasks_s29 e9c11dcb77432c14 (4,352 tasks);
+  - pilot_summary_29.py 0da5b0859793f029; mcheck.py a05f0822 (unchanged).
+
+## E124: Study 29 dev pilot and pre-registration (11 Oct 2026)
+- **Dev pilot output:** `des_p29_psc/runs.csv`, sha256 8d2888f6dbee2738, 1,094 rows.
+- **Pilot results (dev seeds; kgMT, the tracking response):**
+  - 0 post-alarm bad pairs in 1,529,000 deliveries across all model-error and forced-alarm cells. For comparison, kgM had 9.3% / 7.8% and kgMJ 0–0.2%.
+  - The post-alarm margin sat 0.008–0.011 above the true offset.
+  - Throughput was 0.80–0.84 of oracle at offset 0.044. kgM reached 0.39–0.59 and 16-point tomography 0.33–0.56.
+  - After a forced false alarm, the margin recovered to 0.007–0.014.
+  - Replay of Study 28's network 19: 0 bad pairs (Study 28 had 6,232).
+  - Baselines: with the point estimate, 23/128 runs had post-alarm bad pairs. Always-tracking cost 14 points.
+- **Pre-registration:** `README_29.md`, with 6 primary and 4 secondary hypotheses. `analyze_29.py` (4a54c1e339839150) is locked.
+  - T2 and T5 were redefined after the pilot (disclosed). T2 failed on the pilot only because of its size. The original T5 duplicated kgM.
+  - No code change after the pilot.
+- **Confirmatory run:** `tasks_s29.jsonl` (e9c11dcb77432c14, 4,352 tasks), seeds 19311–19314. It runs only after the public commit.
