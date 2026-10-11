@@ -1780,3 +1780,118 @@ If the push turns out to be later than 23:01:15, the "before any shard completed
 - **Conclusion:** the pre-registration was public before any result existed, but only by a margin of at least 28 s. It was public before Block D started.
 - **Paper wording:** "hash-locked on the cluster before submission; publicly pushed within 4 min of Block A start and before any job produced output."
 - The exact GitHub time (from the tooltip) can still be added here.
+
+## E104 — Release v0.2.0 (11 Oct 2026)
+
+GitHub release v0.2.0 ("Study 25 results: realism checks") is published, with Zenodo DOI **10.5281/zenodo.23289367**. It contains:
+- Study 25 results, run outputs and the Mac re-analysis;
+- ledger entries through E103.
+
+The pre-registration is v0.1.4 (DOI 10.5281/zenodo.23289143). The concept DOI is unchanged: 10.5281/zenodo.23287414.
+
+## E105 — Authorship (11 Oct 2026)
+
+**Decision:** Michael Mattarock (CMU) agreed to be co-author.
+
+**Authors:** Tanish Singh Rajpal and Michael Mattarock, both "Carnegie Mellon University". Contact emails for the manuscript:
+- trajpal@cmu.edu (corresponding author);
+- mattarock@cmu.edu.
+
+**Pending:** his ORCID, to be added to CITATION.cff and the manuscript.
+
+**Repo changes:** CITATION.cff and README updated. Zenodo will show both authors from the next release; existing DOIs keep a single author.
+
+## E106 — Post-Study-25 reviews (11 Oct 2026): weakness review, proof review, scoreboard, venue
+
+**Inputs:** the weakness review (`WEAKNESSES_REVIEW_2026-10-11.md`, 11 items) and three independent agent checks. All outputs are in `26_certified/`.
+
+**1. Adversarial proof review** (`proofcheck/PROOF_REVIEW.md`; Monte Carlo is reproducible with `run_all.py`, 142 s)
+- **Prop 6** is correct per **fixed path**. The extensions hold: optional stopping, adaptive sampling, the drift variants 6′/6″, and α-spending.
+- **The per-USER claim is NOT proved.**
+  - Routing picks among candidate paths using data, so the valid bound is |U|·α/Lmax.
+  - On our grid, |U|/Lmax = 2 (Lmax = 2) or 7/3 (Lmax = 3).
+  - Earlier studies' "per-user" wording is therefore withdrawn. Their bounds were per path; their empirical results are unchanged.
+- **The "bad / delivering paths ≤ 5%" bar** is a metric, not implied by the theorem.
+- **Prop 10 is false (withdrawn).** It is replaced by Lemma B: the prior must be conditionally independent of the link's own CS data. As a result, ag2 has **no** guarantee under shared noise; ag2t (time split) does, when the noise is not persistent.
+- **Prop 7** is an identity. It does not establish prior validity.
+- **Prop 9:** it needs a P(violation) term when B is random, and errors accumulate across violations.
+- **Prop 3:** valid for windows on distinct links. Study 25's campaign draws fresh links, so it is unaffected.
+
+**2. Scoreboard** (`scoreboard/`)
+- 150 registered tests. Primary: 33 PASS, 7 FAIL.
+- Inconsistencies found and listed:
+  - the E99 count of 22 vs 23 studies;
+  - E56 vs E62 maximum;
+  - E59 vs E62 P-2 wording;
+  - E70 bound retraction;
+  - SU totals.
+
+**3. Venue memo** (`venue/`)
+- PRX Quantum fits only with a "certified delivery" framing. Quantum is the best realistic venue.
+- Prior art that must be cited for the tools: arXiv 2601.20761 (anytime-valid tomography) and the NIST test-supermartingale work.
+- arXiv 2610.10885 is UNVERIFIED and must be read before posting.
+
+**4. Real-data margins** (`recipe/`)
+- **USTC model optimism:** GLS offset 0.029 ± 0.044. One-sided 95% upper bound **0.101**.
+- **Shared-noise levels:** σ_rel = 0.033 (ICFO median), 0.075 (ICFO max), 0.184 (USTC). On ion2020 the USTC level is about c = 2.8 in Study 25 units.
+
+**Study 26 design:**
+- `study26.py` and `analyze_26.py` were built.
+- An independent code review (`REVIEW_26.md`) found 1 blocker and 3 major issues; all are fixed:
+  - O2 bar reduced to per-user risk only;
+  - fleet φ bound now uses epochs, not links;
+  - vacuous cells flagged;
+  - baseline tuning now uses the full SAFE bar, with 16 dev networks.
+- Minor issues were also fixed: the users_requested column, deduplication, task asserts and labels.
+- Dev pilot tasks: `tasks_p26.jsonl` (3,896 tasks).
+
+## E107 — Study 26 dev pilot submitted (10 Oct 2026, PSC clock)
+
+**Job:** PSC array 49023213 (32 shards).
+
+**Code:**
+
+| File | sha |
+|---|---|
+| `study26.py` | 7e13e41a |
+| `analyze_26.py` | 597414f0 |
+| `tasks_p26.jsonl` | e29c4b3a (3,896 dev tasks) |
+
+The hashes were verified by the user on PSC before submission.
+
+**Earlier attempt:** a login-node smoke test was interrupted by the user with Ctrl-C. It was a slow login node, not an error. No jobs had been submitted before this one.
+
+**Dev data only:** the pilot is used to tune the baselines (plugM, cut) and as a functional check.
+
+## E108 — Study 26 dev pilot read; pre-registration locked (11 Oct 2026)
+
+**Dev pilot:** runs sha a38182dc (3,896 tasks; PSC array resubmitted after the first try failed because the `s18c-logs/` folder was missing). Summary in `26_certified/pilot_summary_26.txt`.
+
+**Baselines tuned by the pre-registered rule:**
+
+| hw | plugM | cut |
+|---|---|---|
+| ion2020 | 0.01 | 0.01 (infeasible) |
+| ionproj | 0.01 | 0.1 |
+| nv2 | 0.06 | 0.01 (infeasible) |
+| siv | 0.1 | 0.01 (infeasible) |
+
+**Pilot findings (dev data):**
+- **Guard arms:** 0 bad pairs in Block U.
+- **Plug-in rule without margin:** 18% of ion2020 users bad.
+- **USTC-level iid noise:** undeclared guards on ion2020 were not SAFE (per-user risk 1.7–5.8%). Recipe and oracle arms had ≤ 1 bad pair.
+- **Persistent (AR) noise:** every model-based arm on ion2020 was not SAFE, including the oracle.
+- **Block O:** the undeclared offset left 37–54% of users bad. M = 4 tomography points left 19% of oracle throughput; M = 256 left 75%.
+
+**Changes after the pilot:** the TUNED values were inserted, and R6 was added as a prediction informed by the pilot. Nothing else changed.
+
+**Locked:**
+
+| File | sha |
+|---|---|
+| `study26.py` | 56436cc8 |
+| `analyze_26.py` | e44895fa |
+| `tasks_s26.jsonl` | a693357d (10,848 tasks) |
+| `README_26.md` | 58cccbb6 |
+
+**Decision:** the user chose the "certified entanglement delivery" framing for PRX Quantum. Model-free certification of delivered pairs will be Study 27.
