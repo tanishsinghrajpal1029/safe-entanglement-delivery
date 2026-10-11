@@ -2414,3 +2414,59 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
 - **Manuscript v0.5 updated:** Table II, Sec. VI.B, limitations, App. E.
   - All PENDING macros are resolved.
   - Hashes: main.tex e7cbd3d0b64fe4e2, appendix.tex a193a6934bf96942, preview dcb5f77ad2186100 (22 pages).
+
+## E140: Manuscript v0.6, after a fact-check and referee pass on v0.5 (11 Oct 2026)
+- **Reviews (FACTCHECK_v0.5.md, REFEREE_v0.5.md, BIB_VERIFY_v0.5.md, all in manuscript_v0.6/):**
+  - The fact-check found 31 issues (12 errors, 6 overclaims, 11 imprecise, 2 notes).
+  - The referee recommended major revision, with 9 MUST, 13 SHOULD and 5 COULD items. Theorem 2's core proof was confirmed, with four assumption gaps (N1–N4).
+  - Bibliography: 46 entries checked. Four errors: QPATH2022 authors, USTC2026 published title, Repo2026 release, AditiBecker unverified online.
+- **Applied in v0.6:**
+  - all fact-check items;
+  - MUST 1–8, and the text parts of MUST 9;
+  - SHOULD 10–18 and 21;
+  - COULD 23 and 26.
+- **Main changes:**
+  - The abstract is re-centred: the always-on margin gives a full guarantee; the gated loop is safe after an alarm, but detection is the bottleneck.
+  - New Corollary 3 (always-on margin).
+  - Assumptions (A0) and (A2) split.
+  - (B2) now covers pairs generated, tested or delivered after the first alarm.
+  - Lemma 2 now needs every basis error ≤ 1/2 (implied by F ≥ 3/4), so basis-dependent symmetric readout is allowed.
+  - S30 levels are stated.
+  - Studies 28–29 condensed into App. B.3.
+  - S31b added to Table II and App. D.
+  - Fig. 5 redrawn from S30 data, per hardware type.
+  - Bibliography corrected and new verified references added (e-detectors and others).
+  - Official ACCESS and IBM acknowledgement text.
+  - Fixed-K comparison added (S33).
+- **Open flags:**
+  - ACCESS allocation number to confirm (CIS260277);
+  - v0.6.0 DOI to add;
+  - the authors' proof-check sentence;
+  - three UNVERIFIED bib comments;
+  - REVTeX build: REVTeX could not be installed in the cloud because CTAN is blocked. An Overleaf zip is provided.
+- **sha256 (first 16):** main.tex 0a884a88f9b0b84d, appendix.tex 2a993b10b735b4d1, references.bib d1173a0af92320f6, preview 5fb4847b4ed1bf50 (27 pages, article-class preview).
+
+## E141: S33, fixed-K versus anytime certificate (computation, not pre-registered; 11 Oct 2026)
+- **Code:** s33/fixedk.py, output fixedk_out.json. Expected error counts are used, so the computation is deterministic.
+- **Result (kept pairs to certify 0.9 from perfect pairs, at p = 0.05 / 0.1 / 0.2):**
+
+  | | Kept pairs | Ratio |
+  |---|---|---|
+  | C1 (anytime) | 1,404 / 678 / 315 | — |
+  | Best single bet, planned in advance | 870 / 420 / 195 | 1.2–1.4× the converse floor |
+  | Converse floor | 720 / 330 / 140 | — |
+
+- **Comparison with C1:** C1 needs about 1.6× the planned bet's count (1.5–1.75× at F = 0.97 and 0.95).
+- **Interpretation:** most of the gap to the floor is the price of not planning K or F in advance.
+
+## E142: Study 32 (re-opening and robustness): design, review and pilot package (11 Oct 2026; dev only)
+- **Theory (THEORY_32):** Remark R. The confidence sequence need not be intersected over looks: U′_t fails on the same Ville event, so Theorem 2 holds and U′ can recover. This is standard (Howard et al.).
+- **Blocks:**
+  - R: kgMCh vs kgMChN on '-', o0.044, L0.044, L0.044F, and o0.044FM (forced early alarm plus forced miscoverage).
+  - E: τ 0.85 and 0.92, less calibration data, with paired base controls.
+  - T: thin hardware, descriptive only.
+- **Size:** 104 configs. Pilot: 416 tasks (tasks_p32 feaa79cc). Confirmatory: 3,328 tasks (tasks_s32 f8dbba7c). study32.py 3d1462ed.
+- **Review (REVIEW_32):** 1 blocker (thin hardware cannot exercise the loop; made descriptive), 4 major (the oracle-0 cell, recovery diagnostics, L0.044F, base controls). All addressed.
+- **Smoke run (dev):** o0.044FM, ion2020, p = 0.2.
+  - Running minimum: stuck near 0; 4,225 bad pairs until a re-alarm.
+  - No intersection: recovered; 122 bad pairs, all in the warm-up.
