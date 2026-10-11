@@ -2105,3 +2105,25 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
 - **Manuscript:** the data-availability section and the Repo2026 entry now cite v0.3.2 (main.tex 1d72f464, references.bib 475c9b0b).
 - **Minor:** CITATION.cff said 0.3.1 at the v0.3.2 tag. It has now been bumped to 0.3.2. Zenodo takes the version from the tag.
 - **Open:** the v0.2.2 DOI is not yet recorded.
+- **Addendum (E118):** v0.2.2 was skipped (no release, no DOI), so the version-DOI list is complete through v0.3.2.
+
+## E119: Reference check against arXiv (11 Oct 2026)
+- **Checked:** 11 flagged entries, against their arXiv abstract pages.
+- **Author errors found and fixed:**
+  - QGUARD2026: first author "L. Gatti" is Anthony Gatti.
+  - Oka2026: "K. Oka" is Takafumi Oka.
+  - Kumar2026: "A. Kumar" is Vinay Kumar.
+  - RuanDirkse2024: "Y. Ruan" is Liangzhong Ruan.
+  - QPATH2022: "Qing Jia" is Qidong Jia.
+- **Filled in:**
+  - full author lists for BeQuP2025 (7 authors) and RateFidelity2026 (7 authors);
+  - full first names for Cumitini2026;
+  - DOIs for Takeuchi2018 and Rozpedek2018.
+- **Wording:** the manuscript sentence on Kumar2026 and RateFidelity2026 no longer claims they lack statistical guarantees (we have not read them in full). They are now called complementary.
+- **Still flagged (5):**
+  - BoumanFehr2010: LNCS volume and pages;
+  - QPATH2022: pages;
+  - LinkSelFiE2024: not checked;
+  - Krutyanskiy2023: full author list (the arXiv page was refused with a rate-limit error);
+  - USTC2026: volume and pages, once the issue is out.
+- **Files:** main.tex 91d50703, references.bib c7266930, preview.pdf 7c4d193c. The preview builds cleanly at 13 pages.
