@@ -1964,3 +1964,58 @@ The hashes were verified by the user on PSC before submission.
 - **Design curve, ion2020** (M = 4 / 16 / 64 / 256 / oracle): 0.16 / 0.38 / 0.67 / 0.81 / 0.90.
 
 **Results file:** `RESULTS_26.md`.
+
+## E111 — Innsbruck Stage 3 (model-free fidelity certificate) pre-registered (11 Oct 2026)
+
+**Files:**
+
+| File | sha |
+|---|---|
+| `22_external_checks/innsbruck_230m/stage3_cert/PREREG_INNSBRUCK_CERT.md` | 9f9463dc |
+| `innsbruck_cert.py` | 7b282350 |
+
+**Method:**
+- Data: the six diagonal scans from `stage1_counts.csv`, pooled.
+- Statistic: Chernoff–KL bounds at α/24 per basis, union over 8 targets.
+- **R1-A (primary):** F_L > 1/2.
+
+**Not blind:** the counts were viewed earlier. The pre-registration fixes the method only. Recorded before the statistic is computed.
+
+**Also:**
+- **Study 27 dev pilot:** run on PSC (array 49025650; runs.csv c5dd2ae6, 768 rows). Not yet copied to the Mac.
+- **Repo:** Study 26 results pushed as commit 7b7061e.
+
+## E112 — Innsbruck Stage 3 result (11 Oct 2026)
+
+**Run:** script 7b282350 on `stage1_counts.csv` 8a661f7b, executed in the cloud (the Mac VM has no scipy).
+
+**Results:**
+- **F̂(Φ⁺, M2) = 0.9139.** This equals Stage 1's linear-inversion value (0.9139).
+- **Certified F_L = 0.8867** (95%, simultaneous over 8 targets). R1-A PASS.
+- **R1-C PASS:** detector-swapped scans agree (p = 0.056 / 0.39 / 0.26).
+
+**Interpretation:** this is a model-free fidelity certificate on real heralded ion–photon data. It is not a demonstration of C1 and not device-independent.
+
+## E113 — Study 27 dev pilot read; pre-registration locked; arXiv 2610.10885 read (11 Oct 2026)
+
+**Dev pilot:** c5dd2ae6, 768 tasks. Certificate violations (p = 0.05 / 0.1 / 0.2):
+- users: 0/828, 4/924, 5/5,343;
+- networks: 2/479, 4/550, 3/584.
+
+Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pair average fidelity was 0.924 (certificate 0.878). This illustrates Proposition N. No code change after the pilot.
+
+**Locked:**
+
+| File | sha |
+|---|---|
+| `README_27.md` | dd6335aa |
+| `study27.py` | 1281b710 |
+| `cert.py` | 6b84bbdd |
+| `ptm_corr.py` | 47d89f15 |
+| `analyze_27.py` | 8d455051 |
+| `tasks_s27.jsonl` | 452a078e (3,072 tasks) |
+
+**arXiv 2610.10885** (user-supplied PDF, pages 1–4 read): Aditi & Becker (CU Boulder), "Uncertainty Quantification for Quantum Fidelity Estimation", 7 Oct 2026.
+- It gives split-conformal / Bayesian-informed prediction intervals for state-fidelity estimators (Pauli POVMs, NN estimators).
+- It covers no networks, no delivered pairs, no anytime validity and no per-user bounds.
+- **Threat:** low for our delivery claims. Moderate as related work on "statistical guarantees for fidelity". Cite it, and note that it is per-estimate (the Prop. 1 critique applies).

@@ -50,5 +50,7 @@ The table below is generated from the files in this repository (sha256, first 16
 | external_checks/innsbruck_230m | PREREG_INNSBRUCK_STAGE2.md | 00356d058c4e233c | — | — |
 | study25_realism | README_25.md | b9c1718afa201133 | RESULTS_25.md | des_s25_psc/runs.csv `3826490aaf20734b`, des_s25d_psc/runs.csv `7bb3996c177a281d` (locked files on cluster before submission; commit `370a823` timestamped 2 min after Block A start — ledger E102) |
 | study26_certified | README_26.md | 58cccbb64d383638 | RESULTS_26.md | des_s26_psc/runs.csv `b31b9c98b934a16e` (commit `fc22091` 2 min 15 s before the first job; ledger E110) |
+| study27_certification | README_27.md | dd6335aad65a910b | pending | pending (pushed **before** the confirmatory run) |
+| external_checks/innsbruck_230m/stage3_cert | PREREG_INNSBRUCK_CERT.md | 9f9463dc3267f4ab | STAGE3_RESULT.md | not blind (counts seen earlier); method fixed before computing (E111–E112) |
 
 Where "Results document" is "—", the confirmatory outcome is recorded in `audit/EVIDENCE_LEDGER.md` (entries E35–E89), next to the run hashes.

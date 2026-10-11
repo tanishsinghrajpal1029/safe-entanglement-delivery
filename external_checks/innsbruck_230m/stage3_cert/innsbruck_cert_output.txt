@@ -1,0 +1,8 @@
+HEADLINE M2/Phi+: F_hat = 0.9139, certified F_L = 0.8867 (95%, simultaneous over 8 candidates)
+  X: 170/2355 errors, e_hat 0.0722, e_ub 0.0924, per scan [(98, 1186), (72, 1169)]
+  Y: 144/2406 errors, e_hat 0.0599, e_ub 0.0784, per scan [(76, 1182), (68, 1224)]
+  Z: 97/2411 errors, e_hat 0.0402, e_ub 0.0559, per scan [(43, 1207), (54, 1204)]
+R1-A (primary) F_L > 1/2: PASS
+R1-C (diagnostic) detector-swapped scans agree in every basis (Fisher exact, Bonferroni 0.01/3): PASS {'X': np.float64(0.05576468325734649), 'Y': np.float64(0.3904796997135791), 'Z': np.float64(0.2561237879048547)}
+R1-D (descriptive) F_hat 0.9139 vs Stage 1 Phi+ 0.913 (|diff| <= 0.01 expected): consistent; F_L 0.8867 vs 0.920 / 0.924 (F_L above flags an error)
+all candidates (for the union only): {'M1/Phi+': -0.4365, 'M1/Phi-': 0.4285, 'M1/Psi+': 0.4603, 'M1/Psi-': 0.448, 'M2/Phi+': 0.8867, 'M2/Phi-': 0.0217, 'M2/Psi+': -0.0102, 'M2/Psi-': 0.0021}

@@ -80,6 +80,7 @@ Props. 1–7: `study18c_controller_and_guard/THEORY_NOTE.md` and the project the
 | `study24_ai_v2_hardware/` | AI v2; five hardware types; unseen correlation patterns; latency; drift carry-over (Study 24) |
 | `study25_realism/` | Model error, finite calibration, shared noise, parallel load, declared re-alignment bound (Study 25): 9/9 primary PASS, secondary T3 FAIL; see `RESULTS_25.md` |
 | `study26_certified/` | Per-user guarantee level, real-hardware noise and model-error levels (ICFO/USTC), published baselines at matched safety, finite memory (Study 26): 7/7 primary PASS; secondary U2, R5 FAIL; see `RESULTS_26.md` |
+| `study27_certification/` | **Pre-registered, confirmatory run pending:** model-free, anytime-valid certificate of kept-pair fidelity on top of the control layer, under model error, persistent noise and memory faults (Study 27); theory note and adversarial review included |
 | `external_checks/` | `innsbruck_230m/`, `icfo_2021/`, `ustc_2026/`: pre-registrations, code and results |
 | `audit/` | Evidence ledger, timestamp check, PSC job history, hardware provenance, novelty map, audit scripts |
 | `docs/` | Theory note v4 (Props. 8–10, novelty and contributions) |
