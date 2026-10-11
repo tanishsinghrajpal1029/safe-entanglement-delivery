@@ -2019,3 +2019,24 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
 - It gives split-conformal / Bayesian-informed prediction intervals for state-fidelity estimators (Pauli POVMs, NN estimators).
 - It covers no networks, no delivered pairs, no anytime validity and no per-user bounds.
 - **Threat:** low for our delivery claims. Moderate as related work on "statistical guarantees for fidelity". Cite it, and note that it is per-estimate (the Prop. 1 critique applies).
+
+## E114 — Study 27 confirmatory results (11 Oct 2026)
+
+**Run:** `runs.csv` 53443c34 (3,072 rows). The job metadata records module 1281b710 and tasks 452a078e.
+
+**Timing:** pre-registration commit `63d20c6` at 02:38:49 UTC; shards started 02:40:40–02:42:42 UTC, so the commit came 1 min 51 s before the run.
+
+**Re-analysis:** the cloud re-analysis is byte-identical to the PSC output.
+
+**Results:**
+- **C1 PASS** (users, p = 0.05 / 0.1 / 0.2): 0/3,283, 12/3,584 (upper bound 0.50%), 11/21,358.
+- **C2 PASS** (networks): 17/1,931, 29/2,115 (upper bound 1.9%), 6/2,313.
+- **C1b PASS:** worst cell 2.3%.
+
+**Descriptive:**
+- **Broken control layer:** in the 80 cells where the control layer was not safe, the certificate was wrong for ≤ 0.34% of users and ≤ 1.2% of networks.
+- **Proposition N in the network:** ion2020 under undeclared Δ had 25% bad pairs, a kept-pair average of 0.926 and a certificate of 0.888.
+- **Gaps for heavy ion users:** 0.05–0.16.
+- **Thin hardware:** not certifiable at this horizon.
+
+**Results file:** `RESULTS_27.md`.
