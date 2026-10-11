@@ -1,0 +1,4 @@
+dep0=None: calib err 0.057; W1 60/60, W2 60/60, W3 (hybrid alarm in B) 60/60 [mixture 59/60], median alarm at B-test 165.0, W5 60/60
+dep0=0.09: calib err 0.072; W1 60/60, W2 60/60, W3 (hybrid alarm in B) 60/60 [mixture 56/60], median alarm at B-test 186.0, W5 60/60
+dep0=0.12: calib err 0.085; W1 60/60, W2 60/60, W3 (hybrid alarm in B) 60/60 [mixture 36/60], median alarm at B-test 223.0, W5 60/60
+hardware-rate model (q=0.0915; A 205 tests at 0.058; B 472 at 0.155; 1,000 runs): P(alarm in A) hybrid 0.002, mixture 0.002; P(alarm in B) hybrid 0.789, mixture 0.447
