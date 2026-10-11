@@ -2389,3 +2389,28 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
   - Primary P1–P5: Theorem 2 per-user and per-pair; forced early alarm; always-on full guarantee; check validity; bound tightness.
   - Secondary S1–S6: price of provability; debt; hybrid robustness; predicted failures outside (B2); certificate under feedback; static competitor.
   - Confirmatory: tasks_s30.jsonl 15e156bc8734488c (8,384 tasks; about 600 SU).
+
+## E139: Study 30 confirmatory results (11 Oct 2026)
+- **Timing and provenance:**
+  - Pre-registration commit f5f23f2 at 19:48:04 UTC; first shard started 19:50:08 UTC.
+  - Module e796ebb7, tasks 15e156bc; 32 shards, longest 3,749 s, about 530 SU.
+  - runs.csv 8e31b20a6ff44006 (8,384 rows, none clamped).
+  - Analysis on PSC and re-run in the cloud: identical.
+- **Verdicts:** primary P1–P5 all PASS; secondary S1–S6 all PASS.
+  - **P1 (Theorem 2 in class):** 230 of 89,585 users (UB 0.60%); 8,184 of 3,911,876 pairs (UB 0.50%).
+  - **P2 (forced early alarm):** 0/384 runs (UB 0.78%); kgMT 1/128.
+  - **P3 (always-on):** 0 of 208,896 users.
+  - **P4 (new checks):** plug-in 1/128, hybrid 0/128 false segment alarms.
+  - **P5 (tightness):** margin excess +0.006 to +0.013.
+  - **S1–S6:** price of provability 1.3–8.5 points; plug-in 0.83 vs mixture 0.70 under late onset; hybrid robust; predicted failures outside B2 all confirmed (0.14–0.92); certificate under feedback bounds 2.0% and 3.4%; a fixed margin delivers 0.
+- **P1 diagnosis (exploratory):** all bad pairs come from 2 runs.
+  - Plug-in, ionproj, network 5: a false alarm before the onset (the Corollary O case).
+  - Mixture, ionproj, network 11: the offset CS excluded θ at its first look (n = 150, mean a −0.052) and the running minimum kept U = 0.028 < 0.044. Reproduced exactly in the cloud.
+  - The hybrid arm had none.
+- **Detection with physical offsets:**
+  - At o0.044, median first alarm at epoch 27–55 (ion2020) and 15–30 (ionproj); o0.02 detected in 6–56% of runs.
+  - Whole-run worst-user risk at o0.044 is 0.47–0.49 with a gated check, against 0.53 with none.
+  - Study 28's detection power is superseded (E134).
+- **Manuscript v0.5 updated:** Table II, Sec. VI.B, limitations, App. E.
+  - All PENDING macros are resolved.
+  - Hashes: main.tex e7cbd3d0b64fe4e2, appendix.tex a193a6934bf96942, preview dcb5f77ad2186100 (22 pages).
