@@ -1,0 +1,8 @@
+05acdad26f113f5d study34.py
+1ff58a9dda50f24f tasks_p34_g10.jsonl
+f03bd1945f080d47 tasks_p34_g30.jsonl
+dd8e4c080a868bc0 tasks_p34_g5.jsonl
+eb09915b29244e5b tasks_s34_g10.jsonl
+349db9882349e67d tasks_s34_g30.jsonl
+4818399d4f9e56f1 tasks_s34_g5.jsonl
+3a309a0cdab28bdd pilot_summary_34.py

@@ -2537,3 +2537,18 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
   - Overleaf REVTeX build;
   - confirm the GitHub push times of the pre-registrations;
   - advisor sign-off.
+
+## E147: Study 34 (closed loop on other grids): design, review and pilot package (12 Oct 2026; dev only)
+- **Design:** study34.py 05acdad26f113f5d reuses Study 32's network and arms.
+  - Grids: 5×5 (fresh seeds), 10×10 (180 links) and 30×30 (1,740 links), one process per grid (S34_GRID).
+  - Load variants:
+    - base: the same total request rate;
+    - u: matched exposure, demand restricted to 204 / 340 users (10×10 and 30×30);
+    - m3: three times the rate (5×5 and 30×30).
+  - Scenarios: '-', o0.044, o0.044F. Arms: kg, kgMChN (p 0.1 and 0.2), kgMCa (p 0.1).
+- **Size:** pilot 616 tasks; confirmatory 4,928 tasks (about 500 SU).
+- **Review (REVIEW_34):**
+  - Confirmed: the grid size propagates to every module, the rate multiplier is consistent, per-link levels stay valid, and memory is about 1.4 GB per worker.
+  - B1 (per-user dilution about 60× on 30×30) fixed with served-user and per-delivery metrics plus the matched-exposure variant.
+  - M1: framed as a scaling sanity check. M2: m3 added on 5×5.
+- **Correction (to E143):** the network generator needed no rebuild. Varying topology took one module setting and one run per grid size.
