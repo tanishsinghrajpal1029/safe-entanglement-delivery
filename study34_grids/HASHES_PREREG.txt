@@ -1,0 +1,6 @@
+2819448cb47de63d  analyze_34.py
+380770f9fba9d345  README_34.md
+05acdad26f113f5d  study34.py
+eb09915b29244e5b  tasks_s34_g10.jsonl
+349db9882349e67d  tasks_s34_g30.jsonl
+4818399d4f9e56f1  tasks_s34_g5.jsonl

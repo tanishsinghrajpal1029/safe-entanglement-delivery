@@ -2552,3 +2552,15 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
   - B1 (per-user dilution about 60× on 30×30) fixed with served-user and per-delivery metrics plus the matched-exposure variant.
   - M1: framed as a scaling sanity check. M2: m3 added on 5×5.
 - **Correction (to E143):** the network generator needed no rebuild. Varying topology took one module setting and one run per grid size.
+
+## E148: Study 34 dev pilot and pre-registration (12 Oct 2026)
+- **Pilot:** 616 runs. runs.csv shas: c78898336e352538 (5×5), 7e296f0546541df3 (10×10), 2db35cfb03bafeca (30×30). The cloud summary matches the PSC run.
+- **Pilot findings (dev data, not evidence):**
+  - On every grid and load, the gated arm (kgMChN) delivered 0 bad pairs after an alarm, and the always-on arm (kgMCa) delivered 0 bad pairs.
+  - Detection at offset 0.044 carries over: alarm rate 0.75–1.00 on all grids, with three times the load giving earlier alarms (median epoch 10–12 vs 22).
+  - Matched-exposure served-user risk is similar to 5×5 (0.70 vs 0.65).
+  - With no check, served-user risk is 0.67–0.74 on every grid, so the cells can tell rules apart.
+- **Pre-registration:** README_34.md 380770f9fba9d345 and analyze_34.py 2819448cb47de63d (locked).
+  - Primary: K1 (Theorem 2 on 10×10 and 30×30), K2 (Corollary 3 there), K3 (5×5 reproduction).
+  - Secondary: S1–S5.
+  - Confirmatory tasks: g5 4818399d, g10 eb09915b, g30 349db988 (4,928 tasks; about 500 SU).
