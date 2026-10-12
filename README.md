@@ -10,7 +10,7 @@ Code, pre-registrations, results and the audit trail for the manuscript of the s
 - The evidence is mainly **simulation**: a discrete-event network simulator whose physics was cross-checked against NetSquid.
 - **Three pre-registered re-analyses of public experimental data** back it up: Innsbruck, ICFO and USTC.
 - **Two pre-registered hardware runs on an IBM quantum processor** (Studies 31 and 31b): test-or-keep with Bell-basis ground truth.
-- The final studies are Study 26 (model-based layer at measured hardware levels), Study 27 (model-free certificate), Studies 28–29 (model check and heuristic response), Study 30 (provable closed loop), Studies 31/31b (hardware) and Study 32 (recovering bound and robustness). Each was pre-registered and committed publicly before its first confirmatory job.
+- The final studies are Study 26 (model-based layer at measured hardware levels), Study 27 (model-free certificate), Studies 28–29 (model check and heuristic response), Study 30 (provable closed loop), Studies 31/31b (hardware), Study 32 (recovering bound and robustness), Study 33 (fixed-K computation) and Study 34 (closed loop on larger grids). Every study except Study 33, a computation, was pre-registered and committed publicly before its first confirmatory job.
 
 ## The question
 A quantum network cannot inspect a delivered entangled pair without destroying it. So what can a user actually be guaranteed about the pairs they receive, and what does each kind of guarantee cost?
