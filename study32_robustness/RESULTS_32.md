@@ -8,7 +8,7 @@
 - **Output:** `runs.csv` sha256 16e67200579969ab, 3,328 rows. No epoch was clamped.
 - **Analysis:** run on PSC (`s32_analysis.txt`) and re-run in the cloud (`reanalysis_32_cloud.txt`). The two are identical.
 
-## Verdicts: 6/6 primary PASS, 5/5 secondary PASS
+## Verdicts: 6/6 primary PASS, 4/4 secondary PASS (the certificate check S4 is scored at p = 0.1 and p = 0.2 but is one pre-registered hypothesis)
 
 | | Tier | Result | Numbers |
 |---|---|---|---|

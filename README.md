@@ -87,9 +87,9 @@ A quantum network cannot inspect a delivered entangled pair without destroying i
 | `study30_closed_loop/` | Provable closed loop (Theorem 2, Corollary 3, Prop. D), offset in the true state (Study 30): 5/5 primary, 6/6 secondary PASS; see `RESULTS_30.md` |
 | `study31_hardware_testkeep/` | IBM hardware test-or-keep (Study 31): W1, W2 PASS; W3 FAIL (disclosed); see `RESULTS_31.md` |
 | `study31b_hardware_detector/` | IBM hardware rerun with the hybrid check (Study 31b): W1, W2, W3, W5 PASS; see `RESULTS_31b.md` |
-| `study32_robustness/` | Recovering offset bound and robustness (Study 32): 6/6 primary, 5/5 secondary PASS; see `RESULTS_32.md` |
+| `study32_robustness/` | Recovering offset bound and robustness (Study 32): 6/6 primary, 4/4 secondary PASS; see `RESULTS_32.md` |
 | `study33_fixedk/` | Fixed-K vs anytime certificate (computation, not pre-registered) |
-| `study34_grids/` | Closed loop on 5 × 5, 10 × 10 and 30 × 30 grids (Study 34): 3/3 primary, 6/6 secondary PASS; see `RESULTS_34.md` |
+| `study34_grids/` | Closed loop on 5 × 5, 10 × 10 and 30 × 30 grids (Study 34): 3/3 primary, 5/5 secondary PASS; see `RESULTS_34.md` |
 | `external_checks/` | `innsbruck_230m/`, `icfo_2021/`, `ustc_2026/`: pre-registrations, code and results |
 | `audit/` | Evidence ledger, timestamp check, PSC job history, hardware provenance, novelty map, audit scripts |
 | `docs/` | Theory note v4 for the model-based guard (Prop. 10 there is superseded by Lemma B; see `audit/reviews_2026-10-11/PROOF_REVIEW.md`) |

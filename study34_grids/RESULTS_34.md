@@ -15,7 +15,7 @@
 - **Compute:** about 450 SU.
 - **Analysis:** run on PSC and re-run in the cloud; the two are identical.
 
-## Verdicts: 3/3 primary PASS, 6/6 secondary PASS
+## Verdicts: 3/3 primary PASS, 5/5 secondary PASS (the certificate check S5 is scored at p = 0.1 and p = 0.2 but is one pre-registered hypothesis)
 
 | | Tier | Result | Numbers |
 |---|---|---|---|

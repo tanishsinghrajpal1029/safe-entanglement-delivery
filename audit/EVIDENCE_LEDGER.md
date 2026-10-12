@@ -2589,3 +2589,23 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
 - **Release:** GitHub release v0.6.1, "Study 34: provable closed loop on larger grids".
   - Zenodo version DOI 10.5281/zenodo.23308490; concept DOI 10.5281/zenodo.23287414.
 - **Manuscript v0.6:** the data-availability statement and the Repo2026 bib entry now cite v0.6.1. The repo README lists both DOIs; CITATION version is now 0.6.1 for the next release.
+
+## E151: Final fact-check of manuscript v0.6 (12 Oct 2026)
+- **Report:** FACTCHECK_v0.6.md (in manuscript_v0.6/). 21 findings: 5 errors, 1 overclaim, 10 imprecise, 5 notes.
+- **Applied:** 20 of 21. Item 21 (confirming that the Zenodo DOIs resolve) could not be checked from the cloud.
+- **Main fixes:**
+  - broken `\times` in the S34 paragraph;
+  - scoreboard brought up to date;
+  - the 5×5-only scope statement removed;
+  - process paragraph now covers S32 and S34;
+  - G3 described correctly: per-path α/L_max guard, 64 networks × 2 priors;
+  - limitation now notes that the re-opening Remark was tested in S32;
+  - Corollary 2's α term noted as uninformative in the pooled-check simulations, which test its β term;
+  - "grid size", not "topology"; detection 2.3–2.5× earlier with three times the rate;
+  - Table II and key-table overflows fixed: five secondary rows moved to a new appendix table, no number dropped;
+  - S32 and S34 methods paragraphs added.
+- **Scoreboard:**
+  - Primary: 83 (74 pass, 9 fail).
+  - Secondary: 52 (45 pass or confirmed, 6 fail, 1 unclear), counting each certificate hypothesis once.
+- **Correction to E145 and E149 (and to the v0.6.0/v0.6.1 release notes):** Study 32 has 4/4 secondary hypotheses, not 5/5, and Study 34 has 5/5, not 6/6. The certificate hypothesis is one pre-registered hypothesis scored at two values of p. RESULTS_32, RESULTS_34 and the README are corrected; the published release notes keep the old count.
+- **Manuscript build:** 28 pages, no float or reference warnings. Hashes: main.tex and appendix.tex as committed after this entry.
