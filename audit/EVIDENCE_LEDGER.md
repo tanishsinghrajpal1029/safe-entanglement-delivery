@@ -2584,3 +2584,8 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
 - **Manuscript v0.6 updated:** an evidence sentence block, a Table II row, the topology limitation and the S34 key in App. E.
   - Hashes: main.tex (final) and appendix.tex 8010b3c7a94116db.
 - **Repo README:** scoreboard updated to 83 primary hypotheses (74 PASS, 9 FAIL); Study 34 added.
+
+## E150: Release v0.6.1 (12 Oct 2026)
+- **Release:** GitHub release v0.6.1, "Study 34: provable closed loop on larger grids".
+  - Zenodo version DOI 10.5281/zenodo.23308490; concept DOI 10.5281/zenodo.23287414.
+- **Manuscript v0.6:** the data-availability statement and the Repo2026 bib entry now cite v0.6.1. The repo README lists both DOIs; CITATION version is now 0.6.1 for the next release.

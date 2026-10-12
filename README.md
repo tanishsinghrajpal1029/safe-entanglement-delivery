@@ -111,4 +111,4 @@ Code, simulations and documents were developed with substantial assistance from 
 
 ## License and citation
 - Code: MIT (`LICENSE`). Documents and results: CC BY 4.0.
-- Cite via `CITATION.cff`. Zenodo: **doi:10.5281/zenodo.23287414** (all versions); v0.3.0 (certified delivery): doi:10.5281/zenodo.23291355; v0.6.0 (manuscript v0.6: provable closed loop, hardware, robustness): doi:10.5281/zenodo.23306520.
+- Cite via `CITATION.cff`. Zenodo: **doi:10.5281/zenodo.23287414** (all versions); v0.3.0 (certified delivery): doi:10.5281/zenodo.23291355; v0.6.0 (manuscript v0.6: provable closed loop, hardware, robustness): doi:10.5281/zenodo.23306520; v0.6.1 (adds Study 34): doi:10.5281/zenodo.23308490.
