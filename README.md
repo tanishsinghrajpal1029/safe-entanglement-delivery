@@ -33,7 +33,7 @@ A quantum network cannot inspect a delivered entangled pair without destroying i
 | **A bound that can recover (Study 32).** The offset bound need not be a running minimum (Remark R). | 6/6 primary PASS: same guarantee, cost −0.3 points; after a forced miscoverage it recovered in 128/128 runs (median 502 tests) vs 0/128; robust at τ 0.85/0.92 and with less calibration data; thin hardware never alarms. |
 | **Hardware (Studies 31, 31b; IBM ibm_fez).** | Certificate valid in both runs. Study 31: the fixed-bet check missed an injected degradation (deficit before the change; W3 FAIL). Study 31b (fresh seed, hybrid check, Prop. D): alarm at test 170 of 472 (fixed-bet check: 214); post-alarm offset bound valid but about 3× loose. |
 | **Fixed-K vs anytime (S33, computation).** | A single bet planned for K and F needs 870/420/195 kept pairs to certify 0.9 (p = 0.05/0.1/0.2), 1.2–1.4× the converse floor; the anytime certificate needs about 1.6× that. |
-| **Scale (G3).** | The anytime guard on a 30 × 30 grid (900 nodes, 1,740 links): 0 bad pairs in about 2.1 M deliveries (exact model, stationary links). |
+| **Scale (G3, Study 34).** | The anytime guard on a 30 × 30 grid (900 nodes, 1,740 links): 0 bad pairs in about 2.1 M deliveries (exact model, stationary links). Study 34: the provable closed loop on 10 × 10 and 30 × 30 grids: 0 of 4.2 M post-alarm pairs bad, always-on 0 of 7.8 M; detection depends on test volume, not grid size. 3/3 primary PASS. |
 | **Earlier results (Studies ≤ 25)** | Label-free risk controller, learned priors on thin hardware, latency, faults (a fault-exposure no-go), re-alignment drift. See the study folders and the theory notes. |
 
 ## Real-data checks (pre-registered; data are not redistributed)
@@ -58,13 +58,13 @@ A quantum network cannot inspect a delivered entangled pair without destroying i
 - **Model-based guarantees hold only under stated assumptions.** These are: a correct or declared-pessimistic physics model; counts that are not over-dispersed, or a declared dispersion; and declared drift or re-alignment bounds. Persistent noise is not covered.
 - **The model-free certificate** assumes trusted measurements and hidden, fresh test choices. It certifies an aggregate, not individual pairs. The simulations use ideal measurements.
 - **Guarantees are per user,** not simultaneous over all users of a network.
-- **Network model:** a 5 × 5 grid with stylised noise and fault models (the guard alone was also run on a 30 × 30 grid). The baselines are re-implemented class representatives.
+- **Network model:** a 5 × 5 grid with stylised noise and fault models (the closed loop also on 10 × 10 and 30 × 30 grids; the guard alone on 30 × 30). The baselines are re-implemented class representatives.
 - **Before the first alarm** no data-driven rule can protect users (Prop. N); detection of small offsets is slow.
 
 ## Method
 - **Pre-registration.** Every confirmatory study was pre-registered before its run: hypotheses, pass bars, a locked analysis script tested on synthetic data, task lists and code hashes. Failures are kept and reported.
-  - Over the project, 80 primary hypotheses were tested: 71 PASS, 9 FAIL (`audit/SCOREBOARD_v2.md` covers up to Study 27; Study 28: 6/7; Study 29: 6/6; Study 30: 5/5; Study 31: 2/3; Study 31b: 3/3; Study 32: 6/6; see the RESULTS files).
-  - See `PREREGISTRATION_TIMELINE.md` and `audit/EVIDENCE_LEDGER.md` (entries E1–E145).
+  - Over the project, 83 primary hypotheses were tested: 74 PASS, 9 FAIL (`audit/SCOREBOARD_v2.md` covers up to Study 27; Study 28: 6/7; Study 29: 6/6; Study 30: 5/5; Study 31: 2/3; Study 31b: 3/3; Study 32: 6/6; Study 34: 3/3; see the RESULTS files).
+  - See `PREREGISTRATION_TIMELINE.md` and `audit/EVIDENCE_LEDGER.md` (entries E1–E149).
 - **Timestamps** (`audit/PREREG_TIMESTAMP_CHECK.md`):
   - For every study run on PSC Bridges-2, the pre-registration was on the cluster before the first confirmatory job.
   - Studies 26 and 27 were committed publicly 2 min 15 s and 1 min 51 s before their first job.
@@ -89,6 +89,7 @@ A quantum network cannot inspect a delivered entangled pair without destroying i
 | `study31b_hardware_detector/` | IBM hardware rerun with the hybrid check (Study 31b): W1, W2, W3, W5 PASS; see `RESULTS_31b.md` |
 | `study32_robustness/` | Recovering offset bound and robustness (Study 32): 6/6 primary, 5/5 secondary PASS; see `RESULTS_32.md` |
 | `study33_fixedk/` | Fixed-K vs anytime certificate (computation, not pre-registered) |
+| `study34_grids/` | Closed loop on 5 × 5, 10 × 10 and 30 × 30 grids (Study 34): 3/3 primary, 6/6 secondary PASS; see `RESULTS_34.md` |
 | `external_checks/` | `innsbruck_230m/`, `icfo_2021/`, `ustc_2026/`: pre-registrations, code and results |
 | `audit/` | Evidence ledger, timestamp check, PSC job history, hardware provenance, novelty map, audit scripts |
 | `docs/` | Theory note v4 for the model-based guard (Prop. 10 there is superseded by Lemma B; see `audit/reviews_2026-10-11/PROOF_REVIEW.md`) |

@@ -2564,3 +2564,23 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
   - Primary: K1 (Theorem 2 on 10×10 and 30×30), K2 (Corollary 3 there), K3 (5×5 reproduction).
   - Secondary: S1–S5.
   - Confirmatory tasks: g5 4818399d, g10 eb09915b, g30 349db988 (4,928 tasks; about 500 SU).
+
+## E149: Study 34 confirmatory results (12 Oct 2026)
+- **Timing and provenance:**
+  - Pre-registration commit 1f5636c at 00:52:51 UTC; the first shard started at 00:54:40 UTC.
+  - Module 05acdad2, all three task files matched. Longest shards: 1,817 s (5×5), 855 s (10×10), 3,439 s (30×30); about 450 SU.
+  - runs.csv shas: a00b94cf (5×5), bfc34617 (10×10), 423e18e6 (30×30); 4,928 rows, none clamped.
+  - Analysis on PSC and re-run in the cloud: identical.
+- **Verdicts:** primary K1–K3 all PASS; secondary S1–S5 all PASS.
+  - **K1 (Theorem 2, 10×10 and 30×30):** 0 of 4,166,012 post-alarm pairs bad; 0 of 940,391 post-alarm users.
+  - **K2 (always-on):** 0 of 7,827,544 pairs bad; 0 of 1,495,612 served users.
+  - **K3 (5×5 reproduction):** 0 bad.
+  - **Secondary:**
+    - with no check, 0.67–0.75 of served users harmed;
+    - alarm rate 0.938 on both 5×5 and 30×30;
+    - more traffic means earlier alarms (median epoch 10.1 vs 25.6 on 5×5; 11.8 vs 27.5 on 30×30);
+    - matched-exposure risk 0.705 vs 0.629;
+    - certificate violated in 53 and 72 of 4,928 runs.
+- **Manuscript v0.6 updated:** an evidence sentence block, a Table II row, the topology limitation and the S34 key in App. E.
+  - Hashes: main.tex (final) and appendix.tex 8010b3c7a94116db.
+- **Repo README:** scoreboard updated to 83 primary hypotheses (74 PASS, 9 FAIL); Study 34 added.
