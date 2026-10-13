@@ -1,0 +1,20 @@
+== D1 false certification at the boundary F = 0.5 (rate of F_lo > 0.5; must be <= 0.05)
+   equal     n=200: 0.0000  n=500: 0.0000  n=1000: 0.0001  n=3000: 0.0000
+   dephasing n=200: 0.0001  n=500: 0.0000  n=1000: 0.0005  n=3000: 0.0002
+   extreme   n=200: 0.0001  n=500: 0.0005  n=1000: 0.0006  n=3000: 0.0008
+
+== D1 coverage (rate of F_lo <= true F; must be >= 0.95) and mean margin F - F_lo
+   F=0.55 n=200: cov 1.0000, margin 0.112  n=500: cov 1.0000, margin 0.069  n=1000: cov 1.0000, margin 0.048  n=3000: cov 1.0000, margin 0.027
+   F=0.60 n=200: cov 1.0000, margin 0.109  n=500: cov 1.0000, margin 0.067  n=1000: cov 1.0000, margin 0.047  n=3000: cov 0.9999, margin 0.026
+   F=0.70 n=200: cov 1.0000, margin 0.101  n=500: cov 0.9999, margin 0.062  n=1000: cov 0.9999, margin 0.043  n=3000: cov 0.9999, margin 0.024
+
+== D2 with an exact model (true Delta = 0): rate of D2 FAIL (= false 'inadequate'; <= ~0.05), rate of 'optimism detected' (<= ~0.05), weak-test rate
+   n=200: inadequate 0.0488; optimism detected 0.0473; weak test 0.1264
+   n=500: inadequate 0.0456; optimism detected 0.0454; weak test 0.0000
+   n=1000: inadequate 0.0459; optimism detected 0.0459; weak test 0.0000
+   n=3000: inadequate 0.0498; optimism detected 0.0498; weak test 0.0000
+
+== D2 power: rate of 'optimism detected' when the model is optimistic by Delta (F_true = F_model - Delta)
+   Delta=0.02 n=200: 0.241  n=500: 0.469  n=1000: 0.737  n=3000: 0.990
+   Delta=0.03 n=200: 0.436  n=500: 0.770  n=1000: 0.960  n=3000: 1.000
+   Delta=0.05 n=200: 0.792  n=500: 0.986  n=1000: 1.000  n=3000: 1.000
