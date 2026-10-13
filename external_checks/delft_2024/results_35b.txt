@@ -1,0 +1,31 @@
+G1 PASS  outcome order ['00', '01', '10', '11']; state labels ['$\\Psi^+$', '$\\Psi^-$', 'Avg'] (logged only); basis order {'state_0': ['Z', 'X', 'Y'], 'state_1': ['Z', 'X', 'Y'], 'state_2': ['Z', 'X', 'Y']}
+G2 PASS  parity convention: max |c(p) - correlation| = 0.00000 (<= 0.002)
+G0 PASS  Psi- target for all states: our F {'state_0': 0.5289764792053406, 'state_1': 0.5378119870242456, 'state_2': 0.5339623684826976}; max diff to attribute 0.00000 (<= 0.005)
+G4 info  combined counts = state_0 + state_1 in every basis: True
+info: delivered-state events per basis {'X': 450, 'Y': 452, 'Z': 449}
+
+== PRIMARY
+D1' FAIL  raw-count certificate, delivered (combined) states: F_hat 0.4738, F_lo(95%) 0.3990 (bar > 0.5)
+G3 flag  sweep at 15 ns reproduces the h5 combined fidelity: 0.5349 vs 0.5340 -> PASS
+D2' PASS  model offset at 15 ns (delivered states): F_model 0.5277 (count-rate weights [0.439, 0.561]), F_data 0.5349, Delta -0.0072 +- 0.0152 (bar 0.0505); one-sided 95% interval [-0.0323, +0.0179]; power at 0.03: 0.63 -> underpowered: power at 0.03 < 0.8; model uncertainty used
+
+== SECONDARY
+S1' PASS  readout-corrected (model-dependent) bound: 0.5349 - 1.645 x 0.0151 = 0.5101 (bar > 0.5)
+S2' descriptive  declared margin a safe guard would need: Delta upper bound +0.0179
+S3' descriptive  sweep (nested windows; no test):
+   window  5.0 ns: F_data 0.5820 +- 0.0227, F_model 0.5404, Delta -0.0416
+   window  6.0 ns: F_data 0.5628 +- 0.0217, F_model 0.5359, Delta -0.0269
+   window  7.0 ns: F_data 0.5548 +- 0.0203, F_model 0.5365, Delta -0.0183
+   window  8.0 ns: F_data 0.5608 +- 0.0189, F_model 0.5378, Delta -0.0230
+   window  9.0 ns: F_data 0.5441 +- 0.0184, F_model 0.5371, Delta -0.0069
+   window 10.0 ns: F_data 0.5459 +- 0.0177, F_model 0.5338, Delta -0.0121
+   window 11.0 ns: F_data 0.5521 +- 0.0168, F_model 0.5317, Delta -0.0204
+   window 12.0 ns: F_data 0.5480 +- 0.0162, F_model 0.5323, Delta -0.0156
+   window 13.0 ns: F_data 0.5453 +- 0.0159, F_model 0.5320, Delta -0.0132
+   window 14.0 ns: F_data 0.5435 +- 0.0155, F_model 0.5290, Delta -0.0146
+   window 15.0 ns: F_data 0.5349 +- 0.0151, F_model 0.5277, Delta -0.0072
+   window 16.0 ns: F_data 0.5336 +- 0.0147, F_model 0.5240, Delta -0.0096
+   window 17.0 ns: F_data 0.5333 +- 0.0144, F_model 0.5255, Delta -0.0078
+   window 18.0 ns: F_data 0.5266 +- 0.0143, F_model 0.5209, Delta -0.0057
+   window 19.0 ns: F_data 0.5228 +- 0.0140, F_model 0.5192, Delta -0.0035
+   window 20.0 ns: F_data 0.5232 +- 0.0138, F_model 0.5188, Delta -0.0044
