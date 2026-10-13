@@ -1,0 +1,31 @@
+G1 outcome order ['00', '01', '10', '11']; state labels ['$\\Psi^+$', '$\\Psi^-$', 'Avg']; targets {'state_0': 'Psi+', 'state_1': 'Psi-'}; basis order {'state_0': ['Z', 'X', 'Y'], 'state_1': ['Z', 'X', 'Y']}
+G1 PASS
+G2 parity convention: max |c(p) - correlation| = 0.00000 (<= 0.002) PASS
+G0 target mapping: our F {'state_0': 0.5672205016591607, 'state_1': 0.5759212974207377} vs attribute; max diff 0.00000 (<= 0.005) PASS
+info: max |p - N/sum(N)| = 0.0502 (p is readout-corrected)
+info: events per basis (both states) {'X': 1436, 'Y': 1535, 'Z': 1415}
+
+== PRIMARY
+D1 FAIL  raw-count certificate (both states pooled): F_hat 0.5047, F_lo(95%) 0.4644 (bar > 0.5); per state: state_0 F_hat 0.5041 F_lo 0.4430; state_1 F_hat 0.5054 F_lo 0.4507
+D2 PASS  model offset at 10 ns: F_model 0.5672, F_data 0.5716, Delta -0.0044 +- 0.0083 (bar |Delta| <= 2u + 0.02 = 0.0367); one-sided 95% interval [-0.0181, +0.0093]; power at Delta = 0.03: 0.97 -> adequately powered; model uncertainty used
+
+== SECONDARY
+S1 PASS  readout-corrected (model-dependent) bound: F_data 0.5716 - 1.645 x 0.0081 = 0.5583 (bar > 0.5)
+S2 descriptive  declared margin a safe guard would need: Delta upper bound +0.0093
+S3 descriptive  sweep (G3 PASS: sweep F at 10 ns 0.5716 vs main 0.5716); nested windows, no test:
+   window  5.0 ns: F_data 0.5822 +- 0.0111, F_model 0.5782, Delta -0.0040
+   window  6.0 ns: F_data 0.5846 +- 0.0100, F_model 0.5816, Delta -0.0030
+   window  7.0 ns: F_data 0.5805 +- 0.0094, F_model 0.5803, Delta -0.0002
+   window  8.0 ns: F_data 0.5757 +- 0.0089, F_model 0.5777, Delta +0.0020
+   window  9.0 ns: F_data 0.5728 +- 0.0084, F_model 0.5763, Delta +0.0035
+   window 10.0 ns: F_data 0.5716 +- 0.0081, F_model 0.5753, Delta +0.0037
+   window 11.0 ns: F_data 0.5690 +- 0.0078, F_model 0.5739, Delta +0.0049
+   window 12.0 ns: F_data 0.5634 +- 0.0075, F_model 0.5689, Delta +0.0055
+   window 13.0 ns: F_data 0.5580 +- 0.0073, F_model 0.5660, Delta +0.0080
+   window 14.0 ns: F_data 0.5543 +- 0.0071, F_model 0.5641, Delta +0.0098
+   window 15.0 ns: F_data 0.5525 +- 0.0069, F_model 0.5641, Delta +0.0116
+   window 16.0 ns: F_data 0.5480 +- 0.0068, F_model 0.5578, Delta +0.0098
+   window 17.0 ns: F_data 0.5451 +- 0.0067, F_model 0.5568, Delta +0.0117
+   window 18.0 ns: F_data 0.5389 +- 0.0066, F_model 0.5544, Delta +0.0156
+   window 19.0 ns: F_data 0.5358 +- 0.0065, F_model 0.5511, Delta +0.0154
+   window 20.0 ns: F_data 0.5327 +- 0.0064, F_model 0.5490, Delta +0.0164

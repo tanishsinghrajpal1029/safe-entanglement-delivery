@@ -8,9 +8,9 @@ Code, pre-registrations, results and the audit trail for the manuscript of the s
 
 **Status (October 2026):** the manuscript is in preparation.
 - The evidence is mainly **simulation**: a discrete-event network simulator whose physics was cross-checked against NetSquid.
-- **Three pre-registered re-analyses of public experimental data** back it up: Innsbruck, ICFO and USTC.
+- **Four pre-registered re-analyses of public experimental data** back it up: Innsbruck, ICFO, USTC and Delft.
 - **Two pre-registered hardware runs on an IBM quantum processor** (Studies 31 and 31b): test-or-keep with Bell-basis ground truth.
-- The final studies are Study 26 (model-based layer at measured hardware levels), Study 27 (model-free certificate), Studies 28–29 (model check and heuristic response), Study 30 (provable closed loop), Studies 31/31b (hardware), Study 32 (recovering bound and robustness), Study 33 (fixed-K computation) and Study 34 (closed loop on larger grids). Every study except Study 33, a computation, was pre-registered and committed publicly before its first confirmatory job.
+- The final studies are Study 26 (model-based layer at measured hardware levels), Study 27 (model-free certificate), Studies 28–29 (model check and heuristic response), Study 30 (provable closed loop), Studies 31/31b (hardware), Study 32 (recovering bound and robustness), Study 33 (fixed-K computation), Study 34 (closed loop on larger grids) and Study 35 (Delft diamond-spin data). Every study except Study 33, a computation, was pre-registered and committed publicly before its first confirmatory job.
 
 ## The question
 A quantum network cannot inspect a delivered entangled pair without destroying it. So what can a user actually be guaranteed about the pairs they receive, and what does each kind of guarantee cost?
@@ -43,8 +43,9 @@ A quantum network cannot inspect a delivered entangled pair without destroying i
 | **Innsbruck** 230 m trapped ions (Zenodo 7031042) | Stage 1 reproduced the ion–photon fidelity: 0.920 ± 0.004, against 0.924 in the authors' repository (0.929 in the paper). Stage 2: event-count mismatch (581 vs 491), reported. **Stage 3: a model-free certificate F ≥ 0.887 at 95%** (point estimate 0.914). Stage 3 is not blind: the counts had been seen in Stage 1, so only the method was fixed in advance. |
 | **ICFO** 2021 solid-state memories (Zenodo 6454536) | Reproduced the paper's claims: concurrence falls with storage time and stays positive at 25 µs (6.2σ); two-photon suppression 0.033 vs 0.036(8). The primary visibility estimator **failed**, because the phase settings are not in the data. The echo probability per herald is over-dispersed in 7 of 11 runs (5 of 11 after Bonferroni). |
 | **USTC** 2026 remote ion–ion entanglement (Liu et al., Nature 2026; Zenodo 18218281, figure data) | Point estimates of our memory model are 2–4 fidelity points optimistic at all four storage times. The offset is **not significant** (0.029 ± 0.044). The error rate is over-dispersed (ratio 3.57). |
+| **Delft** 2024 metropolitan diamond-spin link (Stolk et al., Sci. Adv. 2024; 4TU doi:10.4121/983e4771-1d12-457f-a98e-fab3a2959288.v1) | Study 35 (pre-registered; data used once). **Raw-count model-free certificate F ≥ 0.464: entanglement not certified without a readout model** (D1 FAIL, predicted); readout-corrected bound 0.558 > 0.5. **The authors' model is accurate at their 10 ns window:** offset −0.004 ± 0.008 (upper bound 0.009; D2 PASS, well powered). Exploratory: the offset grows with the herald window, to +0.016 at 20 ns (not tested). |
 
-**What the real data imply:** calibration counts need not be binomial, and model optimism cannot be ruled out. A safe declaration must therefore use the upper bound on the model margin (0.10 for USTC), not the point estimate.
+**What the real data imply:** calibration counts need not be binomial, and model optimism cannot be ruled out in general (USTC) though some models are accurate (Delft). A safe declaration must therefore use the upper bound on the model margin (0.10 for USTC, 0.009 for Delft), not the point estimate. On real devices the model-free certificate still rests on trusted (or separately characterised) readout.
 
 ## Theory
 - **Certified-delivery theory:** `study27_certification/THEORY_CERTIFIED_2026-10-11.md`, covering Prop. N, Lemma F, Prop. C1 and the resource floor.
@@ -63,8 +64,8 @@ A quantum network cannot inspect a delivered entangled pair without destroying i
 
 ## Method
 - **Pre-registration.** Every confirmatory study was pre-registered before its run: hypotheses, pass bars, a locked analysis script tested on synthetic data, task lists and code hashes. Failures are kept and reported.
-  - Over the project, 83 primary hypotheses were tested: 74 PASS, 9 FAIL (`audit/SCOREBOARD_v2.md` covers up to Study 27; Study 28: 6/7; Study 29: 6/6; Study 30: 5/5; Study 31: 2/3; Study 31b: 3/3; Study 32: 6/6; Study 34: 3/3; see the RESULTS files).
-  - See `PREREGISTRATION_TIMELINE.md` and `audit/EVIDENCE_LEDGER.md` (entries E1–E149).
+  - Over the project, 85 primary hypotheses were tested: 75 PASS, 10 FAIL (`audit/SCOREBOARD_v2.md` covers up to Study 27; Study 28: 6/7; Study 29: 6/6; Study 30: 5/5; Study 31: 2/3; Study 31b: 3/3; Study 32: 6/6; Study 34: 3/3; Study 35: 1/2; see the RESULTS files).
+  - See `PREREGISTRATION_TIMELINE.md` and `audit/EVIDENCE_LEDGER.md` (entries E1–E155).
 - **Timestamps** (`audit/PREREG_TIMESTAMP_CHECK.md`):
   - For every study run on PSC Bridges-2, the pre-registration was on the cluster before the first confirmatory job.
   - Studies 26 and 27 were committed publicly 2 min 15 s and 1 min 51 s before their first job.
@@ -90,7 +91,7 @@ A quantum network cannot inspect a delivered entangled pair without destroying i
 | `study32_robustness/` | Recovering offset bound and robustness (Study 32): 6/6 primary, 4/4 secondary PASS; see `RESULTS_32.md` |
 | `study33_fixedk/` | Fixed-K vs anytime certificate (computation, not pre-registered) |
 | `study34_grids/` | Closed loop on 5 × 5, 10 × 10 and 30 × 30 grids (Study 34): 3/3 primary, 5/5 secondary PASS; see `RESULTS_34.md` |
-| `external_checks/` | `innsbruck_230m/`, `icfo_2021/`, `ustc_2026/`: pre-registrations, code and results |
+| `external_checks/` | `innsbruck_230m/`, `icfo_2021/`, `ustc_2026/`, `delft_2024/`: pre-registrations, code and results |
 | `audit/` | Evidence ledger, timestamp check, PSC job history, hardware provenance, novelty map, audit scripts |
 | `docs/` | Theory note v4 for the model-based guard (Prop. 10 there is superseded by Lemma B; see `audit/reviews_2026-10-11/PROOF_REVIEW.md`) |
 
