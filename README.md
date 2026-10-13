@@ -15,7 +15,7 @@ Code, pre-registrations, results and the audit trail for the manuscript of the s
 ## The question
 A quantum network cannot inspect a delivered entangled pair without destroying it. So what can a user actually be guaranteed about the pairs they receive, and what does each kind of guarantee cost?
 
-## Main results (manuscript v0.6)
+## Main results (manuscript v0.6.2)
 
 | Result | Evidence |
 |---|---|
@@ -65,7 +65,7 @@ A quantum network cannot inspect a delivered entangled pair without destroying i
 ## Method
 - **Pre-registration.** Every confirmatory study was pre-registered before its run: hypotheses, pass bars, a locked analysis script tested on synthetic data, task lists and code hashes. Failures are kept and reported.
   - Over the project, 87 primary hypotheses were tested: 76 PASS, 11 FAIL (`audit/SCOREBOARD_v2.md` covers up to Study 27; Study 28: 6/7; Study 29: 6/6; Study 30: 5/5; Study 31: 2/3; Study 31b: 3/3; Study 32: 6/6; Study 34: 3/3; Study 35: 1/2; Study 35B: 1/2; see the RESULTS files).
-  - See `PREREGISTRATION_TIMELINE.md` and `audit/EVIDENCE_LEDGER.md` (entries E1–E159).
+  - See `PREREGISTRATION_TIMELINE.md` and `audit/EVIDENCE_LEDGER.md` (entries E1–E161).
 - **Timestamps** (`audit/PREREG_TIMESTAMP_CHECK.md`):
   - For every study run on PSC Bridges-2, the pre-registration was on the cluster before the first confirmatory job.
   - Studies 26 and 27 were committed publicly 2 min 15 s and 1 min 51 s before their first job.
@@ -112,4 +112,4 @@ Code, simulations and documents were developed with substantial assistance from 
 
 ## License and citation
 - Code: MIT (`LICENSE`). Documents and results: CC BY 4.0.
-- Cite via `CITATION.cff`. Zenodo: **doi:10.5281/zenodo.23287414** (all versions); v0.3.0 (certified delivery): doi:10.5281/zenodo.23291355; v0.6.0 (manuscript v0.6: provable closed loop, hardware, robustness): doi:10.5281/zenodo.23306520; v0.6.1 (adds Study 34): doi:10.5281/zenodo.23308490.
+- Cite via `CITATION.cff`. Zenodo: **doi:10.5281/zenodo.23287414** (all versions); v0.3.0 (certified delivery): doi:10.5281/zenodo.23291355; v0.6.0 (manuscript v0.6: provable closed loop, hardware, robustness): doi:10.5281/zenodo.23306520; v0.6.1 (adds Study 34): doi:10.5281/zenodo.23308490; v0.6.2 (adds the Delft re-analyses, Studies 35 and 35B): doi:10.5281/zenodo.23333138.
