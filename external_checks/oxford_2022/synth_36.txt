@@ -1,0 +1,17 @@
+== O1 anytime coverage of the kept-pair bound (rate of ANY violation over the run; bar <= 0.05) and final F margin
+   stationary v=0.946       n=  200,000 reps= 400: violation rate 0.0000; mean margin (true bound - F_L at end) 0.0437
+   stationary v=0.946       n=1,920,000 reps=  20: violation rate 0.0000; mean margin (true bound - F_L at end) 0.0140
+   drift 0.96 -> 0.90       n=  200,000 reps= 400: violation rate 0.0000; mean margin (true bound - F_L at end) 0.0436
+   drift 0.96 -> 0.90       n=1,920,000 reps=  20: violation rate 0.0000; mean margin (true bound - F_L at end) 0.0140
+   steps (3 random levels)  n=  200,000 reps= 400: violation rate 0.0000; mean margin (true bound - F_L at end) 0.0440
+   steps (3 random levels)  n=1,920,000 reps=  20: violation rate 0.0000; mean margin (true bound - F_L at end) 0.0140
+   persistent AR(0.999)     n=  200,000 reps= 400: violation rate 0.0000; mean margin (true bound - F_L at end) 0.0438
+   persistent AR(0.999)     n=1,920,000 reps=  20: violation rate 0.0000; mean margin (true bound - F_L at end) 0.0139
+   adaptive adversary       n=   20,000 reps= 200: violation rate 0.0000; mean margin 0.1372
+
+== O2 / S3 under a stationary link (96 chunks x 10,000 test rounds, q = 0.165): false-positive rates (bar ~0.05)
+   over-dispersion false-positive rate 0.051; persistence false-positive rate 0.034
+== power under persistent chunk-level noise (AR(1) rho = 0.9 on the loss rate)
+   relative sd 1%: over-dispersion power 0.28; persistence power 0.35
+   relative sd 2%: over-dispersion power 0.88; persistence power 0.87
+   relative sd 4%: over-dispersion power 1.00; persistence power 1.00
