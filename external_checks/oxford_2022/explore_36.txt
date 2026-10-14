@@ -1,0 +1,3 @@
+observed test fraction 0.50803 +- 0.00036; 130/256 = 0.50781; z vs 1/2 = 22.3
+p = 0.50000: final F_L 0.9167; certifies 0.9 from round 443473 (217893 kept pairs); DI F_ext >= 0.8370
+p = 0.50781: final F_L 0.9318; certifies 0.9 from round 137112 (67560 kept pairs); DI F_ext >= 0.8665

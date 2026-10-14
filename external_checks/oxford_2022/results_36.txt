@@ -1,0 +1,15 @@
+run started 2026-10-14T01:35:26+00:00; data sha256 fae103d8bfdb179b
+G1 PASS  rows 1920000; test fraction 0.5080; key rounds all x=0: True; time non-decreasing: True; test-setting fractions {(0, 0): 0.2495, (0, 1): 0.25, (1, 0): 0.2506, (1, 1): 0.2499}
+G2 candidates: ((0, 0), 1): -0.0006; ((0, 0), -1): +0.0006; ((0, 1), 1): +0.0431; ((0, 1), -1): -0.0431; ((1, 0), 1): -0.0478; ((1, 0), -1): +0.0478; ((1, 1), 1): -2.6768; ((1, 1), -1): +2.6768
+G2 PASS  convention ((1, 1), -1): S = 2.6768 (published 2.677); key-round QBER 1.4393% (published 1.44%, tol 0.2 pt)
+
+== PRIMARY
+O1 PASS  anytime certificate on kept (key) pairs: final F_L = 0.9167 (bar > 0.9) over 944576 kept pairs; first certifies 0.9 at round 443473 (217893 kept pairs); point estimate sqrt2(1-2q) = 0.9464
+O2 PASS  over-dispersion of the CHSH loss rate across 96 chunks: X2 = 143.1 (df 95), p = 1.04e-03, ratio 1.51, excess relative fluctuation 1.6%, mean loss 0.1654
+
+== SECONDARY
+S1 PASS  consistency: F_L(t) <= 1 - (kept Z-error fraction)/2 at every t with >= 1000 kept pairs; violations 0; final upper value 0.9928
+S2 descriptive  device-independent (self-testing) bound on kept pairs: final F_ext >= 0.8370
+S3 FAIL  persistence: lag-1 autocorrelation of chunk loss rates -0.171, one-sided permutation p = 0.9453 (prediction: persistent, p < 0.05)
+S4 descriptive  QBER dispersion across chunks: X2 = 117.6 (df 95), p = 5.80e-02, ratio 1.24, excess 4.1%
+info: chunk rates min/median/max loss 0.1511/0.1657/0.1782; five largest gaps between heralds (s) [179.4, 208.2, 225.8, 258.2, 1022.8]

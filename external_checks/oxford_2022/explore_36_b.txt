@@ -1,0 +1,4 @@
+p=0.50000 pre-registered            : final F_L 0.9167; first > 0.9 at kept 217893; last <= 0.9 at kept 219185 (round 446184)
+p=0.50000 union over 8 conventions  : final F_L 0.9144; first > 0.9 at kept 262765; last <= 0.9 at kept 264454 (round 537651)
+p=0.50781 pre-registered            : final F_L 0.9318; first > 0.9 at kept 67560; last <= 0.9 at kept 68129 (round 138267)
+p=0.50781 union over 8 conventions  : final F_L 0.9295; first > 0.9 at kept 97353; last <= 0.9 at kept 110968 (round 225641)
