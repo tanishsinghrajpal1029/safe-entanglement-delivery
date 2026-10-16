@@ -2920,3 +2920,11 @@ The external review raised six points. Two of them were real errors and are now 
 - **Effect:** none on the reported bounds, which all have k ≤ 2.
 - **Hash:** appendix.tex 797658f622f5ae01.
 
+## E178: ACCESS allocation number corrected (16 Oct 2026)
+- **Source:** the user's screenshot of the ACCESS portal shows the active project **CIS261606**, "Decentralized Reinforcement Learning for Fidelity-Aware Routing in Heterogeneous Quantum Networks: A Scalability Analysis".
+  - Type: Explore allocation, Aug 21, 2026 to Aug 20, 2027.
+  - Resources: Bridges-2 RM 8.45K of 10.0K core-hours remaining; GPU 200 of 200 GPU hours; Ocean 44 of 50 GB.
+- **Error corrected:** the acknowledgments said "CIS260277". That number came from the PSC charge ID cis260277p. The PSC charge ID and the ACCESS allocation number are different identifiers.
+- **Fix:** the acknowledgments now cite allocation CIS261606, and the % CONFIRM comment is removed.
+- **Hash:** main.tex 96840caa9992e352.
+
