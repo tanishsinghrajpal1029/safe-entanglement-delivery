@@ -2887,3 +2887,26 @@ The external review raised six points. Two of them were real errors and are now 
 
 **Hashes:** main.tex 93a96300ab7905eb, appendix.tex 797658f622f5ae01.
 
+## E176: Release v0.8.0 published and cited (16 Oct 2026)
+
+**The release**
+- GitHub release v0.8.0: tag commit 791dca69f4, "v0.8.0: revision re-analyses, cluster bounds, IBM replay, audit timestamps (ledger E171-E175)".
+  - Committed 23:06:18 UTC; release published 23:07:20 UTC.
+- Zenodo version DOI: 10.5281/zenodo.23427360 (concept DOI 10.5281/zenodo.23287414).
+
+**Checks**
+- The tag contains revision_v0.8/ (10 files), the new audit/ records and study31b_hardware_detector/ibm_job_times.py. Checked via the GitHub API.
+- Blob hashes of the tagged cluster_bounds.py, replay_ibm.py, make_figs_v08.py, ibm_job_times.json, CITATION.cff and README.md match the local files.
+- Zenodo's API is blocked from this environment, so the Zenodo file list was not checked directly. Zenodo archives the tagged snapshot.
+
+**Manuscript**
+- Data availability now cites release v0.8.0 with its version DOI.
+- The Repo2026 bibliography entry now carries the version DOI and the new title.
+- Hashes: main.tex 61b6e3e691c5a244, references.bib 946fad05cfe0f2ed.
+
+**Repository**
+- README citation line extended with the v0.8.0 DOI. This edit is not yet pushed.
+
+**Housekeeping**
+- A stray `.git/objects/maintenance.lock` left by a read-only `git fetch` from the VM was moved to `.git/stale-maintenance-lock-2026-10-16`.
+
