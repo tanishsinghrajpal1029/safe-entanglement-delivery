@@ -2910,3 +2910,13 @@ The external review raised six points. Two of them were real errors and are now 
 **Housekeeping**
 - A stray `.git/objects/maintenance.lock` left by a read-only `git fetch` from the VM was moved to `.git/stale-maintenance-lock-2026-10-16`.
 
+## E177: Endpoint repair in the pooled-bound proof (16 Oct 2026)
+- **What the reviewer found:** the app:pooled claim required p̄ ≤ u(n−1), and the text treated that condition as satisfied. It cannot be assumed for an unknown p̄.
+- **Reproduced:** with n = 64 and heterogeneous strata, the ordinary Clopper–Pearson bound has non-coverage up to 0.0513 when p̄ lies in ((1−α)^(1/n), 1−α/n]. The reviewer reported 0.050019 for one two-stratum example.
+- **Fix:**
+  - u(n−1) := 1 − α/n, which is at least (1−α)^(1/n);
+  - new case (ii): for p̄ > 1 − α/n, P(S ≤ n−1) ≤ n(1 − p̄) < α by the union bound;
+  - the claim now holds for all (p_j).
+- **Effect:** none on the reported bounds, which all have k ≤ 2.
+- **Hash:** appendix.tex 797658f622f5ae01.
+
