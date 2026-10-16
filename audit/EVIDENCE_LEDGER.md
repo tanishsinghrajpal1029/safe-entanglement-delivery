@@ -2609,3 +2609,281 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
   - Secondary: 52 (45 pass or confirmed, 6 fail, 1 unclear), counting each certificate hypothesis once.
 - **Correction to E145 and E149 (and to the v0.6.0/v0.6.1 release notes):** Study 32 has 4/4 secondary hypotheses, not 5/5, and Study 34 has 5/5, not 6/6. The certificate hypothesis is one pre-registered hypothesis scored at two values of p. RESULTS_32, RESULTS_34 and the README are corrected; the published release notes keep the old count.
 - **Manuscript build:** 28 pages, no float or reference warnings. Hashes: main.tex and appendix.tex as committed after this entry.
+
+## E152: Harvard data request answered (12 Oct 2026)
+- Prof. Lukin replied to the E98 request and referred Tanish to Yan-Cheng (group member). Tanish asked him to confirm the address, because the cc was not visible. No data received yet.
+
+## E153: Delft public dataset obtained (13 Oct 2026); structure only, before pre-registration
+- **Dataset:** Stolk et al., "Data and software supporting the publication: Metropolitan-scale heralded entanglement of solid-state qubits", 4TU.ResearchData, doi:10.4121/983e4771-1d12-457f-a98e-fab3a2959288.v1 (CC BY 4.0, released 2024-05-14). Paper: Stolk et al., doi:10.1126/sciadv.adp6442 (two diamond-spin nodes 10 km apart, 25 km of deployed fibre). Downloaded by Tanish to `quantum_grid_router/DataRepository/` (outside the PRX folders; not to be redistributed).
+- **What was looked at (structure only):** the README, the file list and sizes, and the source cells (not the outputs) of the Figure 3 and Figure 2/S7 notebooks. No data values were read, and nothing was computed.
+- **What the structure shows:**
+  - Figures 3 and 4: small processed files (about 18 KB) with per-state (`state_0`, `state_1`) correlator counts in the XX, YY and ZZ bases (outcomes 00/01/10/11), fidelity attributes, the authors' model predictions, and a sweep over 16 herald-window lengths (data and model fidelity).
+  - Figure 2/S7: link-stabilisation time series (polarisation, propagation-time drift, frequency and phase lock, temperature).
+  - **No time-ordered per-event herald records.** So the anytime and closed-loop tests cannot be run; a fixed-sample certificate and a model-offset check can.
+- **Step 0:** the structure-dump script `prx_work/35_delft/dump_structure_35.py` (sha fdfdce1e7837a26e) prints names, shapes, dtypes and attribute names only. Pre-registration follows before any value is read.
+
+## E154: Study 35 ("Delft") pre-registered (13 Oct 2026), before any data value was read
+- **Pre-registration:** `PREREG_35.md` (sha b5765393a6c657aa), with the locked `delft_core.py` 290b837d19ddbba4, `extract_35.py` 61e266e4c795728e and `analyze_35.py` d41418d4e4b6acda.
+- **Synthetic pre-run:** `synth_35.py` d8c1221abf46a875, output `synth_35.txt` 7dc15246d46a878d; end-to-end harness `make_synth_extract_35.py` 57544847a6856679.
+- **Hypotheses:**
+  - D1 (primary): raw-count model-free certificate F_lo > 0.5. Predicted FAIL.
+  - D2 (primary): model offset at 10 ns within 2u + 0.02 and no detected optimism. No prediction of direction. Labelled "weak" if 2u + 0.02 > 0.06, and "underpowered" if the power at Δ = 0.03 is below 0.8.
+  - S1: readout-corrected bound > 0.5. Predicted PASS.
+  - S2 and S3: descriptive.
+- **Gates:** G1 (labels), G2 (parity convention) and G0 (target mapping) are stop rules.
+- **Calibration:**
+  - D1 false certification at F = 0.5 ≤ 0.0008, with coverage ≥ 0.9999;
+  - D2 false FAIL with an exact model 0.046–0.050;
+  - D2 power at Δ = 0.03 is 0.44, 0.77, 0.96 and 1.00 at n = 200, 500, 1,000 and 3,000.
+- **Disclosed:** the authors' notebook source marks the 10 ns point at about 0.57.
+- **Files:** `prx_work/35_delft/` and the repo copy `external_checks/delft_2024/`. The extract JSON is not added to the repository.
+
+## E155: Study 35 ("Delft") results (13 Oct 2026)
+- **Timing:** the pre-registration was committed as `f9db617` at 04:51:17 UTC. The extraction ran at 04:51:31 UTC, 14 s later. The locked hashes were unchanged at run time.
+- **Outputs:** `results_35.txt` 93d8ca6c6fe5b8fc, `RESULTS_35.md` e5bb8aa8b9e73e33.
+- **Gates:** G1, G2, G0 and G3 all PASS.
+- **D1 FAIL (predicted):** the raw-count certificate gives F_lo = 0.464 (F̂ = 0.505).
+- **D2 PASS:** Δ = −0.004 ± 0.008, with an upper bound of 0.009 and power 0.97 at Δ = 0.03.
+- **S1 PASS:** the readout-corrected bound is 0.558.
+- **S3 (exploratory):** Δ rises to +0.016 at a 20 ns window.
+- **Disclosure:** the sweep's model file gives F_model 0.008 higher than `correlation_results` at 10 ns. Using it, Δ = +0.004, still within the bar.
+- **Scoreboard:** 85 primary (75 PASS, 10 FAIL); secondary +1 PASS.
+- **Repository:** README updated (four real datasets, the scoreboard, the Delft row).
+
+## E156: Harvard reply (13 Oct 2026)
+- Yan-Cheng (Lukin group) agreed to share SiV data, but it may take time. He will update in about 2 weeks (late October). No data yet. If data arrive, they get their own pre-registration before analysis, as with Study 35.
+
+## E157: Correction to Study 35 framing (13 Oct 2026)
+- **What Figure 3 is:** the Figure 3 data analysed in Study 35 are **post-selected** entanglement. The qubits were measured right after spin–photon entanglement, and the herald was applied in post-processing, according to the paper.
+- **What Figure 4 is:** the paper's **fully heralded, delivered** Ψ− states (feedback, echo, 15 ns window, F = 0.534 ± 0.015).
+- **The mistake:** PREREG_35 described Figure 4/S6 as "a variant with a different correction". That was wrong.
+- **What does not change:** the verdicts of D1, D2 and S1.
+- **What was fixed:** RESULTS_35 (now ec6f9f931b8f9b83) and the README limit the claims to post-selected entanglement.
+- **Not yet done:** the Figure 4 notebook source (code only, no values) shows that it uses Ψ− targets for all states, a combined state (index 2), a 15 ns window and a model weighted by count rate. The locked analyze_35.py therefore does not apply to it unchanged. Analysing Figure 4 would need its own pre-registration (Stage 2).
+
+## E158: Study 35B ("Delft, delivered states") pre-registered (13 Oct 2026), before any Figure 4 data value was read
+- **Pre-registration:** `PREREG_35B.md` (sha bddcaafd7f9c7d12), with the locked `extract_35b.py` de0792d068c056b9 and `analyze_35b.py` 5740f8f0ef9e6652. The harness is `make_synth_extract_35b.py` 968fe4852852d57b. `delft_core.py` and `extract_35.py` are unchanged.
+- **Target:** the paper's fully heralded, delivered Ψ− states (Fig. 4, 15 ns window, combined state).
+- **Hypotheses:**
+  - D1′ (primary): raw-count certificate F_lo > 0.5. Predicted FAIL.
+  - D2′ (primary): model offset at 15 ns (count-rate-weighted model, as in the authors' Fig. 4D) within 2u + 0.02 and no detected optimism. Expected to be underpowered (power about 0.65 at Δ = 0.03).
+  - S1′: readout-corrected bound > 0.5. Predicted PASS, narrowly.
+- **Seen before:** the paper text (F = 0.534(15) at 15 ns), the Fig. 4 notebook source, and the Study 35 results.
+- **Excluded:** the PSB-corrected variant (S6).
+
+## E159: Study 35B ("Delft, delivered states") results (13 Oct 2026)
+- **Timing:** the pre-registration was committed as `726549d` at 05:06:41 UTC. The extraction ran at 05:06:53 UTC, 12 s later. The locked hashes were unchanged at run time.
+- **Outputs:** `results_35b.txt` 44db158b518ce37e, `RESULTS_35B.md` 660c6fa2979ef570.
+- **Gates:** all PASS. There were 450/452/449 events per basis.
+- **D1′ FAIL (predicted):** the raw-count certificate gives F_lo = 0.399 (F̂ = 0.474).
+- **D2′ PASS but underpowered:** Δ = −0.007 ± 0.015, with an upper bound of 0.018 and power 0.63 at Δ = 0.03.
+- **S1′ PASS (predicted):** the readout-corrected bound is 0.510.
+- **S3′ (descriptive):** Δ is below 0 at every window.
+- **Scoreboard:** 87 primary (76 PASS, 11 FAIL); 54 secondary (47 passed or confirmed, 6 failed, 1 unclear).
+- **README updated.**
+
+## E160: Manuscript v0.6.2 (13 Oct 2026)
+- **Content:** adds the Delft re-analyses S35 and S35B to the abstract, the introduction, Sec. VI.A (a new paragraph), the limitations, the acknowledgements, App. C (a new block), the keys table and the scoreboard.
+- **Hashes:** main.tex 772870b60361d5c0, appendix.tex 2d6a7c244282f4a2, references.bib 212c7a7f53f63c9b.
+- **Build:** the preview is 30 pages, with no undefined references.
+- **Fact-check:** an independent agent found 2 MUST-FIX, 12 SHOULD-FIX and 6 NIT items; all were applied. The two MUST-FIX items were the unsupported "setup dependent" claim and the node location (Delft and The Hague).
+- **Files:** `prx_work/manuscript_v0.6.2/` and `manuscript_v0.6.2_overleaf.zip`.
+- **Open:** the v0.6.2 Zenodo DOI placeholders.
+
+## E161: Release v0.6.2 (13 Oct 2026)
+- **Release:** GitHub v0.6.2, "Delft diamond-spin re-analyses (Studies 35, 35B)". Zenodo doi:10.5281/zenodo.23333138; concept DOI 10.5281/zenodo.23287414.
+- **Manuscript v0.6.2:** the DOI placeholders are filled. main.tex 3c1c859926e735c0, appendix.tex 2d6a7c244282f4a2 (unchanged), references.bib dfc68b8515767755. The preview is 30 pages; the Overleaf zip was rebuilt.
+- **Repository:** the README lists the v0.6.2 DOI; CITATION.cff is now version 0.6.2 (2026-10-13).
+
+## E162: Oxford data received (14 Oct 2026)
+- **Data:** D. P. Nadlinger (Oxford) replied to the E98 request with the shot-by-shot events of the 1,920,000-round characterisation run behind Nadlinger et al., Nature 607, 682 (2022), Fig. 3 / Fig. S4. File `link-quality-events.csv.xz`, sha256 fae103d8bfdb179b.
+- **Terms:** shared privately, so it is not redistributed. Tanish is to share results with the authors before submission; permission to report has been asked.
+- **Seen before pre-registration:** only the header comment (columns, 96 chunks, 8.53 h), the column names and the row count (1,920,000).
+
+## E163: Study 36 ("Oxford") pre-registered (14 Oct 2026), before any data value was read
+- **Pre-registration:** `PREREG_36.md` (sha 216cfed4d2e8be8f), with the locked `oxford_core.py` 0ab19cc02e82ad96 and `analyze_36.py` aa8001b58560851d.
+- **Synthetic pre-run:** `synth_36.py` 17f3828a1776f636, output 58ad84b0e02f05a9; harness `make_synth_csv_36.py` 9577cede5a0997b6.
+- **Hypotheses:**
+  - O1 (primary): an anytime certificate on the kept (key) pairs from the CHSH test rounds, using a Hoeffding martingale with p = 1/2 and the trusted-measurement bound F ≥ √2(1 − 2q). PASS if the final F_L > 0.9. Predicted PASS.
+  - O2 (primary): chunk-level over-dispersion of the CHSH loss rate (χ², 96 chunks). Predicted PASS.
+  - S1: consistency check; S2: device-independent bound (descriptive); S3: persistence, lag-1 permutation test, predicted PASS; S4: QBER dispersion (descriptive).
+- **Gates:** G1 (design) and G2 (reproduce S = 2.677 and QBER = 1.44%, which fixes the CHSH convention).
+- **Synthetic calibration:**
+  - O1 had 0 violations in every scenario; the margin at full size is 0.014.
+  - O2 false-positive rate 0.051; S3 false-positive rate 0.034.
+  - The stationary end-to-end file gave a chance O2 p = 0.038, which is disclosed.
+- **Files:** `external_checks/oxford_2022/` and `prx_work/36_oxford/`. The data are not in the repository.
+
+## E164: Study 36 ("Oxford") results (14 Oct 2026). Not public until the authors agree.
+- **Timing:** pre-registration `d4d4a9d` committed and pushed at 01:32:45 UTC; the locked run started at 01:35:26 UTC, once, in the cloud workspace. Data sha fae103d8bfdb179b.
+- **Outputs:** `results_36.txt` b2afffe8cbdc516f, `RESULTS_36.md` ceb3771d523d3217.
+- **Gates:**
+  - G1 PASS (test fraction 0.5080);
+  - G2 PASS: S = 2.6768 under exactly one convention (minus sign on (1,1), Alice inverted); QBER 1.439%.
+- **O1 PASS:** the anytime certificate on the kept pairs gives F_L = 0.917 over 944,576 kept pairs, and certifies 0.9 from 217,893 kept pairs onwards.
+- **O2 PASS:** over-dispersion, p = 0.001, ratio 1.51, excess 1.6%.
+- **S1 PASS. S2:** device-independent bound 0.837. **S3 FAIL:** lag-1 = −0.17, no persistence. **S4:** p = 0.058.
+- **Deviation:** the true test probability is about 130/256, not 1/2 (z = 22). The pre-registered p = 1/2 is below the true p, so the bound stays valid but conservative. Exploratory (`explore_36_ptrue.py` ab0afbbd9c40bfc0): F_L = 0.932, certifying 0.9 from 67,560 kept pairs; DI 0.867.
+- **Scoreboard:** 89 primary (78 PASS, 11 FAIL); 56 secondary (48 passed or confirmed, 7 failed, 1 unclear).
+- **Hold:** RESULTS_36, the README and the ledger sync stay unpublished until D. P. Nadlinger agrees to the reporting.
+
+## E165: Study 36 reproduced independently on the Mac (14 Oct 2026)
+- **Who and how:** Tanish re-ran the locked `analyze_36.py` on his Mac (`labs` environment), on his copy of the data (sha fae103d8bfdb179b), in `prx_work/36_oxford/repro_mac/`.
+- **Result:** apart from the start-time line, the output is identical to the cloud run (E164). All verdicts and numbers reproduce.
+- **Status:** a reproduction, not a new test. Results are still held until the authors agree.
+
+## E166: Oxford authors' reply (14 Oct 2026)
+- **Permission:** D. P. Nadlinger agreed to the results being reported, and to the credit wording ("raw data provided by D. P. Nadlinger").
+- **Completeness:** the export contains **every heralded event**. Ion loss and recalibration interrupt the schedule but discard no data; every herald yields a row. This supports Prop. C1's assumption that tests are not discarded in an outcome-dependent way.
+- **Hold lifted:** Study 36 results can be published after they are sent to the authors.
+
+## E167: Manuscript v0.6.3 (14 Oct 2026)
+- **Content:** adds Study 36 (Oxford) to the abstract, the introduction, the scope, Sec. VI.A (a new paragraph), Sec. VI.C, related work, the limitations, the outlook, the acknowledgements, data availability, App. C (a new block), the keys table, the scoreboard (89/78/11; 56/48/7/1), process and review.
+- **Hashes:** main.tex df10ee280f5e550e, appendix.tex e45716455a2b7b71, references.bib 06ab9684e3deb39c. Preview 32 pages; Overleaf zip `manuscript_v0.6.3_overleaf.zip`.
+- **Fact-check:** an independent agent found 5 MUST-FIX, 11 SHOULD-FIX and 9 NIT items; all were applied except permission (already granted, E166) and two extra DIQKD citations (the sentence was made singular instead).
+- **Main correction:** "certified 0.9 from 217,893 kept pairs" was only the first crossing. A descriptive computation (`explore_36_b.py` d637e62db183609f, output d418249bb12ce366) shows the bound stays above 0.9 after 219,185 kept pairs; a union over 8 conventions gives 0.914.
+- **Updated:** RESULTS_36 (now 095a09b8112fa507) and the README (Oxford row, five datasets, scoreboard).
+- **Open:** the v0.6.3 DOI; sending the results to the authors before submission.
+
+## E168: Release v0.6.3 (14 Oct 2026)
+- **Release:** GitHub v0.6.3, "Oxford DIQKD re-analysis (Study 36), anytime certificate on randomised test-or-keep data". Zenodo doi:10.5281/zenodo.23355154.
+- **Manuscript v0.6.3:** the DOI is filled; no placeholders remain except the authors' proof-check sentence. main.tex e684d339aef9e169, appendix.tex e45716455a2b7b71 (unchanged), references.bib 706841d658e09754. The preview is 32 pages; the Overleaf zip was rebuilt.
+- **Repository:** the README lists the v0.6.3 DOI; CITATION.cff is now version 0.6.3 (2026-10-14).
+- **Data DOI:** the Oxford data have none; the paper says the data are available from the authors on request. We cite the paper and "data provided by D. P. Nadlinger"; asking the authors for a public deposit is optional.
+
+## E169: Oxford authors' second reply (14 Oct 2026)
+- **Test probability confirmed:** the round type was drawn from 8 random bits with test probability **130/256**, ten times the 13/256 of the main key run. The exploratory F_L = 0.932 therefore uses the correct p; it stays labelled exploratory because it was not pre-registered. The pre-registered 0.917 remains the primary result.
+- **Chunks:** a software convenience, with no mechanism for differences between chunks apart from small dead times. Slow drifts over the whole run are expected; calibrations ran on a timer, about hourly.
+- **Question asked:** which test bases would give the tightest Bell-fidelity bound? Answered by email (Pauli stabiliser tests XX, YY, ZZ, as in Prop. C1).
+- **Manuscript v0.6.4 draft** (not released): the 130/256 wording now says "confirmed", and the chunk and calibration facts are added, marked as private communication. main.tex f3438d5c5eeea0cc, appendix.tex 6d90d6df57ba80fe. To be released together with Prof. Mike's changes.
+
+## E170: Manuscript v0.7 draft, the accessible rewrite (16 Oct 2026)
+- **Target unchanged:** PRX Quantum. The user chose to keep the PRX Quantum target and write the main text in a plain "Nature style": story first, formal material in Methods.
+- **Structure:**
+  - new title and plain-language abstract;
+  - Table I, "Key terms in plain language";
+  - seven Results subsections, each headed by its finding;
+  - Methods containing all formal statements verbatim from v0.6.4, plus detail paragraphs and the full limitations list.
+- **Appendix:** only `\ref` targets updated.
+- **Review:** two independent review passes. The first found 12 must-fix items, the second 8; all were applied. No new results.
+- **Derived numbers:**
+  - 16,640 runs = S30 + S32 + S34;
+  - 88% from the Prop. N example.
+- **New exploratory number (Outlook):** about 770 kept pairs for a Pauli certificate of 0.9 at p = 130/256 and F = 0.946.
+  - Not pre-registered; uses expected error counts.
+  - Script: scripts/oxford_pauli_budget.py. Check: p = 0.1, F = 1 gives 680 (paper: 678).
+- **Also drafted:** popular summary (249 words) and cover letter.
+- **Hashes:** main.tex 9fbbad695c5b508b, appendix.tex 6616362422d32ce6, references.bib bd15f1771b80ab24.
+- **Before release:**
+  - Mike's proof check and sign-off;
+  - Oxford results sent to the authors;
+  - Zenodo v0.7 DOI;
+  - ACCESS number;
+  - REVTeX build;
+  - check of the Delft "post-selected" gloss.
+
+## E171: Manuscript v0.8 draft, response to the external review (16 Oct 2026)
+- **Trigger:** an external review asked for major revisions on seven points. They were triaged against the manuscript and none was rejected. No new experiments; every new number comes from re-analysis of existing records.
+- **Maths:**
+  - Prop. N generalised to any test (TV ≤ κ_T·p·c), with the joint false-certification probability and the realised-vs-conditional fidelity distinction.
+  - B4 fallback corrected (θ_max = 1 holds for the constant shape only).
+  - Probe condition θψ ≤ τ − 3/4 made explicit in (B3).
+  - Zhu & Hayashi (PRA 2019) cited.
+- **Pre-registration:**
+  - GitHub PushEvents fetched from api.github.com via the Mac VM; they show every pre-registered study from S26 to S36 was pushed before its run or data read.
+  - The repository was public from its creation (10 Oct, 19:28 UTC; Zenodo release at 19:43).
+  - Archived: github_push_events_2026-10-16.json (6d50d6aa7723fade), github_push_times_2026-10-16.txt, github_repo_meta_2026-10-16.json.
+  - New Table tab:prereg with three levels of evidence.
+  - This resolves the "push time pending" notes in E101 and E131 onwards.
+- **Cluster-level bounds** (exploratory re-reporting, not pre-registered; no verdict changes):
+  - script manuscript_v0.8_draft/scripts/cluster_bounds.py; the replication unit is the network;
+  - S26: 0/128, bound 2.3%;
+  - S30 P1: 2/64, bound 9.5% (network 5: false alarm before onset, outside Theorem 2; network 11: running-minimum miscoverage);
+  - always-on: bound ≤ 4.6% per study;
+  - S34: 0/128, bound 2.3%.
+- **IBM:**
+  - replay_ibm.py reproduces the stored F_decl, the certificate and the alarms (hybrid 375/419 in S31b; S31 mixture peak 2.714).
+  - The Bell measurement is now called a noisy reference, with Clopper–Pearson intervals 0.838–0.865 and 0.826–0.854.
+  - q corrected from 0.0915 to 0.0914.
+- **Oxford:** 36_oxford/trajectory_36.py (sha e887fdf497bb4890) → trajectory_36.csv (sha 81d238a725a098d1). Run on the Mac; it reproduces 0.9167, 0.9318 and 0.8370, with the crossing after 219,186 kept pairs. Only the derived trajectory left the Mac.
+- **Figures:**
+  - Fig. 1 relabelled;
+  - Figs 3–5 now carry 95% bootstrap intervals over networks;
+  - new Fig. 6 (IBM certificate and evidence, Oxford trajectory);
+  - new summary Table tab:summary; results table split.
+  - Script: figwork/make_figs_v08.py.
+- **Review:** an independent review pass found 2 must-fix and 7 should-fix items; all were applied. The main one: headline bounds now use networks, not runs.
+- **Hashes:** main.tex 707ffdb5ec47dfa9, appendix.tex f79181ad52297cab, references.bib 1c911d58a937457b. Preview: 40 pages.
+
+## E172: IBM job creation times confirmed (16 Oct 2026)
+- **What was run:** the read-only script 31b_hardware_detector/ibm_job_times.py, run by the user on his Mac with his own saved IBM account. It submits nothing and uses no QPU time. Output: ibm_job_times.json (sha 40f605b249639e10).
+- **S31:** job db5s7lamb58s738aufbg
+  - created 2026-10-11 17:13:57 UTC, running 17:13:58, finished 17:14:14;
+  - 913.5 s after the pre-registration push (16:58:44).
+- **S31b:** job db5ubf04qg6s73c40k20
+  - created 19:38:36 UTC, running 19:38:37, finished 19:38:49;
+  - 29.2 s after the push (19:38:07).
+- **QPU usage:** 3 s charged per job.
+- **Conclusion:** both hardware studies stay at evidence level 1, now backed by IBM's own job records. The "confirm the push time" notes in E131 and the S31b entry are resolved.
+- **Manuscript:** v0.8 appendix updated (Table tab:prereg, Table tab:keys, hardware paragraph); appendix.tex is now 3eef2c841cb487f3.
+
+## E173: First REVTeX build on Overleaf (16 Oct 2026)
+- **First attempt failed:** "Extra \or" at main.tex line 50, the first table. Cause: the `array` package's `>{\raggedright\arraybackslash}p{}` column specs clash with REVTeX 4.2's tabular code. The preview build, which uses the article class, never exercised this.
+- **Fix:** removed the `array` package and replaced all nine of those column specs with plain `p{}`. No content changed.
+- **Second attempt succeeded:** 38 pages, pdfTeX 1.40.29, no unresolved references ("??"). Tables and Fig. 6 are placed sensibly.
+- **Cosmetic issue:** narrow table columns are now justified. This is left to journal production.
+- **Hashes:** main.tex c18e87c4b514e87d, appendix.tex 8fcfd0fabdfc7818.
+
+## E174: v0.8, second round of external review (16 Oct 2026)
+The external review raised six points. Two of them were real errors and are now corrected:
+- the converse remark (iii) had its inequality in the wrong direction;
+- the Prop. N headline was too broad.
+
+**1. Prop. N regime.**
+- Thresholds, computed and then checked independently: at α = 0.05 certification is ruled out for p ≤ 0.46 with random Pauli tests (the exact crossing is 0.4685) and for p ≤ 0.37 with any test (crossing 0.3701).
+- When 1 − p ≤ α, "certify if no random Pauli test fails" succeeds against the replacement networks. Its false-certification probability is at most 1 − p, for any N and any replacement law.
+
+**2. Remark (iii).** Now stated with κ = κ_min.
+
+**3. Cluster bounds.**
+- Design check (scripts/cluster_strata.py): balanced within each claim except S34; 32 networks per stratum.
+- Seeds: study26.py, study30.py, study32.py and study34.py all hash (study, hardware, grid, index), so the strata are independent.
+- Hoeffding (1956) justifies Clopper–Pearson for an average of unequal probabilities.
+- Worst-stratum bounds:
+  - S30 ionproj: 2/32 networks, bound 18.4%;
+  - S32 ion2020: 1/32, bound 14.0%;
+  - every other stratum: 0/32, bound 8.9%.
+- The manuscript now says the 10% level is confirmed for every stratum without a harmed network, but not for those two.
+
+**4. IBM.** Intervals labelled pointwise and approximate; "less often" removed.
+
+**5. Oxford.** Drift wording weakened: no positive lag-1 persistence detected, other forms or timescales not excluded.
+
+**6. Release.** The DOI is still pending, to be resolved at the Zenodo v0.8 release.
+
+**Hashes:** main.tex 9aeba3a0eac88200, appendix.tex 8ea51ac958d13adb, references.bib dd15f09993a81e72.
+
+## E175: v0.8, third review round and release preparation (16 Oct 2026)
+
+**Manuscript changes**
+1. **Scope sentences:** "Per-pair guarantees must therefore come from a model" and the matching Results sentence are now limited to the testing regime of Prop. N.
+2. **Fig. 6(a) legend:** now reads "Bell reference (approx. pointwise 95% intervals)".
+3. **Bound wording:** pooled bounds are called conservative (exact only within a stratum). New Appendix subsection app:pooled states the condition and proof:
+   - condition: n·u(k) ≥ k+1 for all k ≤ n−2;
+   - checked numerically: margin ≥ 0.64 for n = 32, 64, 96, 128;
+   - with p̄ ≤ u(n−1) (≥ 0.998), Hoeffding (1956, Thm 4) gives P(p̄ > u(S)) ≤ α.
+4. **Data availability:** the manuscript now reads "release v0.8.0, version DOI 10.5281/zenodo.VERSIONDOI". The placeholder is filled once Zenodo mints the version DOI.
+
+**Release prepared in github_release/safe-entanglement-delivery** (not yet committed or pushed; the user pushes):
+- `revision_v0.8/`: cluster_bounds.py, cluster_strata.py, replay_ibm.py, make_figs_v08.py, trajectory_36.py, with outputs and a README.
+  - The scripts were adapted to the repository layout and tested on a copy of that layout.
+  - The bounds output, strata output, IBM trajectories and figure values reproduced exactly.
+  - Fig. 6 is skipped without the Oxford data, which are not redistributed.
+- `audit/`: GitHub push events, push times, repository metadata and ibm_job_times.json.
+- `study31b_hardware_detector/ibm_job_times.py`.
+- Public ledger synced from this ledger, with the PSC username redacted.
+- `CITATION.cff`: version 0.8.0, dated 2026-10-16, with the new title.
+- `README.md`: Main results updated to v0.8 (narrowed no-go, IBM reference, network bounds), plus a v0.8 section.
+
+**Hashes:** main.tex 93a96300ab7905eb, appendix.tex 797658f622f5ae01.
+

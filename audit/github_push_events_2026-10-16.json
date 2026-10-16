@@ -1,0 +1,2537 @@
+[
+  {
+    "id": "24103281519",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46417185976,
+      "ref": "refs/heads/main",
+      "head": "26360d150f52fff4d037d1288450e20910f7ebfe",
+      "before": "92cb234d158e772af1ba58a255134264f9330c81"
+    },
+    "public": true,
+    "created_at": "2026-10-14T02:10:56Z"
+  },
+  {
+    "id": "24101354460",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46414695767,
+      "ref": "refs/heads/main",
+      "head": "d4d4a9d8aa7fe9f4003e376f1d349ae67671bbcf",
+      "before": "c43dffe553f2f1f0addc2e1b0ce8be4f25a3b533"
+    },
+    "public": true,
+    "created_at": "2026-10-14T01:32:47Z"
+  },
+  {
+    "id": "23995900941",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46307932234,
+      "ref": "refs/heads/main",
+      "head": "2df94c4ba73a391e2a5e09f763c8130b01729e99",
+      "before": "726549d8316510925fe23f767692b280ea466d1d"
+    },
+    "public": true,
+    "created_at": "2026-10-13T05:42:45Z"
+  },
+  {
+    "id": "23992200420",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46304476717,
+      "ref": "refs/heads/main",
+      "head": "f9db617f28cdd8310bede1538d08c485cc96f50c",
+      "before": "1b908016fff2bcc1fd7ad01e3b692a305af7c910"
+    },
+    "public": true,
+    "created_at": "2026-10-13T04:51:20Z"
+  },
+  {
+    "id": "23955764982",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46305497059,
+      "ref": "refs/heads/main",
+      "head": "726549d8316510925fe23f767692b280ea466d1d",
+      "before": "09a2d78c1f9c83bd084c2dbea5f210ab146dea31"
+    },
+    "public": true,
+    "created_at": "2026-10-13T05:06:43Z"
+  },
+  {
+    "id": "17160675352",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/412270134",
+        "assets_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/412270134/assets",
+        "upload_url": "https://uploads.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/412270134/assets{?name,label}",
+        "html_url": "https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/releases/tag/v0.6.3",
+        "id": 412270134,
+        "author": {
+          "login": "tanishsinghrajpal1029",
+          "id": 305917102,
+          "node_id": "U_kgDOEjvsrg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/305917102?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tanishsinghrajpal1029",
+          "html_url": "https://github.com/tanishsinghrajpal1029",
+          "followers_url": "https://api.github.com/users/tanishsinghrajpal1029/followers",
+          "following_url": "https://api.github.com/users/tanishsinghrajpal1029/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tanishsinghrajpal1029/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tanishsinghrajpal1029/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tanishsinghrajpal1029/subscriptions",
+          "organizations_url": "https://api.github.com/users/tanishsinghrajpal1029/orgs",
+          "repos_url": "https://api.github.com/users/tanishsinghrajpal1029/repos",
+          "events_url": "https://api.github.com/users/tanishsinghrajpal1029/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tanishsinghrajpal1029/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVEGeV84Ykr42",
+        "tag_name": "v0.6.3",
+        "target_commitish": "main",
+        "name": "v0.6.3: Oxford DIQKD re-analysis (Study 36), anytime certificate on randomised test-or-keep data",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-14T02:06:28Z",
+        "updated_at": "2026-10-14T02:07:08Z",
+        "published_at": "2026-10-14T02:07:08Z",
+        "assets": [
+
+        ],
+        "tarball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/tarball/v0.6.3",
+        "zipball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/zipball/v0.6.3",
+        "body": "Adds the pre-registered re-analysis of the Oxford device-independent QKD characterisation run (Nadlinger et al., Nature 2022; data provided by the authors, not redistributed). Anytime certificate on kept pairs: F >= 0.917 (trusted settings), above 0.9 after 219,185 kept pairs; device-independent bound 0.837. Link over-dispersed by 1.6% without persistence. Scoreboard: 89 primary (78 pass, 11 fail).",
+        "short_description_html": "<p>Adds the pre-registered re-analysis of the Oxford device-independent QKD characterisation run (Nadlinger et al., Nature 2022; data provided by the authors, not redistributed). Anytime certificate o…</p>",
+        "is_short_description_html_truncated": true
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-14T02:07:08Z"
+  },
+  {
+    "id": "23931607797",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46416893080,
+      "ref": "refs/heads/main",
+      "head": "92cb234d158e772af1ba58a255134264f9330c81",
+      "before": "d4d4a9d8aa7fe9f4003e376f1d349ae67671bbcf"
+    },
+    "public": true,
+    "created_at": "2026-10-14T02:06:30Z"
+  },
+  {
+    "id": "23891400444",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46190338758,
+      "ref": "refs/heads/main",
+      "head": "28d314ae100fa03105d436529fa9d9f5b0fce50f",
+      "before": "2a511e24b7821da4824f0a0512b8e7e8d98d8e95"
+    },
+    "public": true,
+    "created_at": "2026-10-12T04:08:17Z"
+  },
+  {
+    "id": "23872164792",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46175585543,
+      "ref": "refs/heads/main",
+      "head": "15433238baeb1d5dcd691590612a6b44e0e45eaf",
+      "before": "62c25661377acbd1d472729bebd5e10d124d484a"
+    },
+    "public": true,
+    "created_at": "2026-10-11T23:40:54Z"
+  },
+  {
+    "id": "23862171679",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46161870612,
+      "ref": "refs/heads/main",
+      "head": "9ec76d6658221a387287f7be804f76167d9be3da",
+      "before": "3520391f13f03bd101b55a446ce6eca75c497078"
+    },
+    "public": true,
+    "created_at": "2026-10-11T19:47:19Z"
+  },
+  {
+    "id": "23846471352",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46179395353,
+      "ref": "refs/heads/main",
+      "head": "1f5636c281ef9b5c7329c47e3615270b070ea571",
+      "before": "951efcb2684bc0c0e89f5502f4e97882732623b6"
+    },
+    "public": true,
+    "created_at": "2026-10-12T00:52:59Z"
+  },
+  {
+    "id": "23843291792",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46308245451,
+      "ref": "refs/heads/main",
+      "head": "c43dffe553f2f1f0addc2e1b0ce8be4f25a3b533",
+      "before": "2df94c4ba73a391e2a5e09f763c8130b01729e99"
+    },
+    "public": true,
+    "created_at": "2026-10-13T05:47:18Z"
+  },
+  {
+    "id": "17070386567",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/411322152",
+        "assets_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/411322152/assets",
+        "upload_url": "https://uploads.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/411322152/assets{?name,label}",
+        "html_url": "https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/releases/tag/v0.6.2",
+        "id": 411322152,
+        "author": {
+          "login": "tanishsinghrajpal1029",
+          "id": 305917102,
+          "node_id": "U_kgDOEjvsrg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/305917102?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tanishsinghrajpal1029",
+          "html_url": "https://github.com/tanishsinghrajpal1029",
+          "followers_url": "https://api.github.com/users/tanishsinghrajpal1029/followers",
+          "following_url": "https://api.github.com/users/tanishsinghrajpal1029/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tanishsinghrajpal1029/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tanishsinghrajpal1029/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tanishsinghrajpal1029/subscriptions",
+          "organizations_url": "https://api.github.com/users/tanishsinghrajpal1029/orgs",
+          "repos_url": "https://api.github.com/users/tanishsinghrajpal1029/repos",
+          "events_url": "https://api.github.com/users/tanishsinghrajpal1029/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tanishsinghrajpal1029/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVEGeV84YhEco",
+        "tag_name": "v0.6.2",
+        "target_commitish": "main",
+        "name": "v0.6.2: Delft diamond-spin re-analyses (Studies 35, 35B)",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-13T05:42:43Z",
+        "updated_at": "2026-10-13T05:43:42Z",
+        "published_at": "2026-10-13T05:43:42Z",
+        "assets": [
+
+        ],
+        "tarball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/tarball/v0.6.2",
+        "zipball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/zipball/v0.6.2",
+        "body": "Adds two pre-registered re-analyses of the Delft metropolitan NV-centre link (Stolk et al. 2024): post-selected (S35) and delivered (S35B) states. Uncorrected counts do not certify entanglement (predicted); readout-corrected data do; no model optimism detected (delivered-state test underpowered). Scoreboard: 87 primary (76 pass, 11 fail).",
+        "short_description_html": "<p>Adds two pre-registered re-analyses of the Delft metropolitan NV-centre link (Stolk et al. 2024): post-selected (S35) and delivered (S35B) states. Uncorrected counts do not certify entanglement (pr…</p>",
+        "is_short_description_html_truncated": true
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-13T05:43:42Z"
+  },
+  {
+    "id": "23842435198",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46148737871,
+      "ref": "refs/heads/main",
+      "head": "09cb3d1ecd7d8661e0efe3eeede9014a9e68321b",
+      "before": "686c64dc638696ac2e5a521f88eda6159faa07c5"
+    },
+    "public": true,
+    "created_at": "2026-10-11T16:24:33Z"
+  },
+  {
+    "id": "23840071543",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46304718977,
+      "ref": "refs/heads/main",
+      "head": "09a2d78c1f9c83bd084c2dbea5f210ab146dea31",
+      "before": "f9db617f28cdd8310bede1538d08c485cc96f50c"
+    },
+    "public": true,
+    "created_at": "2026-10-13T04:55:07Z"
+  },
+  {
+    "id": "23839187236",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46172013734,
+      "ref": "refs/heads/main",
+      "head": "1d7578229db8c6cfb14ed443abf968cd2c7aaec6",
+      "before": "915271e17b3c1bd0ecb1b899a1b3d6fd7987f442"
+    },
+    "public": true,
+    "created_at": "2026-10-11T22:34:12Z"
+  },
+  {
+    "id": "23817109448",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46148052984,
+      "ref": "refs/heads/main",
+      "head": "686c64dc638696ac2e5a521f88eda6159faa07c5",
+      "before": "a779735be2c49bb506126b7b2f50751eb503118f"
+    },
+    "public": true,
+    "created_at": "2026-10-11T16:14:19Z"
+  },
+  {
+    "id": "23806067144",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46106950459,
+      "ref": "refs/heads/main",
+      "head": "ed2c4fc19fa779baf909ccaf3fe6a88e6667eded",
+      "before": "a1cdfd7c45f99c1ff36dd2ade1571a3a8c6480e5"
+    },
+    "public": true,
+    "created_at": "2026-10-11T03:57:18Z"
+  },
+  {
+    "id": "23803254697",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46107053814,
+      "ref": "refs/heads/main",
+      "head": "1cef7d08493a27e65a423539c701117a7da207b3",
+      "before": "3b86a9e20340560ca3fa8be974e37fadfd319eb1"
+    },
+    "public": true,
+    "created_at": "2026-10-11T03:59:38Z"
+  },
+  {
+    "id": "23798768512",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46130744558,
+      "ref": "refs/heads/main",
+      "head": "82549c5ce180bb1220e9b1be9b0957fa17a42ad3",
+      "before": "023faed067a3130a02475dc969e08f53f69b1898"
+    },
+    "public": true,
+    "created_at": "2026-10-11T11:37:41Z"
+  },
+  {
+    "id": "23791354260",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46093867352,
+      "ref": "refs/heads/main",
+      "head": "c2aa326b593dbdad058bb215ebf989ed6e168083",
+      "before": "370a823c215624bd5e960ed28e52c20f6d1467dd"
+    },
+    "public": true,
+    "created_at": "2026-10-10T23:22:28Z"
+  },
+  {
+    "id": "23788688522",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46189345521,
+      "ref": "refs/heads/main",
+      "head": "2a511e24b7821da4824f0a0512b8e7e8d98d8e95",
+      "before": "ee509da8c43ac4deb4947e68fce2133b7d08009a"
+    },
+    "public": true,
+    "created_at": "2026-10-12T03:51:22Z"
+  },
+  {
+    "id": "23779429875",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46083968678,
+      "ref": "refs/heads/main",
+      "head": "38d23fb91f8fbf577764e7e5f1cbca1e78448979",
+      "before": "6af6cd9037bd2a1bc707f9fb60119025a1d1a647"
+    },
+    "public": true,
+    "created_at": "2026-10-10T20:21:20Z"
+  },
+  {
+    "id": "23779424944",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46083968678,
+      "ref": "refs/heads/main",
+      "head": "38d23fb91f8fbf577764e7e5f1cbca1e78448979",
+      "before": "6af6cd9037bd2a1bc707f9fb60119025a1d1a647"
+    },
+    "public": true,
+    "created_at": "2026-10-10T20:21:20Z"
+  },
+  {
+    "id": "23778102736",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46233372220,
+      "ref": "refs/heads/main",
+      "head": "1b908016fff2bcc1fd7ad01e3b692a305af7c910",
+      "before": "28d314ae100fa03105d436529fa9d9f5b0fce50f"
+    },
+    "public": true,
+    "created_at": "2026-10-12T13:21:34Z"
+  },
+  {
+    "id": "23771062300",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46106959509,
+      "ref": "refs/heads/main",
+      "head": "3b86a9e20340560ca3fa8be974e37fadfd319eb1",
+      "before": "ed2c4fc19fa779baf909ccaf3fe6a88e6667eded"
+    },
+    "public": true,
+    "created_at": "2026-10-11T03:57:30Z"
+  },
+  {
+    "id": "23755450343",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46167252255,
+      "ref": "refs/heads/main",
+      "head": "915271e17b3c1bd0ecb1b899a1b3d6fd7987f442",
+      "before": "f5f23f2001e1f56e40aa2caec4a459dec9d8f090"
+    },
+    "public": true,
+    "created_at": "2026-10-11T21:12:32Z"
+  },
+  {
+    "id": "23747386235",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46161303555,
+      "ref": "refs/heads/main",
+      "head": "3520391f13f03bd101b55a446ce6eca75c497078",
+      "before": "1d966a0432e813dc1a56fc49e05380f359ac2df4"
+    },
+    "public": true,
+    "created_at": "2026-10-11T19:38:07Z"
+  },
+  {
+    "id": "16977673886",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/410137406",
+        "assets_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/410137406/assets",
+        "upload_url": "https://uploads.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/410137406/assets{?name,label}",
+        "html_url": "https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/releases/tag/v0.6.1",
+        "id": 410137406,
+        "author": {
+          "login": "tanishsinghrajpal1029",
+          "id": 305917102,
+          "node_id": "U_kgDOEjvsrg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/305917102?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tanishsinghrajpal1029",
+          "html_url": "https://github.com/tanishsinghrajpal1029",
+          "followers_url": "https://api.github.com/users/tanishsinghrajpal1029/followers",
+          "following_url": "https://api.github.com/users/tanishsinghrajpal1029/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tanishsinghrajpal1029/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tanishsinghrajpal1029/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tanishsinghrajpal1029/subscriptions",
+          "organizations_url": "https://api.github.com/users/tanishsinghrajpal1029/orgs",
+          "repos_url": "https://api.github.com/users/tanishsinghrajpal1029/repos",
+          "events_url": "https://api.github.com/users/tanishsinghrajpal1029/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tanishsinghrajpal1029/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVEGeV84YcjM-",
+        "tag_name": "v0.6.1",
+        "target_commitish": "main",
+        "name": "v0.6.1 — Study 34: provable closed loop on larger grids",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-12T03:48:11Z",
+        "updated_at": "2026-10-12T03:49:50Z",
+        "published_at": "2026-10-12T03:49:50Z",
+        "assets": [
+
+        ],
+        "tarball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/tarball/v0.6.1",
+        "zipball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/zipball/v0.6.1",
+        "body": "Adds Study 34 to the v0.6.0 release (manuscript v0.6). No other code changed.\r\n\r\n## New\r\n- **Study 34 – closed loop on other grids** (`study34_grids/`): the provable closed loop (Theorem 2, current-look bound) and the always-on margin (Corollary 3) on 5×5, 10×10 (180 links) and 30×30 (1,740 links) grids, under three load settings (same total rate, matched exposure, three times the rate). Pre-registered (commit 1f5636c) before the first job; 4,928 runs.\r\n  - 3/3 primary, 6/6 secondary PASS.\r\n  - 0 of 4.2 M post-alarm pairs bad on 10×10 and 30×30; always-on margin 0 of 7.8 M.\r\n  - Detection depends on the test volume, not the grid size (alarm rate 0.94 on both 5×5 and 30×30; about twice as early with three times the rate). Harm before the first alarm still dominates on every grid.\r\n- Manuscript v0.6 updated with the Study 34 results; evidence ledger extended to E149; scoreboard: 83 primary hypotheses, 74 PASS, 9 FAIL.",
+        "short_description_html": "<p>Adds Study 34 to the v0.6.0 release (manuscript v0.6). No other code changed.</p>\n<h2>New</h2>\n<ul>\n<li>\n<strong>Study 34 – closed loop on other grids</strong> (<code>study34_grids/</code>): the provable closed loop (Theorem 2, current-look bound) a…</li>\n</ul>",
+        "is_short_description_html_truncated": true
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-12T03:49:50Z"
+  },
+  {
+    "id": "23739754887",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46189169481,
+      "ref": "refs/heads/main",
+      "head": "ee509da8c43ac4deb4947e68fce2133b7d08009a",
+      "before": "1f5636c281ef9b5c7329c47e3615270b070ea571"
+    },
+    "public": true,
+    "created_at": "2026-10-12T03:48:16Z"
+  },
+  {
+    "id": "23726850116",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46176683141,
+      "ref": "refs/heads/main",
+      "head": "951efcb2684bc0c0e89f5502f4e97882732623b6",
+      "before": "f6e0e7cc5dbbc6a50003027752ad975ce4719ed9"
+    },
+    "public": true,
+    "created_at": "2026-10-12T00:02:12Z"
+  },
+  {
+    "id": "23725813959",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46175720508,
+      "ref": "refs/heads/main",
+      "head": "f6e0e7cc5dbbc6a50003027752ad975ce4719ed9",
+      "before": "15433238baeb1d5dcd691590612a6b44e0e45eaf"
+    },
+    "public": true,
+    "created_at": "2026-10-11T23:43:35Z"
+  },
+  {
+    "id": "16968497331",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409991089",
+        "assets_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409991089/assets",
+        "upload_url": "https://uploads.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409991089/assets{?name,label}",
+        "html_url": "https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/releases/tag/v0.6.0",
+        "id": 409991089,
+        "author": {
+          "login": "tanishsinghrajpal1029",
+          "id": 305917102,
+          "node_id": "U_kgDOEjvsrg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/305917102?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tanishsinghrajpal1029",
+          "html_url": "https://github.com/tanishsinghrajpal1029",
+          "followers_url": "https://api.github.com/users/tanishsinghrajpal1029/followers",
+          "following_url": "https://api.github.com/users/tanishsinghrajpal1029/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tanishsinghrajpal1029/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tanishsinghrajpal1029/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tanishsinghrajpal1029/subscriptions",
+          "organizations_url": "https://api.github.com/users/tanishsinghrajpal1029/orgs",
+          "repos_url": "https://api.github.com/users/tanishsinghrajpal1029/repos",
+          "events_url": "https://api.github.com/users/tanishsinghrajpal1029/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tanishsinghrajpal1029/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVEGeV84Yb_ex",
+        "tag_name": "v0.6.0",
+        "target_commitish": "main",
+        "name": "v0.6.0 — Provable closed loop, IBM hardware runs, robustness (manuscript v0.6)",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-11T23:40:46Z",
+        "updated_at": "2026-10-11T23:41:25Z",
+        "published_at": "2026-10-11T23:41:25Z",
+        "assets": [
+
+        ],
+        "tarball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/tarball/v0.6.0",
+        "zipball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/zipball/v0.6.0",
+        "body": "Code, pre-registrations, run outputs and audit trail for manuscript v0.6 of\r\n\"Certifying delivered entanglement: per-pair guarantees need a model, averages do not\".\r\n\r\n## New since v0.5.0\r\n- **Study 30 – provable closed loop** (`study30_closed_loop/`): after a model-check alarm, the margin is a time-uniform upper confidence bound on the model offset (Theorem 2); run from the start it protects every user (Corollary 3). Offset placed in the true state. 5/5 primary, 6/6 secondary PASS. Detection is the bottleneck: most harm occurs before the first alarm.\r\n- **Studies 31 and 31b – IBM hardware** (`study31_hardware_testkeep/`, `study31b_hardware_detector/`): test-or-keep on ibm_fez with Bell-basis ground truth. Certificate valid in both runs. Study 31: fixed-bet check missed the injected degradation (W3 FAIL, disclosed). Study 31b: hybrid check alarmed (W1–W3, W5 PASS).\r\n- **Study 32 – recovering bound and robustness** (`study32_robustness/`): the offset bound need not be a running minimum; it recovered in 128/128 forced-miscoverage runs at no cost. Guarantees hold at τ = 0.85/0.92 and with less calibration data. 6/6 primary, 5/5 secondary PASS.\r\n- **S33 – fixed-K vs anytime certificate** (`study33_fixedk/`, computation, not pre-registered).\r\n- **Disclosure:** Studies 28–29 added the offset to the model, which inflated detection power (ledger E134).\r\n- Evidence ledger extended to E145; scoreboard: 80 primary hypotheses, 71 PASS, 9 FAIL.\r\n\r\nEvery confirmatory study was pre-registered and pushed before its first job; failures are reported.\r\nThird-party datasets are not redistributed (see `DATA_SOURCES.md`).",
+        "short_description_html": "<p>Code, pre-registrations, run outputs and audit trail for manuscript v0.6 of<br>\n\"Certifying delivered entanglement: per-pair guarantees need a model, averages do not\".</p>\n<h2>New since v0.5.0</h2>\n<ul>\n<li><strong>Study 30 – prov…</strong></li>\n</ul>",
+        "is_short_description_html_truncated": true
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-11T23:41:25Z"
+  },
+  {
+    "id": "23725299715",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46175248240,
+      "ref": "refs/heads/main",
+      "head": "62c25661377acbd1d472729bebd5e10d124d484a",
+      "before": "f64723335d887ceae3bd624b553284cb596b35a8"
+    },
+    "public": true,
+    "created_at": "2026-10-11T23:34:22Z"
+  },
+  {
+    "id": "23722553882",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46172648211,
+      "ref": "refs/heads/main",
+      "head": "f64723335d887ceae3bd624b553284cb596b35a8",
+      "before": "1d7578229db8c6cfb14ed443abf968cd2c7aaec6"
+    },
+    "public": true,
+    "created_at": "2026-10-11T22:45:44Z"
+  },
+  {
+    "id": "23711837772",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46161926225,
+      "ref": "refs/heads/main",
+      "head": "f5f23f2001e1f56e40aa2caec4a459dec9d8f090",
+      "before": "9ec76d6658221a387287f7be804f76167d9be3da"
+    },
+    "public": true,
+    "created_at": "2026-10-11T19:48:11Z"
+  },
+  {
+    "id": "23711099832",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46161178287,
+      "ref": "refs/heads/main",
+      "head": "1d966a0432e813dc1a56fc49e05380f359ac2df4",
+      "before": "b51306a9853fe8afcfa59c557fab8903da6df32c"
+    },
+    "public": true,
+    "created_at": "2026-10-11T19:36:06Z"
+  },
+  {
+    "id": "23701338120",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46150991016,
+      "ref": "refs/heads/main",
+      "head": "b51306a9853fe8afcfa59c557fab8903da6df32c",
+      "before": "f66effc0876ff734baebd924f06bd524f782be26"
+    },
+    "public": true,
+    "created_at": "2026-10-11T16:58:44Z"
+  },
+  {
+    "id": "23700581137",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46150198925,
+      "ref": "refs/heads/main",
+      "head": "f66effc0876ff734baebd924f06bd524f782be26",
+      "before": "09cb3d1ecd7d8661e0efe3eeede9014a9e68321b"
+    },
+    "public": true,
+    "created_at": "2026-10-11T16:46:42Z"
+  },
+  {
+    "id": "16951435933",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409776639",
+        "assets_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409776639/assets",
+        "upload_url": "https://uploads.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409776639/assets{?name,label}",
+        "html_url": "https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/releases/tag/v0.5.0",
+        "id": 409776639,
+        "author": {
+          "login": "tanishsinghrajpal1029",
+          "id": 305917102,
+          "node_id": "U_kgDOEjvsrg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/305917102?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tanishsinghrajpal1029",
+          "html_url": "https://github.com/tanishsinghrajpal1029",
+          "followers_url": "https://api.github.com/users/tanishsinghrajpal1029/followers",
+          "following_url": "https://api.github.com/users/tanishsinghrajpal1029/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tanishsinghrajpal1029/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tanishsinghrajpal1029/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tanishsinghrajpal1029/subscriptions",
+          "organizations_url": "https://api.github.com/users/tanishsinghrajpal1029/orgs",
+          "repos_url": "https://api.github.com/users/tanishsinghrajpal1029/repos",
+          "events_url": "https://api.github.com/users/tanishsinghrajpal1029/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tanishsinghrajpal1029/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVEGeV84YbLH_",
+        "tag_name": "v0.5.0",
+        "target_commitish": "main",
+        "name": "v0.5.0: Margin response (Study 29): closed-loop model check with tracking margin",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-11T16:14:15Z",
+        "updated_at": "2026-10-11T16:15:05Z",
+        "published_at": "2026-10-11T16:15:05Z",
+        "assets": [
+
+        ],
+        "tarball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/tarball/v0.5.0",
+        "zipball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/zipball/v0.5.0",
+        "body": "Study 29 (pre-registered; commit a779735 before the first job): after a model-check alarm, the margin tracks an exact upper bound on the model offset (post-alarm and probe tests) and can come back down.\r\n- 0 bad pairs in 5.8M post-alarm deliveries; Study 28's failure case fixed (0/128 vs 127/128).\r\n- Margin within +0.006-0.011 of the true offset; throughput 0.78 of oracle vs 0.48 (Study 28) and 0.35-0.53 (16-point tomography).\r\n6/6 primary, 4/4 secondary PASS. PSC and cloud analyses identical. Ledger E123-E125.",
+        "short_description_html": "<p>Study 29 (pre-registered; commit <a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/commit/a779735be2c49bb506126b7b2f50751eb503118f/hovercard\" href=\"https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/commit/a779735be2c49bb506126b7b2f50751eb503118f\"><tt>a779735</tt></a> before the first job): after a model-check alarm, the margin tracks an exact upper bound on the model offset (post-alarm and probe tests) and can come back …</p>",
+        "is_short_description_html_truncated": true
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-11T16:15:05Z"
+  },
+  {
+    "id": "23696062575",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46145423169,
+      "ref": "refs/heads/main",
+      "head": "a779735be2c49bb506126b7b2f50751eb503118f",
+      "before": "760d4bc7990c172e6132f29b369262d72454b70f"
+    },
+    "public": true,
+    "created_at": "2026-10-11T15:34:51Z"
+  },
+  {
+    "id": "23684949324",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46107391659,
+      "ref": "refs/heads/main",
+      "head": "c9fb7916ed4337c6913f7edaa4bf560acf3e2290",
+      "before": "5dfce4918c33191b3690631a8b1db72841fb5b56"
+    },
+    "public": true,
+    "created_at": "2026-10-11T04:06:02Z"
+  },
+  {
+    "id": "23683321672",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46107236873,
+      "ref": "refs/heads/main",
+      "head": "5dfce4918c33191b3690631a8b1db72841fb5b56",
+      "before": "1cef7d08493a27e65a423539c701117a7da207b3"
+    },
+    "public": true,
+    "created_at": "2026-10-11T04:02:52Z"
+  },
+  {
+    "id": "16941309276",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409634179",
+        "assets_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409634179/assets",
+        "upload_url": "https://uploads.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409634179/assets{?name,label}",
+        "html_url": "https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/releases/tag/v0.4.0",
+        "id": 409634179,
+        "author": {
+          "login": "tanishsinghrajpal1029",
+          "id": 305917102,
+          "node_id": "U_kgDOEjvsrg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/305917102?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tanishsinghrajpal1029",
+          "html_url": "https://github.com/tanishsinghrajpal1029",
+          "followers_url": "https://api.github.com/users/tanishsinghrajpal1029/followers",
+          "following_url": "https://api.github.com/users/tanishsinghrajpal1029/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tanishsinghrajpal1029/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tanishsinghrajpal1029/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tanishsinghrajpal1029/subscriptions",
+          "organizations_url": "https://api.github.com/users/tanishsinghrajpal1029/orgs",
+          "repos_url": "https://api.github.com/users/tanishsinghrajpal1029/repos",
+          "events_url": "https://api.github.com/users/tanishsinghrajpal1029/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tanishsinghrajpal1029/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVEGeV84YaoWD",
+        "tag_name": "v0.4.0",
+        "target_commitish": "main",
+        "name": "v0.4.0: Model-checked delivery (Study 28), converse resource bound, network-wide guarantee",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-11T11:46:05Z",
+        "updated_at": "2026-10-11T11:46:58Z",
+        "published_at": "2026-10-11T11:46:58Z",
+        "assets": [
+
+        ],
+        "tarball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/tarball/v0.4.0",
+        "zipball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/zipball/v0.4.0",
+        "body": "Study 28 (pre-registered; commit 023faed before the first job): the certification tests also check the per-pair guard's model.\r\n- Detected undeclared model error in 128/128 ion networks; 70-92% fewer bad pairs; false alarms 0.29%.\r\n- H4 FAILED (disclosed): one network's early alarm raised the margin too little; 0.8% bad after alarms (bar 1%).\r\n- Blind to sparse failures and thin hardware, as predicted.\r\n- Network-wide guarantee: 0/128 networks with a bad pair, cost 0.5 points on ions.\r\n- Converse bound: certifying 0.9 needs >= 330 kept pairs (p = 0.1); our certificate needs 678.\r\n6/7 primary, 4/4 secondary PASS. PSC and cloud analyses identical. Ledger E120-E122.",
+        "short_description_html": "<p>Study 28 (pre-registered; commit <a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/commit/023faed067a3130a02475dc969e08f53f69b1898/hovercard\" href=\"https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/commit/023faed067a3130a02475dc969e08f53f69b1898\"><tt>023faed</tt></a> before the first job): the certification tests also check the per-pair guard's model.</p>\n<ul>\n<li>Detected undeclared model error in 128/128 ion networks; 70-92% fewer…</li>\n</ul>",
+        "is_short_description_html_truncated": true
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-11T11:46:58Z"
+  },
+  {
+    "id": "23682232970",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46131227503,
+      "ref": "refs/heads/main",
+      "head": "760d4bc7990c172e6132f29b369262d72454b70f",
+      "before": "82549c5ce180bb1220e9b1be9b0957fa17a42ad3"
+    },
+    "public": true,
+    "created_at": "2026-10-11T11:46:13Z"
+  },
+  {
+    "id": "23681964878",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46105144988,
+      "ref": "refs/heads/main",
+      "head": "0412205489e016950d48bdceb03db373c028e5f7",
+      "before": "63d20c69e130eb30e95b1d01e7fee230a2316d31"
+    },
+    "public": true,
+    "created_at": "2026-10-11T03:18:23Z"
+  },
+  {
+    "id": "23680356765",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46103287239,
+      "ref": "refs/heads/main",
+      "head": "63d20c69e130eb30e95b1d01e7fee230a2316d31",
+      "before": "7b7061ecb141f0173405b55f62db3c69a3be572f"
+    },
+    "public": true,
+    "created_at": "2026-10-11T02:38:56Z"
+  },
+  {
+    "id": "23669647590",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46094690335,
+      "ref": "refs/heads/main",
+      "head": "f51bfa652c44b862406a63086588829331929c88",
+      "before": "c2aa326b593dbdad058bb215ebf989ed6e168083"
+    },
+    "public": true,
+    "created_at": "2026-10-10T23:39:19Z"
+  },
+  {
+    "id": "23667034008",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46113944341,
+      "ref": "refs/heads/main",
+      "head": "023faed067a3130a02475dc969e08f53f69b1898",
+      "before": "c9fb7916ed4337c6913f7edaa4bf560acf3e2290"
+    },
+    "public": true,
+    "created_at": "2026-10-11T06:24:59Z"
+  },
+  {
+    "id": "23663044226",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46106817430,
+      "ref": "refs/heads/main",
+      "head": "a1cdfd7c45f99c1ff36dd2ade1571a3a8c6480e5",
+      "before": "f3ad587ddd9e538c035619cdabadabe88f5192f4"
+    },
+    "public": true,
+    "created_at": "2026-10-11T03:54:23Z"
+  },
+  {
+    "id": "23662927250",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46106622211,
+      "ref": "refs/heads/main",
+      "head": "f3ad587ddd9e538c035619cdabadabe88f5192f4",
+      "before": "0412205489e016950d48bdceb03db373c028e5f7"
+    },
+    "public": true,
+    "created_at": "2026-10-11T03:50:09Z"
+  },
+  {
+    "id": "23654995793",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46092662603,
+      "ref": "refs/heads/main",
+      "head": "370a823c215624bd5e960ed28e52c20f6d1467dd",
+      "before": "9a4ca180d5b20900c932e4253f989f0cc4f066d7"
+    },
+    "public": true,
+    "created_at": "2026-10-10T22:59:03Z"
+  },
+  {
+    "id": "16926947131",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409398942",
+        "assets_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409398942/assets",
+        "upload_url": "https://uploads.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409398942/assets{?name,label}",
+        "html_url": "https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/releases/tag/v0.3.2",
+        "id": 409398942,
+        "author": {
+          "login": "tanishsinghrajpal1029",
+          "id": 305917102,
+          "node_id": "U_kgDOEjvsrg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/305917102?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tanishsinghrajpal1029",
+          "html_url": "https://github.com/tanishsinghrajpal1029",
+          "followers_url": "https://api.github.com/users/tanishsinghrajpal1029/followers",
+          "following_url": "https://api.github.com/users/tanishsinghrajpal1029/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tanishsinghrajpal1029/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tanishsinghrajpal1029/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tanishsinghrajpal1029/subscriptions",
+          "organizations_url": "https://api.github.com/users/tanishsinghrajpal1029/orgs",
+          "repos_url": "https://api.github.com/users/tanishsinghrajpal1029/repos",
+          "events_url": "https://api.github.com/users/tanishsinghrajpal1029/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tanishsinghrajpal1029/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVEGeV84YZu6e",
+        "tag_name": "v0.3.2",
+        "target_commitish": "main",
+        "name": "",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-11T03:59:31Z",
+        "updated_at": "2026-10-11T04:01:06Z",
+        "published_at": "2026-10-11T04:01:06Z",
+        "assets": [
+
+        ],
+        "tarball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/tarball/v0.3.2",
+        "zipball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/zipball/v0.3.2",
+        "body": "",
+        "short_description_html": "",
+        "is_short_description_html_truncated": false
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-11T04:01:06Z"
+  },
+  {
+    "id": "16926861242",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409397449",
+        "assets_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409397449/assets",
+        "upload_url": "https://uploads.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409397449/assets{?name,label}",
+        "html_url": "https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/releases/tag/v0.3.1",
+        "id": 409397449,
+        "author": {
+          "login": "tanishsinghrajpal1029",
+          "id": 305917102,
+          "node_id": "U_kgDOEjvsrg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/305917102?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tanishsinghrajpal1029",
+          "html_url": "https://github.com/tanishsinghrajpal1029",
+          "followers_url": "https://api.github.com/users/tanishsinghrajpal1029/followers",
+          "following_url": "https://api.github.com/users/tanishsinghrajpal1029/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tanishsinghrajpal1029/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tanishsinghrajpal1029/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tanishsinghrajpal1029/subscriptions",
+          "organizations_url": "https://api.github.com/users/tanishsinghrajpal1029/orgs",
+          "repos_url": "https://api.github.com/users/tanishsinghrajpal1029/repos",
+          "events_url": "https://api.github.com/users/tanishsinghrajpal1029/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tanishsinghrajpal1029/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVEGeV84YZujJ",
+        "tag_name": "v0.3.1",
+        "target_commitish": "main",
+        "name": "",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-11T03:57:28Z",
+        "updated_at": "2026-10-11T03:57:53Z",
+        "published_at": "2026-10-11T03:57:53Z",
+        "assets": [
+
+        ],
+        "tarball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/tarball/v0.3.1",
+        "zipball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/zipball/v0.3.1",
+        "body": "",
+        "short_description_html": "",
+        "is_short_description_html_truncated": false
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-11T03:57:53Z"
+  },
+  {
+    "id": "16926775527",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409395794",
+        "assets_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409395794/assets",
+        "upload_url": "https://uploads.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409395794/assets{?name,label}",
+        "html_url": "https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/releases/tag/v0.3.0",
+        "id": 409395794,
+        "author": {
+          "login": "tanishsinghrajpal1029",
+          "id": 305917102,
+          "node_id": "U_kgDOEjvsrg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/305917102?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tanishsinghrajpal1029",
+          "html_url": "https://github.com/tanishsinghrajpal1029",
+          "followers_url": "https://api.github.com/users/tanishsinghrajpal1029/followers",
+          "following_url": "https://api.github.com/users/tanishsinghrajpal1029/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tanishsinghrajpal1029/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tanishsinghrajpal1029/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tanishsinghrajpal1029/subscriptions",
+          "organizations_url": "https://api.github.com/users/tanishsinghrajpal1029/orgs",
+          "repos_url": "https://api.github.com/users/tanishsinghrajpal1029/repos",
+          "events_url": "https://api.github.com/users/tanishsinghrajpal1029/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tanishsinghrajpal1029/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVEGeV84YZuJS",
+        "tag_name": "v0.3.0",
+        "target_commitish": "main",
+        "name": "v0.3.0: Certified delivery (Studies 26–27, Innsbruck certificate, manuscript-aligned)",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-11T03:54:16Z",
+        "updated_at": "2026-10-11T03:54:39Z",
+        "published_at": "2026-10-11T03:54:39Z",
+        "assets": [
+
+        ],
+        "tarball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/tarball/v0.3.0",
+        "zipball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/zipball/v0.3.0",
+        "body": "Certified-delivery release, matching manuscript v0.2.\r\n- Study 26 (pre-registered): model-based guard at measured hardware noise levels; 7/7 primary PASS, 2 secondary FAIL (disclosed).\r\n- Study 27 (pre-registered): model-free certificate; 2/2 primary PASS. Valid where the model-based layer fails; certifies averages only.\r\n- Innsbruck 230 m data: certified F ≥ 0.887 at 95% (not blind; method fixed in advance).\r\n- Hypothesis scoreboard v2; evidence ledger E101–E115.",
+        "short_description_html": "<p>Certified-delivery release, matching manuscript v0.2.</p>\n<ul>\n<li>Study 26 (pre-registered): model-based guard at measured hardware noise levels; 7/7 primary PASS, 2 secondary FAIL (disclosed).</li>\n<li>Study 27 (pre-…</li>\n</ul>",
+        "is_short_description_html_truncated": true
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-11T03:54:39Z"
+  },
+  {
+    "id": "23652391209",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46100627007,
+      "ref": "refs/heads/main",
+      "head": "fc220912a4a7afbafc0d80eecbe7797a7b10ab0f",
+      "before": "04eb63332cbe3172d645b12979cbf86860ef310c"
+    },
+    "public": true,
+    "created_at": "2026-10-11T01:42:05Z"
+  },
+  {
+    "id": "16924706101",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409352080",
+        "assets_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409352080/assets",
+        "upload_url": "https://uploads.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409352080/assets{?name,label}",
+        "html_url": "https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/releases/tag/v0.2.3",
+        "id": 409352080,
+        "author": {
+          "login": "tanishsinghrajpal1029",
+          "id": 305917102,
+          "node_id": "U_kgDOEjvsrg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/305917102?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tanishsinghrajpal1029",
+          "html_url": "https://github.com/tanishsinghrajpal1029",
+          "followers_url": "https://api.github.com/users/tanishsinghrajpal1029/followers",
+          "following_url": "https://api.github.com/users/tanishsinghrajpal1029/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tanishsinghrajpal1029/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tanishsinghrajpal1029/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tanishsinghrajpal1029/subscriptions",
+          "organizations_url": "https://api.github.com/users/tanishsinghrajpal1029/orgs",
+          "repos_url": "https://api.github.com/users/tanishsinghrajpal1029/repos",
+          "events_url": "https://api.github.com/users/tanishsinghrajpal1029/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tanishsinghrajpal1029/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVEGeV84YZjeQ",
+        "tag_name": "v0.2.3",
+        "target_commitish": "main",
+        "name": "Study 27 pre-registration",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-11T02:38:49Z",
+        "updated_at": "2026-10-11T02:39:36Z",
+        "published_at": "2026-10-11T02:39:36Z",
+        "assets": [
+
+        ],
+        "tarball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/tarball/v0.2.3",
+        "zipball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/zipball/v0.2.3",
+        "body": "",
+        "short_description_html": "",
+        "is_short_description_html_truncated": false
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-11T02:39:36Z"
+  },
+  {
+    "id": "23647713346",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46102901663,
+      "ref": "refs/heads/main",
+      "head": "7b7061ecb141f0173405b55f62db3c69a3be572f",
+      "before": "fc220912a4a7afbafc0d80eecbe7797a7b10ab0f"
+    },
+    "public": true,
+    "created_at": "2026-10-11T02:30:40Z"
+  },
+  {
+    "id": "16923126959",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409327361",
+        "assets_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409327361/assets",
+        "upload_url": "https://uploads.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409327361/assets{?name,label}",
+        "html_url": "https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/releases/tag/v0.2.1",
+        "id": 409327361,
+        "author": {
+          "login": "tanishsinghrajpal1029",
+          "id": 305917102,
+          "node_id": "U_kgDOEjvsrg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/305917102?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tanishsinghrajpal1029",
+          "html_url": "https://github.com/tanishsinghrajpal1029",
+          "followers_url": "https://api.github.com/users/tanishsinghrajpal1029/followers",
+          "following_url": "https://api.github.com/users/tanishsinghrajpal1029/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tanishsinghrajpal1029/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tanishsinghrajpal1029/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tanishsinghrajpal1029/subscriptions",
+          "organizations_url": "https://api.github.com/users/tanishsinghrajpal1029/orgs",
+          "repos_url": "https://api.github.com/users/tanishsinghrajpal1029/repos",
+          "events_url": "https://api.github.com/users/tanishsinghrajpal1029/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tanishsinghrajpal1029/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVEGeV84YZdcB",
+        "tag_name": "v0.2.1",
+        "target_commitish": "main",
+        "name": "",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-11T01:41:56Z",
+        "updated_at": "2026-10-11T01:42:38Z",
+        "published_at": "2026-10-11T01:42:38Z",
+        "assets": [
+
+        ],
+        "tarball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/tarball/v0.2.1",
+        "zipball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/zipball/v0.2.1",
+        "body": "",
+        "short_description_html": "",
+        "is_short_description_html_truncated": false
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-11T01:42:38Z"
+  },
+  {
+    "id": "23641701212",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46082261036,
+      "ref": "refs/heads/main",
+      "head": "6af6cd9037bd2a1bc707f9fb60119025a1d1a647",
+      "before": "5aa185c23e9f101d5722db64e27c959efe635cfb"
+    },
+    "public": true,
+    "created_at": "2026-10-10T19:52:29Z"
+  },
+  {
+    "id": "23641008038",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "ref": "main",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/main",
+      "master_branch": "main",
+      "description": null,
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-10-10T19:31:49Z"
+  },
+  {
+    "id": "23635745382",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46094820749,
+      "ref": "refs/heads/main",
+      "head": "04eb63332cbe3172d645b12979cbf86860ef310c",
+      "before": "f51bfa652c44b862406a63086588829331929c88"
+    },
+    "public": true,
+    "created_at": "2026-10-10T23:42:00Z"
+  },
+  {
+    "id": "16919033978",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409265894",
+        "assets_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409265894/assets",
+        "upload_url": "https://uploads.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409265894/assets{?name,label}",
+        "html_url": "https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/releases/tag/v0.2.0",
+        "id": 409265894,
+        "author": {
+          "login": "tanishsinghrajpal1029",
+          "id": 305917102,
+          "node_id": "U_kgDOEjvsrg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/305917102?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tanishsinghrajpal1029",
+          "html_url": "https://github.com/tanishsinghrajpal1029",
+          "followers_url": "https://api.github.com/users/tanishsinghrajpal1029/followers",
+          "following_url": "https://api.github.com/users/tanishsinghrajpal1029/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tanishsinghrajpal1029/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tanishsinghrajpal1029/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tanishsinghrajpal1029/subscriptions",
+          "organizations_url": "https://api.github.com/users/tanishsinghrajpal1029/orgs",
+          "repos_url": "https://api.github.com/users/tanishsinghrajpal1029/repos",
+          "events_url": "https://api.github.com/users/tanishsinghrajpal1029/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tanishsinghrajpal1029/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVEGeV84YZObm",
+        "tag_name": "v0.2.0",
+        "target_commitish": "main",
+        "name": "v0.2.0 — Study 25 results: realism checks (model error, calibration, shared noise, network load, drift)",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-10T23:22:21Z",
+        "updated_at": "2026-10-10T23:23:29Z",
+        "published_at": "2026-10-10T23:23:29Z",
+        "assets": [
+
+        ],
+        "tarball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/tarball/v0.2.0",
+        "zipball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/zipball/v0.2.0",
+        "body": "Confirmatory results for Study 25, pre-registered in v0.1.4 (DOI 10.5281/zenodo.23289143).\r\n\r\n- 9/9 primary hypotheses PASS; 2/3 secondary PASS.\r\n- Secondary T3 FAILS (disclosed, not re-tuned): under strong shared noise, the time-split AI variant on NV exceeded the known-law guard by 2.12 points of bad paths vs a 2.00 margin. The main AI arm passed on all hardware.\r\n- Run outputs: des_s25_psc/runs.csv (sha256 3826490a…), des_s25d_psc/runs.csv (7bb3996c…); analysis re-run independently with identical results.\r\n- Timing: hash-locked on the cluster before job submission; publicly pushed before any job produced output (ledger E102).\r\n\r\nSee study25_realism/RESULTS_25.md and audit/EVIDENCE_LEDGER.md (E101–E103).",
+        "short_description_html": "<p>Confirmatory results for Study 25, pre-registered in v0.1.4 (DOI 10.5281/zenodo.23289143).</p>\n<ul>\n<li>9/9 primary hypotheses PASS; 2/3 secondary PASS.</li>\n<li>Secondary T3 FAILS (disclosed, not re-tuned): under stro…</li>\n</ul>",
+        "is_short_description_html_truncated": true
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-10T23:23:29Z"
+  },
+  {
+    "id": "16918287538",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409256749",
+        "assets_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409256749/assets",
+        "upload_url": "https://uploads.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409256749/assets{?name,label}",
+        "html_url": "https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/releases/tag/v0.1.4",
+        "id": 409256749,
+        "author": {
+          "login": "tanishsinghrajpal1029",
+          "id": 305917102,
+          "node_id": "U_kgDOEjvsrg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/305917102?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tanishsinghrajpal1029",
+          "html_url": "https://github.com/tanishsinghrajpal1029",
+          "followers_url": "https://api.github.com/users/tanishsinghrajpal1029/followers",
+          "following_url": "https://api.github.com/users/tanishsinghrajpal1029/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tanishsinghrajpal1029/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tanishsinghrajpal1029/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tanishsinghrajpal1029/subscriptions",
+          "organizations_url": "https://api.github.com/users/tanishsinghrajpal1029/orgs",
+          "repos_url": "https://api.github.com/users/tanishsinghrajpal1029/repos",
+          "events_url": "https://api.github.com/users/tanishsinghrajpal1029/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tanishsinghrajpal1029/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVEGeV84YZMMt",
+        "tag_name": "v0.1.4",
+        "target_commitish": "main",
+        "name": "Study 25 pre-registration",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-10T22:58:56Z",
+        "updated_at": "2026-10-10T22:59:40Z",
+        "published_at": "2026-10-10T22:59:40Z",
+        "assets": [
+
+        ],
+        "tarball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/tarball/v0.1.4",
+        "zipball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/zipball/v0.1.4",
+        "body": "",
+        "short_description_html": "",
+        "is_short_description_html_truncated": false
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-10T22:59:40Z"
+  },
+  {
+    "id": "16913334948",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409190160",
+        "assets_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409190160/assets",
+        "upload_url": "https://uploads.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409190160/assets{?name,label}",
+        "html_url": "https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/releases/tag/v0.1.3",
+        "id": 409190160,
+        "author": {
+          "login": "tanishsinghrajpal1029",
+          "id": 305917102,
+          "node_id": "U_kgDOEjvsrg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/305917102?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tanishsinghrajpal1029",
+          "html_url": "https://github.com/tanishsinghrajpal1029",
+          "followers_url": "https://api.github.com/users/tanishsinghrajpal1029/followers",
+          "following_url": "https://api.github.com/users/tanishsinghrajpal1029/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tanishsinghrajpal1029/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tanishsinghrajpal1029/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tanishsinghrajpal1029/subscriptions",
+          "organizations_url": "https://api.github.com/users/tanishsinghrajpal1029/orgs",
+          "repos_url": "https://api.github.com/users/tanishsinghrajpal1029/repos",
+          "events_url": "https://api.github.com/users/tanishsinghrajpal1029/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tanishsinghrajpal1029/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVEGeV84YY78Q",
+        "tag_name": "v0.1.3",
+        "target_commitish": "main",
+        "name": "",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-10T20:32:27Z",
+        "updated_at": "2026-10-10T20:32:58Z",
+        "published_at": "2026-10-10T20:32:58Z",
+        "assets": [
+
+        ],
+        "tarball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/tarball/v0.1.3",
+        "zipball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/zipball/v0.1.3",
+        "body": "",
+        "short_description_html": "",
+        "is_short_description_html_truncated": false
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-10T20:32:58Z"
+  },
+  {
+    "id": "23621863698",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46084624047,
+      "ref": "refs/heads/main",
+      "head": "9a4ca180d5b20900c932e4253f989f0cc4f066d7",
+      "before": "38d23fb91f8fbf577764e7e5f1cbca1e78448979"
+    },
+    "public": true,
+    "created_at": "2026-10-10T20:32:35Z"
+  },
+  {
+    "id": "16913127082",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409187307",
+        "assets_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409187307/assets",
+        "upload_url": "https://uploads.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409187307/assets{?name,label}",
+        "html_url": "https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/releases/tag/v0.1.2",
+        "id": 409187307,
+        "author": {
+          "login": "tanishsinghrajpal1029",
+          "id": 305917102,
+          "node_id": "U_kgDOEjvsrg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/305917102?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tanishsinghrajpal1029",
+          "html_url": "https://github.com/tanishsinghrajpal1029",
+          "followers_url": "https://api.github.com/users/tanishsinghrajpal1029/followers",
+          "following_url": "https://api.github.com/users/tanishsinghrajpal1029/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tanishsinghrajpal1029/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tanishsinghrajpal1029/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tanishsinghrajpal1029/subscriptions",
+          "organizations_url": "https://api.github.com/users/tanishsinghrajpal1029/orgs",
+          "repos_url": "https://api.github.com/users/tanishsinghrajpal1029/repos",
+          "events_url": "https://api.github.com/users/tanishsinghrajpal1029/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tanishsinghrajpal1029/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVEGeV84YY7Pr",
+        "tag_name": "v0.1.2",
+        "target_commitish": "main",
+        "name": "",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-10T20:21:16Z",
+        "updated_at": "2026-10-10T20:27:05Z",
+        "published_at": "2026-10-10T20:27:05Z",
+        "assets": [
+
+        ],
+        "tarball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/tarball/v0.1.2",
+        "zipball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/zipball/v0.1.2",
+        "body": "",
+        "short_description_html": "",
+        "is_short_description_html_truncated": false
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-10T20:27:05Z"
+  },
+  {
+    "id": "16911937975",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409170805",
+        "assets_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409170805/assets",
+        "upload_url": "https://uploads.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409170805/assets{?name,label}",
+        "html_url": "https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/releases/tag/v0.1.1",
+        "id": 409170805,
+        "author": {
+          "login": "tanishsinghrajpal1029",
+          "id": 305917102,
+          "node_id": "U_kgDOEjvsrg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/305917102?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tanishsinghrajpal1029",
+          "html_url": "https://github.com/tanishsinghrajpal1029",
+          "followers_url": "https://api.github.com/users/tanishsinghrajpal1029/followers",
+          "following_url": "https://api.github.com/users/tanishsinghrajpal1029/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tanishsinghrajpal1029/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tanishsinghrajpal1029/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tanishsinghrajpal1029/subscriptions",
+          "organizations_url": "https://api.github.com/users/tanishsinghrajpal1029/orgs",
+          "repos_url": "https://api.github.com/users/tanishsinghrajpal1029/repos",
+          "events_url": "https://api.github.com/users/tanishsinghrajpal1029/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tanishsinghrajpal1029/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVEGeV84YY3N1",
+        "tag_name": "v0.1.1",
+        "target_commitish": "main",
+        "name": "",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-10T19:52:22Z",
+        "updated_at": "2026-10-10T19:54:25Z",
+        "published_at": "2026-10-10T19:54:25Z",
+        "assets": [
+
+        ],
+        "tarball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/tarball/v0.1.1",
+        "zipball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/zipball/v0.1.1",
+        "body": "",
+        "short_description_html": "",
+        "is_short_description_html_truncated": false
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-10T19:54:25Z"
+  },
+  {
+    "id": "16911528114",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409165205",
+        "assets_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409165205/assets",
+        "upload_url": "https://uploads.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/releases/409165205/assets{?name,label}",
+        "html_url": "https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery/releases/tag/v0.1.0",
+        "id": 409165205,
+        "author": {
+          "login": "tanishsinghrajpal1029",
+          "id": 305917102,
+          "node_id": "U_kgDOEjvsrg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/305917102?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tanishsinghrajpal1029",
+          "html_url": "https://github.com/tanishsinghrajpal1029",
+          "followers_url": "https://api.github.com/users/tanishsinghrajpal1029/followers",
+          "following_url": "https://api.github.com/users/tanishsinghrajpal1029/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tanishsinghrajpal1029/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tanishsinghrajpal1029/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tanishsinghrajpal1029/subscriptions",
+          "organizations_url": "https://api.github.com/users/tanishsinghrajpal1029/orgs",
+          "repos_url": "https://api.github.com/users/tanishsinghrajpal1029/repos",
+          "events_url": "https://api.github.com/users/tanishsinghrajpal1029/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tanishsinghrajpal1029/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOVEGeV84YY12V",
+        "tag_name": "v0.1.0",
+        "target_commitish": "main",
+        "name": "v0.1.0: pre-registrations, code and results (Studies 18C, G1–G7, 23, 24; Innsbruck and ICFO checks)",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-10-10T19:38:41Z",
+        "updated_at": "2026-10-10T19:53:58Z",
+        "published_at": "2026-10-10T19:43:07Z",
+        "assets": [
+
+        ],
+        "tarball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/tarball/v0.1.0",
+        "zipball_url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery/zipball/v0.1.0",
+        "body": "",
+        "short_description_html": "",
+        "is_short_description_html_truncated": false
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-10T19:43:07Z"
+  },
+  {
+    "id": "23617849995",
+    "type": "PushEvent",
+    "actor": {
+      "id": 305917102,
+      "login": "tanishsinghrajpal1029",
+      "display_login": "tanishsinghrajpal1029",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tanishsinghrajpal1029",
+      "avatar_url": "https://avatars.githubusercontent.com/u/305917102?"
+    },
+    "repo": {
+      "id": 1413586519,
+      "name": "tanishsinghrajpal1029/safe-entanglement-delivery",
+      "url": "https://api.github.com/repos/tanishsinghrajpal1029/safe-entanglement-delivery"
+    },
+    "payload": {
+      "repository_id": 1413586519,
+      "push_id": 46081462827,
+      "ref": "refs/heads/main",
+      "head": "5aa185c23e9f101d5722db64e27c959efe635cfb",
+      "before": "e0d20298a3e385863b2ac5378f6370eb56fdfdfd"
+    },
+    "public": true,
+    "created_at": "2026-10-10T19:38:49Z"
+  }
+]

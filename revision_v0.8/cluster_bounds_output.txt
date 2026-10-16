@@ -1,0 +1,18 @@
+                                                claim     users   runs  run_ub  nets  net_ub                                       worst
+               S26 U1 guard, no stressor (bg,kg,ag2t)   0/91392  0/384  0.0078 0/128  0.0231  (0.08936819898626475, (ion2020, 5), 0, 32)
+                     S26 S1 finite memory (bad pairs) 0/4340857  0/864  0.0035  0/96  0.0307  (0.08936819898626475, (ion2020, 5), 0, 32)
+S30 P1 post-alarm, in-class cells (as pre-registered) 230/89585 2/2048  0.0031  2/64  0.0951  (0.18394346817692872, (ionproj, 5), 2, 32)
+                S30 P1 without late-onset cell L0.044   0/74370 0/1664  0.0018  0/64  0.0457  (0.08936819898626475, (ion2020, 5), 0, 32)
+                       S30 P1 hybrid arm only (kgMCh)   0/22945  0/640  0.0047  0/64  0.0457  (0.08936819898626475, (ion2020, 5), 0, 32)
+                          S30 P3 always-on, whole run  0/208896  0/768  0.0039  0/64  0.0457  (0.08936819898626475, (ion2020, 5), 0, 32)
+                  S32 R1 current-look bound, in class  23/11800  1/256  0.0184  1/64  0.0720  (0.13984946027422598, (ion2020, 5), 1, 32)
+                       S32 R1 without late-onset cell    0/6339  0/128  0.0231  0/64  0.0457  (0.08936819898626475, (ion2020, 5), 0, 32)
+          S32 E1 post-alarm, tau/calibration variants   0/15606  0/192  0.0155  0/64  0.0457  (0.08936819898626475, (ion2020, 5), 0, 32)
+                            S32 E2 always-on, Block E  0/139264  0/512  0.0058  0/64  0.0457  (0.08936819898626475, (ion2020, 5), 0, 32)
+                       S34 K1 post-alarm, 10x10+30x30  0/940391 0/1280  0.0023 0/128  0.0231 (0.08936819898626475, (ion2020, 10), 0, 32)
+         S34 K2 always-on, 10x10+30x30 (served users) 0/1495612  0/960  0.0031 0/128  0.0231 (0.08936819898626475, (ion2020, 10), 0, 32)
+
+S30 P1 harmed runs:
+   arm      hw     sc        cfg  idx  users_bad_post  users_post  bad_after_alarm_all  fa_first_t  first_alarm_ep  alarms
+kgMCp ionproj L0.044 L0.044|p20    5             126         208                 6109           1       16.045390       1
+ kgMC ionproj L0.044 L0.044|p20   11             104         200                 2075           0       61.799975       1

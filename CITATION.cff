@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code or these results, please cite them as below."
-title: "Certifying delivered entanglement: per-pair guarantees need a model, averages do not (code and data)"
+title: "What can a quantum network promise about the entangled pairs it delivers? (code and data)"
 authors:
   - family-names: Rajpal
     given-names: Tanish Singh
@@ -8,8 +8,8 @@ authors:
   - family-names: Mattarock
     given-names: Michael
     affiliation: "Carnegie Mellon University"
-version: 0.6.3
-date-released: 2026-10-14
+version: 0.8.0
+date-released: 2026-10-16
 license: MIT
 type: software
 doi: 10.5281/zenodo.23287414

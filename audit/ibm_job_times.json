@@ -1,0 +1,61 @@
+{
+ "fetched_utc": "2026-10-16T22:23:43+00:00",
+ "jobs": {
+  "S31": {
+   "job_id": "db5s7lamb58s738aufbg",
+   "prereg_push_utc": "2026-10-11T16:58:44Z",
+   "backend": "ibm_fez",
+   "status": "DONE",
+   "creation_date_utc": "2026-10-11T17:13:57.464120+00:00",
+   "metrics_created": "2026-10-11T17:13:57.46412Z",
+   "metrics_finished": "2026-10-11T17:14:14.781736Z",
+   "metrics_running": "2026-10-11T17:13:58.814029Z",
+   "usage": {
+    "qpu_charge_time_seconds": 3,
+    "value": 0.045376,
+    "unit": "resource_units",
+    "status": "complete",
+    "details": [
+     {
+      "value": 0.045376,
+      "unit": "resource_units",
+      "metric": {
+       "id": "caffe3ca-729c-5750-8777-df63bbf8bfd9",
+       "value": 3
+      }
+     }
+    ]
+   },
+   "created_minus_push_s": 913.5,
+   "prereg_before_job": true
+  },
+  "S31b": {
+   "job_id": "db5ubf04qg6s73c40k20",
+   "prereg_push_utc": "2026-10-11T19:38:07Z",
+   "backend": "ibm_fez",
+   "status": "DONE",
+   "creation_date_utc": "2026-10-11T19:38:36.154737+00:00",
+   "metrics_created": "2026-10-11T19:38:36.154737Z",
+   "metrics_finished": "2026-10-11T19:38:49.612381Z",
+   "metrics_running": "2026-10-11T19:38:37.482392Z",
+   "usage": {
+    "qpu_charge_time_seconds": 3,
+    "value": 0.045376,
+    "unit": "resource_units",
+    "status": "complete",
+    "details": [
+     {
+      "value": 0.045376,
+      "unit": "resource_units",
+      "metric": {
+       "id": "caffe3ca-729c-5750-8777-df63bbf8bfd9",
+       "value": 3
+      }
+     }
+    ]
+   },
+   "created_minus_push_s": 29.2,
+   "prereg_before_job": true
+  }
+ }
+}
