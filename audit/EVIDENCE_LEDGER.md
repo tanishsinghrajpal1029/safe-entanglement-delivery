@@ -2928,3 +2928,11 @@ The external review raised six points. Two of them were real errors and are now 
 - **Fix:** the acknowledgments now cite allocation CIS261606, and the % CONFIRM comment is removed.
 - **Hash:** main.tex 96840caa9992e352.
 
+## E179: Manuscript v0.9 and release v0.9.0, other topologies (19 Oct 2026)
+- **What:** manuscript v0.9 adds the safety results of three pre-registered topology studies, S3D-1 (5³ cube vs 11×11, 13×13 grids; ion presets; 1,344 runs), S3D-2 (10³ cube vs 32×32, 37×37 grids; projected links; 1,224 runs) and S3D-3 (32×32 grid with diagonal links; 408 runs), run on PSC Bridges-2 under allocation CIS261606.
+- **Where:** the studies are in https://github.com/tanishsinghrajpal1029/quantum-3d-network (release v1.0.0, commit 724252b, DOI 10.5281/zenodo.23467683). This repository gets `revision_v0.9/` (analysis copies with SHA256SUMS, `s3d_table10.py` and its output, `SCOREBOARD_S3D.md`) and `audit/s3d_2026-10-19/` (timing records).
+- **Result:** 36 cells × 32 networks, no harmed network; 0 of 8,793,454 guarded deliveries bad; U_max up to 104. S3D-1's detection prediction failed for ion2020 (22 vs 31 of 32 networks alarmed).
+- **Pre-registration:** pushes of fc3660d, 7e3dc97, 1fe2dba precede the first confirmatory shards by 15 h 53 min, 14 min 15 s and 12 min 32 s (GitHub repository activity log; PSC sacct). The 3D repository was private at those times (manuscript Level 1b).
+- **Scoreboard:** +6 primary (5 passed) and +12 secondary (10 passed); totals 95 primary (83 passed, 12 failed), 68 secondary (58 passed or confirmed, 9 failed, 1 unclear).
+- **Manuscript:** appendix.tex ad9277cb38527d17; main.tex and references.bib receive the v0.9.0 version DOI after this release.
+

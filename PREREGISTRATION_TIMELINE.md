@@ -54,3 +54,7 @@ The table below is generated from the files in this repository (sha256, first 16
 | external_checks/innsbruck_230m/stage3_cert | PREREG_INNSBRUCK_CERT.md | 9f9463dc3267f4ab | STAGE3_RESULT.md | not blind (counts seen earlier); method fixed before computing (E111–E112) |
 
 Where "Results document" is "—", the confirmatory outcome is recorded in `audit/EVIDENCE_LEDGER.md` (entries E35–E89), next to the run hashes.
+
+## S3D-1 to S3D-3 (separate repository; added 19 Oct 2026)
+Pre-registered in https://github.com/tanishsinghrajpal1029/quantum-3d-network (private until 19 Oct 2026; release v1.0.0, DOI 10.5281/zenodo.23467683). Push → first confirmatory shard: S3D-1 `fc3660d` 15 h 53 min; S3D-2 `7e3dc97` 14 min 15 s; S3D-3 `1fe2dba` 12 min 32 s. Records: `audit/s3d_2026-10-19/` and `revision_v0.9/README.md`.
+

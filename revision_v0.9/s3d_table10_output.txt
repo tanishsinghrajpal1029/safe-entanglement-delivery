@@ -1,0 +1,6 @@
+Study  cells harmed nets   bad/guarded deliveries    U_max  sha256 (first 16)
+S3D-1     12           0          0 /   3,493,387   4-12    df955c127dfc4651
+S3D-2     18           0          0 /   3,783,809  17-104   577d4da1fdfb9d18
+S3D-3      6           0          0 /   1,516,258  37-96    b7f846022884af31
+total     36           0          0 /   8,793,454
+S3D-1 detection (alarm rate, gated check, offset 0.044; 32 networks): ion2020 cube 0.688 vs 11x11 0.969 (22 vs 31 of 32); ionproj 0.969 vs 1.000 (31 vs 32 of 32)

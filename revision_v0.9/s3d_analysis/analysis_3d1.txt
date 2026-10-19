@@ -1,0 +1,89 @@
+# Study 3D-1 confirmatory output, PSC Bridges-2 (pasted by Tanish, 18 Oct 2026). Produced by sim/psc/analyze_3d1.py (sha e305e8062e55e9e9).
+# runs.csv sha256: d2g11 583c7c40d2d6c88a373d763724212bb6073a68c6c8bea6bc3db0159e13dd00ff
+#                  d2g13 885c609dbadc9795ccc7a9b2ed6c2769efc98b82887f4f2e159364362fe3e9de
+#                  d3g5  d1e148becd3c2904cb38f2d03486849b5f9bdcc6d99f07afd8762a6011c5cd8b
+STUDY 3D-1 ANALYSIS
+runs per lattice x hardware: {('d2g11', 'ion2020'): 224, ('d2g11', 'ionproj'): 224, ('d2g13', 'ion2020'): 224, ('d2g13', 'ionproj'): 224, ('d3g5', 'ion2020'): 224, ('d3g5', 'ionproj'): 224}
+
+== H1 safety (network level: a network is harmed if any of its runs in the arm harms a user; bound = one-sided CP95)
+-- H1a gated check, after the alarm (Theorem 2)
+   2D 11x11  ion2020: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/27361 (bound 1.09e-04, bar 0.01) -> PASS
+   2D 11x11  ionproj: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/222857 (bound 1.34e-05, bar 0.01) -> PASS
+   2D 13x13  ion2020: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/37696 (bound 7.95e-05, bar 0.01) -> PASS
+   2D 13x13  ionproj: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/223300 (bound 1.34e-05, bar 0.01) -> PASS
+   3D 5^3    ion2020: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/20181 (bound 1.48e-04, bar 0.01) -> PASS
+   3D 5^3    ionproj: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/168824 (bound 1.77e-05, bar 0.01) -> PASS
+-- H1b always-on margin, whole run (Corollary 3)
+   2D 11x11  ion2020: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/321982 (bound 9.30e-06, bar 0.01) -> PASS
+   2D 11x11  ionproj: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/643274 (bound 4.66e-06, bar 0.01) -> PASS
+   2D 13x13  ion2020: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/331760 (bound 9.03e-06, bar 0.01) -> PASS
+   2D 13x13  ionproj: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/627505 (bound 4.77e-06, bar 0.01) -> PASS
+   3D 5^3    ion2020: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/265981 (bound 1.13e-05, bar 0.01) -> PASS
+   3D 5^3    ionproj: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/602666 (bound 4.97e-06, bar 0.01) -> PASS
+H1 VERDICT (3D 5^3, both parts, both hardware): PASS
+
+== H2 longest-hop success per request, no check, no offset (kg -); 3D minus 2D, 0.9875 two-sided bootstrap over networks
+   ion2020 (hop 2): 3D 0.164 vs 2D 11x11 0.172: diff -0.007 [-0.076, +0.066] -> FAIL
+   ion2020 (hop 2): 3D 0.164 vs 2D 13x13 0.186: diff -0.022 [-0.091, +0.050] -> FAIL
+   ionproj (hop 3): 3D 0.720 vs 2D 11x11 0.648: diff +0.072 [-0.021, +0.165] -> FAIL
+   ionproj (hop 3): 3D 0.720 vs 2D 13x13 0.629: diff +0.091 [+0.010, +0.170] -> PASS
+H2 VERDICT (all 4 comparisons): FAIL (1/4)
+
+== H3 mean kept fidelity (p10_F), kg -; 3D minus 2D 11x11, 90% bootstrap (TOST at 5%), margin +-0.01
+   ion2020: 3D 0.9353 vs 2D 0.9372: diff -0.0019 [-0.0025, -0.0013] -> PASS
+   ionproj: 3D 0.9350 vs 2D 0.9380: diff -0.0029 [-0.0036, -0.0022] -> PASS
+
+== S1 (prediction) detection carries over: alarm rate, gated check, offset 0.044; |3D - 2D 11x11| <= 0.15
+   ion2020: 3D 0.688, 2D 11x11 0.969, 2D 13x13 0.875 -> FAIL
+   ionproj: 3D 0.969, 2D 11x11 1.000, 2D 13x13 0.938 -> PASS
+
+== S2 (prediction) the test can tell rules apart: with no check, offset 0.044 harms > 10% of served users (every lattice, hardware)
+   2D 11x11  ion2020: 0.691 -> PASS
+   2D 11x11  ionproj: 0.698 -> PASS
+   2D 13x13  ion2020: 0.681 -> PASS
+   2D 13x13  ionproj: 0.699 -> PASS
+   3D 5^3    ion2020: 0.726 -> PASS
+   3D 5^3    ionproj: 0.737 -> PASS
+
+== S3 (falsification test) certificate validity, no feedback (kg -, 64 networks per lattice): the certificate allows at most
+   5% violating runs; FAIL only if the one-sided CP95 LOWER bound exceeds 0.05 (evidence of excess violations)
+   2D 11x11  p10: 1/64 (lower 0.001, upper 0.072) -> PASS
+   2D 11x11  p20: 2/64 (lower 0.006, upper 0.095) -> PASS
+   2D 13x13  p10: 0/64 (lower 0.000, upper 0.046) -> PASS
+   2D 13x13  p20: 1/64 (lower 0.001, upper 0.072) -> PASS
+   3D 5^3    p10: 0/64 (lower 0.000, upper 0.046) -> PASS
+   3D 5^3    p20: 3/64 (lower 0.013, upper 0.117) -> PASS
+   all 7 cells, runs (descriptive; runs of one network share test randomness, so they are not independent):
+   2D 11x11  p10: 3/448 runs, 2/64 networks; p20: 9/448 runs, 3/64 networks
+   2D 13x13  p10: 12/448 runs, 7/64 networks; p20: 5/448 runs, 4/64 networks
+   3D 5^3    p10: 11/448 runs, 4/64 networks; p20: 16/448 runs, 6/64 networks
+
+== D1 (descriptive) false alarms: gated check with no offset, share of runs with an alarm
+   2D 11x11  ion2020: 1/32 (bound 0.140)
+   2D 11x11  ionproj: 0/32 (bound 0.089)
+   2D 13x13  ion2020: 1/32 (bound 0.140)
+   2D 13x13  ionproj: 0/32 (bound 0.089)
+   3D 5^3    ion2020: 0/32 (bound 0.089)
+   3D 5^3    ionproj: 0/32 (bound 0.089)
+
+== D2 (descriptive) cost of the always-on margin: longest-hop success kept, kgMCa - / kg - (same network), 95% bootstrap
+   2D 11x11  ion2020: 0.152 [0.111, 0.197]
+   2D 11x11  ionproj: 0.281 [0.233, 0.330]
+   2D 13x13  ion2020: 0.190 [0.149, 0.230]
+   2D 13x13  ionproj: 0.276 [0.247, 0.304]
+   3D 5^3    ion2020: 0.126 [0.082, 0.174]
+   3D 5^3    ionproj: 0.332 [0.276, 0.390]
+
+== D3 (descriptive) every hop and lattice, kg -: success per request, served share, route choices, U_max
+                  s1     s2     s3  h2_paths_mean  h3_paths_mean  umax  users_all  p10_F
+hw      lat
+ion2020 d2g11  1.000  0.172    NaN          1.503            NaN   4.0     1236.0  0.937
+        d2g13  0.998  0.186    NaN          1.502            NaN   4.0     1772.0  0.937
+        d3g5   0.999  0.164    NaN          1.681            NaN   4.0     2010.0  0.935
+ionproj d2g11  0.999  1.001  0.648          1.503          2.343   7.0     2308.0  0.938
+        d2g13  0.996  0.999  0.629          1.502          2.340   7.0     3348.0  0.938
+        d3g5   0.999  1.003  0.720          1.681          3.416  12.0     4262.0  0.935
+
+== D4 (descriptive) matched links: 2D 13x13 minus 2D 11x11, longest-hop success (95% bootstrap)
+   ion2020: +0.015 [-0.029, +0.061]
+   ionproj: -0.019 [-0.080, +0.042]

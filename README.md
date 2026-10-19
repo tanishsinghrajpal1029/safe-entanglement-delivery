@@ -10,12 +10,12 @@ Code, pre-registrations, results and the audit trail for the manuscript of the s
 - The evidence is mainly **simulation**: a discrete-event network simulator whose physics was cross-checked against NetSquid.
 - **Five pre-registered re-analyses of experimental data** back it up: Innsbruck, ICFO, USTC and Delft (public deposits) and Oxford (shot-by-shot device-independent QKD data provided by the authors, with test-or-keep randomised per pair).
 - **Two pre-registered hardware runs on an IBM quantum processor** (Studies 31 and 31b): test-or-keep with Bell-basis ground truth.
-- The final studies are Study 26 (model-based layer at measured hardware levels), Study 27 (model-free certificate), Studies 28–29 (model check and heuristic response), Study 30 (provable closed loop), Studies 31/31b (hardware), Study 32 (recovering bound and robustness), Study 33 (fixed-K computation), Study 34 (closed loop on larger grids), Study 35 (Delft diamond-spin data) and Study 36 (Oxford DIQKD data). Every study except Study 33, a computation, was pre-registered and committed publicly before its first confirmatory job.
+- The final studies are Study 26 (model-based layer at measured hardware levels), Study 27 (model-free certificate), Studies 28–29 (model check and heuristic response), Study 30 (provable closed loop), Studies 31/31b (hardware), Study 32 (recovering bound and robustness), Study 33 (fixed-K computation), Study 34 (closed loop on larger grids), Study 35 (Delft diamond-spin data) and Study 36 (Oxford DIQKD data). Every study except Study 33, a computation, was pre-registered and committed publicly before its first confirmatory job. Manuscript v0.9 adds three pre-registered topology studies (S3D-1 to S3D-3: cubes and a grid with diagonal links), kept in a separate repository (see Revision v0.9 below); their pre-registrations were pushed before their confirmatory jobs, to a repository that was private at the time.
 
 ## The question
 A quantum network cannot inspect a delivered entangled pair without destroying it. So what can a user actually be guaranteed about the pairs they receive, and what does each kind of guarantee cost?
 
-## Main results (manuscript v0.8)
+## Main results (manuscript v0.9)
 
 | Result | Evidence |
 |---|---|
@@ -34,7 +34,11 @@ A quantum network cannot inspect a delivered entangled pair without destroying i
 | **Hardware (Studies 31, 31b; IBM ibm_fez).** | Certificate stayed below a noisy Bell-measured reference in both runs (a consistency check, not a coverage test). Study 31: the fixed-bet check missed an injected degradation (deficit before the change; W3 FAIL). Study 31b (fresh seed, hybrid check, Prop. D): alarm at test 170 of 472 (fixed-bet check: 214); post-alarm offset bound valid but about 3× loose. |
 | **Fixed-K vs anytime (S33, computation).** | A single bet planned for K and F needs 870/420/195 kept pairs to certify 0.9 (p = 0.05/0.1/0.2), 1.2–1.4× the converse floor; the anytime certificate needs about 1.6× that. |
 | **Scale (G3, Study 34).** | The anytime guard on a 30 × 30 grid (900 nodes, 1,740 links): 0 bad pairs in about 2.1 M deliveries (exact model, stationary links). Study 34: the provable closed loop on 10 × 10 and 30 × 30 grids: 0 of 4.2 M post-alarm pairs bad, always-on 0 of 7.8 M; detection depends on test volume, not grid size. 3/3 primary PASS. |
+| **Other topologies (S3D-1 to S3D-3; manuscript v0.9).** | The provable and always-on margins on 5³ and 10³ cubes, a 32 × 32 grid with diagonal links and square grids of side 11–37, with routing sets of up to U_max = 104 links: no harmed network in any of 36 cells (32 networks each), 0 of 8.8 M guarded deliveries bad. Detection was slower on the 5³ cube with ion2020 hardware (alarm in 22 vs 31 of 32 networks). Studies in [quantum-3d-network](https://github.com/tanishsinghrajpal1029/quantum-3d-network) (DOI 10.5281/zenodo.23467683). |
 | **Earlier results (Studies ≤ 25)** | Label-free risk controller, learned priors on thin hardware, latency, faults (a fault-exposure no-go), re-alignment drift. See the study folders and the theory notes. |
+
+## Revision v0.9 (other topologies)
+Copies of the S3D analysis outputs, a script that rebuilds every S3D number in the manuscript, the S3D scoreboard rows and the pre-registration timing: see [`revision_v0.9/README.md`](revision_v0.9/README.md). The studies themselves are in [quantum-3d-network](https://github.com/tanishsinghrajpal1029/quantum-3d-network) (release v1.0.0, DOI 10.5281/zenodo.23467683).
 
 ## Revision v0.8 (re-analysis of existing records)
 Network-level bounds, per-stratum bounds, the IBM replay and the v0.8 figures: see [`revision_v0.8/README.md`](revision_v0.8/README.md). Server-side pre-registration timestamps (GitHub push events, IBM job records) are archived in `audit/`.

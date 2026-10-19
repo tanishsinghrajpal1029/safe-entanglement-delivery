@@ -1,0 +1,72 @@
+merged 8 shards -> 408 rows; runs.csv sha256 5b38e19d853ad3c7aa22e01d6a3b618499f888a74f358470f053edf2c000eb64
+STUDY 3D-3 (KING'S-GRAPH CONTROL) ANALYSIS
+king runs per link level: {'fut97': 136, 'fut98': 136, 'fut99': 136} | Study 3D-2 references verified by sha256
+
+== K1 (primary) dimension, not degree: 3D 10^3 serves more of uniform demand than the king's graph (kg -), every link level; 0.9833 two-sided bootstrap over networks
+   fut97: 3D 0.0499 vs king 0.0429: diff +0.0070 [+0.0049, +0.0094]; ratio 1.16 [1.12, 1.21] (geometry-only 1.12) -> PASS
+   fut98: 3D 0.1017 vs king 0.0736: diff +0.0281 [+0.0250, +0.0314]; ratio 1.38 [1.35, 1.42] (geometry-only 1.31) -> PASS
+   fut99: 3D 0.2620 vs king 0.1534: diff +0.1087 [+0.1034, +0.1140]; ratio 1.71 [1.68, 1.74] (geometry-only 1.63) -> PASS
+K1 VERDICT (all 3): PASS (3/3)
+
+== K2 (primary, safety on the king's graph) as Study 3D-2 R1: harmed networks bound <= 0.10 and bad-pair bound <= 0.01
+-- K2a gated, after a forced alarm
+   fut97: harmed networks 0/32 (bound 0.089); bad pairs 0/57862 (bound 5.18e-05) -> PASS
+   fut98: harmed networks 0/32 (bound 0.089); bad pairs 0/81964 (bound 3.65e-05) -> PASS
+   fut99: harmed networks 0/32 (bound 0.089); bad pairs 0/113056 (bound 2.65e-05) -> PASS
+-- K2b always-on margin, whole run
+   fut97: harmed networks 0/32 (bound 0.089); bad pairs 0/305349 (bound 9.81e-06) -> PASS
+   fut98: harmed networks 0/32 (bound 0.089); bad pairs 0/407784 (bound 7.35e-06) -> PASS
+   fut99: harmed networks 0/32 (bound 0.089); bad pairs 0/550243 (bound 5.44e-06) -> PASS
+K2 VERDICT: PASS
+
+== K3 (secondary) degree helps in 2D: king minus 2D 32x32 grid (kg -), every link level; 0.9833 two-sided bootstrap
+   fut97: king 0.0429 vs grid 0.0214: diff +0.0215 [+0.0207, +0.0222] -> PASS
+   fut98: king 0.0736 vs grid 0.0366: diff +0.0370 [+0.0359, +0.0382] -> PASS
+   fut99: king 0.1534 vs grid 0.0758: diff +0.0775 [+0.0763, +0.0788] -> PASS
+
+== K4 (secondary) the 3D lead over the king's graph survives the always-on margin (kgMCa -); 0.9833 two-sided bootstrap
+   fut97: 3D 0.0301 vs king 0.0290: diff +0.0012 [-0.0008, +0.0032] -> FAIL
+   fut98: 3D 0.0639 vs king 0.0514: diff +0.0125 [+0.0093, +0.0158] -> PASS
+   fut99: 3D 0.1719 vs king 0.1097: diff +0.0623 [+0.0552, +0.0696] -> PASS
+
+== S1 (prediction) king's graph, no check, offset 0.044 harms > 10% of served users (8 networks per link level)
+   fut97: 0.683 -> PASS
+   fut98: 0.660 -> PASS
+   fut99: 0.639 -> PASS
+
+== S2 (falsification) certificate on the king's graph, kg -, 96 networks: FAIL only if the CP95 lower bound > 0.05
+   p10: 3/96 (lower 0.009, upper 0.079) -> PASS
+   p20: 1/96 (lower 0.001, upper 0.048) -> PASS
+
+== D1 (descriptive) served share by lattice, arm and link level; links; served share per 1,000 links
+lat                            2D 32x32  2D 37x37  2D 32x32 + diagonals  3D 10^3
+hw    arm    cfg                                                                
+fut97 kg     -|p00|base          0.0214    0.0160                0.0429   0.0499
+             o0.044|p00|base     0.0070    0.0050                0.0137   0.0122
+      kgMCa  -|p10|base          0.0142    0.0111                0.0290   0.0301
+             o0.044|p10|base     0.0034    0.0027                0.0069   0.0049
+      kgMChN o0.044F|p10|base    0.0034    0.0026                0.0068   0.0049
+fut98 kg     -|p00|base          0.0366    0.0274                0.0736   0.1017
+             o0.044|p00|base     0.0126    0.0093                0.0252   0.0235
+      kgMCa  -|p10|base          0.0255    0.0192                0.0514   0.0639
+             o0.044|p10|base     0.0066    0.0047                0.0133   0.0105
+      kgMChN o0.044F|p10|base    0.0062    0.0046                0.0130   0.0102
+fut99 kg     -|p00|base          0.0758    0.0574                0.1534   0.2620
+             o0.044|p00|base     0.0267    0.0201                0.0558   0.0710
+      kgMCa  -|p10|base          0.0530    0.0402                0.1097   0.1719
+             o0.044|p10|base     0.0144    0.0106                0.0298   0.0311
+      kgMChN o0.044F|p10|base    0.0142    0.0103                0.0287   0.0303
+
+kg -, served share per 1,000 links:
+       2D 32x32  2D 37x37  3D 10^3  2D 32x32 + diagonals
+hw                                                      
+fut97    0.0108    0.0060   0.0185                0.0110
+fut98    0.0184    0.0103   0.0377                0.0188
+fut99    0.0382    0.0215   0.0970                0.0393
+
+== D2 (descriptive) king's graph, kg -: success per servable request by hop, paths per pair, U_max, servable share
+          s1     s2     s3     s4     s5     s6     s7     s8  umax  share_servable  p10_F
+hw                                                                                        
+fut97  1.002  1.000  0.869  0.137  0.003    NaN    NaN    NaN  37.0           0.098  0.934
+fut98  1.008  1.002  0.997  0.904  0.262  0.013    NaN    NaN  54.0           0.133  0.935
+fut99  0.999  1.003  1.001  1.000  0.998  0.927  0.528  0.078  96.0           0.212  0.937

@@ -1,0 +1,95 @@
+STUDY 3D-2 (REACH) ANALYSIS
+runs per lattice x link level: {('d2g32', 'fut97'): 136, ('d2g32', 'fut98'): 136, ('d2g32', 'fut99'): 136, ('d2g37', 'fut97'): 136, ('d2g37', 'fut98'): 136, ('d2g37', 'fut99'): 136, ('d3g10', 'fut97'): 136, ('d3g10', 'fut98'): 136, ('d3g10', 'fut99'): 136}
+
+== R1 safety (network level; one-sided CP95). Network harmed if any run in the arm harms a user
+-- R1a gated check after the alarm (Theorem 2; forced alarm)
+   2D 32x32  fut97: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/54598 (bound 5.49e-05, bar 0.01) -> PASS
+   2D 32x32  fut98: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/72774 (bound 4.12e-05, bar 0.01) -> PASS
+   2D 32x32  fut99: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/101879 (bound 2.94e-05, bar 0.01) -> PASS
+   2D 37x37  fut97: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/55613 (bound 5.39e-05, bar 0.01) -> PASS
+   2D 37x37  fut98: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/70809 (bound 4.23e-05, bar 0.01) -> PASS
+   2D 37x37  fut99: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/96192 (bound 3.11e-05, bar 0.01) -> PASS
+   3D 10^3   fut97: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/28207 (bound 1.06e-04, bar 0.01) -> PASS
+   3D 10^3   fut98: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/39400 (bound 7.60e-05, bar 0.01) -> PASS
+   3D 10^3   fut99: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/65193 (bound 4.60e-05, bar 0.01) -> PASS
+-- R1b always-on margin, whole run (Corollary 3)
+   2D 32x32  fut97: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/282220 (bound 1.06e-05, bar 0.01) -> PASS
+   2D 32x32  fut98: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/377107 (bound 7.94e-06, bar 0.01) -> PASS
+   2D 32x32  fut99: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/483238 (bound 6.20e-06, bar 0.01) -> PASS
+   2D 37x37  fut97: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/291294 (bound 1.03e-05, bar 0.01) -> PASS
+   2D 37x37  fut98: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/367133 (bound 8.16e-06, bar 0.01) -> PASS
+   2D 37x37  fut99: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/474212 (bound 6.32e-06, bar 0.01) -> PASS
+   3D 10^3   fut97: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/200619 (bound 1.49e-05, bar 0.01) -> PASS
+   3D 10^3   fut98: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/286862 (bound 1.04e-05, bar 0.01) -> PASS
+   3D 10^3   fut99: harmed networks 0/32 (bound 0.089, bar 0.10); bad pairs 0/436459 (bound 6.86e-06, bar 0.01) -> PASS
+R1 VERDICT (3D 10^3, both parts, all three link levels): PASS
+
+== R2 served share of uniform demand, no check, no offset (kg -); 3D minus 2D; 0.9917 two-sided bootstrap over networks
+   fut97: 3D 0.0499 vs 2D 32x32 0.0214: diff +0.0285 [+0.0263, +0.0310] -> PASS
+   fut97: 3D 0.0499 vs 2D 37x37 0.0160: diff +0.0339 [+0.0316, +0.0364] -> PASS
+   fut98: 3D 0.1017 vs 2D 32x32 0.0366: diff +0.0651 [+0.0618, +0.0686] -> PASS
+   fut98: 3D 0.1017 vs 2D 37x37 0.0274: diff +0.0744 [+0.0711, +0.0777] -> PASS
+   fut99: 3D 0.2620 vs 2D 32x32 0.0758: diff +0.1862 [+0.1803, +0.1920] -> PASS
+   fut99: 3D 0.2620 vs 2D 37x37 0.0574: diff +0.2046 [+0.1988, +0.2104] -> PASS
+R2 VERDICT (all 6 comparisons): PASS (6/6)
+
+== R3 (prediction) the 3D / 2D 32x32 ratio of served share is at least 1.5 at every link level (95% bootstrap lower bound); analytic ratios 2.1 / 2.5 / 2.8 shown for comparison
+   fut97: ratio 2.33 [2.26, 2.40] (analytic 2.1) -> PASS
+   fut98: ratio 2.78 [2.72, 2.84] (analytic 2.5) -> PASS
+   fut99: ratio 3.46 [3.40, 3.51] (analytic 2.8) -> PASS
+
+== R4 the always-on margin (kgMCa -) keeps a 3D advantage over 2D 32x32; 0.9833 two-sided bootstrap
+   fut97: 3D 0.0301 vs 2D 0.0142: diff +0.0160 [+0.0142, +0.0178] -> PASS
+   fut98: 3D 0.0639 vs 2D 0.0255: diff +0.0384 [+0.0355, +0.0413] -> PASS
+   fut99: 3D 0.1719 vs 2D 0.0530: diff +0.1189 [+0.1122, +0.1257] -> PASS
+
+== S1 (prediction) with no check, offset 0.044 harms > 10% of served users (8 networks per cell)
+   2D 32x32  fut97: 0.683 -> PASS
+   2D 32x32  fut98: 0.661 -> PASS
+   2D 32x32  fut99: 0.647 -> PASS
+   2D 37x37  fut97: 0.689 -> PASS
+   2D 37x37  fut98: 0.666 -> PASS
+   2D 37x37  fut99: 0.650 -> PASS
+   3D 10^3   fut97: 0.765 -> PASS
+   3D 10^3   fut98: 0.760 -> PASS
+   3D 10^3   fut99: 0.734 -> PASS
+
+== S2 (falsification) certificate validity, kg - (no feedback), 96 networks per lattice: FAIL only if the CP95 LOWER bound > 0.05
+   2D 32x32  p10: 4/96 (lower 0.014, upper 0.093) -> PASS
+   2D 32x32  p20: 0/96 (lower 0.000, upper 0.031) -> PASS
+   2D 37x37  p10: 2/96 (lower 0.004, upper 0.064) -> PASS
+   2D 37x37  p20: 1/96 (lower 0.001, upper 0.048) -> PASS
+   3D 10^3   p10: 1/96 (lower 0.001, upper 0.048) -> PASS
+   3D 10^3   p20: 1/96 (lower 0.001, upper 0.048) -> PASS
+
+== D1 (descriptive) served share by arm, lattice and link level (mean over networks)
+lat                             d2g32   d2g37   d3g10
+hw    arm    cfg                                     
+fut97 kg     -|p00|base        0.0214  0.0160  0.0499
+             o0.044|p00|base   0.0070  0.0050  0.0122
+      kgMCa  -|p10|base        0.0142  0.0111  0.0301
+             o0.044|p10|base   0.0034  0.0027  0.0049
+      kgMChN o0.044F|p10|base  0.0034  0.0026  0.0049
+fut98 kg     -|p00|base        0.0366  0.0274  0.1017
+             o0.044|p00|base   0.0126  0.0093  0.0235
+      kgMCa  -|p10|base        0.0255  0.0192  0.0639
+             o0.044|p10|base   0.0066  0.0047  0.0105
+      kgMChN o0.044F|p10|base  0.0062  0.0046  0.0102
+fut99 kg     -|p00|base        0.0758  0.0574  0.2620
+             o0.044|p00|base   0.0267  0.0201  0.0710
+      kgMCa  -|p10|base        0.0530  0.0402  0.1719
+             o0.044|p10|base   0.0144  0.0106  0.0311
+      kgMChN o0.044F|p10|base  0.0142  0.0103  0.0303
+
+== D2 (descriptive) kg -: success per servable request by hop, U_max, servable share, kept fidelity
+                s1     s2     s3     s4     s5     s6     s7     s8   umax  share_servable  p10_F
+hw    lat                                                                                        
+fut97 d2g32  1.005  0.998  0.810  0.118  0.003    NaN    NaN    NaN   17.0           0.052  0.934
+      d2g37  1.003  0.999  0.806  0.106  0.003    NaN    NaN    NaN   17.0           0.040  0.934
+      d3g10  0.996  1.006  0.838  0.157  0.008    NaN    NaN    NaN   33.0           0.146  0.930
+fut98 d2g32  0.997  1.005  0.999  0.834  0.192  0.008    NaN    NaN   24.0           0.071  0.935
+      d2g37  0.996  0.999  0.998  0.829  0.171  0.007    NaN    NaN   24.0           0.054  0.935
+      d3g10  1.012  1.004  0.998  0.892  0.273  0.019    NaN    NaN   54.0           0.217  0.930
+fut99 d2g32  0.996  1.007  1.003  1.001  1.000  0.842  0.315  0.030   40.0           0.117  0.936
+      d2g37  0.996  0.994  1.007  0.999  0.991  0.839  0.302  0.025   40.0           0.090  0.936
+      d3g10  0.989  1.003  1.003  1.003  0.996  0.933  0.516  0.085  104.0           0.389  0.931
