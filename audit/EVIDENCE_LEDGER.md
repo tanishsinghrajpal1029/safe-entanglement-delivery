@@ -2936,3 +2936,8 @@ The external review raised six points. Two of them were real errors and are now 
 - **Scoreboard:** +6 primary (5 passed) and +12 secondary (10 passed); totals 95 primary (83 passed, 12 failed), 68 secondary (58 passed or confirmed, 9 failed, 1 unclear).
 - **Manuscript:** appendix.tex ad9277cb38527d17; main.tex and references.bib receive the v0.9.0 version DOI after this release.
 
+## E180: Release v0.9.1, wording correction for S3D (19 Oct 2026)
+- **What a targeted review found in v0.9:** (1) "the certificate was never invalidated" (manuscript Appendix B.5) and "Certificate not invalidated" (`revision_v0.9/SCOREBOARD_S3D.md`) overstate the falsification tests, which only failed to reject the nominal 5% violation rate; violations occurred (4/96 on 32×32 at p = 0.1, upper bound 9.3%; 3/64 on the 5³ cube at p = 0.2, upper bound 11.7%). (2) The pre-registered pair-level bad-pair bound pools deliveries as independent.
+- **Fix:** the scoreboard rows and a correction note here; the 3D repository's results documents in its release v1.0.1; manuscript v0.9 Appendix B.5 now states what the tests established and labels the pair-level bound as reported for the record, with inference resting on 0/32 harmed networks per cell (8.9%). The review's two clarity points were also addressed in the manuscript (fut97–fut99 parameters in the hardware table; the closed-loop scope limitation now separates S30–S34 from S3D-1–3).
+- **Unchanged:** every verdict, number, run, analysis copy and script; the pre-registrations.
+
