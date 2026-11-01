@@ -1,0 +1,5 @@
+# Study 38 frozen files (sha256). Check with: grep -v '^#' HASHES_PREREG_38.txt | shasum -a 256 -c -
+e971d10a79739e530f031d7cfc1cd4caa6b28f7ad43a3932f07eb2cf4326e9ba  PREREG_38.md
+4725600849e55ea4f8f3ba86b72f5481c8a0680c36d9a05182bc7df07e022f69  analyze_38.py
+6b84bbdd3c10fd36138aae4c936ad2e4148c3fb6c08b413d913d0c474a03fc58  cert.py
+# Data: github.com/ionq-publications/khz-heterogeneous-entanglement at commit 8a08f695fca8aff540e85cd8a14b25b25927e82f (checked by the script)
