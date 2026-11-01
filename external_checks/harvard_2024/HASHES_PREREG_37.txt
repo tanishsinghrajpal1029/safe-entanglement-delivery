@@ -1,0 +1,7 @@
+# Study 37 frozen files (sha256). Check with: sha256sum -c HASHES_PREREG_37.txt
+52cc04adf4626f03625bffab4aaf2ace4d00218629c39c0e3cd2d296ae1e69bf  PREREG_37.md
+2d1348159e3aaddc005bbb25a5046f8f654a4902af3df9e89557c131a0e2fe8d  analyze_37.py
+6b84bbdd3c10fd36138aae4c936ad2e4148c3fb6c08b413d913d0c474a03fc58  cert.py
+# Authors' notebooks (Knaut et al., Nature 2024; private, not redistributed). Printed by every run.
+# 758f87b801c21d639949e7ea6e10b149ea86000f2ba83a4a152a106c8226de73  YC_2026_E-E_musweep_analysis_new_new_dyn.ipynb
+# 3d9d5cde9d31470752f47b68f1f9c394621a6f9171fdac70a9f50362e15c4ea6  N-N_hold_telecom_analysis_new_eff_dyn.ipynb
