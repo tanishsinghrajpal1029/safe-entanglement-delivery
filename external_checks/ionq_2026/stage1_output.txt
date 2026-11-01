@@ -1,0 +1,14 @@
+STUDY 38 ANALYSIS  (2026-11-01 11:21:50)
+   IonQ repository commit 8a08f695fca8aff540e85cd8a14b25b25927e82f (registered 8a08f695fca8); tracked files modified: no
+   analyze_38.py sha256 4725600849e55ea4; cert.py sha256 6b84bbdd3c10fd36
+== Stage 1 (gates)
+   run 64563 (Fig. 1): heralds 9000 (missing outcome 0); XX/YY/ZZ heralds 3000; G0 counts = authors': True; F_lin ours 0.8805 vs authors' formula 0.8805; rate 1.032 kHz
+   run 64563 MLE (authors' code): F = 0.8794 +/- 0.0073 (published 0.879(0.007)), z = 0.06; rate 1.032 kHz (published 1.032(0.011)), z = 0.02
+   run 69967 (Fig. 2, XY8-1): heralds 9000 (missing outcome 0); XX/YY/ZZ heralds 3000; G0 counts = authors': True; F_lin ours 0.8730 vs authors' formula 0.8730; rate 0.718 kHz
+   run 69963 (Fig. 2, XY8-2): heralds 9000 (missing outcome 0); XX/YY/ZZ heralds 3000; G0 counts = authors': True; F_lin ours 0.8710 vs authors' formula 0.8710; rate 1.037 kHz
+   run 69977 (Fig. 2, XY8-3): heralds 9000 (missing outcome 0); XX/YY/ZZ heralds 3000; G0 counts = authors': True; F_lin ours 0.8565 vs authors' formula 0.8565; rate 1.161 kHz
+   run 69969 (Fig. 2, XY8-4): heralds 9000 (missing outcome 0); XX/YY/ZZ heralds 3000; G0 counts = authors': True; F_lin ours 0.8530 vs authors' formula 0.8530; rate 1.205 kHz
+   run 69971 (Fig. 2, XY8-8): heralds 9000 (missing outcome 0); XX/YY/ZZ heralds 3000; G0 counts = authors': True; F_lin ours 0.8105 vs authors' formula 0.8105; rate 1.310 kHz
+   run 69974 (Fig. 2, XY8-16): heralds 9000 (missing outcome 0); XX/YY/ZZ heralds 3000; G0 counts = authors': True; F_lin ours 0.7415 vs authors' formula 0.7415; rate 1.353 kHz
+G0 (our parser reproduces the authors' counts and Fig. 2 fidelity formula, all 7 runs): PASS
+G1 (Fig. 1 fidelity and rate reproduced, within 2 s.d.): PASS
