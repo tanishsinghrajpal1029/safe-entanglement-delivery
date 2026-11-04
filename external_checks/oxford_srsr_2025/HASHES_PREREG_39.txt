@@ -1,0 +1,5 @@
+# Study 39 frozen files (sha256). Check with: grep -v '^#' HASHES_PREREG_39.txt | shasum -a 256 -c -
+8dcde789d407aaf906764c6d79f278257e20b3ef8c796c76dc9dd485d44b1f14  PREREG_39.md
+7a90e71131548a403818a19311ffe4c30f1773e554ca1e8e551c8a01559dae90  analyze_39.py
+6b84bbdd3c10fd36138aae4c936ad2e4148c3fb6c08b413d913d0c474a03fc58  cert.py
+# Data (private, not in the repository): 000565472-SrSrTomographyLeader.h5 sha256 86d0404bf560da1fba25a08dfce375c815639ca749641363de7753d57cf95018
