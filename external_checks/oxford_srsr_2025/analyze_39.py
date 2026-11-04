@@ -60,6 +60,13 @@ def read(path):
                  her=g("herald_pattern_idxs").reshape(-1).astype(int), t=g("leader_t_success_mus").reshape(-1).astype(np.int64),
                  tf=g("follower_t_success_mus").reshape(-1).astype(np.int64), tries=g("leader_tries_taken").reshape(-1).astype(np.int64),
                  aborts=g("protocol_aborts").reshape(-1).astype(np.int64))
+        n = len(d["bl"])
+        bad = [k for k, v in d.items() if len(v) != n]
+        assert not bad, f"arrays not aligned with the {n} events: {bad}"
+        for k in ("leader_sr_brights", "follower_sr_brights"):
+            raw = f[PFX + k][()]
+            assert raw.dtype == bool or set(np.unique(raw).tolist()) <= {0, 1}, f"{k} is not bright/dark (dtype {raw.dtype})"
+        assert np.issubdtype(f[PFX + "leader_t_success_mus"].dtype, np.integer), "timestamps are not integers"
         d["stored"] = dict(fid=[float(f[PFX + f"fidelity_{k}"][()]) for k in range(4)],
                            fid_psi_plus=float(f[PFX + "fidelity_to_psi_plus"][()]))
     return d
@@ -90,8 +97,11 @@ def fid_psi_plus(c):                      # F(Psi+) = (1 + <XX> + <YY> - <ZZ>)/4
     return (1 + c["XX"][0] + c["YY"][0] - c["ZZ"][0]) / 4
 
 
-def fid_phase_opt(c):                     # max over phi of F(Psi(phi)), Psi(phi) = (|01> + e^{i phi}|10>)/sqrt2
-    a = c["XX"][0] + c["YY"][0]; b = c["XY"][0] - c["YX"][0]
+def fid_phase_opt(c):
+    """max over phi of F(Psi(phi)), Psi(phi) = (|01> + e^{i phi}|10>)/sqrt2, leader = first qubit.
+    For Psi(phi): <XX> = <YY> = cos phi, <XY> = -sin phi, <YX> = +sin phi, so
+    F(phi) = (1 - <ZZ> + cos(phi)(<XX>+<YY>) - sin(phi)(<XY>-<YX>))/4."""
+    a = c["XX"][0] + c["YY"][0]; b = -(c["XY"][0] - c["YX"][0])
     return (1 - c["ZZ"][0] + np.hypot(a, b)) / 4, float(np.arctan2(b, a))
 
 
@@ -100,6 +110,8 @@ def stage1(d, log):
     log("== Stage 1 (gates)")
     n = len(d["bl"]); s1 = dict(G1=True, G2=False)
     for name, b in (("leader", d["bl"]), ("follower", d["bf"])):
+        if b.min() < 0 or b.max() > 5:
+            log(f"   {name} basis codes outside 0-5: {sorted(set(np.unique(b).tolist()) - set(range(6)))}"); s1["G1"] = False; continue
         fr = np.bincount(b, minlength=6) / n
         exp = np.array([1 / 6, 1 / 6, 1 / 6, 1 / 6, 1 / 3, 0]); sd = np.sqrt(exp * (1 - exp) / n)
         ok = bool(np.all(np.abs(fr - exp) <= 5 * np.maximum(sd, 1e-12)) and set(np.unique(b)) <= {0, 1, 2, 3, 4})
@@ -180,8 +192,11 @@ def stage2(d, s1, log):
     # H2 drift
     tests = []
     bl = np.array_split(np.arange(len(el)), 10)
-    if np.all(d["tries"] >= 1):
-        tests.append(("success per attempt", chi2_blocks([len(b) for b in bl], [d["tries"][b].sum() for b in bl])))
+    tries = d["tries"]
+    if tries.min() == 0:
+        tries = tries + 1; log("   leader_tries_taken contains 0: using tries + 1 (attempts including the success), as pre-registered")
+    if tries.min() >= 1:
+        tests.append(("success per attempt", chi2_blocks([len(b) for b in bl], [tries[b].sum() for b in bl])))
     else:
         tests.append(("success per attempt", None))
     for k in range(3):
@@ -197,6 +212,11 @@ def stage2(d, s1, log):
     for n, r in tests:
         log(f"   {n}: " + ("NA" if r is None else f"chi2 {r[0]:.1f}, df {r[1]}, p {r[2]:.2g}, Bonferroni {min(1, r[2] * m):.2g} -> "
                             f"{'detected' if r[2] * m < 0.05 else 'not detected'}"))
+    res = {n: (r is not None and r[2] * m < 0.05) for n, r in tests if r is not None}
+    p_ok = res.get("success per attempt") is True
+    e_ok = all(res.get(f"{a}{a} error") is False for a in "XYZ" if f"{a}{a} error" in res)
+    log(f"H2 verdict: success-per-attempt prediction {'held' if p_ok else 'failed' if 'success per attempt' in res else 'NA'}; "
+        f"error-rate prediction {'held' if e_ok else 'failed'}")
     # H3, H4, H5
     o = certificate_draws(err, bas)
     fail3 = fail4 = False
@@ -226,7 +246,7 @@ def stage2(d, s1, log):
     # calibrate-then-certify (descriptive): phase from the first 10% of events, fidelity to Psi(phi_cal) on the rest
     cal = np.zeros(len(el), bool); cal[: len(el) // 10] = True
     _, phc = fid_phase_opt(correlators(d, el, ef, cal)); cr = correlators(d, el, ef, ~cal)
-    Fcal = (1 - cr["ZZ"][0] + np.cos(phc) * (cr["XX"][0] + cr["YY"][0]) + np.sin(phc) * (cr["XY"][0] - cr["YX"][0])) / 4
+    Fcal = (1 - cr["ZZ"][0] + np.cos(phc) * (cr["XX"][0] + cr["YY"][0]) - np.sin(phc) * (cr["XY"][0] - cr["YX"][0])) / 4
     log(f"D3 phase calibrated on the first 10% (phi = {phc:+.3f} rad): fidelity of the remaining events to Psi(phi_cal) {Fcal:.4f}")
 
 
@@ -239,7 +259,7 @@ def make_synthetic(path, n=200000, seed=11, phi=0.25, F0=0.965):
     # Werner-like mixture of Psi(phi) with white noise: sample correlated eigenvalues per axis pair
     w = (4 * F0 - 1) / 3
     al = np.array([AX[b] for b in bl]); af = np.array([AX[b] for b in bf])
-    E = {("X", "X"): np.cos(phi), ("Y", "Y"): np.cos(phi), ("Z", "Z"): -1.0, ("X", "Y"): np.sin(phi), ("Y", "X"): -np.sin(phi)}
+    E = {("X", "X"): np.cos(phi), ("Y", "Y"): np.cos(phi), ("Z", "Z"): -1.0, ("X", "Y"): -np.sin(phi), ("Y", "X"): np.sin(phi)}
     corr = np.array([w * E.get((a, b), 0.0) for a, b in zip(al, af)])
     el = rng.choice([1, -1], n); ef = np.where(rng.random(n) < (1 + corr) / 2, el, -el)
     rl = np.where(np.isin(bl, list(NEG)), -el, el); rf = np.where(np.isin(bf, list(NEG)), -ef, ef)   # recorded orientation

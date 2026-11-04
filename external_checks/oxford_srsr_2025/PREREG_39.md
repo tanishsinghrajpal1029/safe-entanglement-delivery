@@ -10,21 +10,21 @@
 
 ## 2. Definitions
 - Eigenvalues ±1 per node from bright/dark, with the sign reversed for the negative orientations (codes 2, 3), under the one convention that reproduces the stored fidelities (gate G2).
-- **Target Ψ⁺ = (|01⟩ + |10⟩)/√2 in the authors' common frame** (⟨XX⟩ = ⟨YY⟩ = +1, ⟨ZZ⟩ = −1); F(Ψ⁺) = (1 + ⟨XX⟩ + ⟨YY⟩ − ⟨ZZ⟩)/4. A matched-axis event (both nodes on the same axis) is an **error** if its outcome product differs from the target's. The phase-optimised fidelity max_φ F(Ψ(φ)) is reported but **not certified** (choosing φ from the data would select the target after the fact).
+- The leader node is the first qubit. **Target Ψ⁺ = (|01⟩ + |10⟩)/√2 in the authors' common frame** (⟨XX⟩ = ⟨YY⟩ = +1, ⟨ZZ⟩ = −1); F(Ψ⁺) = (1 + ⟨XX⟩ + ⟨YY⟩ − ⟨ZZ⟩)/4. A matched-axis event (both nodes on the same axis) is an **error** if its outcome product differs from the target's. The phase-optimised fidelity max_φ F(Ψ(φ)) is reported but **not certified** (choosing φ from the data would select the target after the fact).
 - The certificate (Prop. C1, `cert.py`, α = 0.05) uses only matched-axis events (≈ 1/3 of all events; a random, time-interleaved subset because both settings are drawn per event). Every event was measured, so the test-or-keep split is drawn by us after the fact, as in Studies 37–38.
 
 ## 3. Stage 1: gates
 - **G1 (design):** each node's setting-code frequencies within 5 s.d. of (1/6, 1/6, 1/6, 1/6, 1/3, 0); herald patterns in {0, 1, 2, 3}; timestamps strictly increasing. Reported: share of equal codes at both nodes; events with `protocol_aborts` > 0.
 - **G2 (convention):** of the candidate conventions (bright ↦ ±1 at each node; sign reversal for negative orientations or not), exactly one physically distinct convention reproduces the stored per-pattern fidelities **and** the stored `fidelity_to_psi_plus` within 0.01 each (our linear estimates; the global relabelling of both nodes is equivalent).
-- If a gate fails, Stage 2 is not run; we report and ask the authors.
+- If a gate fails, Stage 2 is not run; we report and ask the authors, and any further analysis needs a dated amendment pushed before it is run. This includes the case where G2 fails only on the fidelity *values* (for example, if the stored fidelities come from maximum-likelihood fitting) while one convention is clearly separated from the others: we ask how the stored values were computed before proceeding.
 
 ## 4. Stage 2: hypotheses
-**H2 (primary, drift within the run).** Pearson χ² across 10 equal-event blocks in time order (df = 9; merge/NA rule as in Studies 37–38) for: successes per attempt (`leader_tries_taken`), the XX, YY and ZZ error rates (10 blocks within each), and the share of each herald pattern. Bonferroni over valid tests.
+**H2 (primary, drift within the run).** Pearson χ² across 10 equal-event blocks in time order (df = 9; merge/NA rule as in Studies 37–38) for: successes per attempt (`leader_tries_taken`; if it contains zeros, i.e. counts failed attempts only, tries + 1 is used), the XX, YY and ZZ error rates (10 blocks within each), and the share of each herald pattern. Bonferroni over valid tests.
 - **Prediction:** successes per attempt **drift detected**; the three error rates **not** detected. (Herald-pattern shares: no prediction; reported.)
 
 **H3 (primary, validity).** Each matched-axis event is labelled "test" with probability p ∈ {0.05, 0.1, 0.2} (1,000 seeded draws per p, seeds 39001–40000). A draw violates if the final certificate exceeds U = 1 − ½ Σ_B CP_lower(e_B) on the kept events (each per-basis bound at level 0.025/3). **FAIL if** in any p the CP95 lower bound on the violation rate exceeds 0.05. **Prediction:** PASS.
 
-**H4 (primary, anytime validity in time order; new).** For the same draws, at 20 equally spaced checkpoints in time order, the running certificate is compared with the running U on the kept events so far (each per-basis bound at level 0.025/3/20). A draw violates if any checkpoint exceeds. **FAIL if** in any p the CP95 lower bound on this rate exceeds 0.05. **Prediction:** PASS. This is the first dataset whose settings are drawn per event, so the certificate's validity at all times can be checked on real data.
+**H4 (primary, anytime validity in time order; new).** For the same draws, at 20 checkpoints in time order, equally spaced in the number of matched-axis events, the running certificate is compared with the running U on the kept events so far (each per-basis bound at level 0.025/3/20). A draw violates if any checkpoint exceeds. **FAIL if** in any p the CP95 lower bound on this rate exceeds 0.05. **Prediction:** PASS. This is the first dataset whose settings are drawn per event, so the certificate's validity at all times can be checked on real data.
 
 **H5 (primary, usefulness predicted in advance).** At p = 0.2 the median final certificate lies inside the 10–90 % band simulated from the **stored** F(Ψ⁺) at the actual number of matched-axis events (tests ~ Binomial(N, p), errors ~ Binomial(tests, 2(1−F)/3); 2,000 draws; seed 3900). p = 0.05 and 0.1 secondary. **Prediction:** PASS. (The stored F(Ψ⁺) was known in advance, so H5 checks the certificate's statistics, not a blind prediction of the fidelity; disclosed.)
 
@@ -33,6 +33,7 @@
 ## 5. Code
 - `analyze_39.py` (our parser; no author code) and `cert.py` (unchanged from Study 27). Test-only switch `S39_TEST_SMALL` (100 draws) is never set for the real run; the output states if it is.
 - Run order: Stage 1 (`--stage 1`), then Stage 2 (`--stage 2`), same machine and Python.
+- Before freezing, an independent AI code review (synthetic data only) checked conventions, statistics and data handling; it found no error affecting H2–H5, and its fixes (sign of the reported phase in D1–D3, array-length and bright/dark checks, the tries fallback, the checkpoint definition) are included.
 
 ## 6. Limitations (stated in advance)
 - One run of one device pair. The test-or-keep split is ours. Pseudorandom settings (NumPy MT19937), recorded; we do not test how or when they were generated relative to the herald.
