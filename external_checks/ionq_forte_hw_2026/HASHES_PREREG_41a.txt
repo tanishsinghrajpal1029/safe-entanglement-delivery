@@ -1,0 +1,7 @@
+# Study 41a frozen files (sha256). analyze_41a.py checks these at Stage 1 (G0).
+# Final free rehearsal of job_41a.py: IonQ simulator job 01a1c91c-ee67-7de4-9c01-9805fd523f31 (11 Nov 2026), output SHA16 ff536560020350f6.
+515b2d080a152c21e308a9154f3b212d49566cf98c017c2e8b233ff34ab8d043  PREREG_41a.md
+2de182a7d8c940640a6d0e0fce5262f585733c6ff074189ef83f522f85325260  job_41a.py
+b53861a91a82111f85adb91441e06d467ca1c8ecd5a93cba090d911a05bb4209  make_design_41a.py
+9ce04a9617b3cbd48bb2ab3bd7625f00599295a08058c9171912af639ee78213  analyze_41a.py
+6b84bbdd3c10fd36138aae4c936ad2e4148c3fb6c08b413d913d0c474a03fc58  cert.py
