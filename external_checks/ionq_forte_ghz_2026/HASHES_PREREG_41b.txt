@@ -1,0 +1,7 @@
+# Study 41b frozen files (sha256). analyze_41b.py checks these at Stage 1 (G0); all five must be listed.
+# Free rehearsals of job_41b.py on the IonQ Forte-1 noise-model simulator (14 Nov 2026): job 0 id 01a1d82e-467d-7bbf-a9bd-65c8fe361655 (output SHA16 e813819931861c1b); job 1 id 01a1d83c-9198-7557-8ba4-31a06e7b3944 (e40c5de8dad14f67).
+2779d07a1870f24c65854767ce065c06027a391dbbe1a9243d4fa9855cda4337  PREREG_41b.md
+bed23a6b30bf93f83dd75d0d00acc3f1a3ef109a28b880d9af8aad61120e0cee  job_41b.py
+f31c8695b343835699abef12a415aefee0cb8c09e5f18db4c65662459799284f  make_design_41b.py
+5f6777579996e66a4f02c0886d316e61e0cc223c5593a1d1511356ee9b831efe  analyze_41b.py
+6b84bbdd3c10fd36138aae4c936ad2e4148c3fb6c08b413d913d0c474a03fc58  cert.py
