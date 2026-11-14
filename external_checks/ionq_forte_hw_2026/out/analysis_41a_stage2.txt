@@ -1,0 +1,42 @@
+STUDY 41a ANALYSIS (stage 2, 2026-11-13T19:00:30)
+   analyze_41a.py 9ce04a9617b3cbd4; cert.py 6b84bbdd3c10fd36; job_41a.py 2de182a7d8c94064; numpy 2.5.1; test switch off
+   hardware files: s41a_job_00.json, s41a_job_01.json, s41a_job_02.json, s41a_job_03.json, s41a_job_04.json, s41a_job_05.json, s41a_job_06.json, s41a_job_07.json, s41a_job_08.json, s41a_job_09.json, s41a_job_10.json, s41a_job_11.json, s41a_job_12.json, s41a_job_13.json, s41a_job_14.json, s41a_job_15.json, s41a_job_16.json, s41a_job_17.json, s41a_job_18.json, s41a_job_19.json, s41a_job_20.json, s41a_job_21.json, s41a_job_22.json, s41a_job_23.json, s41a_job_24.json, s41a_job_25.json, s41a_job_26.json, s41a_job_27.json, s41a_job_28.json, s41a_job_29.json
+== Stage 1 (gates)
+G0 (code and design files identical to the frozen hashes): PASS
+   design table embedded in job_41a.py equals the seed derivation (make_design_41a.py): True; Block B jobs [0, 1, 2, 7, 8, 9, 18, 21, 23, 29]
+   set aside: s41a_job_13_lost_ionq500.json: no counts
+   hardware files 30; job numbers submitted more than once none (earliest kept)
+   time order of jobs (by job-id timestamp) equals job-number order: False
+G1 (complete; design and submitted circuit as fixed in advance; Forte hardware; no debiasing; integrity): PASS
+   per job (clean pairs): largest basis error rate 0.0233 (job 4); lowest linear F 0.9734
+G2 (bit order and error convention sane in every job: each basis error rate < 0.25, F > 0.5): PASS
+
+== Stage 2
+   Block A: 20 jobs, 360000 pair outcomes; Block B: 10 jobs, 180000 pair outcomes (60 faulty clusters of 180)
+   Block A p=0.05: final violations 0/1000 (CP95 lower 0.000); any of 20 checkpoints 0/1000 (CP95 lower 0.000); median certificate 0.9736
+   Block A p=0.1: final violations 0/1000 (CP95 lower 0.000); any of 20 checkpoints 0/1000 (CP95 lower 0.000); median certificate 0.9749
+   Block A p=0.2: final violations 0/1000 (CP95 lower 0.000); any of 20 checkpoints 0/1000 (CP95 lower 0.000); median certificate 0.9757
+   Block B p=0.05: final violations 0/1000 (CP95 lower 0.000); any of 10 checkpoints 0/1000 (CP95 lower 0.000); median certificate 0.9195
+   Block B p=0.1: final violations 0/1000 (CP95 lower 0.000); any of 10 checkpoints 0/1000 (CP95 lower 0.000); median certificate 0.9225
+   Block B p=0.2: final violations 0/1000 (CP95 lower 0.000); any of 10 checkpoints 0/1000 (CP95 lower 0.000); median certificate 0.9244
+H3 (Block A final certificate never above the conservative reference; prediction PASS): PASS
+H4 (Block A anytime: never above the reference at any of 20 job checkpoints in time order; prediction PASS): PASS
+H5 (Block A median certificate at p = 0.2 above 0.9; prediction PASS): 0.9757 -> PASS
+H6 (Block B, planted fault: final and anytime validity as H3/H4; prediction PASS): PASS
+H7 (Block B certificate lower than Block A by the planted amount: ratio in [0.5, 1.5]; prediction PASS): predicted drop 0.0474, observed drop of the median certificate (p = 0.2) 0.0512, ratio 1.08 -> PASS
+
+== Descriptive
+D1 error rates X/Y/Z: Block A [0.0143 0.0149 0.0149] (F 0.9780); Block B clean [0.0156 0.0148 0.0138]; Block B faulty [0.1553 0.1609 0.0142] (predicted X, Y 0.1566, 0.1570; Z unchanged 0.0149); Block B F 0.9302 (predicted 0.9306)
+D1 Block B faulty pairs with phase +theta: X/Y/Z error [0.1605 0.1626 0.0144]
+D1 Block B faulty pairs with phase -theta: X/Y/Z error [0.1502 0.1592 0.0139]
+D1 certificate minus linear F (p = 0.2): A -0.0023; B -0.0058; B median certificate vs ground-truth reference F_A - predicted drop 0.9306: -0.0062
+D2 Block A basis X: 120 clusters; dispersion chi2/df 2.06 (1 = no excess heterogeneity); cluster error range 0.003-0.038
+D2 Block A basis Y: 120 clusters; dispersion chi2/df 2.31 (1 = no excess heterogeneity); cluster error range 0.004-0.038
+D2 Block A basis Z: 120 clusters; dispersion chi2/df 3.15 (1 = no excess heterogeneity); cluster error range 0.006-0.051
+D2 Block A per-job linear F (time order): 0.979 0.974 0.977 0.978 0.981 0.978 0.980 0.974 0.978 0.975 0.978 0.980 0.981 0.976 0.981 0.977 0.977 0.978 0.976 0.982
+D2 Block B per-job linear F of clean pairs (time order; jobs [0, 1, 2, 7, 8, 9, 18, 21, 23, 29]): 0.978 0.977 0.980 0.977 0.981 0.978 0.981 0.973 0.977 0.977
+D3 within-shot independence (Block A): variance ratio of errors per shot, median 1.241 (range 0.954-2.156); mean pairwise error correlation +0.0203
+D4 timeline: first job 2026-11-11 06:01:41 UTC, last 2026-11-13 21:31:41 UTC, span 63.50 h; backend(s) ['ionq_qpu.forte-1']; versions ['{"qiskit": "2.6.2", "qiskit_ionq": "1.0.2"}']
+D5 per logical qubit (the compiler may place logical qubits on different ions per job; mean error of pairs containing it, Block A): median 0.0142; worst qubits q4 0.0195, q6 0.0185, q5 0.0175
+D6 Block A median certificate (p = 0.2) at each job checkpoint: 0.969 0.969 0.970 0.972 0.973 0.974 0.974 0.974 0.974 0.974 0.974 0.975 0.975 0.975 0.975 0.975 0.975 0.975 0.975 0.976; first checkpoint above 0.9: 1
+D7 simulator rehearsal (noise model, 10 Nov): linear F about 0.985, for comparison

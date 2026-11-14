@@ -1,0 +1,12 @@
+STUDY 41a ANALYSIS (stage 1, 2026-11-13T18:59:51)
+   analyze_41a.py 9ce04a9617b3cbd4; cert.py 6b84bbdd3c10fd36; job_41a.py 2de182a7d8c94064; numpy 2.5.1; test switch off
+   hardware files: s41a_job_00.json, s41a_job_01.json, s41a_job_02.json, s41a_job_03.json, s41a_job_04.json, s41a_job_05.json, s41a_job_06.json, s41a_job_07.json, s41a_job_08.json, s41a_job_09.json, s41a_job_10.json, s41a_job_11.json, s41a_job_12.json, s41a_job_13.json, s41a_job_14.json, s41a_job_15.json, s41a_job_16.json, s41a_job_17.json, s41a_job_18.json, s41a_job_19.json, s41a_job_20.json, s41a_job_21.json, s41a_job_22.json, s41a_job_23.json, s41a_job_24.json, s41a_job_25.json, s41a_job_26.json, s41a_job_27.json, s41a_job_28.json, s41a_job_29.json
+== Stage 1 (gates)
+G0 (code and design files identical to the frozen hashes): PASS
+   design table embedded in job_41a.py equals the seed derivation (make_design_41a.py): True; Block B jobs [0, 1, 2, 7, 8, 9, 18, 21, 23, 29]
+   set aside: s41a_job_13_lost_ionq500.json: no counts
+   hardware files 30; job numbers submitted more than once none (earliest kept)
+   time order of jobs (by job-id timestamp) equals job-number order: False
+G1 (complete; design and submitted circuit as fixed in advance; Forte hardware; no debiasing; integrity): PASS
+   per job (clean pairs): largest basis error rate 0.0233 (job 4); lowest linear F 0.9734
+G2 (bit order and error convention sane in every job: each basis error rate < 0.25, F > 0.5): PASS

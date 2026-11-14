@@ -9,4 +9,4 @@ Bell pairs on a cloud QPU with settings fixed in advance, plus a planted fault o
 - `HASHES_PREREG_41a.txt`: frozen sha256 of the files above (checked by the analysis, gate G0).
 - `tests/`: synthetic and simulator tests used before freezing.
 
-Status: frozen before the first hardware job. Results will be added here whatever they are.
+Status: frozen before the first hardware job (commit 1012b04). Results: `RESULTS_41a.md` (all 30 jobs; 5 of 5 primary hypotheses held) and `out/` (verbatim analysis output). Raw job files: `data/raw/` (checksums in `data/SHA256SUMS_raw.txt`); re-run with `python analyze_41a.py --raw data/raw --stage 2`.
