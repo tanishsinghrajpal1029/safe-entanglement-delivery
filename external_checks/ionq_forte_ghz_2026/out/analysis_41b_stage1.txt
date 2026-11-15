@@ -1,0 +1,12 @@
+STUDY 41b ANALYSIS (stage 1, 2026-11-15T05:02:56)
+   analyze_41b.py 5f6777579996e66a; cert.py 6b84bbdd3c10fd36; job_41b.py bed23a6b30bf93f8; numpy 2.5.1; test switch off
+   hardware files: s41b_job_00.json, s41b_job_01.json, s41b_job_02.json, s41b_job_03.json, s41b_job_04.json, s41b_job_05.json, s41b_job_06.json, s41b_job_07.json, s41b_job_08.json, s41b_job_09.json, s41b_job_10.json, s41b_job_11.json, s41b_job_12.json, s41b_job_13.json, s41b_job_14.json, s41b_job_15.json, s41b_job_16.json, s41b_job_17.json, s41b_job_18.json, s41b_job_19.json
+== Stage 1 (gates)
+G0 (code and design files identical to the frozen hashes): PASS
+   design table embedded in job_41b.py equals the seed derivation (make_design_41b.py): True; sizes [4, 3, 3, 4, 3, 3, 3, 4, 3, 3, 4, 4, 4, 4, 3, 4, 3, 4, 3, 4]
+   hardware files 20; job numbers submitted more than once none (earliest kept)
+   time order of jobs (by job-id timestamp) equals job-number order: True
+   IonQ compiled stats per job (job:qubits/1q+2q gates; reported, not gated): 0:36q/45+27 1:36q/48+24 2:36q/48+24 3:36q/43+27 4:36q/48+24 5:36q/48+24 6:36q/48+24 7:36q/45+27 8:36q/48+24 9:36q/48+24 10:36q/45+27 11:36q/45+27 12:36q/45+27 13:36q/43+27 14:36q/48+24 15:36q/45+27 16:36q/48+24 17:36q/47+27 18:36q/48+24 19:36q/43+27
+G1 (complete; design and submitted circuit as fixed in advance; Forte hardware; no debiasing; integrity): PASS
+   per job: largest test error rate 0.0800 (job 11); lowest linear F 0.9402
+G2 (bit order and conventions sane in every job: each test's error rate < 0.25, linear F > 0.5): PASS

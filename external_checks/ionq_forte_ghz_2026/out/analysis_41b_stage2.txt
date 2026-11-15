@@ -1,0 +1,54 @@
+STUDY 41b ANALYSIS (stage 2, 2026-11-15T05:03:26)
+   analyze_41b.py 5f6777579996e66a; cert.py 6b84bbdd3c10fd36; job_41b.py bed23a6b30bf93f8; numpy 2.5.1; test switch off
+   hardware files: s41b_job_00.json, s41b_job_01.json, s41b_job_02.json, s41b_job_03.json, s41b_job_04.json, s41b_job_05.json, s41b_job_06.json, s41b_job_07.json, s41b_job_08.json, s41b_job_09.json, s41b_job_10.json, s41b_job_11.json, s41b_job_12.json, s41b_job_13.json, s41b_job_14.json, s41b_job_15.json, s41b_job_16.json, s41b_job_17.json, s41b_job_18.json, s41b_job_19.json
+== Stage 1 (gates)
+G0 (code and design files identical to the frozen hashes): PASS
+   design table embedded in job_41b.py equals the seed derivation (make_design_41b.py): True; sizes [4, 3, 3, 4, 3, 3, 3, 4, 3, 3, 4, 4, 4, 4, 3, 4, 3, 4, 3, 4]
+   hardware files 20; job numbers submitted more than once none (earliest kept)
+   time order of jobs (by job-id timestamp) equals job-number order: True
+   IonQ compiled stats per job (job:qubits/1q+2q gates; reported, not gated): 0:36q/45+27 1:36q/48+24 2:36q/48+24 3:36q/43+27 4:36q/48+24 5:36q/48+24 6:36q/48+24 7:36q/45+27 8:36q/48+24 9:36q/48+24 10:36q/45+27 11:36q/45+27 12:36q/45+27 13:36q/43+27 14:36q/48+24 15:36q/45+27 16:36q/48+24 17:36q/47+27 18:36q/48+24 19:36q/43+27
+G1 (complete; design and submitted circuit as fixed in advance; Forte hardware; no debiasing; integrity): PASS
+   per job: largest test error rate 0.0800 (job 11); lowest linear F 0.9402
+G2 (bit order and conventions sane in every job: each test's error rate < 0.25, linear F > 0.5): PASS
+
+== Stage 2
+   GHZ-3: 10 jobs, 120000 states (120 clusters)
+   GHZ-3 p=0.05: final violations 0/1000 (CP95 lower 0.000); any of 10 checkpoints 0/1000 (CP95 lower 0.000); median certificate 0.9482
+   GHZ-3 p=0.1: final violations 0/1000 (CP95 lower 0.000); any of 10 checkpoints 0/1000 (CP95 lower 0.000); median certificate 0.9512
+   GHZ-3 p=0.2: final violations 0/1000 (CP95 lower 0.000); any of 10 checkpoints 0/1000 (CP95 lower 0.000); median certificate 0.9530
+   GHZ-4: 10 jobs, 90000 states (90 clusters)
+   GHZ-4 p=0.05: final violations 0/1000 (CP95 lower 0.000); any of 10 checkpoints 0/1000 (CP95 lower 0.000); median certificate 0.9313
+   GHZ-4 p=0.1: final violations 0/1000 (CP95 lower 0.000); any of 10 checkpoints 0/1000 (CP95 lower 0.000); median certificate 0.9352
+   GHZ-4 p=0.2: final violations 0/1000 (CP95 lower 0.000); any of 10 checkpoints 0/1000 (CP95 lower 0.000); median certificate 0.9376
+H3b (final certificate never above the conservative reference, GHZ-3 and GHZ-4; prediction PASS): PASS
+H4b (anytime: never above the reference at any job checkpoint in time order, both sizes; prediction PASS): PASS
+H5b (median certificate at p = 0.2 above 0.90 for GHZ-3 and 0.85 for GHZ-4; prediction PASS): 0.9530, 0.9376 -> PASS
+H6b (genuine multipartite entanglement of the kept ensemble certified from the first job alone: certificate > 0.5 at the first checkpoint in >= 99% of draws at p = 0.05, both sizes; prediction PASS): 1.000, 1.000 -> PASS
+
+== Descriptive
+D1 GHZ-3 realised test counts (clusters): Z 40, XXX 20, XYY 20, YXY 20, YYX 20
+D1 GHZ-3: error rates Z 0.0279, XXX 0.0244, XYY 0.0277, YXY 0.0289, YYX 0.0301; linear F 0.9583; certificate minus F (p = 0.2) -0.0053
+D2 GHZ-3 test Z: 40 clusters; dispersion chi2/df 6.01; range 0.017-0.088
+D2 GHZ-3 test XXX: 20 clusters; dispersion chi2/df 1.33; range 0.017-0.034
+D2 GHZ-3 test XYY: 20 clusters; dispersion chi2/df 1.53; range 0.018-0.045
+D2 GHZ-3 test YXY: 20 clusters; dispersion chi2/df 1.27; range 0.018-0.040
+D2 GHZ-3 test YYX: 20 clusters; dispersion chi2/df 3.75; range 0.016-0.056
+D2 GHZ-3 per-job linear F (time order): 0.960 0.958 0.959 0.962 0.952 0.963 0.960 0.958 0.956 0.956
+D3 GHZ-3 within-shot independence: variance ratio median 1.215 (range 1.049-1.756); mean pairwise error correlation +0.0256
+D6 GHZ-3 median certificate (p = 0.2) at each job checkpoint: 0.943 0.947 0.949 0.951 0.951 0.952 0.953 0.953 0.953 0.953
+D1 GHZ-4 realised test counts (clusters): Z 30, XXXX 8, XXYY 6, XYXY 8, XYYX 8, YXXY 8, YXYX 7, YYXX 9, YYYY 6
+D1 GHZ-4: error rates Z 0.0364, XXXX 0.0343, XXYY 0.0358, XYXY 0.0354, XYYX 0.0349, YXXY 0.0393, YXYX 0.0406, YYXX 0.0409, YYYY 0.0348; linear F 0.9448; certificate minus F (p = 0.2) -0.0072
+D2 GHZ-4 test Z: 30 clusters; dispersion chi2/df 2.84; range 0.019-0.062
+D2 GHZ-4 test XXXX: 8 clusters; dispersion chi2/df 2.65; range 0.019-0.044
+D2 GHZ-4 test XXYY: 6 clusters; dispersion chi2/df 3.47; range 0.023-0.055
+D2 GHZ-4 test XYXY: 8 clusters; dispersion chi2/df 1.45; range 0.027-0.044
+D2 GHZ-4 test XYYX: 8 clusters; dispersion chi2/df 0.98; range 0.027-0.043
+D2 GHZ-4 test YXXY: 8 clusters; dispersion chi2/df 0.27; range 0.034-0.043
+D2 GHZ-4 test YXYX: 7 clusters; dispersion chi2/df 0.81; range 0.032-0.046
+D2 GHZ-4 test YYXX: 9 clusters; dispersion chi2/df 6.47; range 0.027-0.080
+D2 GHZ-4 test YYYY: 6 clusters; dispersion chi2/df 0.99; range 0.024-0.041
+D2 GHZ-4 per-job linear F (time order): 0.940 0.942 0.950 0.945 0.940 0.949 0.945 0.946 0.944 0.946
+D3 GHZ-4 within-shot independence: variance ratio median 1.120 (range 0.999-1.275); mean pairwise error correlation +0.0169
+D6 GHZ-4 median certificate (p = 0.2) at each job checkpoint: 0.915 0.924 0.930 0.933 0.933 0.935 0.936 0.937 0.937 0.938
+D4 timeline: first job 2026-11-14 05:34:24 UTC, last 2026-11-15 12:51:59 UTC, span 31.29 h; backend(s) ['ionq_qpu.forte-1']; versions ['{"qiskit": "2.6.2", "qiskit_ionq": "1.0.2"}']
+D5 scaling with the Bell pairs of Study 41a (linear F 0.978, 1 CX): 1 - F per CX = 0.0209 (GHZ-3, 2 CX), 0.0184 (GHZ-4, 3 CX), 0.022 (Bell)

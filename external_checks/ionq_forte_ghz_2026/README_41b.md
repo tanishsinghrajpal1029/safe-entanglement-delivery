@@ -9,4 +9,4 @@ Extends Study 41a (`../ionq_forte_hw_2026/`) from Bell pairs to three- and four-
 - `HASHES_PREREG_41b.txt`: frozen sha256 of the files above (checked by the analysis, gate G0).
 - `tests/`: local simulator helpers used before freezing.
 
-Status: frozen before the first 41b hardware job. Results will be added here whatever they are.
+Status: frozen before the first 41b hardware job (commit add3dd6). Results: `RESULTS_41b.md` (all 20 jobs; 4 of 4 primary hypotheses held) and `out/` (verbatim analysis output). Raw job files: `data/raw/` (checksums in `data/SHA256SUMS_raw.txt`); re-run with `python analyze_41b.py --raw data/raw --stage 2`.
