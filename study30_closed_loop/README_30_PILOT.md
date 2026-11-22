@@ -80,13 +80,13 @@ Two batches of smoke runs, both on dev network 0 or 1.
 **1. Mac terminal** (copy to PSC, next to `s29`):
 ```bash
 cd ~/Documents/Independent-Study/quantum_grid_router/Files11-EndToEnd-PRX-Claude/prx_work
-ssh <psc-user>@bridges2.psc.edu 'cd "$(dirname "$(find /ocean/projects/cis260277p/$USER -maxdepth 4 -type d -name s29 | head -1)")" && tar xzf - && ls -d s30' < s30_pilot.tgz
+ssh <psc-user>@bridges2.psc.edu 'cd "$(dirname "$(find /ocean/projects/<psc-charge-id>/$USER -maxdepth 4 -type d -name s29 | head -1)")" && tar xzf - && ls -d s30' < s30_pilot.tgz
 ```
 
 **2. PSC** (log in, then):
 ```bash
-cd "$(dirname "$(find /ocean/projects/cis260277p/$USER -maxdepth 4 -type d -name s29 | head -1)")/s30" && mkdir -p s18c-logs
-sbatch --account=cis260277p --array=0-31 --cpus-per-task=16 --time=02:00:00 \
+cd "$(dirname "$(find /ocean/projects/<psc-charge-id>/$USER -maxdepth 4 -type d -name s29 | head -1)")/s30" && mkdir -p s18c-logs
+sbatch --account=<psc-charge-id> --array=0-31 --cpus-per-task=16 --time=02:00:00 \
   --export=ALL,S18C_DIR=$PWD,PY=/opt/packages/anaconda3-2024.10-1/bin/python3,S18C_MODULE=study30,S18C_TASKS=tasks_p30.jsonl,S18C_OUT=des_p30_psc,S18C_NSHARDS=32,S18C_LIB=$PWD/../s18c,S26_DIR=$PWD/../s26,S27_DIR=$PWD/../s27 \
   s18c_array.sbatch
 ```
@@ -94,13 +94,13 @@ sbatch --account=cis260277p --array=0-31 --cpus-per-task=16 --time=02:00:00 \
 **3. PSC, when `squeue -u $USER` is empty:**
 ```bash
 /opt/packages/anaconda3-2024.10-1/bin/python3 psc_array_runner.py --merge des_p30_psc
-srun -p RM-shared -A cis260277p -n 1 -c 4 -t 00:20:00 /opt/packages/anaconda3-2024.10-1/bin/python3 pilot_summary_30.py des_p30_psc/runs.csv > pilot_summary_30.txt; tail -40 pilot_summary_30.txt
+srun -p RM-shared -A <psc-charge-id> -n 1 -c 4 -t 00:20:00 /opt/packages/anaconda3-2024.10-1/bin/python3 pilot_summary_30.py des_p30_psc/runs.csv > pilot_summary_30.txt; tail -40 pilot_summary_30.txt
 ```
 
 **4. Mac terminal** (bring results back):
 ```bash
 cd ~/Documents/Independent-Study/quantum_grid_router/Files11-EndToEnd-PRX-Claude/prx_work/30_closed_loop
-ssh <psc-user>@bridges2.psc.edu 'cd "$(dirname "$(find /ocean/projects/cis260277p/$USER -maxdepth 4 -type d -name s29 | head -1)")/s30" && tar czf - des_p30_psc pilot_summary_30.txt' | tar xzf -
+ssh <psc-user>@bridges2.psc.edu 'cd "$(dirname "$(find /ocean/projects/<psc-charge-id>/$USER -maxdepth 4 -type d -name s29 | head -1)")/s30" && tar czf - des_p30_psc pilot_summary_30.txt' | tar xzf -
 ```
 
 **Cost estimate**

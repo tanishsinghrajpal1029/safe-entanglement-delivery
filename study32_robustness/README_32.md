@@ -32,8 +32,8 @@ Bootstrap: 4,000 network-cluster resamples within hardware type, one-sided 95%.
 ## Confirmatory commands (PSC)
 Expected cost is about 300 SU; the pilot took at most 325 s per shard.
 ```bash
-cd /ocean/projects/cis260277p/$USER/s32
-sbatch --account=cis260277p --array=0-31 --cpus-per-task=16 --time=03:00:00 \
+cd /ocean/projects/<psc-charge-id>/$USER/s32
+sbatch --account=<psc-charge-id> --array=0-31 --cpus-per-task=16 --time=03:00:00 \
   --export=ALL,S18C_DIR=$PWD,PY=/opt/packages/anaconda3-2024.10-1/bin/python3,S18C_MODULE=study32,S18C_TASKS=tasks_s32.jsonl,S18C_OUT=des_s32_psc,S18C_NSHARDS=32,S18C_LIB=$PWD/../s18c,S26_DIR=$PWD/../s26,S27_DIR=$PWD/../s27,S30_DIR=$PWD/../s30 \
   s18c_array.sbatch
 ```

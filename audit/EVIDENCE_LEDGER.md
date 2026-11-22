@@ -447,9 +447,9 @@ The full Gate-3 novelty check is still OPEN. It needs to cover LINKSELFIE, QNT t
 - **Bug found and fixed.** An empty passing set was treated as zero risk, so a sub-threshold path delivered 9 bad pairs. Fix: a z needs ≥ 20 supporting window attempts.
 - **After the fix,** on an above-threshold path (ion_proj, F0 0.98, g = 1e-5), adaptive delivered 136 good / 0 bad against 398 / 0 for fixed z = 2. Adaptive is markedly more conservative; it had no admissible z on 57% of attempts.
 
-**PSC.** cis260277p shows Bridges-2 RM 9,869 / 10,000 SU (shown by Tanish on 5 Oct). No PSC job has been submitted.
+**PSC.** <psc-charge-id> shows Bridges-2 RM 9,869 / 10,000 SU (shown by Tanish on 5 Oct). No PSC job has been submitted.
 
-**PSC approval (5 Oct 2026).** Tanish approved **400 SU in total** on cis260277p (RM-shared) for Study 18C. That covers the frontier map and the final run.
+**PSC approval (5 Oct 2026).** Tanish approved **400 SU in total** on <psc-charge-id> (RM-shared) for Study 18C. That covers the frontier map and the final run.
 - **Infrastructure:** `psc_array_runner.py` (sha `f5eca179…`, tested in the cloud) and `s18c_array.sbatch` (sha `e0e00051…`; at most 64 SU per array element).
 - **Ledger of PSC spending:** 0 SU used so far.
 
@@ -459,7 +459,7 @@ The full Gate-3 novelty check is still OPEN. It needs to cover LINKSELFIE, QNT t
 
 **Files.** `drift_queue_des_v10.py` (sha `105b0e3b…`) and `README_v10.md` (sha `c96b9857…`), with predictions M1–M3. The task list holds 13,824 path-runs (`tasks_v10.jsonl` sha `4cf402f3…` when generated with `--write-tasks`).
 
-**Environment.** PSC check by Tanish (5 Oct): `/opt/packages/anaconda3-2024.10-1/bin/python3` with numpy 1.26.4, pandas 2.2.2, scipy 1.13.1. Code copied to `/ocean/projects/cis260277p/<psc-user>/s18c`; sha256 checks match for v9 and the runner.
+**Environment.** PSC check by Tanish (5 Oct): `/opt/packages/anaconda3-2024.10-1/bin/python3` with numpy 1.26.4, pandas 2.2.2, scipy 1.13.1. Code copied to `/ocean/projects/<psc-charge-id>/<psc-user>/s18c`; sha256 checks match for v9 and the runner.
 
 **SU plan.** Test shard, then a 20-element array with a 0.5 h limit. Ceiling 320 SU; expected 110–180.
 
@@ -1327,7 +1327,7 @@ Per-decision belief rules, Bayesian or δ-quantile, failed as Proposition 1 pred
 - **New theory:** Prop. 6″ (exact-drift mixture CS) needs g known exactly; Prop. 6′ needs only an upper bound on g.
 
 ## E79 — Compute check and advisor materials (9 Oct 2026)
-- **PSC `projects` (pasted by Tanish):** cis260277p Bridges-2 Regular Memory balance 8,767 / 10,000 SU, so **1,233 SU** have been charged to the allocation (all work in the project). The approved cap for this study's runs was 1,000 SU, and the earlier ~850 estimate was low. No further PSC runs until the budget is re-approved.
+- **PSC `projects` (pasted by Tanish):** <psc-charge-id> Bridges-2 Regular Memory balance 8,767 / 10,000 SU, so **1,233 SU** have been charged to the allocation (all work in the project). The approved cap for this study's runs was 1,000 SU, and the earlier ~850 estimate was low. No further PSC runs until the budget is re-approved.
 - **Advisor materials** in `advisor_report_2026-10-10/`:
   - report v2, 20 pages, adds Chapters 10–12 and Diagrams A–E;
   - chapter-wise study guide, 30 pages;
@@ -2439,7 +2439,7 @@ Under undeclared optimism, ion2020 kg delivered 28% bad pairs while the kept-pai
   - Official ACCESS and IBM acknowledgement text.
   - Fixed-K comparison added (S33).
 - **Open flags:**
-  - ACCESS allocation number to confirm (CIS260277);
+  - ACCESS allocation number to confirm (<psc-charge-id>);
   - v0.6.0 DOI to add;
   - the authors' proof-check sentence;
   - three UNVERIFIED bib comments;
@@ -2924,7 +2924,7 @@ The external review raised six points. Two of them were real errors and are now 
 - **Source:** the user's screenshot of the ACCESS portal shows the active project **CIS261606**, "Decentralized Reinforcement Learning for Fidelity-Aware Routing in Heterogeneous Quantum Networks: A Scalability Analysis".
   - Type: Explore allocation, Aug 21, 2026 to Aug 20, 2027.
   - Resources: Bridges-2 RM 8.45K of 10.0K core-hours remaining; GPU 200 of 200 GPU hours; Ocean 44 of 50 GB.
-- **Error corrected:** the acknowledgments said "CIS260277". That number came from the PSC charge ID cis260277p. The PSC charge ID and the ACCESS allocation number are different identifiers.
+- **Error corrected:** the acknowledgments said "<psc-charge-id>". That number came from the PSC charge ID <psc-charge-id>. The PSC charge ID and the ACCESS allocation number are different identifiers.
 - **Fix:** the acknowledgments now cite allocation CIS261606, and the % CONFIRM comment is removed.
 - **Hash:** main.tex 96840caa9992e352.
 

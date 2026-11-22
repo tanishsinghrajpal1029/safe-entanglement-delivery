@@ -61,12 +61,12 @@ Kept pairs needed to certify τ = 0.9 at α = 0.05:
 1. **Mac terminal:**
 ```bash
 cd ~/Documents/Independent-Study/quantum_grid_router/Files11-EndToEnd-PRX-Claude/prx_work
-ssh <psc-user>@bridges2.psc.edu 'cd /ocean/projects/cis260277p/<psc-user> && tar xzf - && ls -d s32' < s32_pilot.tgz
+ssh <psc-user>@bridges2.psc.edu 'cd /ocean/projects/<psc-charge-id>/<psc-user> && tar xzf - && ls -d s32' < s32_pilot.tgz
 ```
 2. **PSC:**
 ```bash
-cd /ocean/projects/cis260277p/$USER/s32 && mkdir -p s18c-logs
-sbatch --account=cis260277p --array=0-31 --cpus-per-task=16 --time=02:00:00 \
+cd /ocean/projects/<psc-charge-id>/$USER/s32 && mkdir -p s18c-logs
+sbatch --account=<psc-charge-id> --array=0-31 --cpus-per-task=16 --time=02:00:00 \
   --export=ALL,S18C_DIR=$PWD,PY=/opt/packages/anaconda3-2024.10-1/bin/python3,S18C_MODULE=study32,S18C_TASKS=tasks_p32.jsonl,S18C_OUT=des_p32_psc,S18C_NSHARDS=32,S18C_LIB=$PWD/../s18c,S26_DIR=$PWD/../s26,S27_DIR=$PWD/../s27,S30_DIR=$PWD/../s30 \
   s18c_array.sbatch
 ```
@@ -78,7 +78,7 @@ sbatch --account=cis260277p --array=0-31 --cpus-per-task=16 --time=02:00:00 \
 4. **Mac terminal:**
 ```bash
 cd ~/Documents/Independent-Study/quantum_grid_router/Files11-EndToEnd-PRX-Claude/prx_work/32_robustness
-ssh <psc-user>@bridges2.psc.edu 'cd /ocean/projects/cis260277p/<psc-user>/s32 && tar czf - des_p32_psc pilot_summary_32.txt' | tar xzf -
+ssh <psc-user>@bridges2.psc.edu 'cd /ocean/projects/<psc-charge-id>/<psc-user>/s32 && tar czf - des_p32_psc pilot_summary_32.txt' | tar xzf -
 ```
 
 **Cost:** pilot about 60 SU; confirmatory about 300 SU.

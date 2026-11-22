@@ -34,10 +34,10 @@ Bootstrap: network clusters within grid × load × hardware type. Per-user measu
 
 ## Confirmatory commands (PSC; three jobs, one per grid; about 500 SU)
 ```bash
-cd /ocean/projects/cis260277p/$USER/s34
+cd /ocean/projects/<psc-charge-id>/$USER/s34
 for G in 5 10 30; do
   N=32; [ $G = 30 ] && N=64
-  sbatch --account=cis260277p --array=0-$((N-1)) --cpus-per-task=16 --time=04:00:00 \
+  sbatch --account=<psc-charge-id> --array=0-$((N-1)) --cpus-per-task=16 --time=04:00:00 \
     --export=ALL,S34_GRID=$G,S18C_DIR=$PWD,PY=/opt/packages/anaconda3-2024.10-1/bin/python3,S18C_MODULE=study34,S18C_TASKS=tasks_s34_g$G.jsonl,S18C_OUT=des_s34_g$G,S18C_NSHARDS=$N,S18C_LIB=$PWD/../s18c,S26_DIR=$PWD/../s26,S27_DIR=$PWD/../s27,S30_DIR=$PWD/../s30,S32_DIR=$PWD/../s32 \
     s18c_array.sbatch
 done

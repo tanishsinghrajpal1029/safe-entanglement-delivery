@@ -52,14 +52,14 @@ Every closed-loop result so far (Studies 28–32) is on one 5×5 grid; only the 
 1. **Mac terminal:**
 ```bash
 cd ~/Documents/Independent-Study/quantum_grid_router/Files11-EndToEnd-PRX-Claude/prx_work
-ssh <psc-user>@bridges2.psc.edu 'cd /ocean/projects/cis260277p/<psc-user> && tar xzf - && ls -d s34' < s34_pilot.tgz
+ssh <psc-user>@bridges2.psc.edu 'cd /ocean/projects/<psc-charge-id>/<psc-user> && tar xzf - && ls -d s34' < s34_pilot.tgz
 ```
 2. **PSC** (three jobs, one per grid):
 ```bash
-cd /ocean/projects/cis260277p/$USER/s34 && mkdir -p s18c-logs
+cd /ocean/projects/<psc-charge-id>/$USER/s34 && mkdir -p s18c-logs
 for G in 5 10 30; do
   N=16; [ $G = 30 ] && N=32
-  sbatch --account=cis260277p --array=0-$((N-1)) --cpus-per-task=16 --time=03:00:00 \
+  sbatch --account=<psc-charge-id> --array=0-$((N-1)) --cpus-per-task=16 --time=03:00:00 \
     --export=ALL,S34_GRID=$G,S18C_DIR=$PWD,PY=/opt/packages/anaconda3-2024.10-1/bin/python3,S18C_MODULE=study34,S18C_TASKS=tasks_p34_g$G.jsonl,S18C_OUT=des_p34_g$G,S18C_NSHARDS=$N,S18C_LIB=$PWD/../s18c,S26_DIR=$PWD/../s26,S27_DIR=$PWD/../s27,S30_DIR=$PWD/../s30,S32_DIR=$PWD/../s32 \
     s18c_array.sbatch
 done
@@ -72,7 +72,7 @@ for G in 5 10 30; do /opt/packages/anaconda3-2024.10-1/bin/python3 psc_array_run
 4. **Mac terminal:**
 ```bash
 mkdir -p ~/Documents/Independent-Study/quantum_grid_router/Files11-EndToEnd-PRX-Claude/prx_work/34_grids && cd ~/Documents/Independent-Study/quantum_grid_router/Files11-EndToEnd-PRX-Claude/prx_work/34_grids
-ssh <psc-user>@bridges2.psc.edu 'cd /ocean/projects/cis260277p/<psc-user>/s34 && tar czf - des_p34_g5 des_p34_g10 des_p34_g30 pilot_summary_34.txt' | tar xzf -
+ssh <psc-user>@bridges2.psc.edu 'cd /ocean/projects/<psc-charge-id>/<psc-user>/s34 && tar czf - des_p34_g5 des_p34_g10 des_p34_g30 pilot_summary_34.txt' | tar xzf -
 ```
 
 **Cost estimate:**
