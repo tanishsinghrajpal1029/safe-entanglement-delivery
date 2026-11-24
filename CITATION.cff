@@ -8,9 +8,22 @@ authors:
   - family-names: Mattarock
     given-names: Michael
     affiliation: "Carnegie Mellon University"
-version: 0.9.1
-date-released: 2026-10-19
+version: 1.0.0
+date-released: 2026-11-22
 license: MIT
 type: software
 doi: 10.5281/zenodo.23287414
 repository-code: "https://github.com/tanishsinghrajpal1029/safe-entanglement-delivery"
+preferred-citation:
+  type: article
+  title: "What can a quantum network promise about the entangled pairs it delivers?"
+  authors:
+    - family-names: Rajpal
+      given-names: Tanish Singh
+    - family-names: Mattarock
+      given-names: Michael
+  year: 2026
+  identifiers:
+    - type: other
+      value: "arXiv:2611.29730"
+  url: "https://arxiv.org/abs/2611.29730"

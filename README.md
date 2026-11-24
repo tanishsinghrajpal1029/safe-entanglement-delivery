@@ -6,7 +6,7 @@ Code, pre-registrations, results and the audit trail for the manuscript of the s
 
 **Authors:** Tanish Singh Rajpal and Michael Mattarock (Carnegie Mellon University).
 
-**Status (November 2026):** the manuscript is complete (v0.9.2) and under review by the authors before submission.
+**Status (November 2026):** preprint on arXiv: [arXiv:2611.29730](https://arxiv.org/abs/2611.29730) (T. S. Rajpal and M. Mattarock, *What can a quantum network promise about the entangled pairs it delivers?*). Release v1.0.0 ([doi:10.5281/zenodo.24447997](https://doi.org/10.5281/zenodo.24447997)) matches that version of the manuscript.
 - **Seven pre-registered re-analyses of experimental data:** Innsbruck, ICFO, USTC, Delft and IonQ (public deposits), and Oxford and Harvard (data provided by their authors). Highlights:
   - **IonQ kilohertz ion–SiV link (Study 38):** we predicted the certificate *before reading the data* (median 0.817) and measured 0.818. It certifies the 0.8 SiV threshold from about 3 s of link time; the certificate was never wrong in 21,000 test-or-keep draws.
   - **Oxford DIQKD record (Study 36):** certified average fidelity 0.917, above 0.9 after about 220,000 kept pairs.
@@ -125,4 +125,4 @@ Code, simulations and documents were developed with substantial assistance from 
 
 ## License and citation
 - Code: MIT (`LICENSE`). Documents and results: CC BY 4.0.
-- Cite via `CITATION.cff`. Zenodo: **doi:10.5281/zenodo.23287414** (all versions); v0.3.0 (certified delivery): doi:10.5281/zenodo.23291355; v0.6.0 (manuscript v0.6: provable closed loop, hardware, robustness): doi:10.5281/zenodo.23306520; v0.6.1 (adds Study 34): doi:10.5281/zenodo.23308490; v0.6.2 (adds the Delft re-analyses, Studies 35 and 35B): doi:10.5281/zenodo.23333138; v0.6.3 (adds the Oxford DIQKD re-analysis, Study 36): doi:10.5281/zenodo.23355154. v0.8.0 (manuscript v0.8: revision re-analyses, network-level bounds, IBM replay, audit timestamps): doi:10.5281/zenodo.23427360; v0.9.0 (other topologies): doi:10.5281/zenodo.23467909; v0.9.1 (wording correction): doi:10.5281/zenodo.23468145.
+- Cite via `CITATION.cff`. Zenodo: **doi:10.5281/zenodo.23287414** (all versions); v0.3.0 (certified delivery): doi:10.5281/zenodo.23291355; v0.6.0 (manuscript v0.6: provable closed loop, hardware, robustness): doi:10.5281/zenodo.23306520; v0.6.1 (adds Study 34): doi:10.5281/zenodo.23308490; v0.6.2 (adds the Delft re-analyses, Studies 35 and 35B): doi:10.5281/zenodo.23333138; v0.6.3 (adds the Oxford DIQKD re-analysis, Study 36): doi:10.5281/zenodo.23355154. v0.8.0 (manuscript v0.8: revision re-analyses, network-level bounds, IBM replay, audit timestamps): doi:10.5281/zenodo.23427360; v0.9.0 (other topologies): doi:10.5281/zenodo.23467909; v0.9.1 (wording correction): doi:10.5281/zenodo.23468145. v1.0.0 (arXiv:2611.29730 version; adds Studies 37–41): doi:10.5281/zenodo.24447997.
